@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+build/
+DerivedData/
+*.xcuserstate
+*.moved-aside
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# CocoaPods (unused but ignored)
+Pods/
+
+# fastlane
+fastlane/report.xml
+fastlane/screenshots

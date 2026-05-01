@@ -1,0 +1,32 @@
+[
+  {
+    "id": "remove-constant",
+    "label": "+◯を消す",
+    "kindMessage": "今は“+の数を消すところ”で止まりやすいです。3問だけ練習すると、元の問題が解きやすくなります。",
+    "practiceSetId": "set-remove-constant"
+  },
+  {
+    "id": "isolate-2x-to-x",
+    "label": "2xをxにする",
+    "kindMessage": "今は“2xをxにするところ”で止まりやすいです。3問だけ練習すると、元の問題が解きやすくなります。",
+    "practiceSetId": "set-isolate-2x"
+  },
+  {
+    "id": "transpose-sign",
+    "label": "移項のときの符号",
+    "kindMessage": "移項するときは、符号が変わります。3問だけ練習すると、自然にできるようになります。",
+    "practiceSetId": "set-transpose-sign"
+  },
+  {
+    "id": "balance-both-sides",
+    "label": "両辺に同じことをする",
+    "kindMessage": "片方だけ変えるとバランスが崩れます。3問だけ「両辺に同じことをする」練習をしてみましょう。",
+    "practiceSetId": "set-balance"
+  },
+  {
+    "id": "word-problem-modeling",
+    "label": "文章を式にする",
+    "kindMessage": "文章を式にするところでつまずきやすいです。短い文の式立て3問で十分です。",
+    "practiceSetId": "set-modeling"
+  }
+]

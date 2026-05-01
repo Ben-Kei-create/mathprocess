@@ -1,0 +1,72 @@
+[
+  {
+    "id": "diag-le-1",
+    "unitId": "g1-linear-eq",
+    "equation": "x + 3 = 8",
+    "questionPrompt": "xの値は？",
+    "choices": [
+      { "id": "a", "label": "x = 5",  "isCorrect": true  },
+      { "id": "b", "label": "x = 11", "isCorrect": false },
+      { "id": "c", "label": "x = 3",  "isCorrect": false },
+      { "id": "d", "label": "x = 8",  "isCorrect": false }
+    ],
+    "mistakeTagIdIfWrong": "remove-constant",
+    "order": 1
+  },
+  {
+    "id": "diag-le-2",
+    "unitId": "g1-linear-eq",
+    "equation": "2x = 10",
+    "questionPrompt": "xの値は？",
+    "choices": [
+      { "id": "a", "label": "x = 5",  "isCorrect": true  },
+      { "id": "b", "label": "x = 8",  "isCorrect": false },
+      { "id": "c", "label": "x = 20", "isCorrect": false },
+      { "id": "d", "label": "x = 12", "isCorrect": false }
+    ],
+    "mistakeTagIdIfWrong": "isolate-2x-to-x",
+    "order": 2
+  },
+  {
+    "id": "diag-le-3",
+    "unitId": "g1-linear-eq",
+    "equation": "2x + 3 = 11",
+    "questionPrompt": "xの値は？",
+    "choices": [
+      { "id": "a", "label": "x = 4",  "isCorrect": true  },
+      { "id": "b", "label": "x = 7",  "isCorrect": false },
+      { "id": "c", "label": "x = 14", "isCorrect": false },
+      { "id": "d", "label": "x = 8",  "isCorrect": false }
+    ],
+    "mistakeTagIdIfWrong": "isolate-2x-to-x",
+    "order": 3
+  },
+  {
+    "id": "diag-le-4",
+    "unitId": "g1-linear-eq",
+    "equation": "3x - 5 = x + 7",
+    "questionPrompt": "xの値は？",
+    "choices": [
+      { "id": "a", "label": "x = 6",  "isCorrect": true  },
+      { "id": "b", "label": "x = 1",  "isCorrect": false },
+      { "id": "c", "label": "x = 12", "isCorrect": false },
+      { "id": "d", "label": "x = 2",  "isCorrect": false }
+    ],
+    "mistakeTagIdIfWrong": "transpose-sign",
+    "order": 4
+  },
+  {
+    "id": "diag-le-5",
+    "unitId": "g1-linear-eq",
+    "equation": "ある数xに3を足すと11になる。xは？",
+    "questionPrompt": "xの値は？",
+    "choices": [
+      { "id": "a", "label": "x = 8",  "isCorrect": true  },
+      { "id": "b", "label": "x = 14", "isCorrect": false },
+      { "id": "c", "label": "x = 33", "isCorrect": false },
+      { "id": "d", "label": "x = 11", "isCorrect": false }
+    ],
+    "mistakeTagIdIfWrong": "word-problem-modeling",
+    "order": 5
+  }
+]
