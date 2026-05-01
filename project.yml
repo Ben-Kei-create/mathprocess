@@ -1,0 +1,44 @@
+name: TokeRoot
+options:
+  bundleIdPrefix: app.tokeroot
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: ja
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    GENERATE_INFOPLIST_FILE: YES
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: "0.1"
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait"
+    INFOPLIST_KEY_CFBundleDisplayName: "解け√ルート"
+    DEVELOPMENT_LANGUAGE: ja
+targets:
+  TokeRoot:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: TokeRoot
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.tokeroot.TokeRoot
+        ENABLE_PREVIEWS: YES
+schemes:
+  TokeRoot:
+    build:
+      targets:
+        TokeRoot: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

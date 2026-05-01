@@ -1,0 +1,20 @@
+[
+  { "id": "g1-seifu",       "grade": "中1", "title": "正負の数",       "subtitle": null, "status": "comingSoon", "order": 1 },
+  { "id": "g1-mojishiki",   "grade": "中1", "title": "文字式",          "subtitle": null, "status": "comingSoon", "order": 2 },
+  { "id": "g1-linear-eq",   "grade": "中1", "title": "一次方程式",      "subtitle": "「次に何をする？」で解けるようになる", "status": "available", "order": 3 },
+  { "id": "g1-hirei",       "grade": "中1", "title": "比例・反比例",    "subtitle": null, "status": "comingSoon", "order": 4 },
+  { "id": "g1-zukei",       "grade": "中1", "title": "図形",            "subtitle": null, "status": "comingSoon", "order": 5 },
+
+  { "id": "g2-shiki",       "grade": "中2", "title": "式の計算",        "subtitle": null, "status": "comingSoon", "order": 1 },
+  { "id": "g2-renritsu",    "grade": "中2", "title": "連立方程式",      "subtitle": null, "status": "comingSoon", "order": 2 },
+  { "id": "g2-linear-fn",   "grade": "中2", "title": "一次関数",        "subtitle": null, "status": "comingSoon", "order": 3 },
+  { "id": "g2-shomei",      "grade": "中2", "title": "図形の証明",      "subtitle": null, "status": "comingSoon", "order": 4 },
+  { "id": "g2-kakuritsu",   "grade": "中2", "title": "確率",            "subtitle": null, "status": "comingSoon", "order": 5 },
+
+  { "id": "g3-tenkai",      "grade": "中3", "title": "展開・因数分解",  "subtitle": null, "status": "comingSoon", "order": 1 },
+  { "id": "g3-heihokon",    "grade": "中3", "title": "平方根",          "subtitle": null, "status": "comingSoon", "order": 2 },
+  { "id": "g3-quad-eq",     "grade": "中3", "title": "二次方程式",      "subtitle": null, "status": "comingSoon", "order": 3 },
+  { "id": "g3-quad-fn",     "grade": "中3", "title": "二次関数",        "subtitle": null, "status": "comingSoon", "order": 4 },
+  { "id": "g3-soji",        "grade": "中3", "title": "相似",            "subtitle": null, "status": "comingSoon", "order": 5 },
+  { "id": "g3-sanpei",      "grade": "中3", "title": "三平方の定理",    "subtitle": null, "status": "comingSoon", "order": 6 }
+]

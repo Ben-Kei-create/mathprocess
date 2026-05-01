@@ -1,0 +1,451 @@
+[
+  {
+    "id": "le-001",
+    "unitId": "g1-linear-eq",
+    "title": "+の数を消す",
+    "equation": "x + 3 = 8",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "左側を x だけにしたいので、+3 を消す方法を考えます。",
+    "tags": ["移項", "定数項"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-001-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x + 3 = 8",
+        "explanationCaption": "両辺から3を引きます。",
+        "equationAfter": "x + 3 - 3 = 8 - 3",
+        "highlight": "-3",
+        "choices": [
+          { "id": "a", "label": "両辺から3を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に3を足す",   "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "両辺を3で割る",   "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-001-s2",
+        "prompt": "次は？",
+        "equationBefore": "x + 3 - 3 = 8 - 3",
+        "explanationCaption": "+3 と -3 が消えて、x = 5 になります。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "計算して x = 5", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "計算して x = 11","isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-002",
+    "unitId": "g1-linear-eq",
+    "title": "2xをxにする",
+    "equation": "2x = 10",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "2x は「x が 2倍」という意味です。x だけにするには？",
+    "tags": ["係数"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-002-s1",
+        "prompt": "x だけにするには？",
+        "equationBefore": "2x = 10",
+        "explanationCaption": "両辺を 2 で割ります。",
+        "equationAfter": "2x ÷ 2 = 10 ÷ 2",
+        "highlight": "÷ 2",
+        "choices": [
+          { "id": "a", "label": "両辺を 2 で割る", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 2 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "両辺に 2 をかける","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-002-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "2x ÷ 2 = 10 ÷ 2",
+        "explanationCaption": "答えは x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 8",  "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 20", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-003",
+    "unitId": "g1-linear-eq",
+    "title": "+を消してから割る",
+    "equation": "2x + 3 = 11",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "まず x のついていない数を消し、それから x の前の数を1にします。",
+    "tags": ["移項", "係数"],
+    "finalAnswer": "x = 4",
+    "steps": [
+      {
+        "id": "le-003-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "2x + 3 = 11",
+        "explanationCaption": "左だけ変えるとバランスが崩れるので、両辺から3を引きます。",
+        "equationAfter": "2x + 3 - 3 = 11 - 3",
+        "highlight": "-3",
+        "choices": [
+          { "id": "a", "label": "両辺から3を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺を2で割る",   "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "11を左に移す",    "isCorrect": false, "mistakeTagId": "transpose-sign" }
+        ]
+      },
+      {
+        "id": "le-003-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "2x + 3 - 3 = 11 - 3",
+        "explanationCaption": "+3 と -3 が消えて、2x = 8 になります。",
+        "equationAfter": "2x = 8",
+        "highlight": "2x = 8",
+        "choices": [
+          { "id": "a", "label": "2x = 8",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2x = 14", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-003-s3",
+        "prompt": "次は？",
+        "equationBefore": "2x = 8",
+        "explanationCaption": "2x は「x が 2倍」という意味です。x だけにするために、両辺を 2 で割ります。",
+        "equationAfter": "2x ÷ 2 = 8 ÷ 2",
+        "highlight": "÷ 2",
+        "choices": [
+          { "id": "a", "label": "両辺を 2 で割る", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 2 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-003-s4",
+        "prompt": "答えは？",
+        "equationBefore": "2x ÷ 2 = 8 ÷ 2",
+        "explanationCaption": "答えは x = 4 です。",
+        "equationAfter": "x = 4",
+        "highlight": "x = 4",
+        "choices": [
+          { "id": "a", "label": "x = 4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 6", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 8", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-004",
+    "unitId": "g1-linear-eq",
+    "title": "両辺にxがある",
+    "equation": "3x - 5 = x + 7",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x を片側にまとめて、数をもう片側にまとめます。",
+    "tags": ["移項"],
+    "finalAnswer": "x = 6",
+    "steps": [
+      {
+        "id": "le-004-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "3x - 5 = x + 7",
+        "explanationCaption": "右の x を左に移します。符号は + から - に変わります。",
+        "equationAfter": "3x - x - 5 = 7",
+        "highlight": "- x",
+        "choices": [
+          { "id": "a", "label": "右の x を左に移す（符号反転）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "右の x をそのまま左に足す",       "isCorrect": false, "mistakeTagId": "transpose-sign" },
+          { "id": "c", "label": "両辺を 3 で割る",                "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-004-s2",
+        "prompt": "次は？",
+        "equationBefore": "3x - x - 5 = 7",
+        "explanationCaption": "-5 を右に移します。+5 になります。",
+        "equationAfter": "3x - x = 7 + 5",
+        "highlight": "+ 5",
+        "choices": [
+          { "id": "a", "label": "-5 を右に移す（+5 にする）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-5 をそのまま右に書く",       "isCorrect": false, "mistakeTagId": "transpose-sign" }
+        ]
+      },
+      {
+        "id": "le-004-s3",
+        "prompt": "計算すると？",
+        "equationBefore": "3x - x = 7 + 5",
+        "explanationCaption": "3x - x = 2x、7 + 5 = 12 です。",
+        "equationAfter": "2x = 12",
+        "highlight": "2x = 12",
+        "choices": [
+          { "id": "a", "label": "2x = 12", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x = 12", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-004-s4",
+        "prompt": "答えは？",
+        "equationBefore": "2x = 12",
+        "explanationCaption": "両辺を 2 で割って、x = 6 です。",
+        "equationAfter": "x = 6",
+        "highlight": "x = 6",
+        "choices": [
+          { "id": "a", "label": "x = 6",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 4",  "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 24", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-005",
+    "unitId": "g1-linear-eq",
+    "title": "文章を式にする",
+    "equation": "ある数 x に 3 を足すと 11 になる。x は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「x に 3 を足すと 11」を、そのまま式にしてみましょう。",
+    "tags": ["文章題"],
+    "finalAnswer": "x = 8",
+    "steps": [
+      {
+        "id": "le-005-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "ある数 x に 3 を足すと 11",
+        "explanationCaption": "そのまま式にすると x + 3 = 11 です。",
+        "equationAfter": "x + 3 = 11",
+        "highlight": "x + 3 = 11",
+        "choices": [
+          { "id": "a", "label": "x + 3 = 11", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x = 11",    "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 3 = 11", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-005-s2",
+        "prompt": "次は？",
+        "equationBefore": "x + 3 = 11",
+        "explanationCaption": "両辺から 3 を引きます。",
+        "equationAfter": "x = 11 - 3",
+        "highlight": "- 3",
+        "choices": [
+          { "id": "a", "label": "両辺から 3 を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 3 を足す",   "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-005-s3",
+        "prompt": "答えは？",
+        "equationBefore": "x = 11 - 3",
+        "explanationCaption": "答えは x = 8 です。",
+        "equationAfter": "x = 8",
+        "highlight": "x = 8",
+        "choices": [
+          { "id": "a", "label": "x = 8",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 14", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-101",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: +の数を消す①",
+    "equation": "x + 4 = 9",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "+4 を消すには？",
+    "tags": ["特訓", "移項"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-101-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x + 4 = 9",
+        "explanationCaption": "両辺から 4 を引きます。",
+        "equationAfter": "x = 9 - 4",
+        "highlight": "- 4",
+        "choices": [
+          { "id": "a", "label": "両辺から 4 を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 4 を足す",   "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-101-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x = 9 - 4",
+        "explanationCaption": "x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 13", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-102",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: +の数を消す②",
+    "equation": "x + 7 = 12",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "+7 を消すには？",
+    "tags": ["特訓", "移項"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-102-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x + 7 = 12",
+        "explanationCaption": "両辺から 7 を引きます。",
+        "equationAfter": "x = 12 - 7",
+        "highlight": "- 7",
+        "choices": [
+          { "id": "a", "label": "両辺から 7 を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 7 を足す",   "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-102-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x = 12 - 7",
+        "explanationCaption": "x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 19", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-103",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: +の数を消す③",
+    "equation": "x + 6 = 14",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "+6 を消すには？",
+    "tags": ["特訓", "移項"],
+    "finalAnswer": "x = 8",
+    "steps": [
+      {
+        "id": "le-103-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x + 6 = 14",
+        "explanationCaption": "両辺から 6 を引きます。",
+        "equationAfter": "x = 14 - 6",
+        "highlight": "- 6",
+        "choices": [
+          { "id": "a", "label": "両辺から 6 を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 6 を足す",   "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-103-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x = 14 - 6",
+        "explanationCaption": "x = 8 です。",
+        "equationAfter": "x = 8",
+        "highlight": "x = 8",
+        "choices": [
+          { "id": "a", "label": "x = 8",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 20", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-201",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 2xをxにする①",
+    "equation": "3x = 12",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の前の数を 1 にしましょう。",
+    "tags": ["特訓", "係数"],
+    "finalAnswer": "x = 4",
+    "steps": [
+      {
+        "id": "le-201-s1",
+        "prompt": "x だけにするには？",
+        "equationBefore": "3x = 12",
+        "explanationCaption": "両辺を 3 で割ります。",
+        "equationAfter": "x = 4",
+        "highlight": "x = 4",
+        "choices": [
+          { "id": "a", "label": "両辺を 3 で割る",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 3 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-202",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 2xをxにする②",
+    "equation": "4x = 20",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の前の数を 1 にしましょう。",
+    "tags": ["特訓", "係数"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-202-s1",
+        "prompt": "x だけにするには？",
+        "equationBefore": "4x = 20",
+        "explanationCaption": "両辺を 4 で割ります。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "両辺を 4 で割る",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 4 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-203",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 2xをxにする③",
+    "equation": "5x = 35",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の前の数を 1 にしましょう。",
+    "tags": ["特訓", "係数"],
+    "finalAnswer": "x = 7",
+    "steps": [
+      {
+        "id": "le-203-s1",
+        "prompt": "x だけにするには？",
+        "equationBefore": "5x = 35",
+        "explanationCaption": "両辺を 5 で割ります。",
+        "equationAfter": "x = 7",
+        "highlight": "x = 7",
+        "choices": [
+          { "id": "a", "label": "両辺を 5 で割る",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 5 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  }
+]

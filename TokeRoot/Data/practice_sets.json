@@ -1,0 +1,32 @@
+[
+  {
+    "id": "set-remove-constant",
+    "title": "+の数を消す練習",
+    "mistakeTagId": "remove-constant",
+    "problemIds": ["le-101", "le-102", "le-103"]
+  },
+  {
+    "id": "set-isolate-2x",
+    "title": "2xをxにする練習",
+    "mistakeTagId": "isolate-2x-to-x",
+    "problemIds": ["le-201", "le-202", "le-203"]
+  },
+  {
+    "id": "set-transpose-sign",
+    "title": "符号を変えて移項する練習",
+    "mistakeTagId": "transpose-sign",
+    "problemIds": ["le-101", "le-201", "le-102"]
+  },
+  {
+    "id": "set-balance",
+    "title": "両辺に同じことをする練習",
+    "mistakeTagId": "balance-both-sides",
+    "problemIds": ["le-101", "le-201", "le-102"]
+  },
+  {
+    "id": "set-modeling",
+    "title": "短い文を式にする練習",
+    "mistakeTagId": "word-problem-modeling",
+    "problemIds": ["le-005", "le-101", "le-102"]
+  }
+]
