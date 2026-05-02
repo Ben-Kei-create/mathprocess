@@ -107,6 +107,12 @@ struct RouteEngine {
     // MARK: Continue target
 
     /// What should the home 「つづきから」 button open?
+    /// Logic:
+    ///  1. Onboarding / diagnosis if not yet done.
+    ///  2. If the last problem still isn't solved, return to it.
+    ///  3. Otherwise return the next-up problem in the active unit
+    ///     (lowest difficulty that the user hasn't cleared yet).
+    ///  4. Otherwise fall back to the recommended practice set or unit select.
     func continueTarget() -> ContinueTarget {
         if !store.profile.hasCompletedOnboarding {
             return .onboarding
@@ -115,8 +121,13 @@ struct RouteEngine {
             return .diagnosis(unitId: "g1-linear-eq")
         }
         if let pid = store.lastProblemId,
-           let _ = data.problem(id: pid) {
+           let _ = data.problem(id: pid),
+           !store.isSolved(pid) {
             return .problem(id: pid)
+        }
+        let unitId = store.lastUnitId ?? "g1-linear-eq"
+        if let next = nextUnsolvedProblem(in: unitId) {
+            return .problem(id: next.id)
         }
         if let setId = store.profile.diagnosisRecommendedSetId,
            let set = data.practiceSet(id: setId),
@@ -129,6 +140,31 @@ struct RouteEngine {
         return .unitSelect
     }
 
+    /// Difficulty-graded next problem: pick the lowest-difficulty
+    /// uncleared problem in the unit. Within the same difficulty, the
+    /// first by JSON order.
+    func nextUnsolvedProblem(in unitId: String) -> Problem? {
+        data.problems(in: unitId)
+            .filter { !store.isSolved($0.id) }
+            .min { ($0.difficulty, $0.id) < ($1.difficulty, $1.id) }
+    }
+
+    /// Highest difficulty the user has already cleared in the unit.
+    func clearedDifficulty(in unitId: String) -> Int {
+        data.problems(in: unitId)
+            .filter { store.isSolved($0.id) }
+            .map(\.difficulty)
+            .max() ?? 0
+    }
+
+    /// Is this problem unlocked? (gate by difficulty: must clear at least
+    /// one problem at every strictly lower difficulty in the same unit.)
+    func isUnlocked(_ problem: Problem) -> Bool {
+        if problem.difficulty <= 1 { return true }
+        let cleared = clearedDifficulty(in: problem.unitId)
+        return cleared >= problem.difficulty - 1
+    }
+
     /// 「今日のおすすめ」 short caption.
     func todaysRecommendation() -> String {
         if let tagId = store.topStuckTagId(),
@@ -138,6 +174,11 @@ struct RouteEngine {
         }
         if !store.profile.hasCompletedDiagnosis {
             return "ルート診断テスト（5問・約3分）"
+        }
+        let unitId = store.lastUnitId ?? "g1-linear-eq"
+        if let next = nextUnsolvedProblem(in: unitId),
+           let unit = data.unit(id: unitId) {
+            return "\(unit.title)：Lv.\(next.difficulty) 「\(next.title)」"
         }
         return "一次方程式：基本ステップ 3問"
     }

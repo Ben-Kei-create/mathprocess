@@ -1,6 +1,6 @@
 [
-  { "id": "g1-seifu",       "grade": "中1", "title": "正負の数",       "subtitle": null, "status": "comingSoon", "order": 1 },
-  { "id": "g1-mojishiki",   "grade": "中1", "title": "文字式",          "subtitle": null, "status": "comingSoon", "order": 2 },
+  { "id": "g1-seifu",       "grade": "中1", "title": "正負の数",       "subtitle": "負の数の足し算・引き算・かけ算・わり算", "status": "available",  "order": 1 },
+  { "id": "g1-mojishiki",   "grade": "中1", "title": "文字式",          "subtitle": "同類項をまとめる・分配法則", "status": "available",  "order": 2 },
   { "id": "g1-linear-eq",   "grade": "中1", "title": "一次方程式",      "subtitle": "「次に何をする？」で解けるようになる", "status": "available", "order": 3 },
   { "id": "g1-hirei",       "grade": "中1", "title": "比例・反比例",    "subtitle": null, "status": "comingSoon", "order": 4 },
   { "id": "g1-zukei",       "grade": "中1", "title": "図形",            "subtitle": null, "status": "comingSoon", "order": 5 },

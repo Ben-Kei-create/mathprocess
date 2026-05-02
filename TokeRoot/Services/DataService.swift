@@ -17,12 +17,18 @@ final class DataService {
     private init() { loadAll() }
 
     func loadAll() {
-        units             = decode("units")                         ?? []
-        problems          = decode("problems_linear_eq")            ?? []
-        practiceSets      = decode("practice_sets")                 ?? []
-        mistakeTags       = decode("mistake_tags")                  ?? []
-        diagnosisProblems = decode("diagnosis_linear_eq")           ?? []
-        homeMessages      = decode("home_messages")                 ?? .empty
+        units = decode("units") ?? []
+
+        // Merge problem files. New units drop in here as additional files.
+        let linearEq:   [Problem] = decode("problems_linear_eq")  ?? []
+        let seifu:      [Problem] = decode("problems_seifu")      ?? []
+        let mojishiki:  [Problem] = decode("problems_mojishiki")  ?? []
+        problems = linearEq + seifu + mojishiki
+
+        practiceSets      = decode("practice_sets")       ?? []
+        mistakeTags       = decode("mistake_tags")        ?? []
+        diagnosisProblems = decode("diagnosis_linear_eq") ?? []
+        homeMessages      = decode("home_messages")       ?? .empty
     }
 
     // MARK: lookup helpers

@@ -1,0 +1,359 @@
+[
+  {
+    "id": "mj-001",
+    "unitId": "g1-mojishiki",
+    "title": "x の係数を読む",
+    "equation": "3x の x の前の数は？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の前の数を「係数」と言います。",
+    "tags": ["係数"],
+    "finalAnswer": "3",
+    "steps": [
+      {
+        "id": "mj-001-s1",
+        "prompt": "係数は？",
+        "equationBefore": "3x",
+        "explanationCaption": "x の前の数 3 が係数です。",
+        "equationAfter": "係数 = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "1", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-002",
+    "unitId": "g1-mojishiki",
+    "title": "x の係数（1の場合）",
+    "equation": "x の係数は？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x は「1x」と同じです。",
+    "tags": ["係数"],
+    "finalAnswer": "1",
+    "steps": [
+      {
+        "id": "mj-002-s1",
+        "prompt": "係数は？",
+        "equationBefore": "x",
+        "explanationCaption": "x は 1x と同じ。係数は 1 です。",
+        "equationAfter": "係数 = 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "0", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "x", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-101",
+    "unitId": "g1-mojishiki",
+    "title": "同類項をまとめる①",
+    "equation": "3x + 2x = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の数だけを足します。",
+    "tags": ["同類項"],
+    "finalAnswer": "5x",
+    "steps": [
+      {
+        "id": "mj-101-s1",
+        "prompt": "係数を足すと？",
+        "equationBefore": "3x + 2x",
+        "explanationCaption": "3 + 2 = 5。x はそのまま残ります。",
+        "equationAfter": "= 5x",
+        "highlight": "5x",
+        "choices": [
+          { "id": "a", "label": "5x",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "5",   "isCorrect": false, "mistakeTagId": "like-terms" },
+          { "id": "c", "label": "5x²", "isCorrect": false, "mistakeTagId": "like-terms" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-102",
+    "unitId": "g1-mojishiki",
+    "title": "同類項をまとめる②",
+    "equation": "5x - 2x = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の数だけを引きます。",
+    "tags": ["同類項"],
+    "finalAnswer": "3x",
+    "steps": [
+      {
+        "id": "mj-102-s1",
+        "prompt": "計算すると？",
+        "equationBefore": "5x - 2x",
+        "explanationCaption": "5 - 2 = 3。x はそのまま残ります。",
+        "equationAfter": "= 3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3x", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3",  "isCorrect": false, "mistakeTagId": "like-terms" },
+          { "id": "c", "label": "7x", "isCorrect": false, "mistakeTagId": "like-terms" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-103",
+    "unitId": "g1-mojishiki",
+    "title": "同類項をまとめる③（定数も）",
+    "equation": "3x + 4 + 2x = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x のあるものと、ないものを別に集めます。",
+    "tags": ["同類項"],
+    "finalAnswer": "5x + 4",
+    "steps": [
+      {
+        "id": "mj-103-s1",
+        "prompt": "x のあるところは？",
+        "equationBefore": "3x + 4 + 2x",
+        "explanationCaption": "3x + 2x = 5x。4 は別にしておきます。",
+        "equationAfter": "5x + 4",
+        "highlight": "5x",
+        "choices": [
+          { "id": "a", "label": "5x（4 は別）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "9x",          "isCorrect": false, "mistakeTagId": "like-terms" },
+          { "id": "c", "label": "9",           "isCorrect": false, "mistakeTagId": "like-terms" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-201",
+    "unitId": "g1-mojishiki",
+    "title": "同類項（マイナス）",
+    "equation": "-3x + 5x = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "係数だけを足します。",
+    "tags": ["同類項", "符号"],
+    "finalAnswer": "2x",
+    "steps": [
+      {
+        "id": "mj-201-s1",
+        "prompt": "係数を足すと？",
+        "equationBefore": "-3x + 5x",
+        "explanationCaption": "-3 + 5 = 2 です。",
+        "equationAfter": "= 2x",
+        "highlight": "2x",
+        "choices": [
+          { "id": "a", "label": "2x",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "8x",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-2x", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-202",
+    "unitId": "g1-mojishiki",
+    "title": "x と定数を分ける",
+    "equation": "2x + 3 + 4x - 5 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x のあるもの、ないもの を別々に集めます。",
+    "tags": ["同類項"],
+    "finalAnswer": "6x - 2",
+    "steps": [
+      {
+        "id": "mj-202-s1",
+        "prompt": "x のところは？",
+        "equationBefore": "2x + 3 + 4x - 5",
+        "explanationCaption": "2x + 4x = 6x。",
+        "equationAfter": "6x + 3 - 5",
+        "highlight": "6x",
+        "choices": [
+          { "id": "a", "label": "6x", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "6",  "isCorrect": false, "mistakeTagId": "like-terms" }
+        ]
+      },
+      {
+        "id": "mj-202-s2",
+        "prompt": "定数のところは？",
+        "equationBefore": "6x + 3 - 5",
+        "explanationCaption": "3 - 5 = -2 です。",
+        "equationAfter": "6x - 2",
+        "highlight": "- 2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "8",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "2",  "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-401",
+    "unitId": "g1-mojishiki",
+    "title": "分配法則①",
+    "equation": "2(x + 3) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "外の数を中の全部にかけます。",
+    "tags": ["分配法則"],
+    "finalAnswer": "2x + 6",
+    "steps": [
+      {
+        "id": "mj-401-s1",
+        "prompt": "2 を中の何にかける？",
+        "equationBefore": "2(x + 3)",
+        "explanationCaption": "x にも 3 にも 2 をかけます。",
+        "equationAfter": "2 × x + 2 × 3",
+        "highlight": "2 × 3",
+        "choices": [
+          { "id": "a", "label": "x と 3 の両方", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x だけ",        "isCorrect": false, "mistakeTagId": "distribute-paren" },
+          { "id": "c", "label": "3 だけ",        "isCorrect": false, "mistakeTagId": "distribute-paren" }
+        ]
+      },
+      {
+        "id": "mj-401-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "2 × x + 2 × 3",
+        "explanationCaption": "2x + 6 になります。",
+        "equationAfter": "= 2x + 6",
+        "highlight": "2x + 6",
+        "choices": [
+          { "id": "a", "label": "2x + 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2x + 3", "isCorrect": false, "mistakeTagId": "distribute-paren" },
+          { "id": "c", "label": "x + 6",  "isCorrect": false, "mistakeTagId": "distribute-paren" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-402",
+    "unitId": "g1-mojishiki",
+    "title": "分配法則②（マイナス）",
+    "equation": "-3(x - 2) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "中の符号も -3 で変わります。",
+    "tags": ["分配法則", "符号"],
+    "finalAnswer": "-3x + 6",
+    "steps": [
+      {
+        "id": "mj-402-s1",
+        "prompt": "-3 と x の積は？",
+        "equationBefore": "-3(x - 2)",
+        "explanationCaption": "-3 × x = -3x。",
+        "equationAfter": "-3x + (-3) × (-2)",
+        "highlight": "-3x",
+        "choices": [
+          { "id": "a", "label": "-3x", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x",  "isCorrect": false, "mistakeTagId": "distribute-paren" }
+        ]
+      },
+      {
+        "id": "mj-402-s2",
+        "prompt": "(-3) × (-2) は？",
+        "equationBefore": "-3x + (-3) × (-2)",
+        "explanationCaption": "「- × -」は「+」、3 × 2 = 6 なので +6 です。",
+        "equationAfter": "= -3x + 6",
+        "highlight": "+ 6",
+        "choices": [
+          { "id": "a", "label": "+6",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-6",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" },
+          { "id": "c", "label": "+5",  "isCorrect": false, "mistakeTagId": "distribute-paren" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-403",
+    "unitId": "g1-mojishiki",
+    "title": "分配法則 + 同類項",
+    "equation": "2(x + 1) + 3x = ?",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "まず分配、次に同類項をまとめます。",
+    "tags": ["分配法則", "同類項"],
+    "finalAnswer": "5x + 2",
+    "steps": [
+      {
+        "id": "mj-403-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "2(x + 1) + 3x",
+        "explanationCaption": "カッコを外します。",
+        "equationAfter": "2x + 2 + 3x",
+        "highlight": "2x + 2",
+        "choices": [
+          { "id": "a", "label": "カッコを外す",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x を足す",     "isCorrect": false, "mistakeTagId": "distribute-paren" }
+        ]
+      },
+      {
+        "id": "mj-403-s2",
+        "prompt": "x のところは？",
+        "equationBefore": "2x + 2 + 3x",
+        "explanationCaption": "2x + 3x = 5x。2 はそのまま。",
+        "equationAfter": "= 5x + 2",
+        "highlight": "5x + 2",
+        "choices": [
+          { "id": "a", "label": "5x + 2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "5x + 5", "isCorrect": false, "mistakeTagId": "like-terms" },
+          { "id": "c", "label": "7x",     "isCorrect": false, "mistakeTagId": "like-terms" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-501",
+    "unitId": "g1-mojishiki",
+    "title": "代入してみる",
+    "equation": "x = 3 のとき、2x + 1 の値は？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x のところに 3 を入れます。",
+    "tags": ["代入"],
+    "finalAnswer": "7",
+    "steps": [
+      {
+        "id": "mj-501-s1",
+        "prompt": "x のところに 3 を入れると？",
+        "equationBefore": "2x + 1",
+        "explanationCaption": "x に 3 を入れて 2 × 3 + 1 になります。",
+        "equationAfter": "2 × 3 + 1",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "2 × 3 + 1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2 + 3 + 1", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "23 + 1",    "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "mj-501-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "2 × 3 + 1",
+        "explanationCaption": "6 + 1 = 7 です。",
+        "equationAfter": "= 7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "7", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "8", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  }
+]

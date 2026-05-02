@@ -28,5 +28,49 @@
     "label": "文章を式にする",
     "kindMessage": "文章を式にするところでつまずきやすいです。短い文の式立て3問で十分です。",
     "practiceSetId": "set-modeling"
+  },
+  {
+    "id": "distribute-paren",
+    "label": "カッコを外す（分配法則）",
+    "kindMessage": "カッコの中の符号も忘れがちです。短い分配の練習を3問だけしましょう。",
+    "practiceSetId": "set-distribute"
+  },
+  {
+    "id": "clear-fraction",
+    "label": "分数を消す",
+    "kindMessage": "分母を消すために、両辺に同じ数をかけます。3問だけ練習すれば自然にできます。",
+    "practiceSetId": "set-clear-fraction"
+  },
+
+  {
+    "id": "neg-add-sign",
+    "label": "負の数のたし算",
+    "kindMessage": "符号を入れ替えるところで迷いやすいです。短い練習を3問だけしましょう。",
+    "practiceSetId": "set-neg-add"
+  },
+  {
+    "id": "neg-sub-sign",
+    "label": "負の数のひき算",
+    "kindMessage": "「-(-) = +」 で迷いやすいです。3問だけ練習すれば慣れます。",
+    "practiceSetId": "set-neg-sub"
+  },
+  {
+    "id": "neg-mul-sign",
+    "label": "符号のかけ算ルール",
+    "kindMessage": "「-×- = +」「-×+ = -」のルールが固まると速くなります。3問だけ練習しましょう。",
+    "practiceSetId": "set-neg-mul"
+  },
+
+  {
+    "id": "like-terms",
+    "label": "同類項をまとめる",
+    "kindMessage": "x の数だけを足して、定数項は別に足します。短い練習を3問だけしましょう。",
+    "practiceSetId": "set-like-terms"
+  },
+  {
+    "id": "coef-of-x",
+    "label": "x の係数",
+    "kindMessage": "x の前の数をきちんと拾えると、計算がスッと進みます。3問だけ練習しましょう。",
+    "practiceSetId": "set-coef"
   }
 ]

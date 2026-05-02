@@ -11,9 +11,10 @@ struct ReviewBoxView: View {
                 .navigationTitle("ふくしゅう箱")
                 .navigationDestination(for: HomeView.NavTarget.self) { target in
                     switch target {
-                    case .problem(let id):     ProblemView(problemId: id)
-                    case .practice(let id):    PracticeRunnerView(practiceSetId: id)
-                    case .unitSelect:          UnitSelectView()
+                    case .problem(let id):       ProblemView(problemId: id)
+                    case .practice(let id):      PracticeRunnerView(practiceSetId: id)
+                    case .unitSelect:            UnitSelectView()
+                    case .unitDetail(let id):    UnitDetailView(unitId: id)
                     }
                 }
         }

@@ -36,10 +36,12 @@ struct UnitSelectView: View {
         }
     }
 
+    @Environment(ProgressStore.self) private var store
+
     @ViewBuilder
     private func row(for unit: MathUnit) -> some View {
         if unit.isAvailable {
-            NavigationLink(value: HomeView.NavTarget.problem(firstProblemId(unit))) {
+            NavigationLink(value: HomeView.NavTarget.unitDetail(unit.id)) {
                 rowBody(unit)
             }
             .buttonStyle(.plain)
@@ -60,6 +62,11 @@ struct UnitSelectView: View {
                         .font(TKType.caption)
                         .foregroundStyle(TKColor.textSecondary)
                 }
+                if unit.isAvailable {
+                    Text(progressLabel(for: unit))
+                        .font(TKType.caption)
+                        .foregroundStyle(TKColor.success)
+                }
             }
             Spacer()
             Text(unit.status.label)
@@ -79,7 +86,9 @@ struct UnitSelectView: View {
         )
     }
 
-    private func firstProblemId(_ unit: MathUnit) -> String {
-        DataService.shared.problems(in: unit.id).first?.id ?? ""
+    private func progressLabel(for unit: MathUnit) -> String {
+        let problems = DataService.shared.problems(in: unit.id)
+        let done = problems.filter { store.isSolved($0.id) }.count
+        return "\(done) / \(problems.count) クリア"
     }
 }

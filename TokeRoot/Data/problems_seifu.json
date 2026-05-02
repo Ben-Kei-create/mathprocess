@@ -1,0 +1,608 @@
+[
+  {
+    "id": "sf-001",
+    "unitId": "g1-seifu",
+    "title": "正の数のたし算",
+    "equation": "3 + 5 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "そのまま足すだけです。",
+    "tags": ["たし算"],
+    "finalAnswer": "8",
+    "steps": [
+      {
+        "id": "sf-001-s1",
+        "prompt": "計算すると？",
+        "equationBefore": "3 + 5",
+        "explanationCaption": "3 + 5 = 8 です。",
+        "equationAfter": "= 8",
+        "highlight": "= 8",
+        "choices": [
+          { "id": "a", "label": "8",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "15", "isCorrect": false, "mistakeTagId": "neg-mul-sign" },
+          { "id": "c", "label": "2",  "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-002",
+    "unitId": "g1-seifu",
+    "title": "負の数のたし算（同符号）",
+    "equation": "(-3) + (-5) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "どちらも - なので、絶対値を足してから - をつけます。",
+    "tags": ["たし算", "符号"],
+    "finalAnswer": "-8",
+    "steps": [
+      {
+        "id": "sf-002-s1",
+        "prompt": "符号はどうなる？",
+        "equationBefore": "(-3) + (-5)",
+        "explanationCaption": "両方とも - なので、答えも - になります。",
+        "equationAfter": "-(3 + 5)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "-（マイナス）",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "+（プラス）",    "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "符号は決まらない","isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      },
+      {
+        "id": "sf-002-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "-(3 + 5)",
+        "explanationCaption": "3 + 5 = 8 なので、答えは -8 です。",
+        "equationAfter": "= -8",
+        "highlight": "-8",
+        "choices": [
+          { "id": "a", "label": "-8", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "8",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-2", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-003",
+    "unitId": "g1-seifu",
+    "title": "負の数のたし算（異符号）",
+    "equation": "3 + (-5) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "符号がちがうので、大きい方から小さい方を引いて、大きい方の符号をつけます。",
+    "tags": ["たし算", "符号"],
+    "finalAnswer": "-2",
+    "steps": [
+      {
+        "id": "sf-003-s1",
+        "prompt": "絶対値が大きいのは？",
+        "equationBefore": "3 + (-5)",
+        "explanationCaption": "5 の方が 3 より大きいので、答えは - になります。",
+        "equationAfter": "-(5 - 3)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "-5（だから答えは -）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "+3（だから答えは +）", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      },
+      {
+        "id": "sf-003-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "-(5 - 3)",
+        "explanationCaption": "5 - 3 = 2、符号は - なので、答えは -2 です。",
+        "equationAfter": "= -2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-8", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-004",
+    "unitId": "g1-seifu",
+    "title": "負の数のひき算",
+    "equation": "5 - (-3) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「-(-)」は「+」になります。",
+    "tags": ["ひき算", "符号"],
+    "finalAnswer": "8",
+    "steps": [
+      {
+        "id": "sf-004-s1",
+        "prompt": "「-(-3)」 は？",
+        "equationBefore": "5 - (-3)",
+        "explanationCaption": "「-(-3)」は「+3」になります。",
+        "equationAfter": "5 + 3",
+        "highlight": "+ 3",
+        "choices": [
+          { "id": "a", "label": "+3 になる",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-3 のまま",   "isCorrect": false, "mistakeTagId": "neg-sub-sign" },
+          { "id": "c", "label": "0 になる",    "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      },
+      {
+        "id": "sf-004-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "5 + 3",
+        "explanationCaption": "5 + 3 = 8 です。",
+        "equationAfter": "= 8",
+        "highlight": "= 8",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-005",
+    "unitId": "g1-seifu",
+    "title": "ひき算の符号 (-) - (-)",
+    "equation": "(-7) - (-2) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "「-(-2)」は「+2」になります。",
+    "tags": ["ひき算", "符号"],
+    "finalAnswer": "-5",
+    "steps": [
+      {
+        "id": "sf-005-s1",
+        "prompt": "符号はどうなる？",
+        "equationBefore": "(-7) - (-2)",
+        "explanationCaption": "「-(-2)」は「+2」なので、(-7) + 2 になります。",
+        "equationAfter": "(-7) + 2",
+        "highlight": "+ 2",
+        "choices": [
+          { "id": "a", "label": "(-7) + 2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "(-7) - 2", "isCorrect": false, "mistakeTagId": "neg-sub-sign" },
+          { "id": "c", "label": "7 - 2",    "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      },
+      {
+        "id": "sf-005-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(-7) + 2",
+        "explanationCaption": "符号がちがうので 7 - 2 = 5、大きい方が - なので -5 です。",
+        "equationAfter": "= -5",
+        "highlight": "-5",
+        "choices": [
+          { "id": "a", "label": "-5", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "5",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-9", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-006",
+    "unitId": "g1-seifu",
+    "title": "符号のかけ算（-×-）",
+    "equation": "(-3) × (-4) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「- × -」は「+」になります。",
+    "tags": ["かけ算", "符号"],
+    "finalAnswer": "12",
+    "steps": [
+      {
+        "id": "sf-006-s1",
+        "prompt": "符号はどうなる？",
+        "equationBefore": "(-3) × (-4)",
+        "explanationCaption": "「- × -」は「+」になります。",
+        "equationAfter": "+ (3 × 4)",
+        "highlight": "+",
+        "choices": [
+          { "id": "a", "label": "+（プラス）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-（マイナス）","isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      },
+      {
+        "id": "sf-006-s2",
+        "prompt": "答えは？",
+        "equationBefore": "+ (3 × 4)",
+        "explanationCaption": "3 × 4 = 12 で、符号は + なので 12 です。",
+        "equationAfter": "= 12",
+        "highlight": "= 12",
+        "choices": [
+          { "id": "a", "label": "12",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-12", "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-007",
+    "unitId": "g1-seifu",
+    "title": "符号のかけ算（+×-）",
+    "equation": "6 × (-3) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「+ × -」は「-」になります。",
+    "tags": ["かけ算", "符号"],
+    "finalAnswer": "-18",
+    "steps": [
+      {
+        "id": "sf-007-s1",
+        "prompt": "符号はどうなる？",
+        "equationBefore": "6 × (-3)",
+        "explanationCaption": "「+ × -」は「-」になります。",
+        "equationAfter": "-(6 × 3)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "-（マイナス）", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "+（プラス）",   "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      },
+      {
+        "id": "sf-007-s2",
+        "prompt": "答えは？",
+        "equationBefore": "-(6 × 3)",
+        "explanationCaption": "6 × 3 = 18、符号は - なので -18 です。",
+        "equationAfter": "= -18",
+        "highlight": "-18",
+        "choices": [
+          { "id": "a", "label": "-18", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "18",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-008",
+    "unitId": "g1-seifu",
+    "title": "符号のわり算",
+    "equation": "(-12) ÷ 3 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "わり算もかけ算と同じ符号ルールです。",
+    "tags": ["わり算", "符号"],
+    "finalAnswer": "-4",
+    "steps": [
+      {
+        "id": "sf-008-s1",
+        "prompt": "符号はどうなる？",
+        "equationBefore": "(-12) ÷ 3",
+        "explanationCaption": "「- ÷ +」は「-」になります。",
+        "equationAfter": "-(12 ÷ 3)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "-",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "+",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      },
+      {
+        "id": "sf-008-s2",
+        "prompt": "答えは？",
+        "equationBefore": "-(12 ÷ 3)",
+        "explanationCaption": "12 ÷ 3 = 4、符号は - なので -4 です。",
+        "equationAfter": "= -4",
+        "highlight": "-4",
+        "choices": [
+          { "id": "a", "label": "-4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "4",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-009",
+    "unitId": "g1-seifu",
+    "title": "混合計算（たし算→ひき算）",
+    "equation": "5 + (-2) - 4 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "前から順に処理しましょう。",
+    "tags": ["混合", "符号"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-009-s1",
+        "prompt": "まず 5 + (-2) は？",
+        "equationBefore": "5 + (-2) - 4",
+        "explanationCaption": "5 + (-2) = 5 - 2 = 3 です。",
+        "equationAfter": "3 - 4",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "7",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-3", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      },
+      {
+        "id": "sf-009-s2",
+        "prompt": "3 - 4 は？",
+        "equationBefore": "3 - 4",
+        "explanationCaption": "符号がちがうので 4 - 3 = 1、大きい方が - なので -1 です。",
+        "equationAfter": "= -1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "1",  "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-7", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-010",
+    "unitId": "g1-seifu",
+    "title": "混合計算（かけ算混じり）",
+    "equation": "(-2) × 3 + 5 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "かけ算→たし算 の順で処理します。",
+    "tags": ["混合", "順序"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-010-s1",
+        "prompt": "先にやるのは？",
+        "equationBefore": "(-2) × 3 + 5",
+        "explanationCaption": "かけ算を先にします。",
+        "equationAfter": "-6 + 5",
+        "highlight": "-6",
+        "choices": [
+          { "id": "a", "label": "(-2) × 3 → -6",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3 + 5 → 8",      "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      },
+      {
+        "id": "sf-010-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "-6 + 5",
+        "explanationCaption": "符号がちがうので 6 - 5 = 1、大きい方が - なので -1 です。",
+        "equationAfter": "= -1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "1",   "isCorrect": false, "mistakeTagId": "neg-add-sign" },
+          { "id": "c", "label": "-11", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-101",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のたし算①",
+    "equation": "(-2) + (-6) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "両方 - なので、絶対値を足して - をつけます。",
+    "tags": ["特訓", "たし算"],
+    "finalAnswer": "-8",
+    "steps": [
+      {
+        "id": "sf-101-s1",
+        "prompt": "答えは？",
+        "equationBefore": "(-2) + (-6)",
+        "explanationCaption": "両方 - なので、2 + 6 = 8、答えは -8 です。",
+        "equationAfter": "= -8",
+        "highlight": "-8",
+        "choices": [
+          { "id": "a", "label": "-8", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "8",  "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-102",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のたし算②",
+    "equation": "(-4) + 7 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "符号がちがうので、大きい方から小さい方を引きます。",
+    "tags": ["特訓", "たし算"],
+    "finalAnswer": "3",
+    "steps": [
+      {
+        "id": "sf-102-s1",
+        "prompt": "答えは？",
+        "equationBefore": "(-4) + 7",
+        "explanationCaption": "7 - 4 = 3、大きい方が + なので 3 です。",
+        "equationAfter": "= 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-3", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-103",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のたし算③",
+    "equation": "9 + (-9) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "同じ大きさで符号がちがうので、答えは 0 です。",
+    "tags": ["特訓", "たし算"],
+    "finalAnswer": "0",
+    "steps": [
+      {
+        "id": "sf-103-s1",
+        "prompt": "答えは？",
+        "equationBefore": "9 + (-9)",
+        "explanationCaption": "同じ大きさで符号がちがうので、ちょうど 0 になります。",
+        "equationAfter": "= 0",
+        "highlight": "0",
+        "choices": [
+          { "id": "a", "label": "0",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "18",  "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-201",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のひき算①",
+    "equation": "4 - (-2) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「-(-2)」は「+2」。",
+    "tags": ["特訓", "ひき算"],
+    "finalAnswer": "6",
+    "steps": [
+      {
+        "id": "sf-201-s1",
+        "prompt": "答えは？",
+        "equationBefore": "4 - (-2)",
+        "explanationCaption": "4 + 2 = 6 です。",
+        "equationAfter": "= 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-202",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のひき算②",
+    "equation": "(-3) - (-7) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "(-3) + 7 になります。",
+    "tags": ["特訓", "ひき算"],
+    "finalAnswer": "4",
+    "steps": [
+      {
+        "id": "sf-202-s1",
+        "prompt": "答えは？",
+        "equationBefore": "(-3) - (-7)",
+        "explanationCaption": "(-3) + 7 = 7 - 3 = 4 です。",
+        "equationAfter": "= 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-4",  "isCorrect": false, "mistakeTagId": "neg-sub-sign" },
+          { "id": "c", "label": "-10", "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-203",
+    "unitId": "g1-seifu",
+    "title": "特訓: 負の数のひき算③",
+    "equation": "8 - (-3) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「-(-3)」は「+3」。",
+    "tags": ["特訓", "ひき算"],
+    "finalAnswer": "11",
+    "steps": [
+      {
+        "id": "sf-203-s1",
+        "prompt": "答えは？",
+        "equationBefore": "8 - (-3)",
+        "explanationCaption": "8 + 3 = 11 です。",
+        "equationAfter": "= 11",
+        "highlight": "11",
+        "choices": [
+          { "id": "a", "label": "11", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "5",  "isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-301",
+    "unitId": "g1-seifu",
+    "title": "特訓: 符号のかけ算①",
+    "equation": "(-2) × 5 = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「-×+」は「-」。",
+    "tags": ["特訓", "かけ算"],
+    "finalAnswer": "-10",
+    "steps": [
+      {
+        "id": "sf-301-s1",
+        "prompt": "答えは？",
+        "equationBefore": "(-2) × 5",
+        "explanationCaption": "2 × 5 = 10、符号は - なので -10 です。",
+        "equationAfter": "= -10",
+        "highlight": "-10",
+        "choices": [
+          { "id": "a", "label": "-10", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "10",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-302",
+    "unitId": "g1-seifu",
+    "title": "特訓: 符号のかけ算②",
+    "equation": "(-4) × (-3) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「-×-」は「+」。",
+    "tags": ["特訓", "かけ算"],
+    "finalAnswer": "12",
+    "steps": [
+      {
+        "id": "sf-302-s1",
+        "prompt": "答えは？",
+        "equationBefore": "(-4) × (-3)",
+        "explanationCaption": "4 × 3 = 12、符号は + なので 12 です。",
+        "equationAfter": "= 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-12", "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf-303",
+    "unitId": "g1-seifu",
+    "title": "特訓: 符号のかけ算③",
+    "equation": "7 × (-2) = ?",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「+×-」は「-」。",
+    "tags": ["特訓", "かけ算"],
+    "finalAnswer": "-14",
+    "steps": [
+      {
+        "id": "sf-303-s1",
+        "prompt": "答えは？",
+        "equationBefore": "7 × (-2)",
+        "explanationCaption": "7 × 2 = 14、符号は - なので -14 です。",
+        "equationAfter": "= -14",
+        "highlight": "-14",
+        "choices": [
+          { "id": "a", "label": "-14", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "14",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  }
+]

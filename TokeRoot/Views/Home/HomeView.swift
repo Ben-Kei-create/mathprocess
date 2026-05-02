@@ -7,6 +7,7 @@ struct HomeView: View {
 
     enum NavTarget: Hashable {
         case unitSelect
+        case unitDetail(String)
         case problem(String)
         case practice(String)
     }
@@ -32,9 +33,10 @@ struct HomeView: View {
             .background(TKColor.background.ignoresSafeArea())
             .navigationDestination(for: NavTarget.self) { target in
                 switch target {
-                case .unitSelect:           UnitSelectView()
-                case .problem(let id):      ProblemView(problemId: id)
-                case .practice(let setId):  PracticeRunnerView(practiceSetId: setId)
+                case .unitSelect:               UnitSelectView()
+                case .unitDetail(let unitId):   UnitDetailView(unitId: unitId)
+                case .problem(let id):          ProblemView(problemId: id)
+                case .practice(let setId):      PracticeRunnerView(practiceSetId: setId)
                 }
             }
         }
@@ -131,7 +133,10 @@ struct HomeView: View {
     private func openContinue() {
         switch engine.continueTarget() {
         case .onboarding, .diagnosis, .unitSelect:
-            path.append(NavTarget.unitSelect)
+            // Show the active unit's difficulty ladder rather than the
+            // raw unit list — that's where progression is visible.
+            let unitId = ProgressStore.shared.lastUnitId ?? "g1-linear-eq"
+            path.append(NavTarget.unitDetail(unitId))
         case .problem(let id):
             path.append(NavTarget.problem(id))
         }

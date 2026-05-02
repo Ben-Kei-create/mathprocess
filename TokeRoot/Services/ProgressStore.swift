@@ -13,7 +13,9 @@ final class ProgressStore {
     var lastProblemId: String? = nil
     var lastUnitId: String? = nil
     var memoText: String = ""
-    var stuckCounts: [String: Int] = [:]   // mistakeTagId -> count
+    var stuckCounts: [String: Int] = [:]    // mistakeTagId -> count
+    var solvedProblemIds: Set<String> = []  // problems cleared at least once
+    var attemptsByProblem: [String: Int] = [:]  // problemId -> attempts
 
     private let key = "tokeroot.progress.v1"
 
@@ -29,6 +31,8 @@ final class ProgressStore {
         var lastUnitId: String?
         var memoText: String
         var stuckCounts: [String: Int]
+        var solvedProblemIds: [String]?       // optional for old snapshots
+        var attemptsByProblem: [String: Int]?
     }
 
     func save() {
@@ -39,7 +43,9 @@ final class ProgressStore {
             lastProblemId: lastProblemId,
             lastUnitId: lastUnitId,
             memoText: memoText,
-            stuckCounts: stuckCounts
+            stuckCounts: stuckCounts,
+            solvedProblemIds: Array(solvedProblemIds),
+            attemptsByProblem: attemptsByProblem
         )
         if let data = try? JSONEncoder().encode(snap) {
             UserDefaults.standard.set(data, forKey: key)
@@ -58,6 +64,8 @@ final class ProgressStore {
         self.lastUnitId = snap.lastUnitId
         self.memoText = snap.memoText
         self.stuckCounts = snap.stuckCounts
+        self.solvedProblemIds = Set(snap.solvedProblemIds ?? [])
+        self.attemptsByProblem = snap.attemptsByProblem ?? [:]
     }
 
     // MARK: mutations
@@ -66,6 +74,10 @@ final class ProgressStore {
         events.append(e)
         for tag in e.mistakeTagIds {
             stuckCounts[tag, default: 0] += 1
+        }
+        attemptsByProblem[e.problemId, default: 0] += 1
+        if e.outcome == .solved || e.outcome == .practice {
+            solvedProblemIds.insert(e.problemId)
         }
         lastProblemId = e.problemId
         lastUnitId = e.unitId
@@ -93,7 +105,13 @@ final class ProgressStore {
         lastUnitId = nil
         memoText = ""
         stuckCounts = [:]
+        solvedProblemIds = []
+        attemptsByProblem = [:]
         save()
+    }
+
+    func isSolved(_ problemId: String) -> Bool {
+        solvedProblemIds.contains(problemId)
     }
 
     // MARK: derived
