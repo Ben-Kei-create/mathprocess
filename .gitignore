@@ -1,21 +1,19 @@
 # macOS
 .DS_Store
 
-# Xcode
-*.xcodeproj/
+# Xcode user-specific files (track the .xcodeproj itself but ignore user state)
 xcuserdata/
-*.xcworkspace/xcuserdata/
-build/
-DerivedData/
 *.xcuserstate
 *.moved-aside
+build/
+DerivedData/
 
 # Swift Package Manager
 .build/
 .swiftpm/
 Package.resolved
 
-# CocoaPods (unused but ignored)
+# CocoaPods (unused)
 Pods/
 
 # fastlane
