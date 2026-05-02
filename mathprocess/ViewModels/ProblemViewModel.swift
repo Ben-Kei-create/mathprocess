@@ -28,6 +28,11 @@ final class ProblemViewModel {
     var encounteredMistakeTagIds: Set<String> = []
     var showHint: Bool = false
 
+    /// True if recording this solve raised the user's max cleared
+    /// difficulty in this unit. Drives the "新しい考え方が1つ増えた" banner.
+    var didAdvanceLevel: Bool = false
+    var advancedLevelConcept: String? = nil
+
     init(problem: Problem,
          store: ProgressStore = .shared,
          data: DataService = .shared) {
@@ -123,6 +128,9 @@ final class ProblemViewModel {
     }
 
     private func recordOutcome() {
+        let engine = RouteEngine(data: data, store: store)
+        let beforeLv = engine.clearedDifficulty(in: problem.unitId)
+
         let elapsed = Int(Date().timeIntervalSince(startedAt))
         let event = StudyEvent(
             id: UUID(),
@@ -134,5 +142,11 @@ final class ProblemViewModel {
             mistakeTagIds: Array(encounteredMistakeTagIds)
         )
         store.recordEvent(event)
+
+        let afterLv = engine.clearedDifficulty(in: problem.unitId)
+        if afterLv > beforeLv {
+            didAdvanceLevel = true
+            advancedLevelConcept = data.levelConcept(unitId: problem.unitId, level: afterLv)
+        }
     }
 }

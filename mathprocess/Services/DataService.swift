@@ -13,6 +13,8 @@ final class DataService {
     private(set) var mistakeTags: [MistakeTag] = []
     private(set) var diagnosisProblems: [DiagnosisProblem] = []
     private(set) var homeMessages: HomeMessages = .empty
+    /// `[unitId: [difficulty (as String): concept message]]`
+    private(set) var levelConcepts: [String: [String: String]] = [:]
 
     private init() { loadAll() }
 
@@ -29,6 +31,14 @@ final class DataService {
         mistakeTags       = decode("mistake_tags")        ?? []
         diagnosisProblems = decode("diagnosis_linear_eq") ?? []
         homeMessages      = decode("home_messages")       ?? .empty
+        levelConcepts     = decode("level_concepts")      ?? [:]
+    }
+
+    /// Concept text introduced at this difficulty level. e.g.
+    /// `levelConcept(unitId: "g1-linear-eq", level: 3)` →
+    /// 「両辺に x があるときの移項」
+    func levelConcept(unitId: String, level: Int) -> String? {
+        levelConcepts[unitId]?["\(level)"]
     }
 
     // MARK: lookup helpers

@@ -159,6 +159,10 @@ struct ProblemView: View {
             }
         case .solved:
             VStack(spacing: TKSpacing.sm) {
+                if vm.didAdvanceLevel {
+                    LevelUpBanner(level: vm.problem.difficulty,
+                                  concept: vm.advancedLevelConcept)
+                }
                 PrimaryButton(onSolved == nil ? "おわる" : "次の問題へ",
                               systemImage: "checkmark") {
                     if let onSolved { onSolved() } else { dismiss() }
