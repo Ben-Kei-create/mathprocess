@@ -7,7 +7,7 @@
 
   { "id": "g2-shiki",       "grade": "中2", "title": "式の計算",        "subtitle": null, "status": "comingSoon", "order": 1 },
   { "id": "g2-renritsu",    "grade": "中2", "title": "連立方程式",      "subtitle": null, "status": "comingSoon", "order": 2 },
-  { "id": "g2-linear-fn",   "grade": "中2", "title": "一次関数",        "subtitle": null, "status": "comingSoon", "order": 3 },
+  { "id": "g2-linear-fn",   "grade": "中2", "title": "一次関数",        "subtitle": "y = ax + b で考える", "status": "available",  "order": 3 },
   { "id": "g2-shomei",      "grade": "中2", "title": "図形の証明",      "subtitle": null, "status": "comingSoon", "order": 4 },
   { "id": "g2-kakuritsu",   "grade": "中2", "title": "確率",            "subtitle": null, "status": "comingSoon", "order": 5 },
 

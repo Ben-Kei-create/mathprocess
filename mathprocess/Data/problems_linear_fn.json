@@ -1,0 +1,340 @@
+[
+  {
+    "id": "lf-001",
+    "unitId": "g2-linear-fn",
+    "title": "y = ax + b の意味",
+    "equation": "y = 2x + 3",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "a が傾き、b が切片です。",
+    "tags": ["定義"],
+    "finalAnswer": "傾き 2 / 切片 3",
+    "steps": [
+      {
+        "id": "lf-001-s1",
+        "prompt": "傾きはどれ？",
+        "equationBefore": "y = 2x + 3",
+        "explanationCaption": "x の前の数 2 が傾きです。",
+        "equationAfter": "傾き = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3",  "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "x",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-001-s2",
+        "prompt": "切片はどれ？",
+        "equationBefore": "y = 2x + 3",
+        "explanationCaption": "定数の 3 が切片（y軸との交点）です。",
+        "equationAfter": "切片 = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-002",
+    "unitId": "g2-linear-fn",
+    "title": "切片を読む（マイナス）",
+    "equation": "y = 3x - 4",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「+ b」の b が切片。マイナスならそのまま負の値。",
+    "tags": ["定義"],
+    "finalAnswer": "切片 -4",
+    "steps": [
+      {
+        "id": "lf-002-s1",
+        "prompt": "切片は？",
+        "equationBefore": "y = 3x - 4",
+        "explanationCaption": "y = 3x + (-4) と読みます。",
+        "equationAfter": "切片 = -4",
+        "highlight": "-4",
+        "choices": [
+          { "id": "a", "label": "-4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "4",  "isCorrect": false, "mistakeTagId": "neg-sub-sign" },
+          { "id": "c", "label": "3",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-003",
+    "unitId": "g2-linear-fn",
+    "title": "x = 0 のとき y は？",
+    "equation": "y = 2x + 5",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x = 0 を代入すると、y = 切片 になります。",
+    "tags": ["代入", "切片"],
+    "finalAnswer": "y = 5",
+    "steps": [
+      {
+        "id": "lf-003-s1",
+        "prompt": "x = 0 を入れると？",
+        "equationBefore": "y = 2x + 5",
+        "explanationCaption": "x = 0 を入れると 2 × 0 + 5 = 5 です。",
+        "equationAfter": "y = 5",
+        "highlight": "y = 5",
+        "choices": [
+          { "id": "a", "label": "y = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "y = 0",  "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "y = 7",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-004",
+    "unitId": "g2-linear-fn",
+    "title": "x が増えると y は？",
+    "equation": "y = 3x + 1",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x が 1 増えると、y は a だけ増えます。",
+    "tags": ["傾き"],
+    "finalAnswer": "y は 3 増える",
+    "steps": [
+      {
+        "id": "lf-004-s1",
+        "prompt": "x が 1 増えると、y は？",
+        "equationBefore": "y = 3x + 1",
+        "explanationCaption": "傾き 3 のぶんだけ y は増えます。",
+        "equationAfter": "y は 3 増える",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3 増える", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "1 増える", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "4 増える", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-005",
+    "unitId": "g2-linear-fn",
+    "title": "値の代入（負の傾き）",
+    "equation": "y = -2x + 6, x = 3 のとき",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "符号に気をつけて代入します。",
+    "tags": ["代入", "符号"],
+    "finalAnswer": "y = 0",
+    "steps": [
+      {
+        "id": "lf-005-s1",
+        "prompt": "代入すると？",
+        "equationBefore": "y = -2x + 6",
+        "explanationCaption": "x に 3 を入れて -2 × 3 + 6 になります。",
+        "equationAfter": "-2 × 3 + 6",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "-2 × 3 + 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "-2 + 3 + 6", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-005-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "-2 × 3 + 6",
+        "explanationCaption": "-6 + 6 = 0 です。",
+        "equationAfter": "y = 0",
+        "highlight": "y = 0",
+        "choices": [
+          { "id": "a", "label": "y = 0",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "y = 12",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" },
+          { "id": "c", "label": "y = -12", "isCorrect": false, "mistakeTagId": "neg-add-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-006",
+    "unitId": "g2-linear-fn",
+    "title": "切片からグラフを読む",
+    "equation": "y軸との交点が (0, 4)。傾き 1。式は？",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "切片は y 軸との交点の y 座標。",
+    "tags": ["グラフ", "式立て"],
+    "finalAnswer": "y = x + 4",
+    "steps": [
+      {
+        "id": "lf-006-s1",
+        "prompt": "切片は？",
+        "equationBefore": "y軸との交点 (0, 4)",
+        "explanationCaption": "x = 0 のときの y、つまり 4 が切片です。",
+        "equationAfter": "切片 b = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "b = 4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "b = 0", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-006-s2",
+        "prompt": "式は？",
+        "equationBefore": "傾き 1, 切片 4",
+        "explanationCaption": "y = 1x + 4 → y = x + 4 です。",
+        "equationAfter": "y = x + 4",
+        "highlight": "y = x + 4",
+        "choices": [
+          { "id": "a", "label": "y = x + 4",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "y = 4x + 1",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-007",
+    "unitId": "g2-linear-fn",
+    "title": "2 点から式を作る①",
+    "equation": "(0, 1) と (2, 5) を通る直線",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "(0, 1) は切片そのもの。傾き = (yの差) ÷ (xの差)。",
+    "tags": ["2点", "傾き", "切片"],
+    "finalAnswer": "y = 2x + 1",
+    "steps": [
+      {
+        "id": "lf-007-s1",
+        "prompt": "切片は？",
+        "equationBefore": "(0, 1) を通る",
+        "explanationCaption": "x = 0 のとき y = 1 なので、切片は 1。",
+        "equationAfter": "b = 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "b = 1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "b = 0", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-007-s2",
+        "prompt": "傾きは？",
+        "equationBefore": "(0, 1) → (2, 5)",
+        "explanationCaption": "y の増加 4 ÷ x の増加 2 = 2。",
+        "equationAfter": "a = 2",
+        "highlight": "a = 2",
+        "choices": [
+          { "id": "a", "label": "a = 2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "a = 4", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "a = 1/2", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-007-s3",
+        "prompt": "式は？",
+        "equationBefore": "a = 2, b = 1",
+        "explanationCaption": "y = 2x + 1 です。",
+        "equationAfter": "y = 2x + 1",
+        "highlight": "y = 2x + 1",
+        "choices": [
+          { "id": "a", "label": "y = 2x + 1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 2",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-008",
+    "unitId": "g2-linear-fn",
+    "title": "2 点から式を作る②（負の傾き）",
+    "equation": "(1, 4) と (3, 0) を通る直線",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "傾きは (yの変化) ÷ (xの変化)。x が右に動いて y が下がるなら負。",
+    "tags": ["2点", "傾き", "符号"],
+    "finalAnswer": "y = -2x + 6",
+    "steps": [
+      {
+        "id": "lf-008-s1",
+        "prompt": "傾きは？",
+        "equationBefore": "(1, 4) → (3, 0)",
+        "explanationCaption": "y は 4 → 0 で -4 減少、x は 1 → 3 で 2 増加。-4 ÷ 2 = -2。",
+        "equationAfter": "a = -2",
+        "highlight": "a = -2",
+        "choices": [
+          { "id": "a", "label": "a = -2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "a = 2",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" },
+          { "id": "c", "label": "a = -4", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-008-s2",
+        "prompt": "切片を求めよう",
+        "equationBefore": "y = -2x + b, (1, 4) を通る",
+        "explanationCaption": "4 = -2 × 1 + b → b = 6。",
+        "equationAfter": "b = 6",
+        "highlight": "b = 6",
+        "choices": [
+          { "id": "a", "label": "b = 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "b = 2", "isCorrect": false, "mistakeTagId": "transpose-sign" },
+          { "id": "c", "label": "b = -6","isCorrect": false, "mistakeTagId": "neg-sub-sign" }
+        ]
+      },
+      {
+        "id": "lf-008-s3",
+        "prompt": "式は？",
+        "equationBefore": "a = -2, b = 6",
+        "explanationCaption": "y = -2x + 6 です。",
+        "equationAfter": "y = -2x + 6",
+        "highlight": "y = -2x + 6",
+        "choices": [
+          { "id": "a", "label": "y = -2x + 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "y = 2x - 6",  "isCorrect": false, "mistakeTagId": "neg-mul-sign" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-009",
+    "unitId": "g2-linear-fn",
+    "title": "x 軸との交点（y = 0）",
+    "equation": "y = 2x - 6 と x 軸の交点",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x 軸との交点では y = 0。",
+    "tags": ["グラフ", "方程式"],
+    "finalAnswer": "x = 3",
+    "steps": [
+      {
+        "id": "lf-009-s1",
+        "prompt": "y = 0 を入れると？",
+        "equationBefore": "y = 2x - 6",
+        "explanationCaption": "0 = 2x - 6 という方程式になります。",
+        "equationAfter": "0 = 2x - 6",
+        "highlight": "0 = 2x - 6",
+        "choices": [
+          { "id": "a", "label": "0 = 2x - 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 0",      "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "lf-009-s2",
+        "prompt": "x は？",
+        "equationBefore": "0 = 2x - 6",
+        "explanationCaption": "2x = 6 → x = 3。",
+        "equationAfter": "x = 3",
+        "highlight": "x = 3",
+        "choices": [
+          { "id": "a", "label": "x = 3",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = -3", "isCorrect": false, "mistakeTagId": "transpose-sign" },
+          { "id": "c", "label": "x = 12", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  }
+]
