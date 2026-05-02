@@ -72,5 +72,30 @@
     "label": "x の係数",
     "kindMessage": "x の前の数をきちんと拾えると、計算がスッと進みます。3問だけ練習しましょう。",
     "practiceSetId": "set-coef"
+  },
+
+  {
+    "id": "sqrt-pm",
+    "label": "平方根は ± 両方",
+    "kindMessage": "x² = ◯ の答えは ±◯ です。プラス側だけにならないように、3問だけ練習しましょう。",
+    "practiceSetId": "set-sqrt-pm"
+  },
+  {
+    "id": "factor-sign",
+    "label": "因数分解の符号",
+    "kindMessage": "「かけて◯・たして◯」を、符号も含めて見るのが鍵です。3問だけ練習しましょう。",
+    "practiceSetId": "set-factor-sign"
+  },
+  {
+    "id": "ab-zero",
+    "label": "AB=0 の使い方",
+    "kindMessage": "「かけて 0」 = 「どちらかが 0」。両方の解を出すのを忘れないように、3問だけ練習しましょう。",
+    "practiceSetId": "set-ab-zero"
+  },
+  {
+    "id": "discriminant",
+    "label": "解の公式の代入",
+    "kindMessage": "符号と b² の計算で迷いやすいです。3問だけ判別式の計算を練習しましょう。",
+    "practiceSetId": "set-discriminant"
   }
 ]

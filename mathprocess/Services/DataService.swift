@@ -26,7 +26,8 @@ final class DataService {
         let seifu:      [Problem] = decode("problems_seifu")      ?? []
         let mojishiki:  [Problem] = decode("problems_mojishiki")  ?? []
         let linearFn:   [Problem] = decode("problems_linear_fn")  ?? []
-        problems = linearEq + seifu + mojishiki + linearFn
+        let quadEq:     [Problem] = decode("problems_quad_eq")    ?? []
+        problems = linearEq + seifu + mojishiki + linearFn + quadEq
 
         practiceSets      = decode("practice_sets")       ?? []
         mistakeTags       = decode("mistake_tags")        ?? []

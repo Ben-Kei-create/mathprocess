@@ -13,7 +13,7 @@
 
   { "id": "g3-tenkai",      "grade": "中3", "title": "展開・因数分解",  "subtitle": null, "status": "comingSoon", "order": 1 },
   { "id": "g3-heihokon",    "grade": "中3", "title": "平方根",          "subtitle": null, "status": "comingSoon", "order": 2 },
-  { "id": "g3-quad-eq",     "grade": "中3", "title": "二次方程式",      "subtitle": null, "status": "comingSoon", "order": 3 },
+  { "id": "g3-quad-eq",     "grade": "中3", "title": "二次方程式",      "subtitle": "平方根・因数分解・解の公式", "status": "available",  "order": 3 },
   { "id": "g3-quad-fn",     "grade": "中3", "title": "二次関数",        "subtitle": null, "status": "comingSoon", "order": 4 },
   { "id": "g3-soji",        "grade": "中3", "title": "相似",            "subtitle": null, "status": "comingSoon", "order": 5 },
   { "id": "g3-sanpei",      "grade": "中3", "title": "三平方の定理",    "subtitle": null, "status": "comingSoon", "order": 6 }

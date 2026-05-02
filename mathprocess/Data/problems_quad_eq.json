@@ -1,0 +1,349 @@
+[
+  {
+    "id": "qe-001",
+    "unitId": "g3-quad-eq",
+    "title": "平方根で解く①",
+    "equation": "x² = 9",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「2乗して 9」になる数は ±3。",
+    "tags": ["平方根"],
+    "finalAnswer": "x = ±3",
+    "steps": [
+      {
+        "id": "qe-001-s1",
+        "prompt": "答えは？",
+        "equationBefore": "x² = 9",
+        "explanationCaption": "2乗して 9 になるのは 3 と -3。",
+        "equationAfter": "x = ±3",
+        "highlight": "±3",
+        "choices": [
+          { "id": "a", "label": "x = ±3", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 3",  "isCorrect": false, "mistakeTagId": "sqrt-pm" },
+          { "id": "c", "label": "x = 9/2","isCorrect": false, "mistakeTagId": "sqrt-pm" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-002",
+    "unitId": "g3-quad-eq",
+    "title": "平方根で解く②",
+    "equation": "x² = 25",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "2乗して 25 → ±5。",
+    "tags": ["平方根"],
+    "finalAnswer": "x = ±5",
+    "steps": [
+      {
+        "id": "qe-002-s1",
+        "prompt": "答えは？",
+        "equationBefore": "x² = 25",
+        "explanationCaption": "2乗して 25 になるのは 5 と -5。",
+        "equationAfter": "x = ±5",
+        "highlight": "±5",
+        "choices": [
+          { "id": "a", "label": "x = ±5", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 5",  "isCorrect": false, "mistakeTagId": "sqrt-pm" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-003",
+    "unitId": "g3-quad-eq",
+    "title": "平方根で解く（移項あり）",
+    "equation": "x² - 16 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "まず -16 を右に移します。",
+    "tags": ["平方根", "移項"],
+    "finalAnswer": "x = ±4",
+    "steps": [
+      {
+        "id": "qe-003-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x² - 16 = 0",
+        "explanationCaption": "両辺に 16 を足します。",
+        "equationAfter": "x² = 16",
+        "highlight": "x² = 16",
+        "choices": [
+          { "id": "a", "label": "両辺に 16 を足す", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺を 16 で割る", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "qe-003-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x² = 16",
+        "explanationCaption": "2乗して 16 → ±4。",
+        "equationAfter": "x = ±4",
+        "highlight": "±4",
+        "choices": [
+          { "id": "a", "label": "x = ±4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 8",  "isCorrect": false, "mistakeTagId": "sqrt-pm" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-004",
+    "unitId": "g3-quad-eq",
+    "title": "因数分解で解く①",
+    "equation": "(x - 2)(x - 3) = 0",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「かけて 0」 = 「どちらかが 0」。",
+    "tags": ["因数分解", "AB=0"],
+    "finalAnswer": "x = 2, 3",
+    "steps": [
+      {
+        "id": "qe-004-s1",
+        "prompt": "x はどちら？",
+        "equationBefore": "(x - 2)(x - 3) = 0",
+        "explanationCaption": "x - 2 = 0 または x - 3 = 0。",
+        "equationAfter": "x = 2 または x = 3",
+        "highlight": "x = 2 または x = 3",
+        "choices": [
+          { "id": "a", "label": "x = 2, 3",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = -2, -3","isCorrect": false, "mistakeTagId": "factor-sign" },
+          { "id": "c", "label": "x = 5",     "isCorrect": false, "mistakeTagId": "ab-zero" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-005",
+    "unitId": "g3-quad-eq",
+    "title": "因数分解で解く②",
+    "equation": "x² - 5x + 6 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "かけて 6・たして -5 → -2 と -3。",
+    "tags": ["因数分解"],
+    "finalAnswer": "x = 2, 3",
+    "steps": [
+      {
+        "id": "qe-005-s1",
+        "prompt": "因数分解すると？",
+        "equationBefore": "x² - 5x + 6 = 0",
+        "explanationCaption": "かけて 6・たして -5 → -2 と -3。",
+        "equationAfter": "(x - 2)(x - 3) = 0",
+        "highlight": "(x - 2)(x - 3)",
+        "choices": [
+          { "id": "a", "label": "(x - 2)(x - 3)", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "(x + 2)(x + 3)", "isCorrect": false, "mistakeTagId": "factor-sign" },
+          { "id": "c", "label": "(x - 1)(x - 6)", "isCorrect": false, "mistakeTagId": "factor-sign" }
+        ]
+      },
+      {
+        "id": "qe-005-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(x - 2)(x - 3) = 0",
+        "explanationCaption": "x = 2 または x = 3。",
+        "equationAfter": "x = 2, 3",
+        "highlight": "x = 2, 3",
+        "choices": [
+          { "id": "a", "label": "x = 2, 3",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = -2, -3", "isCorrect": false, "mistakeTagId": "ab-zero" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-006",
+    "unitId": "g3-quad-eq",
+    "title": "因数分解で解く（共通因数）",
+    "equation": "x² - 4x = 0",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x が共通。",
+    "tags": ["因数分解", "共通因数"],
+    "finalAnswer": "x = 0, 4",
+    "steps": [
+      {
+        "id": "qe-006-s1",
+        "prompt": "因数分解すると？",
+        "equationBefore": "x² - 4x = 0",
+        "explanationCaption": "x が共通なので x(x - 4)。",
+        "equationAfter": "x(x - 4) = 0",
+        "highlight": "x(x - 4)",
+        "choices": [
+          { "id": "a", "label": "x(x - 4)",   "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x²(x - 4)",  "isCorrect": false, "mistakeTagId": "factor-sign" }
+        ]
+      },
+      {
+        "id": "qe-006-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x(x - 4) = 0",
+        "explanationCaption": "x = 0 または x = 4。",
+        "equationAfter": "x = 0, 4",
+        "highlight": "x = 0, 4",
+        "choices": [
+          { "id": "a", "label": "x = 0, 4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 4",    "isCorrect": false, "mistakeTagId": "ab-zero" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-007",
+    "unitId": "g3-quad-eq",
+    "title": "解の公式①",
+    "equation": "x² + 3x + 1 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "ax² + bx + c = 0 の a,b,c を見つける。",
+    "tags": ["解の公式"],
+    "finalAnswer": "x = (-3 ± √5) / 2",
+    "steps": [
+      {
+        "id": "qe-007-s1",
+        "prompt": "a, b, c は？",
+        "equationBefore": "x² + 3x + 1 = 0",
+        "explanationCaption": "x² の係数 = 1, x の係数 = 3, 定数 = 1。",
+        "equationAfter": "a = 1, b = 3, c = 1",
+        "highlight": "a = 1, b = 3, c = 1",
+        "choices": [
+          { "id": "a", "label": "a = 1, b = 3, c = 1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "a = 0, b = 3, c = 1", "isCorrect": false, "mistakeTagId": "coef-of-x" },
+          { "id": "c", "label": "a = 1, b = 1, c = 3", "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "qe-007-s2",
+        "prompt": "判別式 b² - 4ac は？",
+        "equationBefore": "a = 1, b = 3, c = 1",
+        "explanationCaption": "3² - 4·1·1 = 9 - 4 = 5。",
+        "equationAfter": "判別式 = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "13", "isCorrect": false, "mistakeTagId": "discriminant" },
+          { "id": "c", "label": "-5", "isCorrect": false, "mistakeTagId": "discriminant" }
+        ]
+      },
+      {
+        "id": "qe-007-s3",
+        "prompt": "答えは？",
+        "equationBefore": "判別式 = 5, b = 3, a = 1",
+        "explanationCaption": "x = (-b ± √(判別式)) / 2a に代入。",
+        "equationAfter": "x = (-3 ± √5) / 2",
+        "highlight": "(-3 ± √5) / 2",
+        "choices": [
+          { "id": "a", "label": "x = (-3 ± √5) / 2", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = (3 ± √5) / 2",  "isCorrect": false, "mistakeTagId": "discriminant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-008",
+    "unitId": "g3-quad-eq",
+    "title": "解の公式②（割れる）",
+    "equation": "2x² - 3x + 1 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "判別式が平方数なら整数で割れる。",
+    "tags": ["解の公式"],
+    "finalAnswer": "x = 1, 1/2",
+    "steps": [
+      {
+        "id": "qe-008-s1",
+        "prompt": "a, b, c は？",
+        "equationBefore": "2x² - 3x + 1 = 0",
+        "explanationCaption": "a = 2, b = -3, c = 1。",
+        "equationAfter": "a = 2, b = -3, c = 1",
+        "highlight": "a = 2, b = -3, c = 1",
+        "choices": [
+          { "id": "a", "label": "a = 2, b = -3, c = 1", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "a = 2, b = 3, c = 1",  "isCorrect": false, "mistakeTagId": "coef-of-x" }
+        ]
+      },
+      {
+        "id": "qe-008-s2",
+        "prompt": "判別式は？",
+        "equationBefore": "a = 2, b = -3, c = 1",
+        "explanationCaption": "(-3)² - 4·2·1 = 9 - 8 = 1。",
+        "equationAfter": "判別式 = 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "17", "isCorrect": false, "mistakeTagId": "discriminant" }
+        ]
+      },
+      {
+        "id": "qe-008-s3",
+        "prompt": "答えは？",
+        "equationBefore": "判別式 = 1, b = -3, a = 2",
+        "explanationCaption": "x = (3 ± 1) / 4 → x = 1 または x = 1/2。",
+        "equationAfter": "x = 1, 1/2",
+        "highlight": "x = 1, 1/2",
+        "choices": [
+          { "id": "a", "label": "x = 1, 1/2",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = -1, -1/2","isCorrect": false, "mistakeTagId": "discriminant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "qe-009",
+    "unitId": "g3-quad-eq",
+    "title": "二次方程式の文章題",
+    "equation": "ある正の数を2乗してから 5 を引くと 20 になる。その数は？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "正の数を x として式を立てる。最後に「正の数」だけ残す。",
+    "tags": ["文章題"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "qe-009-s1",
+        "prompt": "式は？",
+        "equationBefore": "x² から 5 を引くと 20",
+        "explanationCaption": "x² - 5 = 20。",
+        "equationAfter": "x² - 5 = 20",
+        "highlight": "x² - 5 = 20",
+        "choices": [
+          { "id": "a", "label": "x² - 5 = 20",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2x - 5 = 20",  "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-009-s2",
+        "prompt": "x² は？",
+        "equationBefore": "x² - 5 = 20",
+        "explanationCaption": "両辺に 5 を足して x² = 25。",
+        "equationAfter": "x² = 25",
+        "highlight": "x² = 25",
+        "choices": [
+          { "id": "a", "label": "x² = 25", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x² = 15", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "qe-009-s3",
+        "prompt": "答えは？",
+        "equationBefore": "x² = 25 (正の数)",
+        "explanationCaption": "x = ±5、正の数なので x = 5。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = ±5", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x = -5", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      }
+    ]
+  }
+]

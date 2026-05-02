@@ -12,5 +12,10 @@
   { "id": "set-neg-mul",          "title": "符号のかけ算 練習",     "mistakeTagId": "neg-mul-sign",          "problemIds": ["sf-301", "sf-302", "sf-303"] },
 
   { "id": "set-like-terms",       "title": "同類項をまとめる練習",  "mistakeTagId": "like-terms",            "problemIds": ["mj-101", "mj-102", "mj-103"] },
-  { "id": "set-coef",             "title": "x の係数の練習",         "mistakeTagId": "coef-of-x",             "problemIds": ["mj-101", "mj-201", "mj-202"] }
+  { "id": "set-coef",             "title": "x の係数の練習",         "mistakeTagId": "coef-of-x",             "problemIds": ["mj-101", "mj-201", "mj-202"] },
+
+  { "id": "set-sqrt-pm",          "title": "x² = ◯ を ±で答える練習","mistakeTagId": "sqrt-pm",               "problemIds": ["qe-001", "qe-002", "qe-003"] },
+  { "id": "set-factor-sign",      "title": "因数分解の符号の練習",   "mistakeTagId": "factor-sign",           "problemIds": ["qe-005", "qe-004", "qe-006"] },
+  { "id": "set-ab-zero",          "title": "AB=0 の練習",            "mistakeTagId": "ab-zero",               "problemIds": ["qe-004", "qe-006", "qe-005"] },
+  { "id": "set-discriminant",     "title": "解の公式の代入練習",     "mistakeTagId": "discriminant",          "problemIds": ["qe-007", "qe-008", "qe-007"] }
 ]
