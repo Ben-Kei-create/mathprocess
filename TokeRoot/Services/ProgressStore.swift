@@ -13,6 +13,7 @@ final class ProgressStore {
     var lastProblemId: String? = nil
     var lastUnitId: String? = nil
     var memoText: String = ""
+    var memoDrawingData: Data = Data()
     var stuckCounts: [String: Int] = [:]   // mistakeTagId -> count
 
     private let key = "tokeroot.progress.v1"
@@ -28,7 +29,38 @@ final class ProgressStore {
         var lastProblemId: String?
         var lastUnitId: String?
         var memoText: String
+        var memoDrawingData: Data
         var stuckCounts: [String: Int]
+
+        init(profile: UserProfile,
+             events: [StudyEvent],
+             reviewItems: [ReviewItem],
+             lastProblemId: String?,
+             lastUnitId: String?,
+             memoText: String,
+             memoDrawingData: Data,
+             stuckCounts: [String: Int]) {
+            self.profile = profile
+            self.events = events
+            self.reviewItems = reviewItems
+            self.lastProblemId = lastProblemId
+            self.lastUnitId = lastUnitId
+            self.memoText = memoText
+            self.memoDrawingData = memoDrawingData
+            self.stuckCounts = stuckCounts
+        }
+
+        init(from decoder: Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            profile = try c.decode(UserProfile.self, forKey: .profile)
+            events = try c.decode([StudyEvent].self, forKey: .events)
+            reviewItems = try c.decode([ReviewItem].self, forKey: .reviewItems)
+            lastProblemId = try c.decodeIfPresent(String.self, forKey: .lastProblemId)
+            lastUnitId = try c.decodeIfPresent(String.self, forKey: .lastUnitId)
+            memoText = try c.decode(String.self, forKey: .memoText)
+            memoDrawingData = try c.decodeIfPresent(Data.self, forKey: .memoDrawingData) ?? Data()
+            stuckCounts = try c.decode([String: Int].self, forKey: .stuckCounts)
+        }
     }
 
     func save() {
@@ -39,6 +71,7 @@ final class ProgressStore {
             lastProblemId: lastProblemId,
             lastUnitId: lastUnitId,
             memoText: memoText,
+            memoDrawingData: memoDrawingData,
             stuckCounts: stuckCounts
         )
         if let data = try? JSONEncoder().encode(snap) {
@@ -57,6 +90,7 @@ final class ProgressStore {
         self.lastProblemId = snap.lastProblemId
         self.lastUnitId = snap.lastUnitId
         self.memoText = snap.memoText
+        self.memoDrawingData = snap.memoDrawingData
         self.stuckCounts = snap.stuckCounts
     }
 
@@ -92,6 +126,7 @@ final class ProgressStore {
         lastProblemId = nil
         lastUnitId = nil
         memoText = ""
+        memoDrawingData = Data()
         stuckCounts = [:]
         save()
     }
