@@ -141,12 +141,21 @@ struct RouteEngine {
     }
 
     /// Difficulty-graded next problem: pick the lowest-difficulty
-    /// uncleared problem in the unit. Within the same difficulty, the
-    /// first by JSON order.
+    /// uncleared problem in the unit. Within the same difficulty,
+    /// prefer the least-attempted, breaking ties at random — so the
+    /// student doesn't see the exact same Lv.2 problem every session.
     func nextUnsolvedProblem(in unitId: String) -> Problem? {
-        data.problems(in: unitId)
+        let unsolved = data.problems(in: unitId)
             .filter { !store.isSolved($0.id) }
-            .min { ($0.difficulty, $0.id) < ($1.difficulty, $1.id) }
+        guard let minLv = unsolved.map(\.difficulty).min() else { return nil }
+        let group = unsolved.filter { $0.difficulty == minLv }
+        let minAttempts = group
+            .map { store.attemptsByProblem[$0.id, default: 0] }
+            .min() ?? 0
+        let leastTried = group.filter {
+            store.attemptsByProblem[$0.id, default: 0] == minAttempts
+        }
+        return leastTried.randomElement() ?? group.first
     }
 
     /// Highest difficulty the user has already cleared in the unit.
