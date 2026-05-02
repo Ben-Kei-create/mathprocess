@@ -166,12 +166,17 @@ struct RouteEngine {
             .max() ?? 0
     }
 
-    /// Is this problem unlocked? (gate by difficulty: must clear at least
-    /// one problem at every strictly lower difficulty in the same unit.)
+    /// Is this problem unlocked?
+    /// - Base gate: cleared at least one problem at every strictly
+    ///   lower difficulty in the same unit.
+    /// - Bonus gate: 3 perfect-streak clears at Lv.N opens Lv.(N+2)
+    ///   even if Lv.(N+1) hasn't been touched.
     func isUnlocked(_ problem: Problem) -> Bool {
         if problem.difficulty <= 1 { return true }
         let cleared = clearedDifficulty(in: problem.unitId)
-        return cleared >= problem.difficulty - 1
+        if cleared >= problem.difficulty - 1 { return true }
+        let bonus = store.bonusUnlockedLevels[problem.unitId] ?? 0
+        return bonus >= problem.difficulty
     }
 
     /// 「今日のおすすめ」 short caption.

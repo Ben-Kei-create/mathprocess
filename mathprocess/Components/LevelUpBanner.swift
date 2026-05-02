@@ -35,3 +35,37 @@ struct LevelUpBanner: View {
         .transition(.opacity.combined(with: .scale(scale: 0.97)))
     }
 }
+
+/// Stronger celebration: 3-perfect-clear streak just opened a level
+/// ahead of schedule. Warm gold to set it apart from the regular
+/// LevelUpBanner.
+struct BonusUnlockBanner: View {
+    let earnedAtLv: Int
+    let unlockedLv: Int
+
+    var body: some View {
+        HStack(alignment: .top, spacing: TKSpacing.sm) {
+            Image(systemName: "star.fill")
+                .font(.system(size: 18, weight: .medium))
+                .foregroundStyle(TKColor.warm)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Lv.\(earnedAtLv) を3問連続ノーミスでクリア")
+                    .font(TKType.subtitle)
+                    .foregroundStyle(TKColor.warm)
+                Text("ボーナス：Lv.\(unlockedLv) を早回しで開放しました。")
+                    .font(TKType.body)
+                    .foregroundStyle(TKColor.textPrimary)
+            }
+            Spacer()
+        }
+        .padding(TKSpacing.md)
+        .frame(maxWidth: .infinity)
+        .background(TKColor.warmSoft)
+        .clipShape(RoundedRectangle(cornerRadius: TKRadius.medium))
+        .overlay(
+            RoundedRectangle(cornerRadius: TKRadius.medium)
+                .stroke(TKColor.warm.opacity(0.4), lineWidth: 1)
+        )
+        .transition(.opacity.combined(with: .scale(scale: 0.97)))
+    }
+}

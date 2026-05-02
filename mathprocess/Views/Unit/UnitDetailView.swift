@@ -80,6 +80,8 @@ struct UnitDetailView: View {
     private func levelSection(_ lv: Int) -> some View {
         let group = unitProblems.filter { $0.difficulty == lv }
         let unlocked = group.first.map { engine.isUnlocked($0) } ?? false
+        let bonusOpened = (store.bonusUnlockedLevels[unitId] ?? 0) >= lv
+            && engine.clearedDifficulty(in: unitId) < lv - 1
         VStack(alignment: .leading, spacing: TKSpacing.sm) {
             HStack(spacing: TKSpacing.sm) {
                 Text("Lv.\(lv)")
@@ -89,7 +91,14 @@ struct UnitDetailView: View {
                     .font(TKType.caption)
                     .foregroundStyle(TKColor.textSecondary)
                 Spacer()
-                if !unlocked {
+                if bonusOpened {
+                    HStack(spacing: 2) {
+                        Image(systemName: "star.fill")
+                        Text("ボーナス開放")
+                    }
+                    .font(TKType.caption)
+                    .foregroundStyle(TKColor.warm)
+                } else if !unlocked {
                     Image(systemName: "lock.fill")
                         .foregroundStyle(TKColor.textTertiary)
                 }

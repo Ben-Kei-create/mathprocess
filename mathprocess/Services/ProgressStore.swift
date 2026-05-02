@@ -18,6 +18,23 @@ final class ProgressStore {
     var solvedProblemIds: Set<String> = []      // problems cleared at least once
     var attemptsByProblem: [String: Int] = [:]  // problemId -> attempt count
 
+    /// Per (unitId : level) consecutive perfect (no-mistake) clears.
+    /// Key format: `"unitId:lv"`. Reset on any non-perfect attempt.
+    var perfectStreakByUnitLv: [String: Int] = [:]
+    /// Per unit, the highest level early-unlocked by a 3-perfect bonus.
+    /// `bonusUnlockedLevels[unitId] = N` means Lv.N is open even if the
+    /// base difficulty gate hasn't been satisfied.
+    var bonusUnlockedLevels: [String: Int] = [:]
+    /// Transient (not persisted) one-shot signal: the last `recordEvent`
+    /// call just earned a bonus unlock. ProblemViewModel reads + clears.
+    var pendingBonus: PendingBonus? = nil
+
+    struct PendingBonus: Equatable {
+        let unitId: String
+        let earnedAtLv: Int   // the level the user was perfect at
+        let unlockedLv: Int   // the level newly opened (earnedAt + 2)
+    }
+
     private let key = "tokeroot.progress.v1"
 
     private init() { load() }
@@ -35,6 +52,8 @@ final class ProgressStore {
         var stuckCounts: [String: Int]
         var solvedProblemIds: [String]?
         var attemptsByProblem: [String: Int]?
+        var perfectStreakByUnitLv: [String: Int]?
+        var bonusUnlockedLevels: [String: Int]?
 
         init(profile: UserProfile,
              events: [StudyEvent],
@@ -45,7 +64,9 @@ final class ProgressStore {
              memoDrawingData: Data,
              stuckCounts: [String: Int],
              solvedProblemIds: [String],
-             attemptsByProblem: [String: Int]) {
+             attemptsByProblem: [String: Int],
+             perfectStreakByUnitLv: [String: Int],
+             bonusUnlockedLevels: [String: Int]) {
             self.profile = profile
             self.events = events
             self.reviewItems = reviewItems
@@ -56,20 +77,24 @@ final class ProgressStore {
             self.stuckCounts = stuckCounts
             self.solvedProblemIds = solvedProblemIds
             self.attemptsByProblem = attemptsByProblem
+            self.perfectStreakByUnitLv = perfectStreakByUnitLv
+            self.bonusUnlockedLevels = bonusUnlockedLevels
         }
 
         init(from decoder: Decoder) throws {
             let c = try decoder.container(keyedBy: CodingKeys.self)
-            profile           = try c.decode(UserProfile.self,           forKey: .profile)
-            events            = try c.decode([StudyEvent].self,          forKey: .events)
-            reviewItems       = try c.decode([ReviewItem].self,          forKey: .reviewItems)
-            lastProblemId     = try c.decodeIfPresent(String.self,       forKey: .lastProblemId)
-            lastUnitId        = try c.decodeIfPresent(String.self,       forKey: .lastUnitId)
-            memoText          = try c.decode(String.self,                forKey: .memoText)
-            memoDrawingData   = try c.decodeIfPresent(Data.self,         forKey: .memoDrawingData) ?? Data()
-            stuckCounts       = try c.decode([String: Int].self,         forKey: .stuckCounts)
-            solvedProblemIds  = try c.decodeIfPresent([String].self,     forKey: .solvedProblemIds)
-            attemptsByProblem = try c.decodeIfPresent([String: Int].self, forKey: .attemptsByProblem)
+            profile               = try c.decode(UserProfile.self,            forKey: .profile)
+            events                = try c.decode([StudyEvent].self,           forKey: .events)
+            reviewItems           = try c.decode([ReviewItem].self,           forKey: .reviewItems)
+            lastProblemId         = try c.decodeIfPresent(String.self,        forKey: .lastProblemId)
+            lastUnitId            = try c.decodeIfPresent(String.self,        forKey: .lastUnitId)
+            memoText              = try c.decode(String.self,                 forKey: .memoText)
+            memoDrawingData       = try c.decodeIfPresent(Data.self,          forKey: .memoDrawingData) ?? Data()
+            stuckCounts           = try c.decode([String: Int].self,          forKey: .stuckCounts)
+            solvedProblemIds      = try c.decodeIfPresent([String].self,      forKey: .solvedProblemIds)
+            attemptsByProblem     = try c.decodeIfPresent([String: Int].self, forKey: .attemptsByProblem)
+            perfectStreakByUnitLv = try c.decodeIfPresent([String: Int].self, forKey: .perfectStreakByUnitLv)
+            bonusUnlockedLevels   = try c.decodeIfPresent([String: Int].self, forKey: .bonusUnlockedLevels)
         }
     }
 
@@ -84,7 +109,9 @@ final class ProgressStore {
             memoDrawingData: memoDrawingData,
             stuckCounts: stuckCounts,
             solvedProblemIds: Array(solvedProblemIds),
-            attemptsByProblem: attemptsByProblem
+            attemptsByProblem: attemptsByProblem,
+            perfectStreakByUnitLv: perfectStreakByUnitLv,
+            bonusUnlockedLevels: bonusUnlockedLevels
         )
         if let data = try? JSONEncoder().encode(snap) {
             UserDefaults.standard.set(data, forKey: key)
@@ -106,6 +133,8 @@ final class ProgressStore {
         self.stuckCounts = snap.stuckCounts
         self.solvedProblemIds = Set(snap.solvedProblemIds ?? [])
         self.attemptsByProblem = snap.attemptsByProblem ?? [:]
+        self.perfectStreakByUnitLv = snap.perfectStreakByUnitLv ?? [:]
+        self.bonusUnlockedLevels = snap.bonusUnlockedLevels ?? [:]
     }
 
     // MARK: mutations
@@ -122,6 +151,44 @@ final class ProgressStore {
         lastProblemId = e.problemId
         lastUnitId = e.unitId
         save()
+    }
+
+    /// Called by ProblemViewModel when a *main* (non-特訓) problem is
+    /// solved with no mistakes. Tracks the perfect streak for that
+    /// (unit, level) and, if it hits 3, opens Lv.+2 ahead of schedule.
+    func recordPerfectClear(unitId: String, level: Int) {
+        let key = "\(unitId):\(level)"
+        let next = perfectStreakByUnitLv[key, default: 0] + 1
+        perfectStreakByUnitLv[key] = next
+        if next >= 3 {
+            let bonusLv = level + 2
+            let cur = bonusUnlockedLevels[unitId] ?? 0
+            if bonusLv > cur {
+                bonusUnlockedLevels[unitId] = bonusLv
+                pendingBonus = PendingBonus(unitId: unitId,
+                                            earnedAtLv: level,
+                                            unlockedLv: bonusLv)
+            }
+            // Reset so the user has to do another 3 to earn again.
+            perfectStreakByUnitLv[key] = 0
+        }
+        save()
+    }
+
+    /// Called when a problem at this level was solved with at least one
+    /// wrong tap — resets the perfect streak for that level only.
+    func breakPerfectStreak(unitId: String, level: Int) {
+        let key = "\(unitId):\(level)"
+        if perfectStreakByUnitLv[key] != 0 {
+            perfectStreakByUnitLv[key] = 0
+            save()
+        }
+    }
+
+    /// Read & clear the one-shot bonus signal.
+    func consumePendingBonus() -> PendingBonus? {
+        defer { pendingBonus = nil }
+        return pendingBonus
     }
 
     func addReview(_ item: ReviewItem) {
@@ -148,6 +215,9 @@ final class ProgressStore {
         stuckCounts = [:]
         solvedProblemIds = []
         attemptsByProblem = [:]
+        perfectStreakByUnitLv = [:]
+        bonusUnlockedLevels = [:]
+        pendingBonus = nil
         save()
     }
 

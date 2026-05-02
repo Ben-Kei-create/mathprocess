@@ -32,6 +32,8 @@ final class ProblemViewModel {
     /// difficulty in this unit. Drives the "新しい考え方が1つ増えた" banner.
     var didAdvanceLevel: Bool = false
     var advancedLevelConcept: String? = nil
+    /// Set when a 3-perfect bonus opens an early level (Lv. +2).
+    var earnedBonus: ProgressStore.PendingBonus? = nil
 
     init(problem: Problem,
          store: ProgressStore = .shared,
@@ -142,6 +144,20 @@ final class ProblemViewModel {
             mistakeTagIds: Array(encounteredMistakeTagIds)
         )
         store.recordEvent(event)
+
+        // Perfect-streak bonus tracking — only for *main* problems
+        // (特訓 sub-problems shouldn't accelerate progression).
+        let isMain = !problem.tags.contains("特訓")
+        if isMain {
+            if encounteredMistakeTagIds.isEmpty {
+                store.recordPerfectClear(unitId: problem.unitId,
+                                         level: problem.difficulty)
+                earnedBonus = store.consumePendingBonus()
+            } else {
+                store.breakPerfectStreak(unitId: problem.unitId,
+                                         level: problem.difficulty)
+            }
+        }
 
         let afterLv = engine.clearedDifficulty(in: problem.unitId)
         if afterLv > beforeLv {

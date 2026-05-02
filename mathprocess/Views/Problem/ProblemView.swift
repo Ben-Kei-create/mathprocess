@@ -159,6 +159,10 @@ struct ProblemView: View {
             }
         case .solved:
             VStack(spacing: TKSpacing.sm) {
+                if let bonus = vm.earnedBonus {
+                    BonusUnlockBanner(earnedAtLv: bonus.earnedAtLv,
+                                      unlockedLv: bonus.unlockedLv)
+                }
                 if vm.didAdvanceLevel {
                     LevelUpBanner(level: vm.problem.difficulty,
                                   concept: vm.advancedLevelConcept)
