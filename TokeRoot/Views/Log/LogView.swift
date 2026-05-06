@@ -62,19 +62,24 @@ struct LogView: View {
 
     private var achievementsCard: some View {
         SectionCard("できるようになったこと") {
-            if achievements.isEmpty {
+            if earnedAchievements.isEmpty {
                 Text("これからここに、できるようになったことが増えていきます。")
                     .font(TKType.caption)
                     .foregroundStyle(TKColor.textSecondary)
             } else {
                 VStack(alignment: .leading, spacing: TKSpacing.sm) {
-                    ForEach(achievements, id: \.self) { line in
-                        HStack(spacing: TKSpacing.sm) {
+                    ForEach(earnedAchievements) { achievement in
+                        HStack(alignment: .top, spacing: TKSpacing.sm) {
                             Image(systemName: "checkmark.seal.fill")
                                 .foregroundStyle(TKColor.success)
-                            Text(line)
-                                .font(TKType.body)
-                                .foregroundStyle(TKColor.textPrimary)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(achievement.title)
+                                    .font(TKType.body)
+                                    .foregroundStyle(TKColor.textPrimary)
+                                Text(achievement.description)
+                                    .font(TKType.caption)
+                                    .foregroundStyle(TKColor.textSecondary)
+                            }
                         }
                     }
                 }
@@ -82,20 +87,11 @@ struct LogView: View {
         }
     }
 
-    private var achievements: [String] {
-        let solvedFirstTry = store.events
-            .filter { $0.outcome == .solved && $0.mistakeTagIds.isEmpty }
-        var lines: [String] = []
-        if !solvedFirstTry.isEmpty {
-            lines.append("\(solvedFirstTry.count) 問を、自力で解けました。")
-        }
-        let practice = store.events.filter { $0.outcome == .practice }
-        if !practice.isEmpty {
-            lines.append("\(practice.count) 回、特訓から戻ってこれました。")
-        }
-        if uniqueDays >= 3 {
-            lines.append("\(uniqueDays) 日続けました。")
-        }
-        return lines
+    private var earnedAchievements: [Achievement] {
+        store.achievements
+            .filter { $0.earnedAt != nil }
+            .sorted {
+                ($0.earnedAt ?? .distantPast) > ($1.earnedAt ?? .distantPast)
+            }
     }
 }

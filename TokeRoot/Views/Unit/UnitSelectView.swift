@@ -39,7 +39,7 @@ struct UnitSelectView: View {
     @ViewBuilder
     private func row(for unit: MathUnit) -> some View {
         if unit.isAvailable {
-            NavigationLink(value: HomeView.NavTarget.problem(firstProblemId(unit))) {
+            NavigationLink(value: HomeView.NavTarget.unitProblems(unit.id)) {
                 rowBody(unit)
             }
             .buttonStyle(.plain)
@@ -79,7 +79,4 @@ struct UnitSelectView: View {
         )
     }
 
-    private func firstProblemId(_ unit: MathUnit) -> String {
-        DataService.shared.problems(in: unit.id).first?.id ?? ""
-    }
 }

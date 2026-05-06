@@ -16,7 +16,7 @@ struct MemoSheet: View {
                 Text("計算や考えていることを手書きでメモできます。")
                     .font(TKType.caption)
                     .foregroundStyle(TKColor.textSecondary)
-                CanvasRepresentable(canvas: canvas, toolPicker: toolPicker)
+                DrawingCanvasView(canvas: canvas, toolPicker: toolPicker)
                     .background(TKColor.surface)
                     .overlay(
                         RoundedRectangle(cornerRadius: TKRadius.medium)
@@ -50,21 +50,4 @@ struct MemoSheet: View {
             }
         }
     }
-}
-
-private struct CanvasRepresentable: UIViewRepresentable {
-    let canvas: PKCanvasView
-    let toolPicker: PKToolPicker
-
-    func makeUIView(context: Context) -> PKCanvasView {
-        canvas.drawingPolicy = .anyInput
-        canvas.backgroundColor = .clear
-        canvas.isOpaque = false
-        toolPicker.setVisible(true, forFirstResponder: canvas)
-        toolPicker.addObserver(canvas)
-        DispatchQueue.main.async { canvas.becomeFirstResponder() }
-        return canvas
-    }
-
-    func updateUIView(_ uiView: PKCanvasView, context: Context) {}
 }

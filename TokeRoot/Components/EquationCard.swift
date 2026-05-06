@@ -43,7 +43,7 @@ struct EquationCard: View {
                 .underline(true, color: TKColor.highlight)
              + Text(after))
         } else {
-            Text(text)
+            MathText(text: text)
         }
     }
 }

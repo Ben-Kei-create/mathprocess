@@ -22,6 +22,7 @@ struct DiagnosisFlow: View {
                    let firstProblem = set.problemIds.first {
                     store.lastProblemId = firstProblem
                 }
+                store.checkAchievements()
                 store.save()
             }
         } else {

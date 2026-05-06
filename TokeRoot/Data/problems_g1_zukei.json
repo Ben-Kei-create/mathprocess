@@ -1,0 +1,193 @@
+[
+  {
+    "id": "zg1-001",
+    "unitId": "g1-zukei",
+    "title": "角の名前を読む",
+    "equation": "∠ABC はどの角？",
+    "diagram": {
+      "aspectRatio": 1.45,
+      "points": [
+        { "id": "A", "x": 0.18, "y": 0.70, "label": "A" },
+        { "id": "B", "x": 0.48, "y": 0.78, "label": "B" },
+        { "id": "C", "x": 0.78, "y": 0.24, "label": "C" }
+      ],
+      "segments": [
+        { "start": "A", "end": "B" },
+        { "start": "B", "end": "C" }
+      ],
+      "angles": [
+        { "vertex": "B", "radius": 0.16, "startDegrees": 190, "endDegrees": 300 }
+      ],
+      "labels": [
+        { "text": "∠ABC", "x": 0.50, "y": 0.55 }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "角の名前は、真ん中の文字が角の頂点です。",
+    "tags": ["図形", "角"],
+    "finalAnswer": "Bの角",
+    "steps": [
+      {
+        "id": "zg1-001-s1",
+        "prompt": "∠ABC の頂点はどこ？",
+        "equationBefore": "∠ABC",
+        "explanationCaption": "真ん中の B が頂点です。だから ∠ABC は B の角です。",
+        "equationAfter": "Bの角",
+        "highlight": "B",
+        "choices": [
+          { "id": "a", "label": "A の角", "isCorrect": false, "mistakeTagId": null },
+          { "id": "b", "label": "B の角", "isCorrect": true, "mistakeTagId": null },
+          { "id": "c", "label": "C の角", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-002",
+    "unitId": "g1-zukei",
+    "title": "三角形の内角",
+    "equation": "x は何度？",
+    "diagram": {
+      "aspectRatio": 1.45,
+      "points": [
+        { "id": "A", "x": 0.20, "y": 0.78, "label": "A" },
+        { "id": "B", "x": 0.80, "y": 0.78, "label": "B" },
+        { "id": "C", "x": 0.48, "y": 0.22, "label": "C" }
+      ],
+      "segments": [
+        { "start": "A", "end": "B" },
+        { "start": "B", "end": "C" },
+        { "start": "C", "end": "A" }
+      ],
+      "angles": [
+        { "vertex": "A", "radius": 0.12, "startDegrees": 0, "endDegrees": 300 },
+        { "vertex": "B", "radius": 0.12, "startDegrees": 240, "endDegrees": 180 },
+        { "vertex": "C", "radius": 0.12, "startDegrees": 120, "endDegrees": 60 }
+      ],
+      "labels": [
+        { "text": "70°", "x": 0.30, "y": 0.68 },
+        { "text": "50°", "x": 0.68, "y": 0.68 },
+        { "text": "x", "x": 0.48, "y": 0.38 }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "三角形の3つの角を足すと 180° です。",
+    "tags": ["図形", "角度"],
+    "finalAnswer": "x = 60°",
+    "steps": [
+      {
+        "id": "zg1-002-s1",
+        "prompt": "まず使う考え方は？",
+        "equationBefore": "70° + 50° + x = 180°",
+        "explanationCaption": "三角形の内角の和は 180° です。",
+        "equationAfter": "70° + 50° + x = 180°",
+        "highlight": "180°",
+        "choices": [
+          { "id": "a", "label": "3つの角を足すと 180°", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2つの角を足すと 180°", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "いちばん大きい角が x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-002-s2",
+        "prompt": "70° + 50° は？",
+        "equationBefore": "70° + 50° + x = 180°",
+        "explanationCaption": "70° + 50° = 120° です。",
+        "equationAfter": "120° + x = 180°",
+        "highlight": "120°",
+        "choices": [
+          { "id": "a", "label": "120°", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "110°", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "130°", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-002-s3",
+        "prompt": "x は？",
+        "equationBefore": "120° + x = 180°",
+        "explanationCaption": "180° - 120° = 60°。だから x = 60° です。",
+        "equationAfter": "x = 60°",
+        "highlight": "60°",
+        "choices": [
+          { "id": "a", "label": "x = 60°", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 120°", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 50°", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-003",
+    "unitId": "g1-zukei",
+    "title": "まっすぐな角",
+    "equation": "x は何度？",
+    "diagram": {
+      "aspectRatio": 1.6,
+      "points": [
+        { "id": "A", "x": 0.16, "y": 0.62, "label": "A" },
+        { "id": "B", "x": 0.50, "y": 0.62, "label": "B" },
+        { "id": "C", "x": 0.84, "y": 0.62, "label": "C" },
+        { "id": "D", "x": 0.64, "y": 0.25, "label": "D" }
+      ],
+      "segments": [
+        { "start": "A", "end": "B" },
+        { "start": "B", "end": "C" },
+        { "start": "B", "end": "D" }
+      ],
+      "angles": [
+        { "vertex": "B", "radius": 0.13, "startDegrees": 0, "endDegrees": 292 },
+        { "vertex": "B", "radius": 0.18, "startDegrees": 180, "endDegrees": 292 }
+      ],
+      "labels": [
+        { "text": "65°", "x": 0.60, "y": 0.48 },
+        { "text": "x", "x": 0.41, "y": 0.45 }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "一直線の角は 180° です。もう分かっている角を引いてみます。",
+    "tags": ["図形", "角度"],
+    "finalAnswer": "x = 115°",
+    "steps": [
+      {
+        "id": "zg1-003-s1",
+        "prompt": "一直線の角は何度？",
+        "equationBefore": "x + 65° = ?",
+        "explanationCaption": "一直線の角は 180° です。",
+        "equationAfter": "x + 65° = 180°",
+        "highlight": "180°",
+        "choices": [
+          { "id": "a", "label": "90°", "isCorrect": false, "mistakeTagId": null },
+          { "id": "b", "label": "180°", "isCorrect": true, "mistakeTagId": null },
+          { "id": "c", "label": "360°", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-003-s2",
+        "prompt": "x を出すには？",
+        "equationBefore": "x + 65° = 180°",
+        "explanationCaption": "180° から 65° を引きます。",
+        "equationAfter": "x = 180° - 65°",
+        "highlight": "- 65°",
+        "choices": [
+          { "id": "a", "label": "180° から 65° を引く", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "180° に 65° を足す", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-003-s3",
+        "prompt": "答えは？",
+        "equationBefore": "x = 180° - 65°",
+        "explanationCaption": "180° - 65° = 115°。だから x = 115° です。",
+        "equationAfter": "x = 115°",
+        "highlight": "115°",
+        "choices": [
+          { "id": "a", "label": "x = 115°", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 125°", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

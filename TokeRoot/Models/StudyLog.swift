@@ -31,6 +31,15 @@ struct DailyMark: Codable, Hashable {
     }
 }
 
+/// A positive milestone shown in the Log screen. Unearned achievements keep
+/// `earnedAt == nil` so the catalog can stay stable across app versions.
+struct Achievement: Codable, Identifiable, Hashable {
+    let id: String
+    let title: String
+    let description: String
+    var earnedAt: Date?
+}
+
 /// What user has marked for review (right answers that felt shaky,
 /// recent mistakes, or 特訓 sets).
 struct ReviewItem: Codable, Identifiable, Hashable {

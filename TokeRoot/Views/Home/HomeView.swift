@@ -3,10 +3,12 @@ import SwiftUI
 struct HomeView: View {
     @Environment(ProgressStore.self) private var store
     @Environment(DataService.self) private var data
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var path = NavigationPath()
 
     enum NavTarget: Hashable {
         case unitSelect
+        case unitProblems(String)
         case problem(String)
         case practice(String)
     }
@@ -16,28 +18,69 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ScrollView {
-                VStack(alignment: .leading, spacing: TKSpacing.lg) {
-                    header
-                    routeMessage
-                    continueCTA
-                    recommendation
-                    todaysFocus
-                    weeklyStrip
-                    AdSlot(placement: .homeBottom)
-                }
-                .padding(.horizontal, TKSpacing.md)
-                .padding(.top, TKSpacing.md)
-                .padding(.bottom, TKSpacing.xl)
+                homeContent
             }
             .background(TKColor.background.ignoresSafeArea())
             .navigationDestination(for: NavTarget.self) { target in
                 switch target {
                 case .unitSelect:           UnitSelectView()
+                case .unitProblems(let id): UnitProblemListView(unitId: id)
                 case .problem(let id):      ProblemView(problemId: id)
                 case .practice(let setId):  PracticeRunnerView(practiceSetId: setId)
                 }
             }
         }
+    }
+
+    @ViewBuilder
+    private var homeContent: some View {
+        if horizontalSizeClass == .regular {
+            regularHomeContent
+        } else {
+            compactHomeContent
+        }
+    }
+
+    private var compactHomeContent: some View {
+        VStack(alignment: .leading, spacing: TKSpacing.lg) {
+            header
+            routeMessage
+            continueCTA
+            recommendation
+            todaysFocus
+            weeklyStrip
+            AdSlot(placement: .homeBottom)
+        }
+        .padding(.horizontal, TKSpacing.md)
+        .padding(.top, TKSpacing.md)
+        .padding(.bottom, TKSpacing.xl)
+    }
+
+    private var regularHomeContent: some View {
+        VStack(alignment: .leading, spacing: TKSpacing.xl) {
+            header
+
+            HStack(alignment: .top, spacing: TKSpacing.lg) {
+                VStack(alignment: .leading, spacing: TKSpacing.lg) {
+                    routeMessage
+                    continueCTA
+                    recommendation
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+
+                VStack(alignment: .leading, spacing: TKSpacing.lg) {
+                    todaysFocus
+                    weeklyStrip
+                    AdSlot(placement: .homeBottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+            }
+        }
+        .padding(.horizontal, TKSpacing.xl)
+        .padding(.top, TKSpacing.xl)
+        .padding(.bottom, TKSpacing.xl)
+        .frame(maxWidth: 920, alignment: .topLeading)
+        .frame(maxWidth: .infinity)
     }
 
     private var header: some View {

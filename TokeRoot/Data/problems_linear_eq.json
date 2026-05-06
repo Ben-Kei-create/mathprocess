@@ -258,6 +258,247 @@
   },
 
   {
+    "id": "le-006",
+    "unitId": "g1-linear-eq",
+    "title": "穴埋め: +の数を消す",
+    "equation": "x + 5 = 12",
+    "mode": "穴埋めモード",
+    "difficulty": 2,
+    "hint": "+5 を消すには、両辺に同じ -5 を書きます。",
+    "tags": ["穴埋め", "移項", "定数項"],
+    "finalAnswer": "x = 7",
+    "steps": [
+      {
+        "id": "le-006-s1",
+        "prompt": "次の式を入力しよう",
+        "equationBefore": "x + 5 = 12",
+        "explanationCaption": "両辺から 5 を引く形にします。",
+        "equationAfter": "x + 5 - 5 = 12 - 5",
+        "highlight": "- 5",
+        "choices": [
+          { "id": "a", "label": "x + 5 - 5 = 12 - 5", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x + 5 + 5 = 12 + 5", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "x ÷ 5 = 12 ÷ 5",     "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-006-s2",
+        "prompt": "計算した式を入力しよう",
+        "equationBefore": "x + 5 - 5 = 12 - 5",
+        "explanationCaption": "+5 と -5 が消えて、x = 7 です。",
+        "equationAfter": "x = 7",
+        "highlight": "x = 7",
+        "choices": [
+          { "id": "a", "label": "x = 7",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 17", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-007",
+    "unitId": "g1-linear-eq",
+    "title": "穴埋め: ひいてから割る",
+    "equation": "3x + 4 = 19",
+    "mode": "穴埋めモード",
+    "difficulty": 3,
+    "hint": "まず +4 を消し、そのあと 3x を x にします。",
+    "tags": ["穴埋め", "移項", "係数"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-007-s1",
+        "prompt": "まず次の式を入力しよう",
+        "equationBefore": "3x + 4 = 19",
+        "explanationCaption": "両辺から 4 を引く形にします。",
+        "equationAfter": "3x + 4 - 4 = 19 - 4",
+        "highlight": "- 4",
+        "choices": [
+          { "id": "a", "label": "3x + 4 - 4 = 19 - 4", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x + 4 + 4 = 19 + 4", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "3x ÷ 4 = 19 ÷ 4",     "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-007-s2",
+        "prompt": "計算した式を入力しよう",
+        "equationBefore": "3x + 4 - 4 = 19 - 4",
+        "explanationCaption": "+4 と -4 が消えて、3x = 15 になります。",
+        "equationAfter": "3x = 15",
+        "highlight": "3x = 15",
+        "choices": [
+          { "id": "a", "label": "3x = 15", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x = 23", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-007-s3",
+        "prompt": "x だけにする式を入力しよう",
+        "equationBefore": "3x = 15",
+        "explanationCaption": "3x は x の 3倍なので、両辺を 3 で割ります。",
+        "equationAfter": "3x ÷ 3 = 15 ÷ 3",
+        "highlight": "÷ 3",
+        "choices": [
+          { "id": "a", "label": "3x ÷ 3 = 15 ÷ 3", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x - 3 = 15 - 3", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-007-s4",
+        "prompt": "答えを入力しよう",
+        "equationBefore": "3x ÷ 3 = 15 ÷ 3",
+        "explanationCaption": "答えは x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5",  "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 12", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-008",
+    "unitId": "g1-linear-eq",
+    "title": "文章題: 何冊買える？",
+    "equation": "ノートを 3冊買ったら 360円でした。1冊 x 円なら、x は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "同じ値段のノートが 3冊なので、1冊の値段 x を 3倍します。",
+    "tags": ["文章題", "式立て"],
+    "finalAnswer": "x = 120",
+    "steps": [
+      {
+        "id": "le-008-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "ノート 3冊 = 360円",
+        "explanationCaption": "1冊 x 円が 3冊なので、3x = 360 です。",
+        "equationAfter": "3x = 360",
+        "highlight": "3x = 360",
+        "choices": [
+          { "id": "a", "label": "3x = 360", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x + 3 = 360", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "360x = 3", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-008-s2",
+        "prompt": "x だけにするには？",
+        "equationBefore": "3x = 360",
+        "explanationCaption": "両辺を 3 で割ります。",
+        "equationAfter": "3x ÷ 3 = 360 ÷ 3",
+        "highlight": "÷ 3",
+        "choices": [
+          { "id": "a", "label": "両辺を 3 で割る", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 3 を引く", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-008-s3",
+        "prompt": "答えは？",
+        "equationBefore": "3x ÷ 3 = 360 ÷ 3",
+        "explanationCaption": "360 ÷ 3 = 120 なので、x = 120 です。",
+        "equationAfter": "x = 120",
+        "highlight": "x = 120",
+        "choices": [
+          { "id": "a", "label": "x = 120", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 1080", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-009",
+    "unitId": "g1-linear-eq",
+    "title": "文章題: 2倍して足す",
+    "equation": "ある数 x の 2倍に 5 を足すと 17 になります。x は？",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "「2倍」は 2x、「5 を足す」は +5 と書けます。",
+    "tags": ["文章題", "式立て", "係数"],
+    "finalAnswer": "x = 6",
+    "steps": [
+      {
+        "id": "le-009-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "x の 2倍に 5 を足すと 17",
+        "explanationCaption": "x の 2倍は 2x。そこに 5 を足して 17 なので、2x + 5 = 17 です。",
+        "equationAfter": "2x + 5 = 17",
+        "highlight": "2x + 5 = 17",
+        "choices": [
+          { "id": "a", "label": "2x + 5 = 17", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "2 + x + 5 = 17", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "2x = 17 + 5", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-009-s2",
+        "prompt": "まず何をする？",
+        "equationBefore": "2x + 5 = 17",
+        "explanationCaption": "両辺から 5 を引きます。",
+        "equationAfter": "2x = 17 - 5",
+        "highlight": "- 5",
+        "choices": [
+          { "id": "a", "label": "両辺から 5 を引く", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 5 を足す", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-009-s3",
+        "prompt": "次は？",
+        "equationBefore": "2x = 12",
+        "explanationCaption": "2x は x の 2倍なので、両辺を 2 で割ります。",
+        "equationAfter": "2x ÷ 2 = 12 ÷ 2",
+        "highlight": "÷ 2",
+        "choices": [
+          { "id": "a", "label": "両辺を 2 で割る", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 2 を引く", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-009-s4",
+        "prompt": "答えは？",
+        "equationBefore": "2x ÷ 2 = 12 ÷ 2",
+        "explanationCaption": "答えは x = 6 です。",
+        "equationAfter": "x = 6",
+        "highlight": "x = 6",
+        "choices": [
+          { "id": "a", "label": "x = 6", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 24", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-010",
+    "unitId": "g1-linear-eq",
+    "title": "自力: 両辺にxがある式",
+    "equation": "4x - 7 = x + 8",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "x を左、数を右に集めると考えます。移項するときは符号に気をつけます。",
+    "tags": ["自力", "移項", "係数"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "le-010-s1",
+        "prompt": "自分の解き方を書いて、最後に答え合わせしよう",
+        "equationBefore": "4x - 7 = x + 8",
+        "explanationCaption": "右の x を左へ、-7 を右へ移すと 3x = 15。両辺を 3 で割って x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "x = 5",
+        "choices": [
+          { "id": "a", "label": "x = 5", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
     "id": "le-101",
     "unitId": "g1-linear-eq",
     "title": "特訓: +の数を消す①",
@@ -444,6 +685,123 @@
         "choices": [
           { "id": "a", "label": "両辺を 5 で割る",  "isCorrect": true,  "mistakeTagId": null },
           { "id": "b", "label": "両辺から 5 を引く","isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-301",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 文章を式にする①",
+    "equation": "りんごを 4個買うと 480円です。1個 x 円なら？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "1個 x 円が 4個なので、4x と書きます。",
+    "tags": ["特訓", "文章題", "式立て"],
+    "finalAnswer": "x = 120",
+    "steps": [
+      {
+        "id": "le-301-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "りんご 4個 = 480円",
+        "explanationCaption": "1個 x 円が 4個なので、4x = 480 です。",
+        "equationAfter": "4x = 480",
+        "highlight": "4x = 480",
+        "choices": [
+          { "id": "a", "label": "4x = 480", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x + 4 = 480", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "480x = 4", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-301-s2",
+        "prompt": "答えは？",
+        "equationBefore": "4x = 480",
+        "explanationCaption": "両辺を 4 で割って、x = 120 です。",
+        "equationAfter": "x = 120",
+        "highlight": "x = 120",
+        "choices": [
+          { "id": "a", "label": "x = 120", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 1920", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-302",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 文章を式にする②",
+    "equation": "ある数 x に 9 を足すと 21 になります。x は？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「x に 9 を足す」を x + 9 と書きます。",
+    "tags": ["特訓", "文章題", "式立て"],
+    "finalAnswer": "x = 12",
+    "steps": [
+      {
+        "id": "le-302-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "x に 9 を足すと 21",
+        "explanationCaption": "そのまま式にすると、x + 9 = 21 です。",
+        "equationAfter": "x + 9 = 21",
+        "highlight": "x + 9 = 21",
+        "choices": [
+          { "id": "a", "label": "x + 9 = 21", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "9x = 21", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 9 = 21", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-302-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x + 9 = 21",
+        "explanationCaption": "両辺から 9 を引いて、x = 12 です。",
+        "equationAfter": "x = 12",
+        "highlight": "x = 12",
+        "choices": [
+          { "id": "a", "label": "x = 12", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 30", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-303",
+    "unitId": "g1-linear-eq",
+    "title": "特訓: 文章を式にする③",
+    "equation": "ある数 x の 3倍から 6 を引くと 18 になります。x は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "「3倍」は 3x、「6 を引く」は -6 と書けます。",
+    "tags": ["特訓", "文章題", "式立て"],
+    "finalAnswer": "x = 8",
+    "steps": [
+      {
+        "id": "le-303-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "x の 3倍から 6 を引くと 18",
+        "explanationCaption": "x の 3倍は 3x。そこから 6 を引いて 18 なので、3x - 6 = 18 です。",
+        "equationAfter": "3x - 6 = 18",
+        "highlight": "3x - 6 = 18",
+        "choices": [
+          { "id": "a", "label": "3x - 6 = 18", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "3x + 6 = 18", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 6 = 18", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-303-s2",
+        "prompt": "答えは？",
+        "equationBefore": "3x - 6 = 18",
+        "explanationCaption": "両辺に 6 を足してから 3 で割ると、x = 8 です。",
+        "equationAfter": "x = 8",
+        "highlight": "x = 8",
+        "choices": [
+          { "id": "a", "label": "x = 8", "isCorrect": true,  "mistakeTagId": null },
+          { "id": "b", "label": "x = 4", "isCorrect": false, "mistakeTagId": "remove-constant" }
         ]
       }
     ]

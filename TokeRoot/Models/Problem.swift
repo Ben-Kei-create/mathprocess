@@ -37,12 +37,79 @@ struct Problem: Codable, Identifiable, Hashable {
     let unitId: String
     let title: String                 // short label, optional
     let equation: String              // headline equation: "2x + 3 = 11"
+    let diagram: GeometryDiagram?
     let mode: SolveMode
     let difficulty: Int               // 1...5
     let steps: [ProblemStep]
     let finalAnswer: String           // "x = 4"
     let hint: String                  // single calm hint
     let tags: [String]                // free-form tags ("移項", "係数")
+}
+
+/// Optional visual support for geometry problems. Coordinates are normalized
+/// from 0...1 so the same JSON can render on iPhone and iPad.
+struct GeometryDiagram: Codable, Hashable {
+    let aspectRatio: Double
+    let points: [GeometryPoint]
+    let segments: [GeometrySegment]
+    let angles: [GeometryAngle]
+    let labels: [GeometryLabel]
+
+    private enum CodingKeys: String, CodingKey {
+        case aspectRatio
+        case points
+        case segments
+        case angles
+        case labels
+    }
+
+    init(
+        aspectRatio: Double = 4.0 / 3.0,
+        points: [GeometryPoint],
+        segments: [GeometrySegment],
+        angles: [GeometryAngle] = [],
+        labels: [GeometryLabel] = []
+    ) {
+        self.aspectRatio = aspectRatio
+        self.points = points
+        self.segments = segments
+        self.angles = angles
+        self.labels = labels
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        aspectRatio = try container.decodeIfPresent(Double.self, forKey: .aspectRatio) ?? 4.0 / 3.0
+        points = try container.decode([GeometryPoint].self, forKey: .points)
+        segments = try container.decode([GeometrySegment].self, forKey: .segments)
+        angles = try container.decodeIfPresent([GeometryAngle].self, forKey: .angles) ?? []
+        labels = try container.decodeIfPresent([GeometryLabel].self, forKey: .labels) ?? []
+    }
+}
+
+struct GeometryPoint: Codable, Identifiable, Hashable {
+    let id: String
+    let x: Double
+    let y: Double
+    let label: String?
+}
+
+struct GeometrySegment: Codable, Hashable {
+    let start: String
+    let end: String
+}
+
+struct GeometryAngle: Codable, Hashable {
+    let vertex: String
+    let radius: Double
+    let startDegrees: Double
+    let endDegrees: Double
+}
+
+struct GeometryLabel: Codable, Hashable {
+    let text: String
+    let x: Double
+    let y: Double
 }
 
 /// A small targeted set used by 「ここだけ特訓」 and the recovery route.

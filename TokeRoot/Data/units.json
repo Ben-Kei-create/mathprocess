@@ -3,7 +3,7 @@
   { "id": "g1-mojishiki",   "grade": "中1", "title": "文字式",          "subtitle": null, "status": "comingSoon", "order": 2 },
   { "id": "g1-linear-eq",   "grade": "中1", "title": "一次方程式",      "subtitle": "「次に何をする？」で解けるようになる", "status": "available", "order": 3 },
   { "id": "g1-hirei",       "grade": "中1", "title": "比例・反比例",    "subtitle": null, "status": "comingSoon", "order": 4 },
-  { "id": "g1-zukei",       "grade": "中1", "title": "図形",            "subtitle": null, "status": "comingSoon", "order": 5 },
+  { "id": "g1-zukei",       "grade": "中1", "title": "図形",            "subtitle": "図を見ながら角度の考え方をつかむ", "status": "available", "order": 5 },
 
   { "id": "g2-shiki",       "grade": "中2", "title": "式の計算",        "subtitle": null, "status": "comingSoon", "order": 1 },
   { "id": "g2-renritsu",    "grade": "中2", "title": "連立方程式",      "subtitle": null, "status": "comingSoon", "order": 2 },

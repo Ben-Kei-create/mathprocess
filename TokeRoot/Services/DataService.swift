@@ -18,7 +18,8 @@ final class DataService {
 
     func loadAll() {
         units             = decode("units")                         ?? []
-        problems          = decode("problems_linear_eq")            ?? []
+        problems          = (decode("problems_linear_eq")           ?? [])
+                          + (decode("problems_g1_zukei")           ?? [])
         practiceSets      = decode("practice_sets")                 ?? []
         mistakeTags       = decode("mistake_tags")                  ?? []
         diagnosisProblems = decode("diagnosis_linear_eq")           ?? []
