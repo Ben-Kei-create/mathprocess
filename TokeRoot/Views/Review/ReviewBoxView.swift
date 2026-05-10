@@ -176,10 +176,10 @@ struct ReviewBoxView: View {
     }
 
     private func masteryText(for problem: Problem) -> String {
-        let count = store.masterySlots(for: problem.id)
+        let count = store.familyMasterySlots(for: problem, data: data)
         if count >= 3 {
-            return "クリア 3/3"
+            return "類題 3/3"
         }
-        return "クリア \(count)/3"
+        return "類題 \(count)/3"
     }
 }

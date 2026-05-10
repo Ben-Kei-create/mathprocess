@@ -414,5 +414,226 @@
         ]
       }
     ]
+  },
+  {
+    "id": "re-009",
+    "unitId": "g2-renritsu",
+    "title": "割合の人数問題",
+    "equation": "男子は女子より10人多く、男子の20%と女子の30%の合計は12人",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "男子を x 人、女子を y 人として、人数差と割合の2式を作ります。",
+    "tags": ["連立方程式", "文章題", "割合", "高校受験"],
+    "finalAnswer": "男子30人、女子20人",
+    "steps": [
+      {
+        "id": "re-009-s1",
+        "prompt": "人数差の式は？",
+        "equationBefore": "男子は女子より10人多い",
+        "explanationCaption": "男子を x 人、女子を y 人とすると、x = y + 10 です。",
+        "equationAfter": "x = y + 10",
+        "highlight": "y + 10",
+        "choices": [
+          { "id": "a", "label": "x = y + 10", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y = 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-009-s2",
+        "prompt": "割合の式は？",
+        "equationBefore": "男子の20%と女子の30%の合計が12人",
+        "explanationCaption": "男子の20%は 0.2x、女子の30%は 0.3y。合計12人なので、0.2x + 0.3y = 12 です。",
+        "equationAfter": "0.2x + 0.3y = 12",
+        "highlight": "0.3y",
+        "choices": [
+          { "id": "a", "label": "0.2x + 0.3y = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "20x + 30y = 12", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "0.3x + 0.2y = 12", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-009-s3",
+        "prompt": "男子と女子は何人？",
+        "equationBefore": "x = y + 10, 0.2x + 0.3y = 12",
+        "explanationCaption": "割合の式を10倍すると 2x + 3y = 120。x = y + 10 を代入すると、2(y + 10) + 3y = 120 なので、y = 20、x = 30 です。",
+        "equationAfter": "x = 30, y = 20",
+        "highlight": "30",
+        "choices": [
+          { "id": "a", "label": "男子30人、女子20人", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "男子20人、女子30人", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "男子26人、女子16人", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-010",
+    "unitId": "g2-renritsu",
+    "title": "2けたの整数",
+    "equation": "十の位と一の位の和は9。数字を入れ替えると27大きくなる",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "十の位を x、一の位を y とすると、もとの数は 10x + y です。",
+    "tags": ["連立方程式", "整数", "高校受験"],
+    "finalAnswer": "36",
+    "steps": [
+      {
+        "id": "re-010-s1",
+        "prompt": "もとの2けたの整数は？",
+        "equationBefore": "十の位 x、一の位 y",
+        "explanationCaption": "十の位が x、一の位が y なので、もとの数は 10x + y です。",
+        "equationAfter": "10x + y",
+        "highlight": "10x",
+        "choices": [
+          { "id": "a", "label": "10x + y", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 10y", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-010-s2",
+        "prompt": "数字を入れ替えた数は？",
+        "equationBefore": "十の位 y、一の位 x",
+        "explanationCaption": "入れ替えると、十の位が y、一の位が x なので、10y + x です。",
+        "equationAfter": "10y + x",
+        "highlight": "10y",
+        "choices": [
+          { "id": "a", "label": "10y + x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10x + y", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-010-s3",
+        "prompt": "連立の式は？",
+        "equationBefore": "位の和は9、入れ替えると27大きい",
+        "explanationCaption": "位の和は x + y = 9。入れ替えた数はもとの数より27大きいので、10y + x = 10x + y + 27 です。",
+        "equationAfter": "x + y = 9, 10y + x = 10x + y + 27",
+        "highlight": "27",
+        "choices": [
+          { "id": "a", "label": "x + y = 9, 10y + x = 10x + y + 27", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + y = 27, 10x + y = 9", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y = 9, 10x + y = 10y + x + 27", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-010-s4",
+        "prompt": "もとの整数は？",
+        "equationBefore": "x + y = 9, y - x = 3",
+        "explanationCaption": "解くと x = 3、y = 6。もとの整数は 36 です。",
+        "equationAfter": "36",
+        "highlight": "36",
+        "choices": [
+          { "id": "a", "label": "36", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "63", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "45", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-011",
+    "unitId": "g2-renritsu",
+    "title": "向かい合って進む",
+    "equation": "2人が1800m離れて向かい合う。分速70mと80mなら何分後に出会う？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "2人が進んだ距離の合計が1800mになります。",
+    "tags": ["連立方程式", "速さ", "高校受験"],
+    "finalAnswer": "12分後",
+    "steps": [
+      {
+        "id": "re-011-s1",
+        "prompt": "t 分後に2人が進む距離の合計は？",
+        "equationBefore": "分速70mと分速80m",
+        "explanationCaption": "一人は 70t m、もう一人は 80t m 進みます。合計は 70t + 80t です。",
+        "equationAfter": "70t + 80t",
+        "highlight": "80t",
+        "choices": [
+          { "id": "a", "label": "70t + 80t", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "80t - 70t", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "70 + 80 + t", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-011-s2",
+        "prompt": "方程式は？",
+        "equationBefore": "2人の距離は1800m",
+        "explanationCaption": "出会うとき、2人が進んだ距離の合計が1800mです。だから 150t = 1800 です。",
+        "equationAfter": "150t = 1800",
+        "highlight": "150t",
+        "choices": [
+          { "id": "a", "label": "150t = 1800", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10t = 1800", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1800t = 150", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-011-s3",
+        "prompt": "何分後に出会う？",
+        "equationBefore": "150t = 1800",
+        "explanationCaption": "1800 ÷ 150 = 12。12分後に出会います。",
+        "equationAfter": "t = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12分後", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10分後", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "15分後", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-012",
+    "unitId": "g2-renritsu",
+    "title": "食塩水をうすめる",
+    "equation": "12%食塩水 x g に水 y g を加えて8%食塩水を600g作る",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "水には食塩が入っていません。食塩の量は変わりません。",
+    "tags": ["連立方程式", "食塩水", "割合", "高校受験"],
+    "finalAnswer": "12%食塩水400g、水200g",
+    "steps": [
+      {
+        "id": "re-012-s1",
+        "prompt": "全体の重さの式は？",
+        "equationBefore": "12%食塩水 x g、水 y g、合計600g",
+        "explanationCaption": "混ぜた後の合計が600gなので、x + y = 600 です。",
+        "equationAfter": "x + y = 600",
+        "highlight": "600",
+        "choices": [
+          { "id": "a", "label": "x + y = 600", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.12x + y = 600", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y = 0.08", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-012-s2",
+        "prompt": "食塩の量の式は？",
+        "equationBefore": "完成は8%食塩水600g",
+        "explanationCaption": "12%食塩水に入っている食塩は 0.12x g。完成後の食塩は 0.08 × 600 = 48g です。",
+        "equationAfter": "0.12x = 48",
+        "highlight": "48",
+        "choices": [
+          { "id": "a", "label": "0.12x = 48", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.12x + y = 48", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "0.08x = 48", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-012-s3",
+        "prompt": "それぞれ何g？",
+        "equationBefore": "0.12x = 48, x + y = 600",
+        "explanationCaption": "x = 400。x + y = 600 なので、y = 200 です。",
+        "equationAfter": "x = 400, y = 200",
+        "highlight": "400",
+        "choices": [
+          { "id": "a", "label": "12%食塩水400g、水200g", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12%食塩水200g、水400g", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12%食塩水500g、水100g", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

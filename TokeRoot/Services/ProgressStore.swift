@@ -179,10 +179,85 @@ final class ProgressStore {
         masterySlots(for: problemId) >= 3
     }
 
+    func familyKey(for problem: Problem) -> String {
+        if let familyId = problem.familyId, !familyId.isEmpty {
+            return "\(problem.unitId)|\(familyId)"
+        }
+
+        let broadTags: Set<String> = [
+            "正負の数", "文字式", "一次方程式", "比例", "反比例", "図形",
+            "式の計算", "連立方程式", "一次関数", "確率",
+            "展開", "因数分解", "平方根", "二次方程式", "二次関数",
+            "標準", "高校受験", "入試型", "自力", "特訓", "グラフ"
+        ]
+        let helperTags: Set<String> = ["文章題", "式立て"]
+        let meaningfulTags = problem.tags.filter { !broadTags.contains($0) }
+        let specificTag = meaningfulTags.first { !helperTags.contains($0) }
+        let fallbackTag = meaningfulTags.first ?? problem.mode.rawValue
+        return "\(problem.unitId)|\(specificTag ?? fallbackTag)"
+    }
+
+    func relatedProblems(to problem: Problem, data: DataService = .shared) -> [Problem] {
+        let key = familyKey(for: problem)
+        return data.problems(in: problem.unitId)
+            .filter { familyKey(for: $0) == key }
+            .sorted { lhs, rhs in
+                if lhs.difficulty != rhs.difficulty {
+                    return lhs.difficulty < rhs.difficulty
+                }
+                return lhs.id < rhs.id
+            }
+    }
+
+    func distinctClearedCount(inFamilyOf problem: Problem, data: DataService = .shared) -> Int {
+        let relatedIds = Set(relatedProblems(to: problem, data: data).map(\.id))
+        let clearedIds = Set(events.filter {
+            relatedIds.contains($0.problemId)
+            && ($0.outcome == .solved || $0.outcome == .practice)
+        }.map(\.problemId))
+        return clearedIds.count
+    }
+
+    func familyClearProgressCount(for problem: Problem, data: DataService = .shared) -> Int {
+        let relatedProblems = relatedProblems(to: problem, data: data)
+        let relatedIds = Set(relatedProblems.map(\.id))
+        let clearedEvents = events.filter {
+            relatedIds.contains($0.problemId)
+            && ($0.outcome == .solved || $0.outcome == .practice)
+        }
+        let distinctCount = Set(clearedEvents.map(\.problemId)).count
+
+        if relatedProblems.count >= 3 {
+            return distinctCount
+        }
+        if distinctCount < relatedProblems.count {
+            return distinctCount
+        }
+        return clearedEvents.count
+    }
+
+    func familyMasterySlots(for problem: Problem, data: DataService = .shared) -> Int {
+        min(familyClearProgressCount(for: problem, data: data), 3)
+    }
+
+    func isFamilyMastered(problem: Problem, data: DataService = .shared) -> Bool {
+        familyMasterySlots(for: problem, data: data) >= 3
+    }
+
+    func familyCount(in unitId: String, data: DataService = .shared) -> Int {
+        Set(data.problems(in: unitId).map { familyKey(for: $0) }).count
+    }
+
+    func masteredFamilyCount(in unitId: String, data: DataService = .shared) -> Int {
+        let grouped = Dictionary(grouping: data.problems(in: unitId), by: { familyKey(for: $0) })
+        return grouped.values.filter { family in
+            guard let first = family.first else { return false }
+            return isFamilyMastered(problem: first, data: data)
+        }.count
+    }
+
     func masteredCount(in unitId: String, data: DataService = .shared) -> Int {
-        data.problems(in: unitId)
-            .filter { isMastered(problemId: $0.id) }
-            .count
+        masteredFamilyCount(in: unitId, data: data)
     }
 
     /// Reset the saved snapshot — used by Settings 「最初からやり直す」.

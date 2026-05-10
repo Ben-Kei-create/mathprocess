@@ -284,5 +284,83 @@
         ]
       }
     ]
+  },
+  {
+    "id": "sr-009",
+    "unitId": "g3-heihokon",
+    "title": "平方根の整数部分",
+    "equation": "sqrt(30) の整数部分",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "30をはさむ平方数を探します。",
+    "tags": ["平方根", "大小", "入試型"],
+    "finalAnswer": "5",
+    "steps": [
+      {
+        "id": "sr-009-s1",
+        "prompt": "30をはさむ平方数は？",
+        "equationBefore": "sqrt(30)",
+        "explanationCaption": "5^2 = 25、6^2 = 36 なので、30 は 25 と 36 の間です。",
+        "equationAfter": "25 < 30 < 36",
+        "highlight": "25 < 30 < 36",
+        "choices": [
+          { "id": "a", "label": "25 < 30 < 36", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "16 < 30 < 25", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "30 < 36 < 49", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-009-s2",
+        "prompt": "sqrt(30) の整数部分は？",
+        "equationBefore": "5 < sqrt(30) < 6",
+        "explanationCaption": "sqrt(30) は 5 より大きく 6 より小さいので、整数部分は5です。",
+        "equationAfter": "5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "30", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-010",
+    "unitId": "g3-heihokon",
+    "title": "座標の距離と平方根",
+    "equation": "A(1, 2), B(5, 5) の距離",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "横の差と縦の差で直角三角形を作ります。",
+    "tags": ["平方根", "座標", "三平方", "高校受験"],
+    "finalAnswer": "5",
+    "steps": [
+      {
+        "id": "sr-010-s1",
+        "prompt": "横の差と縦の差は？",
+        "equationBefore": "A(1, 2), B(5, 5)",
+        "explanationCaption": "横の差は 5 - 1 = 4、縦の差は 5 - 2 = 3 です。",
+        "equationAfter": "横4、縦3",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "横4、縦3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "横3、縦4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "横5、縦5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-010-s2",
+        "prompt": "距離は？",
+        "equationBefore": "sqrt(4^2 + 3^2)",
+        "explanationCaption": "sqrt(4^2 + 3^2) = sqrt(16 + 9) = sqrt(25) = 5 です。",
+        "equationAfter": "5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(7)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

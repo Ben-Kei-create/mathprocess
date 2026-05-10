@@ -310,5 +310,161 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gs-009",
+    "unitId": "g2-shiki",
+    "title": "多項式を単項式で割る",
+    "equation": "(6x^2 - 9x) ÷ 3x",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "それぞれの項を 3x で割ります。",
+    "tags": ["式の計算", "多項式", "わり算", "標準"],
+    "finalAnswer": "2x - 3",
+    "steps": [
+      {
+        "id": "gs-009-s1",
+        "prompt": "6x^2 ÷ 3x は？",
+        "equationBefore": "(6x^2 - 9x) ÷ 3x",
+        "explanationCaption": "係数は 6 ÷ 3 = 2、文字は x^2 ÷ x = x。だから 2x です。",
+        "equationAfter": "2x - 9x ÷ 3x",
+        "highlight": "2x",
+        "choices": [
+          { "id": "a", "label": "2x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-009-s2",
+        "prompt": "全体を計算すると？",
+        "equationBefore": "6x^2 ÷ 3x - 9x ÷ 3x",
+        "explanationCaption": "6x^2 ÷ 3x = 2x、9x ÷ 3x = 3。答えは 2x - 3 です。",
+        "equationAfter": "2x - 3",
+        "highlight": "2x - 3",
+        "choices": [
+          { "id": "a", "label": "2x - 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x - 9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x^2 - 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-010",
+    "unitId": "g2-shiki",
+    "title": "偶数と奇数の説明",
+    "equation": "偶数と奇数の和が奇数になることを式で見る",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "偶数は 2m、奇数は 2n + 1 と表します。",
+    "tags": ["式の計算", "整数", "説明", "高校受験"],
+    "finalAnswer": "2(m + n) + 1",
+    "steps": [
+      {
+        "id": "gs-010-s1",
+        "prompt": "偶数と奇数を文字で表すと？",
+        "equationBefore": "偶数 + 奇数",
+        "explanationCaption": "偶数は 2m、奇数は 2n + 1 と表せます。",
+        "equationAfter": "2m + (2n + 1)",
+        "highlight": "2n + 1",
+        "choices": [
+          { "id": "a", "label": "2m + (2n + 1)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "m + (n + 1)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2m + 2n", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-010-s2",
+        "prompt": "整理すると？",
+        "equationBefore": "2m + 2n + 1",
+        "explanationCaption": "2m + 2n = 2(m + n)。だから 2(m + n) + 1 となり、奇数の形です。",
+        "equationAfter": "2(m + n) + 1",
+        "highlight": "+ 1",
+        "choices": [
+          { "id": "a", "label": "2(m + n) + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2(m + n)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "m + n + 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-011",
+    "unitId": "g2-shiki",
+    "title": "等式の変形: 円周",
+    "equation": "C = 2πr を r について解く",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "r だけを残すために、両辺を 2π で割ります。",
+    "tags": ["式の計算", "等式の変形", "図形", "標準"],
+    "finalAnswer": "r = C/2π",
+    "steps": [
+      {
+        "id": "gs-011-s1",
+        "prompt": "r だけにするには？",
+        "equationBefore": "C = 2πr",
+        "explanationCaption": "r に 2π がかかっているので、両辺を 2π で割ります。",
+        "equationAfter": "C/2π = r",
+        "highlight": "2π",
+        "choices": [
+          { "id": "a", "label": "両辺を 2π で割る", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺に 2π をかける", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "両辺から 2π を引く", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-011-s2",
+        "prompt": "r について解くと？",
+        "equationBefore": "C/2π = r",
+        "explanationCaption": "左右を入れ替えて、r = C/2π です。",
+        "equationAfter": "r = C/2π",
+        "highlight": "C/2π",
+        "choices": [
+          { "id": "a", "label": "r = C/2π", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "r = 2π/C", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "r = C - 2π", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-012",
+    "unitId": "g2-shiki",
+    "title": "3の倍数の説明",
+    "equation": "連続する3つの整数の和が3の倍数になる理由",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "連続する3つの整数を n - 1, n, n + 1 と表します。",
+    "tags": ["式の計算", "整数", "説明", "高校受験"],
+    "finalAnswer": "3n",
+    "steps": [
+      {
+        "id": "gs-012-s1",
+        "prompt": "連続する3つの整数を表すと？",
+        "equationBefore": "真ん中を n とする",
+        "explanationCaption": "真ん中が n なら、前は n - 1、後ろは n + 1 です。",
+        "equationAfter": "n - 1, n, n + 1",
+        "highlight": "n - 1",
+        "choices": [
+          { "id": "a", "label": "n - 1, n, n + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "n, n + 1, n + 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n - 2, n, n + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-012-s2",
+        "prompt": "和を整理すると？",
+        "equationBefore": "(n - 1) + n + (n + 1)",
+        "explanationCaption": "-1 と +1 が消えて、n が3個分残ります。和は 3n なので、3の倍数です。",
+        "equationAfter": "3n",
+        "highlight": "3n",
+        "choices": [
+          { "id": "a", "label": "3n", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3n + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

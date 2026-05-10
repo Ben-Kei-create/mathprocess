@@ -349,5 +349,109 @@
         ]
       }
     ]
+  },
+  {
+    "id": "qe-009",
+    "unitId": "g3-quad-eq",
+    "title": "整数の和と積",
+    "equation": "2つの正の整数の和が13、積が40",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "一方を x とすると、もう一方は 13 - x です。",
+    "tags": ["二次方程式", "整数", "高校受験"],
+    "finalAnswer": "5と8",
+    "steps": [
+      {
+        "id": "qe-009-s1",
+        "prompt": "もう一方の数は？",
+        "equationBefore": "一方を x、和が13",
+        "explanationCaption": "2つの数の和が13なので、もう一方は 13 - x です。",
+        "equationAfter": "13 - x",
+        "highlight": "13 - x",
+        "choices": [
+          { "id": "a", "label": "13 - x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "13 + x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "40 - x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-009-s2",
+        "prompt": "積が40の方程式は？",
+        "equationBefore": "x と 13 - x の積",
+        "explanationCaption": "2つの数の積が40なので、x(13 - x) = 40 です。",
+        "equationAfter": "x(13 - x) = 40",
+        "highlight": "40",
+        "choices": [
+          { "id": "a", "label": "x(13 - x) = 40", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + (13 - x) = 40", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "13x = 40", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-009-s3",
+        "prompt": "2つの整数は？",
+        "equationBefore": "x^2 - 13x + 40 = 0",
+        "explanationCaption": "(x - 5)(x - 8) = 0 なので、x = 5, 8。2つの整数は5と8です。",
+        "equationAfter": "5と8",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5と8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4と9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3と10", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-010",
+    "unitId": "g3-quad-eq",
+    "title": "投げ上げた物体の高さ",
+    "equation": "高さ h = -5t^2 + 20t。高さ15mになる時刻",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "h に15を入れて、二次方程式を作ります。",
+    "tags": ["二次方程式", "関数", "高校受験"],
+    "finalAnswer": "t = 1, 3",
+    "steps": [
+      {
+        "id": "qe-010-s1",
+        "prompt": "高さ15mになる方程式は？",
+        "equationBefore": "h = -5t^2 + 20t",
+        "explanationCaption": "h に15を入れて、15 = -5t^2 + 20t です。",
+        "equationAfter": "15 = -5t^2 + 20t",
+        "highlight": "15",
+        "choices": [
+          { "id": "a", "label": "15 = -5t^2 + 20t", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0 = -5t^2 + 20t", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "15t = -5t^2 + 20", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-010-s2",
+        "prompt": "整理すると？",
+        "equationBefore": "15 = -5t^2 + 20t",
+        "explanationCaption": "両辺を移項して、5t^2 - 20t + 15 = 0。5で割ると t^2 - 4t + 3 = 0 です。",
+        "equationAfter": "t^2 - 4t + 3 = 0",
+        "highlight": "-4t",
+        "choices": [
+          { "id": "a", "label": "t^2 - 4t + 3 = 0", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "t^2 + 4t + 3 = 0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "t^2 - 4t - 3 = 0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-010-s3",
+        "prompt": "時刻 t は？",
+        "equationBefore": "t^2 - 4t + 3 = 0",
+        "explanationCaption": "(t - 1)(t - 3) = 0 なので、t = 1, 3。上がる途中と下がる途中の2回あります。",
+        "equationAfter": "t = 1, 3",
+        "highlight": "1, 3",
+        "choices": [
+          { "id": "a", "label": "t = 1, 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "t = 0, 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "t = 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

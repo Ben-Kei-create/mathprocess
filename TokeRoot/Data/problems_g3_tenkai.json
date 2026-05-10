@@ -310,5 +310,83 @@
         ]
       }
     ]
+  },
+  {
+    "id": "tk-009",
+    "unitId": "g3-tenkai",
+    "title": "式の値を工夫する",
+    "equation": "101^2 - 99^2",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "a^2 - b^2 = (a + b)(a - b) を使います。",
+    "tags": ["因数分解", "計算の工夫", "入試型"],
+    "finalAnswer": "400",
+    "steps": [
+      {
+        "id": "tk-009-s1",
+        "prompt": "差の平方で変形すると？",
+        "equationBefore": "101^2 - 99^2",
+        "explanationCaption": "a^2 - b^2 = (a + b)(a - b) なので、(101 + 99)(101 - 99) です。",
+        "equationAfter": "(101 + 99)(101 - 99)",
+        "highlight": "101 - 99",
+        "choices": [
+          { "id": "a", "label": "(101 + 99)(101 - 99)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(101 - 99)^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "101 × 99", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-009-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "(101 + 99)(101 - 99)",
+        "explanationCaption": "101 + 99 = 200、101 - 99 = 2。200 × 2 = 400 です。",
+        "equationAfter": "400",
+        "highlight": "400",
+        "choices": [
+          { "id": "a", "label": "400", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "200", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-010",
+    "unitId": "g3-tenkai",
+    "title": "式の証明: 連続する整数",
+    "equation": "連続する2つの整数の積に大きい方を足すと平方数になる",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "連続する整数を n と n + 1 とします。",
+    "tags": ["展開", "整数", "説明", "高校受験"],
+    "finalAnswer": "(n + 1)^2",
+    "steps": [
+      {
+        "id": "tk-010-s1",
+        "prompt": "連続する2つの整数の積に大きい方を足す式は？",
+        "equationBefore": "n, n + 1",
+        "explanationCaption": "積は n(n + 1)。大きい方は n + 1 なので、n(n + 1) + (n + 1) です。",
+        "equationAfter": "n(n + 1) + (n + 1)",
+        "highlight": "n + 1",
+        "choices": [
+          { "id": "a", "label": "n(n + 1) + (n + 1)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "n(n + 1) + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n(n + 1)^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-010-s2",
+        "prompt": "くくると？",
+        "equationBefore": "n(n + 1) + (n + 1)",
+        "explanationCaption": "n + 1 が共通しています。(n + 1)(n + 1) = (n + 1)^2 なので、平方数になります。",
+        "equationAfter": "(n + 1)^2",
+        "highlight": "(n + 1)^2",
+        "choices": [
+          { "id": "a", "label": "(n + 1)^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "n^2 + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n(n + 2)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

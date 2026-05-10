@@ -3,13 +3,14 @@ import SwiftUI
 struct UnitSelectView: View {
     @Environment(DataService.self) private var data
     @Environment(ProgressStore.self) private var store
+    @State private var selectedGrade: Grade = .g1
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: TKSpacing.lg) {
-                ForEach(Grade.allCases) { g in
-                    section(for: g)
-                }
+                gradeHeader
+                gradePicker
+                section(for: selectedGrade)
             }
             .padding(.horizontal, TKSpacing.md)
             .padding(.top, TKSpacing.md)
@@ -20,14 +21,42 @@ struct UnitSelectView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
+    private var gradeHeader: some View {
+        VStack(alignment: .leading, spacing: TKSpacing.xs) {
+            Text("学年ルート")
+                .font(TKType.title)
+                .foregroundStyle(TKColor.textPrimary)
+            Text("中1から中3まで、今やる学年を選べます。")
+                .font(TKType.body)
+                .foregroundStyle(TKColor.textSecondary)
+        }
+    }
+
+    private var gradePicker: some View {
+        Picker("学年ルート", selection: $selectedGrade) {
+            ForEach(Grade.allCases) { grade in
+                Text(grade.rawValue)
+                    .tag(grade)
+            }
+        }
+        .pickerStyle(.segmented)
+        .accessibilityLabel("学年ルートを選ぶ")
+    }
+
     private func section(for grade: Grade) -> some View {
         let units = data.units
             .filter { $0.grade == grade }
             .sorted { $0.order < $1.order }
         return VStack(alignment: .leading, spacing: TKSpacing.sm) {
-            Text("\(grade.rawValue) ルート")
-                .font(TKType.subtitle)
-                .foregroundStyle(TKColor.textPrimary)
+            HStack(alignment: .firstTextBaseline) {
+                Text("\(grade.rawValue) ルート")
+                    .font(TKType.subtitle)
+                    .foregroundStyle(TKColor.textPrimary)
+                Spacer()
+                Text(routeSummary(for: units))
+                    .font(TKType.caption)
+                    .foregroundStyle(TKColor.textTertiary)
+            }
 
             VStack(spacing: TKSpacing.sm) {
                 ForEach(units) { unit in
@@ -35,6 +64,14 @@ struct UnitSelectView: View {
                 }
             }
         }
+    }
+
+    private func routeSummary(for units: [MathUnit]) -> String {
+        let availableUnits = units.filter(\.isAvailable)
+        let problemTotal = availableUnits.reduce(0) { total, unit in
+            total + problemCount(for: unit)
+        }
+        return "\(availableUnits.count)単元・\(problemTotal)問"
     }
 
     @ViewBuilder
@@ -55,6 +92,7 @@ struct UnitSelectView: View {
     private func rowBody(_ unit: MathUnit) -> some View {
         let count = problemCount(for: unit)
         let mastered = masteredCount(for: unit)
+        let familyTotal = familyCount(for: unit)
         return HStack(spacing: 0) {
             Rectangle()
                 .fill(unit.isAvailable ? TKColor.success : TKColor.divider)
@@ -75,7 +113,7 @@ struct UnitSelectView: View {
                             .foregroundStyle(TKColor.textSecondary)
                     }
                     if unit.isAvailable {
-                        unitProgress(mastered: mastered, total: count)
+                        unitProgress(mastered: mastered, total: familyTotal)
                             .padding(.top, 2)
                     }
                 }
@@ -88,7 +126,7 @@ struct UnitSelectView: View {
                             .font(TKType.caption)
                             .foregroundStyle(TKColor.textTertiary)
                         HStack(spacing: 5) {
-                            Text(actionTitle(mastered: mastered, total: count))
+                            Text(actionTitle(mastered: mastered, total: familyTotal))
                             Image(systemName: "chevron.right")
                                 .font(.system(size: 11, weight: .bold))
                         }
@@ -143,7 +181,11 @@ struct UnitSelectView: View {
     }
 
     private func masteredCount(for unit: MathUnit) -> Int {
-        store.masteredCount(in: unit.id, data: data)
+        store.masteredFamilyCount(in: unit.id, data: data)
+    }
+
+    private func familyCount(for unit: MathUnit) -> Int {
+        store.familyCount(in: unit.id, data: data)
     }
 
     private func actionTitle(mastered: Int, total: Int) -> String {
@@ -159,10 +201,11 @@ struct UnitSelectView: View {
     private func accessibilityLabel(for unit: MathUnit) -> String {
         let count = problemCount(for: unit)
         let mastered = masteredCount(for: unit)
+        let familyTotal = familyCount(for: unit)
         let subtitle = unit.subtitle.map { "、\(MathDisplayFormatter.plain($0))" } ?? ""
 
         if unit.isAvailable {
-            return "\(unit.title)\(subtitle)、\(count)問、\(mastered)問完了、\(actionTitle(mastered: mastered, total: count))"
+            return "\(unit.title)\(subtitle)、\(count)問、\(mastered)テーマ完了、\(actionTitle(mastered: mastered, total: familyTotal))"
         }
         return "\(unit.title)\(subtitle)、\(unit.status.label)"
     }

@@ -375,5 +375,213 @@
         ]
       }
     ]
+  },
+  {
+    "id": "pr-009",
+    "unitId": "g2-kakuritsu",
+    "title": "積が3の倍数",
+    "equation": "1から6のカードから2枚を順に引く。積が3の倍数になる確率は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "反対に、積が3の倍数にならない場合を考えます。",
+    "tags": ["確率", "カード", "余事象", "高校受験"],
+    "finalAnswer": "3/5",
+    "steps": [
+      {
+        "id": "pr-009-s1",
+        "prompt": "全部で何通り？",
+        "equationBefore": "6枚から2枚を順に引く",
+        "explanationCaption": "1枚目は6通り、2枚目は残り5通りなので、全部で30通りです。",
+        "equationAfter": "30通り",
+        "highlight": "30",
+        "choices": [
+          { "id": "a", "label": "30通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "15通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-009-s2",
+        "prompt": "積が3の倍数にならないのは何通り？",
+        "equationBefore": "3の倍数ではないカードは1,2,4,5",
+        "explanationCaption": "積が3の倍数にならないには、2枚とも 1,2,4,5 から選びます。4 × 3 = 12通りです。",
+        "equationAfter": "12通り",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "18通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-009-s3",
+        "prompt": "積が3の倍数になる確率は？",
+        "equationBefore": "30 - 12 = 18",
+        "explanationCaption": "積が3の倍数になるのは18通り。確率は 18/30 = 3/5 です。",
+        "equationAfter": "3/5",
+        "highlight": "3/5",
+        "choices": [
+          { "id": "a", "label": "3/5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2/5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1/5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pr-010",
+    "unitId": "g2-kakuritsu",
+    "title": "袋から2色を取り出す",
+    "equation": "赤2個、白3個、青1個から2個を同時に取り出す。色が異なる確率は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "全部の取り出し方と、同じ色になる取り出し方を比べます。",
+    "tags": ["確率", "組み合わせ", "高校受験"],
+    "finalAnswer": "11/15",
+    "steps": [
+      {
+        "id": "pr-010-s1",
+        "prompt": "全部で何通り？",
+        "equationBefore": "6個から2個を同時に取り出す",
+        "explanationCaption": "6個から2個を選ぶので、全部で 15通りです。",
+        "equationAfter": "15通り",
+        "highlight": "15",
+        "choices": [
+          { "id": "a", "label": "15通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-010-s2",
+        "prompt": "同じ色になるのは何通り？",
+        "equationBefore": "赤2個、白3個、青1個",
+        "explanationCaption": "赤赤は1通り、白白は3通り、青青は作れません。合計4通りです。",
+        "equationAfter": "4通り",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-010-s3",
+        "prompt": "色が異なる確率は？",
+        "equationBefore": "15 - 4 = 11",
+        "explanationCaption": "色が異なるのは 11通り。確率は 11/15 です。",
+        "equationAfter": "11/15",
+        "highlight": "11/15",
+        "choices": [
+          { "id": "a", "label": "11/15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4/15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2/3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pr-011",
+    "unitId": "g2-kakuritsu",
+    "title": "さいころの和が10以上",
+    "equation": "大小2個のさいころを投げる。和が10以上になる確率は？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "和が10、11、12になる組を数えます。",
+    "tags": ["確率", "さいころ", "標準"],
+    "finalAnswer": "1/6",
+    "steps": [
+      {
+        "id": "pr-011-s1",
+        "prompt": "全部で何通り？",
+        "equationBefore": "大小2個のさいころ",
+        "explanationCaption": "大小を区別するので、全部で 6 × 6 = 36通りです。",
+        "equationAfter": "36通り",
+        "highlight": "36",
+        "choices": [
+          { "id": "a", "label": "36通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-011-s2",
+        "prompt": "和が10以上は何通り？",
+        "equationBefore": "和が10, 11, 12",
+        "explanationCaption": "和が10は3通り、11は2通り、12は1通り。合計6通りです。",
+        "equationAfter": "6通り",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "10通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-011-s3",
+        "prompt": "確率は？",
+        "equationBefore": "6/36",
+        "explanationCaption": "6/36 を約分して、1/6 です。",
+        "equationAfter": "1/6",
+        "highlight": "1/6",
+        "choices": [
+          { "id": "a", "label": "1/6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1/3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5/6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pr-012",
+    "unitId": "g2-kakuritsu",
+    "title": "さいころの差が1",
+    "equation": "大小2個のさいころを投げる。出た目の差が1になる確率は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "(1,2) と (2,1) のように、順番を区別して数えます。",
+    "tags": ["確率", "さいころ", "高校受験"],
+    "finalAnswer": "5/18",
+    "steps": [
+      {
+        "id": "pr-012-s1",
+        "prompt": "全部で何通り？",
+        "equationBefore": "大小2個のさいころ",
+        "explanationCaption": "大小を区別するので、全部で36通りです。",
+        "equationAfter": "36通り",
+        "highlight": "36",
+        "choices": [
+          { "id": "a", "label": "36通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "18通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-012-s2",
+        "prompt": "差が1になるのは何通り？",
+        "equationBefore": "(1,2), (2,1), ...",
+        "explanationCaption": "(1,2),(2,1),(2,3),(3,2),(3,4),(4,3),(4,5),(5,4),(5,6),(6,5) の10通りです。",
+        "equationAfter": "10通り",
+        "highlight": "10",
+        "choices": [
+          { "id": "a", "label": "10通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-012-s3",
+        "prompt": "確率は？",
+        "equationBefore": "10/36",
+        "explanationCaption": "10/36 を約分して、5/18 です。",
+        "equationAfter": "5/18",
+        "highlight": "5/18",
+        "choices": [
+          { "id": "a", "label": "5/18", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5/36", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1/6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

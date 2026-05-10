@@ -35,6 +35,7 @@ enum SolveMode: String, Codable, CaseIterable {
 struct Problem: Codable, Identifiable, Hashable {
     let id: String
     let unitId: String
+    let familyId: String?
     let title: String                 // short label, optional
     let equation: String              // headline equation: "2x + 3 = 11"
     let diagram: GeometryDiagram?

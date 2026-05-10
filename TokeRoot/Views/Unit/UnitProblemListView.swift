@@ -82,11 +82,11 @@ struct UnitProblemListView: View {
             HStack(spacing: TKSpacing.sm) {
                 summaryPill("\(activeCount)", caption: "練習中")
                 summaryPill("\(masteredCount)", caption: "完了")
-                summaryPill("\(problems.count)", caption: "全部")
+                summaryPill("\(problems.count)", caption: "類題")
             }
 
             ProgressView(value: Double(masteredCount),
-                         total: Double(max(problems.count, 1)))
+                         total: Double(max(familyCount, 1)))
                 .tint(TKColor.success)
         }
     }
@@ -136,9 +136,9 @@ struct UnitProblemListView: View {
     private var emptyCaption: String {
         switch selectedTab {
         case .active:
-            return "3回クリアすると完了へ移動し、次の問題が出ます。"
+            return "同じテーマの別の類題を3問クリアすると、完了へ移動します。"
         case .completed:
-            return "同じ問題を3回クリアすると、ここに移動します。"
+            return "類題を3問以上クリアしたテーマが、ここに移動します。"
         }
     }
 
@@ -262,7 +262,7 @@ struct UnitProblemListView: View {
     }
 
     private func masteryMarks(for problem: Problem) -> some View {
-        let slots = store.masterySlots(for: problem.id)
+        let slots = store.familyMasterySlots(for: problem, data: data)
         return HStack(spacing: 4) {
             ForEach(0..<3, id: \.self) { index in
                 Image(systemName: index < slots ? "checkmark.square.fill" : "square")
@@ -294,7 +294,11 @@ struct UnitProblemListView: View {
     }
 
     private var masteredCount: Int {
-        problems.filter { store.isMastered(problemId: $0.id) }.count
+        store.masteredFamilyCount(in: unitId, data: data)
+    }
+
+    private var familyCount: Int {
+        store.familyCount(in: unitId, data: data)
     }
 
     private var activeCount: Int {
@@ -311,7 +315,7 @@ struct UnitProblemListView: View {
                 filtered = activeProblems(in: section.problems)
             case .completed:
                 filtered = section.problems
-                    .filter { store.isMastered(problemId: $0.id) }
+                    .filter { store.isFamilyMastered(problem: $0, data: data) }
                     .sorted(by: problemSort)
             }
 
@@ -327,15 +331,27 @@ struct UnitProblemListView: View {
     }
 
     private func activeProblems(in problems: [Problem]) -> [Problem] {
-        let notMastered = problems
-            .filter { !store.isMastered(problemId: $0.id) }
+        let candidates = Dictionary(grouping: problems, by: { store.familyKey(for: $0) })
+            .values
+            .compactMap { family -> Problem? in
+                let sortedFamily = family.sorted(by: problemSort)
+                guard let first = sortedFamily.first,
+                      !store.isFamilyMastered(problem: first, data: data) else {
+                    return nil
+                }
+                return nextVariant(in: sortedFamily)
+            }
             .sorted(by: problemSort)
 
-        guard let nextDifficulty = notMastered.map(\.difficulty).min() else {
+        guard let nextDifficulty = candidates.map(\.difficulty).min() else {
             return []
         }
 
-        return notMastered.filter { $0.difficulty == nextDifficulty }
+        return candidates.filter { $0.difficulty == nextDifficulty }
+    }
+
+    private func nextVariant(in family: [Problem]) -> Problem? {
+        family.first { store.clearCount(for: $0.id) == 0 } ?? family.first
     }
 
     private var allSections: [ProblemSection] {
@@ -550,7 +566,7 @@ struct UnitProblemListView: View {
     }
 
     private func rowStroke(for problem: Problem) -> Color {
-        store.clearCount(for: problem.id) > 0
+        store.familyMasterySlots(for: problem, data: data) > 0
             ? difficultyColor(for: problem).opacity(0.28)
             : TKColor.divider
     }
@@ -560,8 +576,8 @@ struct UnitProblemListView: View {
     }
 
     private func accessibilityLabel(for problem: Problem) -> String {
-        let count = store.masterySlots(for: problem.id)
-        let status = selectedTab == .completed ? "完了" : "\(count)回クリア"
+        let count = store.familyMasterySlots(for: problem, data: data)
+        let status = selectedTab == .completed ? "完了" : "類題\(count)問クリア"
         return "\(MathDisplayFormatter.plain(problem.title))、\(MathDisplayFormatter.plain(problem.equation))、\(status)"
     }
 }
