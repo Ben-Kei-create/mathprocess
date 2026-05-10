@@ -232,5 +232,83 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gs-007",
+    "unitId": "g2-shiki",
+    "title": "文字式で速さを表す",
+    "equation": "a km を b 時間で進むときの速さ",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "速さは、道のり ÷ 時間です。",
+    "tags": ["式の計算", "等式", "速さ", "入試型"],
+    "finalAnswer": "a/b km/時",
+    "steps": [
+      {
+        "id": "gs-007-s1",
+        "prompt": "速さを求める式は？",
+        "equationBefore": "道のり a km、時間 b 時間",
+        "explanationCaption": "速さは、道のりを時間で割ります。だから a ÷ b です。",
+        "equationAfter": "a ÷ b",
+        "highlight": "a ÷ b",
+        "choices": [
+          { "id": "a", "label": "a ÷ b", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "a × b", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "b ÷ a", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-007-s2",
+        "prompt": "文字式で書くと？",
+        "equationBefore": "a ÷ b",
+        "explanationCaption": "割り算は分数で書けます。速さは a/b km/時です。",
+        "equationAfter": "a/b",
+        "highlight": "a/b",
+        "choices": [
+          { "id": "a", "label": "a/b", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "b/a", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "ab", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-008",
+    "unitId": "g2-shiki",
+    "title": "等式の変形: 速さ",
+    "equation": "v = d/t を d について解く",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "分母の t を消すために、両辺に t をかけます。",
+    "tags": ["式の計算", "等式の変形", "速さ", "高校受験"],
+    "finalAnswer": "d = vt",
+    "steps": [
+      {
+        "id": "gs-008-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "v = d/t",
+        "explanationCaption": "d/t の分母 t を消すため、両辺に t をかけます。",
+        "equationAfter": "vt = d",
+        "highlight": "t",
+        "choices": [
+          { "id": "a", "label": "両辺に t をかける", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺を t で割る", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "両辺から t を引く", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-008-s2",
+        "prompt": "d について解くと？",
+        "equationBefore": "vt = d",
+        "explanationCaption": "左右を入れ替えて、d = vt です。速さ×時間=道のりの形になります。",
+        "equationAfter": "d = vt",
+        "highlight": "vt",
+        "choices": [
+          { "id": "a", "label": "d = vt", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "d = v/t", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "d = t/v", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

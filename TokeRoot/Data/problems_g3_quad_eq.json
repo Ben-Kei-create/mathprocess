@@ -1,0 +1,353 @@
+[
+  {
+    "id": "qe-001",
+    "unitId": "g3-quad-eq",
+    "title": "平方根で解く",
+    "equation": "x^2 = 25",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "2乗して25になる数は、正と負の2つあります。",
+    "tags": ["二次方程式", "平方根"],
+    "finalAnswer": "x = ±5",
+    "steps": [
+      {
+        "id": "qe-001-s1",
+        "prompt": "x は？",
+        "equationBefore": "x^2 = 25",
+        "explanationCaption": "5^2 = 25、(-5)^2 = 25 なので、x = ±5 です。",
+        "equationAfter": "x = ±5",
+        "highlight": "±5",
+        "choices": [
+          { "id": "a", "label": "x = ±5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 25", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-002",
+    "unitId": "g3-quad-eq",
+    "title": "共通因数で解く",
+    "equation": "x^2 - 5x = 0",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x でくくります。",
+    "tags": ["二次方程式", "因数分解"],
+    "finalAnswer": "x = 0, 5",
+    "steps": [
+      {
+        "id": "qe-002-s1",
+        "prompt": "左辺を因数分解すると？",
+        "equationBefore": "x^2 - 5x",
+        "explanationCaption": "x が共通なので、x(x - 5) とくくれます。",
+        "equationAfter": "x(x - 5) = 0",
+        "highlight": "x(x - 5)",
+        "choices": [
+          { "id": "a", "label": "x(x - 5) = 0", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x - 5)^2 = 0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x - 5 = 0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-002-s2",
+        "prompt": "解は？",
+        "equationBefore": "x(x - 5) = 0",
+        "explanationCaption": "かけ算して0になるので、x = 0 または x - 5 = 0。解は x = 0, 5 です。",
+        "equationAfter": "x = 0, 5",
+        "highlight": "0, 5",
+        "choices": [
+          { "id": "a", "label": "x = 0, 5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = -5, 0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-003",
+    "unitId": "g3-quad-eq",
+    "title": "因数分解で解く",
+    "equation": "x^2 + 5x + 6 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "たして5、かけて6になる2つの数を探します。",
+    "tags": ["二次方程式", "因数分解"],
+    "finalAnswer": "x = -2, -3",
+    "steps": [
+      {
+        "id": "qe-003-s1",
+        "prompt": "因数分解すると？",
+        "equationBefore": "x^2 + 5x + 6",
+        "explanationCaption": "2 + 3 = 5、2 × 3 = 6 なので、(x + 2)(x + 3) です。",
+        "equationAfter": "(x + 2)(x + 3) = 0",
+        "highlight": "(x + 2)",
+        "choices": [
+          { "id": "a", "label": "(x + 2)(x + 3) = 0", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x - 2)(x - 3) = 0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x + 1)(x + 6) = 0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-003-s2",
+        "prompt": "解は？",
+        "equationBefore": "(x + 2)(x + 3) = 0",
+        "explanationCaption": "x + 2 = 0 または x + 3 = 0 なので、x = -2, -3 です。",
+        "equationAfter": "x = -2, -3",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "x = -2, -3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 2, 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = -1, -6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-004",
+    "unitId": "g3-quad-eq",
+    "title": "平方完成に近い形",
+    "equation": "(x - 3)^2 = 16",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x - 3 が、4 または -4 になります。",
+    "tags": ["二次方程式", "平方根", "標準"],
+    "finalAnswer": "x = 7, -1",
+    "steps": [
+      {
+        "id": "qe-004-s1",
+        "prompt": "x - 3 は？",
+        "equationBefore": "(x - 3)^2 = 16",
+        "explanationCaption": "2乗して16になる数は 4 と -4 です。だから x - 3 = ±4 です。",
+        "equationAfter": "x - 3 = ±4",
+        "highlight": "±4",
+        "choices": [
+          { "id": "a", "label": "x - 3 = ±4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x - 3 = 16", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = ±4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-004-s2",
+        "prompt": "解は？",
+        "equationBefore": "x - 3 = 4 または x - 3 = -4",
+        "explanationCaption": "x = 7 または x = -1 です。",
+        "equationAfter": "x = 7, -1",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "x = 7, -1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 4, -4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 7, 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-005",
+    "unitId": "g3-quad-eq",
+    "title": "解の公式を使う",
+    "equation": "x^2 - 4x + 1 = 0",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "因数分解しにくいので、解の公式を使います。",
+    "tags": ["二次方程式", "解の公式", "高校受験"],
+    "finalAnswer": "x = 2 ± sqrt(3)",
+    "steps": [
+      {
+        "id": "qe-005-s1",
+        "prompt": "a, b, c は？",
+        "equationBefore": "x^2 - 4x + 1 = 0",
+        "explanationCaption": "a = 1、b = -4、c = 1 です。",
+        "equationAfter": "a = 1, b = -4, c = 1",
+        "highlight": "b = -4",
+        "choices": [
+          { "id": "a", "label": "a = 1, b = -4, c = 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "a = 1, b = 4, c = 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "a = -4, b = 1, c = 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qe-005-s2",
+        "prompt": "解は？",
+        "equationBefore": "x = (4 ± sqrt(16 - 4))/2",
+        "explanationCaption": "sqrt(12) = 2sqrt(3) なので、x = (4 ± 2sqrt(3))/2 = 2 ± sqrt(3) です。",
+        "equationAfter": "x = 2 ± sqrt(3)",
+        "highlight": "sqrt(3)",
+        "choices": [
+          { "id": "a", "label": "x = 2 ± sqrt(3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 4 ± sqrt(3)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 2 ± sqrt(12)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-006",
+    "unitId": "g3-quad-eq",
+    "title": "面積の文章題",
+    "equation": "縦が横より3cm短い長方形の面積が40cm^2。横は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "横を x cm とすると、縦は x - 3 cm です。",
+    "tags": ["二次方程式", "文章題", "面積", "高校受験"],
+    "finalAnswer": "横は8cm",
+    "steps": [
+      {
+        "id": "qe-006-s1",
+        "prompt": "縦を文字で表すと？",
+        "equationBefore": "横を x cm、縦は横より3cm短い",
+        "explanationCaption": "縦は x - 3 cm です。",
+        "equationAfter": "縦 = x - 3",
+        "highlight": "x - 3",
+        "choices": [
+          { "id": "a", "label": "x - 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 3", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "3x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-006-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "面積 = 横 × 縦 = 40",
+        "explanationCaption": "横は x、縦は x - 3 なので、x(x - 3) = 40 です。",
+        "equationAfter": "x(x - 3) = 40",
+        "highlight": "x(x - 3)",
+        "choices": [
+          { "id": "a", "label": "x(x - 3) = 40", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + (x - 3) = 40", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "3x = 40", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-006-s3",
+        "prompt": "横の長さは？",
+        "equationBefore": "x^2 - 3x - 40 = 0",
+        "explanationCaption": "(x - 8)(x + 5) = 0 なので、x = 8, -5。長さは正なので、横は8cmです。",
+        "equationAfter": "x = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8cm", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5cm", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "40cm", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-007",
+    "unitId": "g3-quad-eq",
+    "title": "連続する整数と二次方程式",
+    "equation": "連続する2つの正の整数の積が72。一方は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "小さい方を x とすると、大きい方は x + 1 です。",
+    "tags": ["二次方程式", "文章題", "整数", "高校受験"],
+    "finalAnswer": "8と9",
+    "steps": [
+      {
+        "id": "qe-007-s1",
+        "prompt": "連続する2つの整数を表すと？",
+        "equationBefore": "小さい方を x とする",
+        "explanationCaption": "連続する整数なので、小さい方が x、大きい方が x + 1 です。",
+        "equationAfter": "x, x + 1",
+        "highlight": "x + 1",
+        "choices": [
+          { "id": "a", "label": "x, x + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x, 2x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 1, x + 1", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-007-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "積が72",
+        "explanationCaption": "2つの数の積が72なので、x(x + 1) = 72 です。",
+        "equationAfter": "x(x + 1) = 72",
+        "highlight": "72",
+        "choices": [
+          { "id": "a", "label": "x(x + 1) = 72", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + (x + 1) = 72", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x^2 + 1 = 72", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-007-s3",
+        "prompt": "2つの整数は？",
+        "equationBefore": "x^2 + x - 72 = 0",
+        "explanationCaption": "(x - 8)(x + 9) = 0 なので、x = 8, -9。正の整数なので、8と9です。",
+        "equationAfter": "8と9",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8と9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7と8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "9と10", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qe-008",
+    "unitId": "g3-quad-eq",
+    "title": "動く点の面積",
+    "equation": "縦10cm、横12cmの長方形で、四すみから x cm の正方形を切り取る",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "残る長方形のたてと横を x を使って表します。",
+    "tags": ["二次方程式", "面積", "図形", "高校受験"],
+    "finalAnswer": "x = 2",
+    "steps": [
+      {
+        "id": "qe-008-s1",
+        "prompt": "切り取った後のたては？",
+        "equationBefore": "たて10cm、上下から x cm ずつ切る",
+        "explanationCaption": "上下から x cm ずつ減るので、たては 10 - 2x です。",
+        "equationAfter": "10 - 2x",
+        "highlight": "2x",
+        "choices": [
+          { "id": "a", "label": "10 - 2x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10 - x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "10 + 2x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-008-s2",
+        "prompt": "切り取った後の横は？",
+        "equationBefore": "横12cm、左右から x cm ずつ切る",
+        "explanationCaption": "左右から x cm ずつ減るので、横は 12 - 2x です。",
+        "equationAfter": "12 - 2x",
+        "highlight": "12 - 2x",
+        "choices": [
+          { "id": "a", "label": "12 - 2x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12 - x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "12 + 2x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-008-s3",
+        "prompt": "残った部分の面積が48cm^2なら、方程式は？",
+        "equationBefore": "たて 10 - 2x、横 12 - 2x",
+        "explanationCaption": "面積は、たて×横です。だから (10 - 2x)(12 - 2x) = 48 です。",
+        "equationAfter": "(10 - 2x)(12 - 2x) = 48",
+        "highlight": "= 48",
+        "choices": [
+          { "id": "a", "label": "(10 - 2x)(12 - 2x) = 48", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(10 - x)(12 - x) = 48", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "10 × 12 - x = 48", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "qe-008-s4",
+        "prompt": "x は？",
+        "equationBefore": "(10 - 2x)(12 - 2x) = 48",
+        "explanationCaption": "展開して整理すると、x^2 - 11x + 18 = 0。(x - 2)(x - 9) = 0 です。長さとして成り立つのは x = 2 です。",
+        "equationAfter": "x = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "x = 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 11", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

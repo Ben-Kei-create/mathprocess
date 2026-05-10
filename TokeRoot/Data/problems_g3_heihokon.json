@@ -1,0 +1,288 @@
+[
+  {
+    "id": "sr-001",
+    "unitId": "g3-heihokon",
+    "title": "平方根の意味",
+    "equation": "sqrt(49)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "2乗して49になる正の数を考えます。",
+    "tags": ["平方根", "基本"],
+    "finalAnswer": "7",
+    "steps": [
+      {
+        "id": "sr-001-s1",
+        "prompt": "sqrt(49) は？",
+        "equationBefore": "sqrt(49)",
+        "explanationCaption": "7^2 = 49 なので、sqrt(49) = 7 です。",
+        "equationAfter": "7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "7", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "49", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-002",
+    "unitId": "g3-heihokon",
+    "title": "ルートを簡単にする",
+    "equation": "sqrt(50)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "50 = 25 × 2 と見ます。",
+    "tags": ["平方根", "変形"],
+    "finalAnswer": "5sqrt(2)",
+    "steps": [
+      {
+        "id": "sr-002-s1",
+        "prompt": "50 を平方数で分けると？",
+        "equationBefore": "sqrt(50)",
+        "explanationCaption": "50 = 25 × 2 です。25 は 5^2 です。",
+        "equationAfter": "sqrt(25 × 2)",
+        "highlight": "25",
+        "choices": [
+          { "id": "a", "label": "25 × 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10 × 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2 × 5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-002-s2",
+        "prompt": "簡単にすると？",
+        "equationBefore": "sqrt(25 × 2)",
+        "explanationCaption": "sqrt(25) = 5 なので、sqrt(50) = 5sqrt(2) です。",
+        "equationAfter": "5sqrt(2)",
+        "highlight": "5sqrt(2)",
+        "choices": [
+          { "id": "a", "label": "5sqrt(2)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "25sqrt(2)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2sqrt(5)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-003",
+    "unitId": "g3-heihokon",
+    "title": "ルートのかけ算",
+    "equation": "sqrt(3) × sqrt(12)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "ルートどうしのかけ算は、中の数をかけられます。",
+    "tags": ["平方根", "かけ算"],
+    "finalAnswer": "6",
+    "steps": [
+      {
+        "id": "sr-003-s1",
+        "prompt": "ルートの中をかけると？",
+        "equationBefore": "sqrt(3) × sqrt(12)",
+        "explanationCaption": "sqrt(3) × sqrt(12) = sqrt(36) です。",
+        "equationAfter": "sqrt(36)",
+        "highlight": "36",
+        "choices": [
+          { "id": "a", "label": "sqrt(36)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "sqrt(15)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(9)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-003-s2",
+        "prompt": "答えは？",
+        "equationBefore": "sqrt(36)",
+        "explanationCaption": "sqrt(36) = 6 です。",
+        "equationAfter": "6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "36", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3sqrt(12)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-004",
+    "unitId": "g3-heihokon",
+    "title": "同じルートを足す",
+    "equation": "2sqrt(3) + 5sqrt(3)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "同じ sqrt(3) どうしなので、前の数を足します。",
+    "tags": ["平方根", "たし算"],
+    "finalAnswer": "7sqrt(3)",
+    "steps": [
+      {
+        "id": "sr-004-s1",
+        "prompt": "前の数を足すと？",
+        "equationBefore": "2sqrt(3) + 5sqrt(3)",
+        "explanationCaption": "sqrt(3) が同じなので、2 + 5 = 7 とまとめます。",
+        "equationAfter": "7sqrt(3)",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "7sqrt(3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7sqrt(6)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "10sqrt(3)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-005",
+    "unitId": "g3-heihokon",
+    "title": "分母を有理化",
+    "equation": "6/sqrt(3)",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "分母と分子に sqrt(3) をかけます。",
+    "tags": ["平方根", "有理化", "標準"],
+    "finalAnswer": "2sqrt(3)",
+    "steps": [
+      {
+        "id": "sr-005-s1",
+        "prompt": "何をかける？",
+        "equationBefore": "6/sqrt(3)",
+        "explanationCaption": "分母の sqrt(3) を消すため、分母と分子に sqrt(3) をかけます。",
+        "equationAfter": "6sqrt(3)/3",
+        "highlight": "sqrt(3)",
+        "choices": [
+          { "id": "a", "label": "sqrt(3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(6)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-005-s2",
+        "prompt": "簡単にすると？",
+        "equationBefore": "6sqrt(3)/3",
+        "explanationCaption": "6 ÷ 3 = 2 なので、2sqrt(3) です。",
+        "equationAfter": "2sqrt(3)",
+        "highlight": "2sqrt(3)",
+        "choices": [
+          { "id": "a", "label": "2sqrt(3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6sqrt(3)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3sqrt(2)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-006",
+    "unitId": "g3-heihokon",
+    "title": "平方根の大小",
+    "equation": "sqrt(7) と 2.6 はどちらが大きい？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "2.6 を2乗して、7と比べます。",
+    "tags": ["平方根", "大小", "標準"],
+    "finalAnswer": "sqrt(7)",
+    "steps": [
+      {
+        "id": "sr-006-s1",
+        "prompt": "2.6^2 は？",
+        "equationBefore": "2.6 × 2.6",
+        "explanationCaption": "2.6^2 = 6.76 です。",
+        "equationAfter": "2.6^2 = 6.76",
+        "highlight": "6.76",
+        "choices": [
+          { "id": "a", "label": "6.76", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7.6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5.2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-006-s2",
+        "prompt": "どちらが大きい？",
+        "equationBefore": "6.76 < 7",
+        "explanationCaption": "2.6^2 = 6.76 は 7 より小さいので、2.6 は sqrt(7) より小さいです。",
+        "equationAfter": "sqrt(7) > 2.6",
+        "highlight": "sqrt(7)",
+        "choices": [
+          { "id": "a", "label": "sqrt(7)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2.6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "同じ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-007",
+    "unitId": "g3-heihokon",
+    "title": "ルートの加減を整理",
+    "equation": "sqrt(45) - sqrt(20)",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "まずそれぞれ簡単な形にします。",
+    "tags": ["平方根", "加減", "標準"],
+    "finalAnswer": "sqrt(5)",
+    "steps": [
+      {
+        "id": "sr-007-s1",
+        "prompt": "sqrt(45) と sqrt(20) を簡単にすると？",
+        "equationBefore": "sqrt(45) - sqrt(20)",
+        "explanationCaption": "sqrt(45) = 3sqrt(5)、sqrt(20) = 2sqrt(5) です。",
+        "equationAfter": "3sqrt(5) - 2sqrt(5)",
+        "highlight": "sqrt(5)",
+        "choices": [
+          { "id": "a", "label": "3sqrt(5) - 2sqrt(5)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9sqrt(5) - 4sqrt(5)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(25)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-007-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "3sqrt(5) - 2sqrt(5)",
+        "explanationCaption": "同じ sqrt(5) なので、3 - 2 = 1。答えは sqrt(5) です。",
+        "equationAfter": "sqrt(5)",
+        "highlight": "sqrt(5)",
+        "choices": [
+          { "id": "a", "label": "sqrt(5)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(25)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sr-008",
+    "unitId": "g3-heihokon",
+    "title": "平方根と面積",
+    "equation": "面積が72cm^2の正方形の1辺",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "正方形の面積は、1辺 × 1辺です。",
+    "tags": ["平方根", "図形", "面積", "高校受験"],
+    "finalAnswer": "6sqrt(2)cm",
+    "steps": [
+      {
+        "id": "sr-008-s1",
+        "prompt": "1辺を x cm とすると、方程式は？",
+        "equationBefore": "正方形の面積 72cm^2",
+        "explanationCaption": "正方形の面積は x^2 なので、x^2 = 72 です。",
+        "equationAfter": "x^2 = 72",
+        "highlight": "72",
+        "choices": [
+          { "id": "a", "label": "x^2 = 72", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4x = 72", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x = 72", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sr-008-s2",
+        "prompt": "x は？",
+        "equationBefore": "x^2 = 72",
+        "explanationCaption": "x = sqrt(72)。72 = 36 × 2 なので、sqrt(72) = 6sqrt(2) です。",
+        "equationAfter": "x = 6sqrt(2)",
+        "highlight": "6sqrt(2)",
+        "choices": [
+          { "id": "a", "label": "6sqrt(2)cm", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "36sqrt(2)cm", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "sqrt(36)cm", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

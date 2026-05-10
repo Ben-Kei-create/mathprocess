@@ -310,5 +310,109 @@
         ]
       }
     ]
+  },
+  {
+    "id": "re-007",
+    "unitId": "g2-renritsu",
+    "title": "食塩水の連立",
+    "equation": "5%食塩水と12%食塩水を混ぜて10%を700g作る",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "全体の重さと、食塩の重さの2つの式を作ります。",
+    "tags": ["連立方程式", "食塩水", "割合", "高校受験"],
+    "finalAnswer": "5%を200g、12%を500g",
+    "steps": [
+      {
+        "id": "re-007-s1",
+        "prompt": "5%を x g、12%を y g とすると、重さの式は？",
+        "equationBefore": "合計700g",
+        "explanationCaption": "2つを混ぜて700gなので、x + y = 700 です。",
+        "equationAfter": "x + y = 700",
+        "highlight": "700",
+        "choices": [
+          { "id": "a", "label": "x + y = 700", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.05x + 0.12y = 700", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y = 0.10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-007-s2",
+        "prompt": "食塩の重さの式は？",
+        "equationBefore": "10%の食塩水700g",
+        "explanationCaption": "食塩の重さは、0.05x + 0.12y。完成後は 0.10 × 700 = 70g です。",
+        "equationAfter": "0.05x + 0.12y = 70",
+        "highlight": "70",
+        "choices": [
+          { "id": "a", "label": "0.05x + 0.12y = 70", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5x + 12y = 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "0.10x + 0.10y = 700", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-007-s3",
+        "prompt": "それぞれ何g？",
+        "equationBefore": "x + y = 700, 0.05x + 0.12y = 70",
+        "explanationCaption": "x = 700 - y を代入すると、35 - 0.05y + 0.12y = 70。0.07y = 35 なので y = 500、x = 200 です。",
+        "equationAfter": "x = 200, y = 500",
+        "highlight": "500",
+        "choices": [
+          { "id": "a", "label": "5%を200g、12%を500g", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5%を500g、12%を200g", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5%を350g、12%を350g", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-008",
+    "unitId": "g2-renritsu",
+    "title": "追いつきの連立",
+    "equation": "兄は分速80m、弟は分速60m。弟が300m先にいる",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "追いつくとき、2人が家からいる位置が同じになります。",
+    "tags": ["連立方程式", "速さ", "追いつき", "高校受験"],
+    "finalAnswer": "15分後、1200m地点",
+    "steps": [
+      {
+        "id": "re-008-s1",
+        "prompt": "t 分後の兄の位置は？",
+        "equationBefore": "兄は分速80m",
+        "explanationCaption": "分速80mで t 分進むので、兄の位置は 80t m です。",
+        "equationAfter": "80t",
+        "highlight": "80t",
+        "choices": [
+          { "id": "a", "label": "80t", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "80 + t", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "t/80", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-008-s2",
+        "prompt": "弟の位置は？",
+        "equationBefore": "弟は300m先、分速60m",
+        "explanationCaption": "弟は最初に300m先にいて、さらに60t m進みます。位置は 300 + 60t です。",
+        "equationAfter": "300 + 60t",
+        "highlight": "300 + 60t",
+        "choices": [
+          { "id": "a", "label": "300 + 60t", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "300 - 60t", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "60t", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-008-s3",
+        "prompt": "追いつくのは何分後？",
+        "equationBefore": "80t = 300 + 60t",
+        "explanationCaption": "20t = 300 なので、t = 15。15分後に追いつきます。",
+        "equationAfter": "t = 15",
+        "highlight": "15",
+        "choices": [
+          { "id": "a", "label": "15分後", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5分後", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "20分後", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

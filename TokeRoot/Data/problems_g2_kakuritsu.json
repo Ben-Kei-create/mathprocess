@@ -271,5 +271,109 @@
         ]
       }
     ]
+  },
+  {
+    "id": "pr-007",
+    "unitId": "g2-kakuritsu",
+    "title": "少なくとも1回表",
+    "equation": "硬貨を3回投げる。少なくとも1回表が出る確率は？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "反対の場合、つまり1回も表が出ない場合を考えると早いです。",
+    "tags": ["確率", "余事象", "高校受験"],
+    "finalAnswer": "7/8",
+    "steps": [
+      {
+        "id": "pr-007-s1",
+        "prompt": "全部で何通り？",
+        "equationBefore": "硬貨を3回投げる",
+        "explanationCaption": "1回につき表・裏の2通り。3回なので 2 × 2 × 2 = 8通りです。",
+        "equationAfter": "8通り",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-007-s2",
+        "prompt": "1回も表が出ないのは何通り？",
+        "equationBefore": "すべて裏",
+        "explanationCaption": "1回も表が出ないのは、裏裏裏の1通りだけです。",
+        "equationAfter": "1通り",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1通り", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3通り", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "7通り", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-007-s3",
+        "prompt": "少なくとも1回表の確率は？",
+        "equationBefore": "1 - 1/8",
+        "explanationCaption": "反対の確率 1/8 を 1 から引きます。1 - 1/8 = 7/8 です。",
+        "equationAfter": "7/8",
+        "highlight": "7/8",
+        "choices": [
+          { "id": "a", "label": "7/8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1/8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3/8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pr-008",
+    "unitId": "g2-kakuritsu",
+    "title": "くじを戻さず引く",
+    "equation": "当たり3本、はずれ7本。2本引いて少なくとも1本当たりの確率",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "少なくとも1本当たりは、2本ともはずれの反対です。",
+    "tags": ["確率", "余事象", "くじ", "高校受験"],
+    "finalAnswer": "8/15",
+    "steps": [
+      {
+        "id": "pr-008-s1",
+        "prompt": "2本ともはずれの確率は？",
+        "equationBefore": "はずれ7本、全部10本",
+        "explanationCaption": "1本目がはずれの確率は 7/10。戻さないので、2本目は 6/9 です。",
+        "equationAfter": "7/10 × 6/9",
+        "highlight": "6/9",
+        "choices": [
+          { "id": "a", "label": "7/10 × 6/9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7/10 × 7/10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3/10 × 2/9", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-008-s2",
+        "prompt": "2本ともはずれの確率は簡単にすると？",
+        "equationBefore": "7/10 × 6/9",
+        "explanationCaption": "7/10 × 6/9 = 42/90 = 7/15 です。",
+        "equationAfter": "7/15",
+        "highlight": "7/15",
+        "choices": [
+          { "id": "a", "label": "7/15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7/10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1/15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "pr-008-s3",
+        "prompt": "少なくとも1本当たりの確率は？",
+        "equationBefore": "1 - 7/15",
+        "explanationCaption": "少なくとも1本当たりは、2本ともはずれの反対です。1 - 7/15 = 8/15 です。",
+        "equationAfter": "8/15",
+        "highlight": "8/15",
+        "choices": [
+          { "id": "a", "label": "8/15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7/15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3/10", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

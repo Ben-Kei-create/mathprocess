@@ -1,0 +1,314 @@
+[
+  {
+    "id": "tk-001",
+    "unitId": "g3-tenkai",
+    "title": "乗法公式の展開",
+    "equation": "(x + 3)(x + 5)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x^2、x の項、数の項に分けます。",
+    "tags": ["展開", "乗法公式"],
+    "finalAnswer": "x^2 + 8x + 15",
+    "steps": [
+      {
+        "id": "tk-001-s1",
+        "prompt": "x の係数はいくつ？",
+        "equationBefore": "(x + 3)(x + 5)",
+        "explanationCaption": "x の係数は 3 + 5 = 8 です。",
+        "equationAfter": "x^2 + 8x + 15",
+        "highlight": "8x",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-001-s2",
+        "prompt": "展開すると？",
+        "equationBefore": "(x + 3)(x + 5)",
+        "explanationCaption": "3 × 5 = 15 なので、x^2 + 8x + 15 です。",
+        "equationAfter": "x^2 + 8x + 15",
+        "highlight": "15",
+        "choices": [
+          { "id": "a", "label": "x^2 + 8x + 15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x^2 + 15x + 8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x^2 + 8x + 8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-002",
+    "unitId": "g3-tenkai",
+    "title": "平方の公式",
+    "equation": "(x - 4)^2",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "(a - b)^2 = a^2 - 2ab + b^2 を使います。",
+    "tags": ["展開", "乗法公式"],
+    "finalAnswer": "x^2 - 8x + 16",
+    "steps": [
+      {
+        "id": "tk-002-s1",
+        "prompt": "真ん中の項は？",
+        "equationBefore": "(x - 4)^2",
+        "explanationCaption": "真ん中の項は -2 × x × 4 = -8x です。",
+        "equationAfter": "x^2 - 8x + 16",
+        "highlight": "-8x",
+        "choices": [
+          { "id": "a", "label": "-8x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-4x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-002-s2",
+        "prompt": "展開すると？",
+        "equationBefore": "(x - 4)^2",
+        "explanationCaption": "最後の項は 4^2 = 16。答えは x^2 - 8x + 16 です。",
+        "equationAfter": "x^2 - 8x + 16",
+        "highlight": "16",
+        "choices": [
+          { "id": "a", "label": "x^2 - 8x + 16", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x^2 - 4x + 16", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x^2 - 16", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-003",
+    "unitId": "g3-tenkai",
+    "title": "少し難しい展開",
+    "equation": "(2x + 3)(x - 5)",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "4つのかけ算を順に出します。",
+    "tags": ["展開", "標準"],
+    "finalAnswer": "2x^2 - 7x - 15",
+    "steps": [
+      {
+        "id": "tk-003-s1",
+        "prompt": "4つに分けてかけると？",
+        "equationBefore": "(2x + 3)(x - 5)",
+        "explanationCaption": "2x × x、2x × (-5)、3 × x、3 × (-5) を計算します。",
+        "equationAfter": "2x^2 - 10x + 3x - 15",
+        "highlight": "-10x",
+        "choices": [
+          { "id": "a", "label": "2x^2 - 10x + 3x - 15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x^2 + 10x + 3x - 15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x^2 - 10x + 3x + 15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-003-s2",
+        "prompt": "整理すると？",
+        "equationBefore": "2x^2 - 10x + 3x - 15",
+        "explanationCaption": "-10x + 3x = -7x。答えは 2x^2 - 7x - 15 です。",
+        "equationAfter": "2x^2 - 7x - 15",
+        "highlight": "-7x",
+        "choices": [
+          { "id": "a", "label": "2x^2 - 7x - 15", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x^2 - 13x - 15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x^2 - 7x + 15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-004",
+    "unitId": "g3-tenkai",
+    "title": "因数分解の基本",
+    "equation": "x^2 + 7x + 12",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "たして7、かけて12になる2つの数を探します。",
+    "tags": ["因数分解", "乗法公式"],
+    "finalAnswer": "(x + 3)(x + 4)",
+    "steps": [
+      {
+        "id": "tk-004-s1",
+        "prompt": "たして7、かけて12になる数は？",
+        "equationBefore": "x^2 + 7x + 12",
+        "explanationCaption": "3 + 4 = 7、3 × 4 = 12 です。",
+        "equationAfter": "3 と 4",
+        "highlight": "3 と 4",
+        "choices": [
+          { "id": "a", "label": "3 と 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2 と 6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1 と 12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-004-s2",
+        "prompt": "因数分解すると？",
+        "equationBefore": "x^2 + 7x + 12",
+        "explanationCaption": "x^2 + 7x + 12 = (x + 3)(x + 4) です。",
+        "equationAfter": "(x + 3)(x + 4)",
+        "highlight": "(x + 3)",
+        "choices": [
+          { "id": "a", "label": "(x + 3)(x + 4)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x + 2)(x + 6)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x - 3)(x - 4)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-005",
+    "unitId": "g3-tenkai",
+    "title": "差の平方",
+    "equation": "x^2 - 25",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x^2 - 5^2 の形に見ます。",
+    "tags": ["因数分解", "乗法公式"],
+    "finalAnswer": "(x + 5)(x - 5)",
+    "steps": [
+      {
+        "id": "tk-005-s1",
+        "prompt": "25 は何の2乗？",
+        "equationBefore": "x^2 - 25",
+        "explanationCaption": "25 = 5^2 です。",
+        "equationAfter": "x^2 - 5^2",
+        "highlight": "5^2",
+        "choices": [
+          { "id": "a", "label": "5^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "25^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "10^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-005-s2",
+        "prompt": "因数分解すると？",
+        "equationBefore": "x^2 - 5^2",
+        "explanationCaption": "a^2 - b^2 = (a + b)(a - b) を使います。",
+        "equationAfter": "(x + 5)(x - 5)",
+        "highlight": "x - 5",
+        "choices": [
+          { "id": "a", "label": "(x + 5)(x - 5)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x - 5)^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x + 25)(x - 25)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-006",
+    "unitId": "g3-tenkai",
+    "title": "係数つきの因数分解",
+    "equation": "2x^2 + 7x + 3",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "2x^2 は 2x と x、3 は 3 と 1 の組み合わせを試します。",
+    "tags": ["因数分解", "高校受験"],
+    "finalAnswer": "(2x + 1)(x + 3)",
+    "steps": [
+      {
+        "id": "tk-006-s1",
+        "prompt": "候補として合う形は？",
+        "equationBefore": "2x^2 + 7x + 3",
+        "explanationCaption": "(2x + 1)(x + 3) を展開すると、2x^2 + 6x + x + 3 になります。",
+        "equationAfter": "(2x + 1)(x + 3)",
+        "highlight": "6x + x",
+        "choices": [
+          { "id": "a", "label": "(2x + 1)(x + 3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(2x + 3)(x + 1)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x + 1)(x + 3)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-006-s2",
+        "prompt": "真ん中の項を確認すると？",
+        "equationBefore": "(2x + 1)(x + 3)",
+        "explanationCaption": "6x + x = 7x なので、元の式 2x^2 + 7x + 3 と合います。",
+        "equationAfter": "2x^2 + 7x + 3",
+        "highlight": "7x",
+        "choices": [
+          { "id": "a", "label": "7x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "9x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-007",
+    "unitId": "g3-tenkai",
+    "title": "共通因数を先にくくる",
+    "equation": "3x^2 - 12x",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "3x が共通しています。",
+    "tags": ["因数分解", "共通因数", "入試型"],
+    "finalAnswer": "3x(x - 4)",
+    "steps": [
+      {
+        "id": "tk-007-s1",
+        "prompt": "共通しているものは？",
+        "equationBefore": "3x^2 - 12x",
+        "explanationCaption": "3x^2 と 12x には、3x が共通しています。",
+        "equationAfter": "3x(x - 4)",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-007-s2",
+        "prompt": "因数分解すると？",
+        "equationBefore": "3x^2 - 12x",
+        "explanationCaption": "3x でくくると、3x(x - 4) です。",
+        "equationAfter": "3x(x - 4)",
+        "highlight": "x - 4",
+        "choices": [
+          { "id": "a", "label": "3x(x - 4)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3x(x + 4)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x(3x - 12x)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tk-008",
+    "unitId": "g3-tenkai",
+    "title": "置き換えで因数分解",
+    "equation": "(x + 1)^2 - 9",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "x + 1 をひとまとまりとして、A^2 - 3^2 の形で見ます。",
+    "tags": ["因数分解", "置き換え", "高校受験"],
+    "finalAnswer": "(x + 4)(x - 2)",
+    "steps": [
+      {
+        "id": "tk-008-s1",
+        "prompt": "差の平方として見ると？",
+        "equationBefore": "(x + 1)^2 - 9",
+        "explanationCaption": "9 = 3^2 なので、(x + 1)^2 - 3^2 と見ます。",
+        "equationAfter": "(x + 1)^2 - 3^2",
+        "highlight": "3^2",
+        "choices": [
+          { "id": "a", "label": "(x + 1)^2 - 3^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x + 1)^2 - 9^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x + 1 - 9)^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "tk-008-s2",
+        "prompt": "因数分解すると？",
+        "equationBefore": "(x + 1)^2 - 3^2",
+        "explanationCaption": "A^2 - B^2 = (A + B)(A - B) です。だから (x + 1 + 3)(x + 1 - 3) になります。",
+        "equationAfter": "(x + 4)(x - 2)",
+        "highlight": "x + 4",
+        "choices": [
+          { "id": "a", "label": "(x + 4)(x - 2)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(x + 1)(x - 9)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(x + 10)(x - 8)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]
