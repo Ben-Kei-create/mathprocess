@@ -13,17 +13,21 @@ struct ChoiceButton: View {
     enum State { case idle, correct, wrong, dimmed }
 
     var body: some View {
+        let style = labelStyle
         Button(action: action) {
             HStack(alignment: .center, spacing: TKSpacing.sm) {
-                Text(label)
-                    .font(TKType.subtitle)
+                MathText(
+                    text: label,
+                    font: style.font,
+                    scriptFont: style.scriptFont,
+                    scriptOffset: style.scriptOffset,
+                    lowerScriptOffset: -4
+                )
                     .foregroundStyle(foreground)
                     .multilineTextAlignment(.leading)
+                    .lineSpacing(style.lineSpacing)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                if let icon = trailingIcon {
-                    Image(systemName: icon)
-                        .foregroundStyle(foreground)
-                }
+                trailingAccessory
             }
             .padding(.horizontal, TKSpacing.md + 2)
             .padding(.vertical, TKSpacing.md + 2)
@@ -33,10 +37,40 @@ struct ChoiceButton: View {
                 RoundedRectangle(cornerRadius: TKRadius.medium)
                     .stroke(stroke, lineWidth: 1.2)
             )
+            .shadow(color: state == .idle ? TKColor.accent.opacity(0.07) : .clear,
+                    radius: 5,
+                    y: 2)
             .opacity(state == .dimmed ? 0.55 : 1)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(MathDisplayFormatter.plain(label))
         .animation(.easeInOut(duration: 0.18), value: state)
+    }
+
+    private var labelStyle: LabelStyle {
+        let count = MathDisplayFormatter.plain(label).count
+        if count >= 34 {
+            return LabelStyle(
+                font: TKType.caption,
+                scriptFont: .system(size: 9, weight: .semibold, design: .rounded),
+                scriptOffset: 4,
+                lineSpacing: 3
+            )
+        }
+        if count >= 20 {
+            return LabelStyle(
+                font: TKType.body,
+                scriptFont: .system(size: 11, weight: .semibold, design: .rounded),
+                scriptOffset: 5,
+                lineSpacing: 2
+            )
+        }
+        return LabelStyle(
+            font: TKType.subtitle,
+            scriptFont: .system(size: 12, weight: .semibold, design: .rounded),
+            scriptOffset: 6,
+            lineSpacing: 2
+        )
     }
 
     private var background: Color {
@@ -68,4 +102,39 @@ struct ChoiceButton: View {
         default:       return nil
         }
     }
+
+    @ViewBuilder
+    private var trailingAccessory: some View {
+        switch state {
+        case .idle:
+            HStack(spacing: 5) {
+                Text("えらぶ")
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 11, weight: .bold))
+            }
+            .font(TKType.caption)
+            .foregroundStyle(.white)
+            .lineLimit(1)
+            .minimumScaleFactor(0.82)
+            .padding(.horizontal, TKSpacing.sm)
+            .padding(.vertical, 7)
+            .background(TKColor.accent)
+            .clipShape(Capsule())
+        case .correct, .wrong:
+            if let icon = trailingIcon {
+                Image(systemName: icon)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(foreground)
+            }
+        case .dimmed:
+            EmptyView()
+        }
+    }
+}
+
+private struct LabelStyle {
+    let font: Font
+    let scriptFont: Font
+    let scriptOffset: CGFloat
+    let lineSpacing: CGFloat
 }

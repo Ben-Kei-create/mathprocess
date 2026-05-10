@@ -1,0 +1,314 @@
+[
+  {
+    "id": "re-001",
+    "unitId": "g2-renritsu",
+    "title": "加減法の基本",
+    "equation": "x + y = 9, x - y = 3",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "2つの式を足すと y が消えます。",
+    "tags": ["連立方程式", "加減法"],
+    "finalAnswer": "x = 6, y = 3",
+    "steps": [
+      {
+        "id": "re-001-s1",
+        "prompt": "2つの式を足すと？",
+        "equationBefore": "x + y = 9, x - y = 3",
+        "explanationCaption": "左辺どうし、右辺どうしを足すと、2x = 12 になります。",
+        "equationAfter": "2x = 12",
+        "highlight": "2x",
+        "choices": [
+          { "id": "a", "label": "2x = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2y = 12", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-001-s2",
+        "prompt": "x は？",
+        "equationBefore": "2x = 12",
+        "explanationCaption": "両辺を2で割って、x = 6 です。",
+        "equationAfter": "x = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "x = 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-001-s3",
+        "prompt": "y は？",
+        "equationBefore": "x + y = 9, x = 6",
+        "explanationCaption": "6 + y = 9 なので、y = 3 です。",
+        "equationAfter": "y = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "y = 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 9", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-002",
+    "unitId": "g2-renritsu",
+    "title": "代入法の基本",
+    "equation": "y = 2x + 1, x + y = 10",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "y の代わりに 2x + 1 を入れます。",
+    "tags": ["連立方程式", "代入法"],
+    "finalAnswer": "x = 3, y = 7",
+    "steps": [
+      {
+        "id": "re-002-s1",
+        "prompt": "x + y = 10 に代入すると？",
+        "equationBefore": "y = 2x + 1",
+        "explanationCaption": "y の場所に 2x + 1 を入れて、x + (2x + 1) = 10 です。",
+        "equationAfter": "x + (2x + 1) = 10",
+        "highlight": "2x + 1",
+        "choices": [
+          { "id": "a", "label": "x + (2x + 1) = 10", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 2y + 1 = 10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x + 1 = 10", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-002-s2",
+        "prompt": "x は？",
+        "equationBefore": "3x + 1 = 10",
+        "explanationCaption": "3x = 9 なので、x = 3 です。",
+        "equationAfter": "x = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "x = 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 9", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-002-s3",
+        "prompt": "y は？",
+        "equationBefore": "y = 2x + 1, x = 3",
+        "explanationCaption": "y = 2 × 3 + 1 = 7 です。",
+        "equationAfter": "y = 7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "y = 7", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-003",
+    "unitId": "g2-renritsu",
+    "title": "係数をそろえる",
+    "equation": "2x + y = 11, x + 2y = 10",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "下の式を2倍すると、x の係数をそろえられます。",
+    "tags": ["連立方程式", "加減法", "標準"],
+    "finalAnswer": "x = 4, y = 3",
+    "steps": [
+      {
+        "id": "re-003-s1",
+        "prompt": "下の式を2倍すると？",
+        "equationBefore": "x + 2y = 10",
+        "explanationCaption": "両辺を2倍して、2x + 4y = 20 です。",
+        "equationAfter": "2x + 4y = 20",
+        "highlight": "2x",
+        "choices": [
+          { "id": "a", "label": "2x + 4y = 20", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x + 2y = 20", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x + 4y = 20", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-003-s2",
+        "prompt": "2つの式を引くと？",
+        "equationBefore": "2x + 4y = 20, 2x + y = 11",
+        "explanationCaption": "上から下を引くと、3y = 9 になります。",
+        "equationAfter": "3y = 9",
+        "highlight": "3y",
+        "choices": [
+          { "id": "a", "label": "3y = 9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3x = 9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5y = 31", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "re-003-s3",
+        "prompt": "x, y は？",
+        "equationBefore": "3y = 9",
+        "explanationCaption": "y = 3。2x + y = 11 に入れると 2x + 3 = 11 なので、x = 4 です。",
+        "equationAfter": "x = 4, y = 3",
+        "highlight": "x = 4",
+        "choices": [
+          { "id": "a", "label": "x = 4, y = 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 3, y = 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 5, y = 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-004",
+    "unitId": "g2-renritsu",
+    "title": "入場券の文章題",
+    "equation": "大人700円、子ども400円。合計10枚で5500円",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "大人を x 枚、子どもを y 枚として、枚数と代金の2つの式を作ります。",
+    "tags": ["連立方程式", "文章題", "料金", "高校受験"],
+    "finalAnswer": "大人5枚、子ども5枚",
+    "steps": [
+      {
+        "id": "re-004-s1",
+        "prompt": "枚数の式は？",
+        "equationBefore": "大人 x 枚、子ども y 枚、合計10枚",
+        "explanationCaption": "枚数の合計なので、x + y = 10 です。",
+        "equationAfter": "x + y = 10",
+        "highlight": "10",
+        "choices": [
+          { "id": "a", "label": "x + y = 10", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "700x + 400y = 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - y = 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-004-s2",
+        "prompt": "代金の式は？",
+        "equationBefore": "大人700円、子ども400円、合計5500円",
+        "explanationCaption": "大人は 700x 円、子どもは 400y 円。合計が5500円です。",
+        "equationAfter": "700x + 400y = 5500",
+        "highlight": "5500",
+        "choices": [
+          { "id": "a", "label": "700x + 400y = 5500", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "400x + 700y = 5500", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "700x + 400y = 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-004-s3",
+        "prompt": "大人と子どもの枚数は？",
+        "equationBefore": "x + y = 10, 700x + 400y = 5500",
+        "explanationCaption": "x + y = 10 から y = 10 - x。代入すると 700x + 400(10 - x) = 5500 なので、x = 5、y = 5 です。",
+        "equationAfter": "x = 5, y = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "大人5枚、子ども5枚", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "大人6枚、子ども4枚", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "大人4枚、子ども6枚", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-005",
+    "unitId": "g2-renritsu",
+    "title": "個数と重さの文章題",
+    "equation": "Aは1個80g、Bは1個50g。合計12個で780g",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "個数の式と重さの式を作ります。",
+    "tags": ["連立方程式", "文章題", "高校受験"],
+    "finalAnswer": "Aが6個、Bが6個",
+    "steps": [
+      {
+        "id": "re-005-s1",
+        "prompt": "Aを x 個、Bを y 個とすると、個数の式は？",
+        "equationBefore": "合計12個",
+        "explanationCaption": "A と B の個数の合計なので、x + y = 12 です。",
+        "equationAfter": "x + y = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "x + y = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "80x + 50y = 12", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + y = 780", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-005-s2",
+        "prompt": "重さの式は？",
+        "equationBefore": "Aは80g、Bは50g、合計780g",
+        "explanationCaption": "Aは 80x g、Bは 50y g。合計が780gです。",
+        "equationAfter": "80x + 50y = 780",
+        "highlight": "780",
+        "choices": [
+          { "id": "a", "label": "80x + 50y = 780", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "50x + 80y = 780", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "80x + 50y = 12", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-005-s3",
+        "prompt": "AとBはそれぞれ何個？",
+        "equationBefore": "x + y = 12, 80x + 50y = 780",
+        "explanationCaption": "y = 12 - x を代入すると、80x + 50(12 - x) = 780。30x = 180 なので x = 6、y = 6 です。",
+        "equationAfter": "x = 6, y = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "Aが6個、Bが6個", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "Aが8個、Bが4個", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "Aが4個、Bが8個", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re-006",
+    "unitId": "g2-renritsu",
+    "title": "速さの文章題",
+    "equation": "家から駅まで歩きと自転車で合計50分、距離は12km",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "歩く時間を x 時間、自転車の時間を y 時間として、時間と距離の式を作ります。",
+    "tags": ["連立方程式", "文章題", "速さ", "高校受験"],
+    "finalAnswer": "歩き20分、自転車30分",
+    "steps": [
+      {
+        "id": "re-006-s1",
+        "prompt": "歩き時速6km、自転車時速18km。時間の式は？",
+        "equationBefore": "歩き x 時間、自転車 y 時間、合計50分",
+        "explanationCaption": "50分は 5/6 時間です。時間の合計は x + y = 5/6 です。",
+        "equationAfter": "x + y = 5/6",
+        "highlight": "5/6",
+        "choices": [
+          { "id": "a", "label": "x + y = 5/6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + y = 50", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "6x + 18y = 5/6", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-006-s2",
+        "prompt": "距離の式は？",
+        "equationBefore": "歩き時速6km、自転車時速18km、距離12km",
+        "explanationCaption": "距離は速さ × 時間です。だから 6x + 18y = 12 です。",
+        "equationAfter": "6x + 18y = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "6x + 18y = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x + 18y = 50", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x/6 + y/18 = 12", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "re-006-s3",
+        "prompt": "歩きと自転車の時間は？",
+        "equationBefore": "x + y = 5/6, 6x + 18y = 12",
+        "explanationCaption": "x = 1/3、y = 1/2 です。1/3時間は20分、1/2時間は30分です。",
+        "equationAfter": "歩き20分、自転車30分",
+        "highlight": "20分",
+        "choices": [
+          { "id": "a", "label": "歩き20分、自転車30分", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "歩き30分、自転車20分", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "歩き10分、自転車40分", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

@@ -12,9 +12,10 @@ Not a quiz app, not a camera-solver, not an AI tutor — a step-by-step
 
 ## MVP Scope
 
-This prototype implements the **中1 > 一次方程式** unit only, but the
-data model and navigation are designed so future units (正負の数, 文字式,
-一次関数, 二次方程式, 三平方の定理, …) plug in without redesign.
+This prototype now includes small, carefully ordered **中1** starter units:
+正負の数, 文字式, 一次方程式, 比例・反比例, and 図形. The route diagnosis still focuses on
+一次方程式, but the unit list and data model are designed so future units
+(一次関数, 二次方程式, 三平方の定理, …) plug in without redesign.
 
 All problems, hints, mistake tags, recovery sets and step-by-step
 explanations are **local structured data** (JSON + Swift models). No
@@ -34,7 +35,7 @@ generative AI in the MVP.
 TokeRoot/
   App/             App entry point + root navigation
   Models/          Domain types: Problem, Step, MistakeTag, Unit, …
-  Data/            Local JSON: linear_equations.json, units.json
+  Data/            Local JSON: units.json, problems_*.json
   Services/        DataService, ProgressStore, RouteEngine
   Theme/           TKColor, TKType, TKSpacing
   Components/      Reusable cards, buttons, equation views
@@ -50,13 +51,20 @@ TokeRoot/
 4. Unit selection (一次方程式 active, others 準備中)
 5. Problem screen — 「次の一手」 mode
 6. 式が動く解説 (animated step-by-step equation)
-7. Mistake tag detection + recovery route
-8. ここだけ特訓 mini-set
-9. Review box
-10. Study log + weekly calendar (✓ ○ ◎ -)
-11. Memo sheet
-12. Mini calculator
-13. Settings + remove-ads placeholder
+7. Inline handwritten scratch memo while solving
+8. Handwritten final-answer box for 自力モード, checked locally first
+9. Spaced review scheduling (1, 3, 7, 14, 30 days)
+10. Mistake tag detection + recovery route
+11. ここだけ特訓 mini-set
+12. Review box
+13. Study log + weekly calendar (✓ ○ ◎ -)
+14. Memo sheet
+15. Mini calculator
+16. Settings + remove-ads placeholder
+
+The handwritten answer flow uses on-device recognition first so routine checks
+cost nothing. A future API fallback can be added only for the small final-answer
+crop, while scratch memo pages stay local.
 
 Ad slots are wired into non-learning screens only — never inside the
 problem flow.
@@ -101,4 +109,3 @@ dependencies — first build is fast.
 | Memo                 | `TokeRoot/Views/Memo/`             |
 | Calculator           | `TokeRoot/Views/Calculator/`       |
 | Settings             | `TokeRoot/Views/Settings/`         |
-

@@ -47,10 +47,43 @@ struct ReviewItem: Codable, Identifiable, Hashable {
     let problemId: String
     let reason: Reason
     let addedAt: Date
+    let dueAt: Date
+    let intervalDays: Int
+    let reviewedCount: Int
 
     enum Reason: String, Codable {
         case mistake     = "間違えた問題"
         case shaky       = "あやしい問題"
         case manual      = "あとで見る"
+        case scheduled   = "記憶チェック"
+    }
+
+    init(
+        id: UUID,
+        problemId: String,
+        reason: Reason,
+        addedAt: Date,
+        dueAt: Date? = nil,
+        intervalDays: Int = 1,
+        reviewedCount: Int = 0
+    ) {
+        self.id = id
+        self.problemId = problemId
+        self.reason = reason
+        self.addedAt = addedAt
+        self.dueAt = dueAt ?? addedAt
+        self.intervalDays = intervalDays
+        self.reviewedCount = reviewedCount
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(UUID.self, forKey: .id)
+        problemId = try c.decode(String.self, forKey: .problemId)
+        reason = try c.decode(Reason.self, forKey: .reason)
+        addedAt = try c.decode(Date.self, forKey: .addedAt)
+        dueAt = try c.decodeIfPresent(Date.self, forKey: .dueAt) ?? addedAt
+        intervalDays = try c.decodeIfPresent(Int.self, forKey: .intervalDays) ?? 1
+        reviewedCount = try c.decodeIfPresent(Int.self, forKey: .reviewedCount) ?? 0
     }
 }

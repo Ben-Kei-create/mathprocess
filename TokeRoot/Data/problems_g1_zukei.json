@@ -189,5 +189,315 @@
         ]
       }
     ]
+  },
+  {
+    "id": "zg1-004",
+    "unitId": "g1-zukei",
+    "title": "自力: 三角形の角度",
+    "equation": "x は何度？",
+    "diagram": {
+      "aspectRatio": 1.45,
+      "points": [
+        { "id": "A", "x": 0.18, "y": 0.78, "label": "A" },
+        { "id": "B", "x": 0.82, "y": 0.78, "label": "B" },
+        { "id": "C", "x": 0.52, "y": 0.20, "label": "C" }
+      ],
+      "segments": [
+        { "start": "A", "end": "B" },
+        { "start": "B", "end": "C" },
+        { "start": "C", "end": "A" }
+      ],
+      "angles": [
+        { "vertex": "A", "radius": 0.12, "startDegrees": 0, "endDegrees": 300 },
+        { "vertex": "B", "radius": 0.12, "startDegrees": 240, "endDegrees": 180 },
+        { "vertex": "C", "radius": 0.12, "startDegrees": 120, "endDegrees": 60 }
+      ],
+      "labels": [
+        { "text": "45°", "x": 0.30, "y": 0.68 },
+        { "text": "80°", "x": 0.68, "y": 0.68 },
+        { "text": "x", "x": 0.52, "y": 0.36 }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "三角形の内角の和 180° から、分かっている角を引きます。",
+    "tags": ["図形", "角度", "自力"],
+    "finalAnswer": "x = 55°",
+    "steps": [
+      {
+        "id": "zg1-004-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "45° + 80° + x = 180°",
+        "explanationCaption": "45° + 80° = 125°。180° - 125° = 55° なので、x = 55° です。",
+        "equationAfter": "x = 55°",
+        "highlight": "55°",
+        "choices": [
+          { "id": "a", "label": "x = 55°", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-005",
+    "unitId": "g1-zukei",
+    "title": "自力: 直線上の角度",
+    "equation": "x は何度？",
+    "diagram": {
+      "aspectRatio": 1.6,
+      "points": [
+        { "id": "A", "x": 0.16, "y": 0.64, "label": "A" },
+        { "id": "B", "x": 0.50, "y": 0.64, "label": "B" },
+        { "id": "C", "x": 0.84, "y": 0.64, "label": "C" },
+        { "id": "D", "x": 0.40, "y": 0.26, "label": "D" }
+      ],
+      "segments": [
+        { "start": "A", "end": "B" },
+        { "start": "B", "end": "C" },
+        { "start": "B", "end": "D" }
+      ],
+      "angles": [
+        { "vertex": "B", "radius": 0.13, "startDegrees": 180, "endDegrees": 242 },
+        { "vertex": "B", "radius": 0.18, "startDegrees": 0, "endDegrees": 242 }
+      ],
+      "labels": [
+        { "text": "72°", "x": 0.39, "y": 0.48 },
+        { "text": "x", "x": 0.60, "y": 0.46 }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "一直線の角は 180° です。分かっている角を引きます。",
+    "tags": ["図形", "角度", "自力"],
+    "finalAnswer": "x = 108°",
+    "steps": [
+      {
+        "id": "zg1-005-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "72° + x = 180°",
+        "explanationCaption": "一直線は 180°。180° - 72° = 108° なので、x = 108° です。",
+        "equationAfter": "x = 108°",
+        "highlight": "108°",
+        "choices": [
+          { "id": "a", "label": "x = 108°", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-006",
+    "unitId": "g1-zukei",
+    "title": "長方形の面積",
+    "equation": "たて 4cm、横 7cm の長方形",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "長方形の面積は、たて × 横 です。",
+    "tags": ["図形", "面積"],
+    "finalAnswer": "28cm^2",
+    "steps": [
+      {
+        "id": "zg1-006-s1",
+        "prompt": "面積を出す式は？",
+        "equationBefore": "たて 4cm、横 7cm",
+        "explanationCaption": "長方形の面積は、たて × 横 で求めます。",
+        "equationAfter": "4 × 7",
+        "highlight": "4 × 7",
+        "choices": [
+          { "id": "a", "label": "4 × 7", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4 + 7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4 × 7 ÷ 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-006-s2",
+        "prompt": "面積は？",
+        "equationBefore": "4 × 7",
+        "explanationCaption": "4 × 7 = 28。面積は 28cm^2 です。",
+        "equationAfter": "28cm^2",
+        "highlight": "28",
+        "choices": [
+          { "id": "a", "label": "28cm^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "11cm^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "14cm^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-007",
+    "unitId": "g1-zukei",
+    "title": "自力: 三角形の面積",
+    "equation": "底辺 8cm、高さ 5cm の三角形",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "三角形の面積は、底辺 × 高さ ÷ 2 です。",
+    "tags": ["図形", "面積", "自力"],
+    "finalAnswer": "20cm^2",
+    "steps": [
+      {
+        "id": "zg1-007-s1",
+        "prompt": "途中式をメモして、面積を書こう",
+        "equationBefore": "底辺 8cm、高さ 5cm",
+        "explanationCaption": "8 × 5 ÷ 2 = 20。面積は 20cm^2 です。",
+        "equationAfter": "20cm^2",
+        "highlight": "20",
+        "choices": [
+          { "id": "a", "label": "20cm^2", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-008",
+    "unitId": "g1-zukei",
+    "title": "平行四辺形の面積",
+    "equation": "底辺 6cm、高さ 4cm の平行四辺形",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "平行四辺形の面積は、底辺 × 高さ です。ななめの辺ではなく、高さを使います。",
+    "tags": ["図形", "面積"],
+    "finalAnswer": "24cm^2",
+    "steps": [
+      {
+        "id": "zg1-008-s1",
+        "prompt": "面積を出す式は？",
+        "equationBefore": "底辺 6cm、高さ 4cm",
+        "explanationCaption": "平行四辺形は、底辺 × 高さ で面積を出します。",
+        "equationAfter": "6 × 4",
+        "highlight": "6 × 4",
+        "choices": [
+          { "id": "a", "label": "6 × 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6 + 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6 × 4 ÷ 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-008-s2",
+        "prompt": "面積は？",
+        "equationBefore": "6 × 4",
+        "explanationCaption": "6 × 4 = 24。面積は 24cm^2 です。",
+        "equationAfter": "24cm^2",
+        "highlight": "24",
+        "choices": [
+          { "id": "a", "label": "24cm^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10cm^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12cm^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-009",
+    "unitId": "g1-zukei",
+    "title": "台形の面積",
+    "equation": "上底 5cm、下底 9cm、高さ 4cm",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "台形の面積は、(上底 + 下底) × 高さ ÷ 2 です。",
+    "tags": ["図形", "面積"],
+    "finalAnswer": "28cm^2",
+    "steps": [
+      {
+        "id": "zg1-009-s1",
+        "prompt": "まず、どことどこを足す？",
+        "equationBefore": "上底 5cm、下底 9cm、高さ 4cm",
+        "explanationCaption": "台形では、平行な2つの辺である上底と下底を足します。",
+        "equationAfter": "5 + 9 = 14",
+        "highlight": "5 + 9",
+        "choices": [
+          { "id": "a", "label": "上底 5 と下底 9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "上底 5 と高さ 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "下底 9 と高さ 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-009-s2",
+        "prompt": "面積を出す式は？",
+        "equationBefore": "5 + 9 = 14、高さ 4cm",
+        "explanationCaption": "台形の面積は、(上底 + 下底) × 高さ ÷ 2 です。",
+        "equationAfter": "14 × 4 ÷ 2",
+        "highlight": "÷ 2",
+        "choices": [
+          { "id": "a", "label": "14 × 4 ÷ 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "14 × 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "14 + 4 ÷ 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-009-s3",
+        "prompt": "面積は？",
+        "equationBefore": "14 × 4 ÷ 2",
+        "explanationCaption": "14 × 4 ÷ 2 = 28。面積は 28cm^2 です。",
+        "equationAfter": "28cm^2",
+        "highlight": "28",
+        "choices": [
+          { "id": "a", "label": "28cm^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "56cm^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "18cm^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-010",
+    "unitId": "g1-zukei",
+    "title": "円の面積",
+    "equation": "半径 3cm の円",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "円の面積は、半径 × 半径 × π です。",
+    "tags": ["図形", "面積"],
+    "finalAnswer": "9πcm^2",
+    "steps": [
+      {
+        "id": "zg1-010-s1",
+        "prompt": "円の面積を出す式は？",
+        "equationBefore": "半径 3cm",
+        "explanationCaption": "円の面積は、半径 × 半径 × π です。",
+        "equationAfter": "3 × 3 × π",
+        "highlight": "3 × 3",
+        "choices": [
+          { "id": "a", "label": "3 × 3 × π", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3 × 2 × π", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3 + 3 + π", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "zg1-010-s2",
+        "prompt": "面積は？",
+        "equationBefore": "3 × 3 × π",
+        "explanationCaption": "3 × 3 = 9。面積は 9πcm^2 です。",
+        "equationAfter": "9πcm^2",
+        "highlight": "9π",
+        "choices": [
+          { "id": "a", "label": "9πcm^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6πcm^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3πcm^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zg1-011",
+    "unitId": "g1-zukei",
+    "title": "自力: 台形の面積",
+    "equation": "上底 4cm、下底 10cm、高さ 6cm",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "(上底 + 下底) × 高さ ÷ 2 を使います。まず 4 + 10 を計算します。",
+    "tags": ["図形", "面積", "自力"],
+    "finalAnswer": "42cm^2",
+    "steps": [
+      {
+        "id": "zg1-011-s1",
+        "prompt": "途中式をメモして、面積を書こう",
+        "equationBefore": "上底 4cm、下底 10cm、高さ 6cm",
+        "explanationCaption": "(4 + 10) × 6 ÷ 2 = 14 × 6 ÷ 2 = 42。面積は 42cm^2 です。",
+        "equationAfter": "42cm^2",
+        "highlight": "42",
+        "choices": [
+          { "id": "a", "label": "42cm^2", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
   }
 ]

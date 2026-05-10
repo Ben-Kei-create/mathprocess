@@ -73,6 +73,11 @@ struct RouteEngine {
     func todayHomeMessage() -> String {
         let m = data.homeMessages
         let minutes = store.profile.dailyTime.rawValue
+        let dueCount = store.dueReviewItems().count
+
+        if dueCount > 0 {
+            return "今日は前に解けた問題を\(dueCount)問だけ確認しましょう。忘れる前に戻ると、ちゃんと残ります。"
+        }
 
         if let days = store.daysSinceLastStudy(), days >= 2 {
             return pick(m.comeback)
@@ -114,6 +119,9 @@ struct RouteEngine {
         if !store.profile.hasCompletedDiagnosis {
             return .diagnosis(unitId: "g1-linear-eq")
         }
+        if let firstDueReview = store.dueReviewItems().first {
+            return .problem(id: firstDueReview.problemId)
+        }
         if let pid = store.lastProblemId,
            let _ = data.problem(id: pid) {
             return .problem(id: pid)
@@ -131,6 +139,10 @@ struct RouteEngine {
 
     /// 「今日のおすすめ」 short caption.
     func todaysRecommendation() -> String {
+        let dueCount = store.dueReviewItems().count
+        if dueCount > 0 {
+            return "復習 \(dueCount)問"
+        }
         if let tagId = store.topStuckTagId(),
            let tag = data.mistakeTag(id: tagId),
            let set = data.practiceSet(id: tag.practiceSetId) {

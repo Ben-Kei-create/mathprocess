@@ -31,6 +31,7 @@ final class ProblemViewModel {
     var selfMadeAnswerText: String = ""
     var lastSubmittedSelfMadeAnswerText: String? = nil
     var lastSelfMadeAnswerWasCorrect: Bool? = nil
+    var selfMadeRecognitionMessage: String? = nil
     var selfMadeHadWrongAttempt: Bool = false
     var encounteredMistakeTagIds: Set<String> = []
     var showHint: Bool = false
@@ -126,6 +127,7 @@ final class ProblemViewModel {
 
     func updateSelfMadeAnswerText(_ value: String) {
         selfMadeAnswerText = value
+        selfMadeRecognitionMessage = nil
         guard let lastSubmittedSelfMadeAnswerText,
               value != lastSubmittedSelfMadeAnswerText else {
             return
@@ -163,7 +165,28 @@ final class ProblemViewModel {
         }
     }
 
-    func submitSelfMadeAnswer() {
+    func submitRecognizedSelfMadeAnswer(_ recognizedText: String) {
+        selfMadeAnswerText = recognizedText
+        submitSelfMadeAnswer(sourceMessage: "読み取り: \(recognizedText)")
+    }
+
+    func showSelfMadeRecognitionError(_ message: String) {
+        selfMadeRecognitionMessage = message
+        lastSubmittedSelfMadeAnswerText = nil
+        lastSelfMadeAnswerWasCorrect = nil
+    }
+
+    func clearSelfMadeAnswerInput() {
+        selfMadeAnswerText = ""
+        resetSelfMadeInput()
+        if case .wrongShown = phase {
+            withAnimation(.easeInOut(duration: 0.18)) {
+                phase = .prompt
+            }
+        }
+    }
+
+    func submitSelfMadeAnswer(sourceMessage: String? = nil) {
         guard problem.mode == .selfMade,
               phase != .solved,
               canSubmitSelfMadeAnswer else {
@@ -172,6 +195,7 @@ final class ProblemViewModel {
 
         let submitted = selfMadeAnswerText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isCorrect = answerJudge.isCorrect(submitted, for: problem)
+        selfMadeRecognitionMessage = sourceMessage
         lastSubmittedSelfMadeAnswerText = submitted
         lastSelfMadeAnswerWasCorrect = isCorrect
 
@@ -270,5 +294,6 @@ final class ProblemViewModel {
         selfMadeAnswerText = ""
         lastSubmittedSelfMadeAnswerText = nil
         lastSelfMadeAnswerWasCorrect = nil
+        selfMadeRecognitionMessage = nil
     }
 }

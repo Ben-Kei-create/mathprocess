@@ -15,27 +15,31 @@ struct AdSlot: View {
     let placement: Placement
 
     var body: some View {
-        if ProgressStore.shared.profile.adsRemoved {
-            EmptyView()
-        } else {
-            HStack {
-                Image(systemName: "rectangle.dashed")
-                    .foregroundStyle(.secondary)
-                Text("広告スペース")
-                    .font(TKType.caption)
-                    .foregroundStyle(.secondary)
-                Spacer()
-            }
-            .padding(.horizontal, TKSpacing.md)
-            .frame(height: 56)
-            .frame(maxWidth: .infinity)
-            .background(TKColor.surfaceElevated)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(TKColor.divider, lineWidth: 1)
-            )
-            .padding(.horizontal, TKSpacing.md)
+        HStack {
+            Text("PR")
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(TKColor.textTertiary)
+                .padding(.horizontal, 7)
+                .padding(.vertical, 4)
+                .background(TKColor.surfaceElevated)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+            Image(systemName: "rectangle.dashed")
+                .foregroundStyle(.secondary)
+            Text("広告スペース")
+                .font(TKType.caption)
+                .foregroundStyle(.secondary)
+            Spacer()
         }
+        .padding(.horizontal, TKSpacing.md)
+        .frame(height: 56)
+        .frame(maxWidth: .infinity)
+        .background(TKColor.background)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(TKColor.textTertiary.opacity(0.45),
+                        style: StrokeStyle(lineWidth: 1, dash: [6, 5]))
+        )
+        .padding(.horizontal, TKSpacing.md)
     }
 }

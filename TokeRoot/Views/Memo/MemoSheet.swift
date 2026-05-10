@@ -9,6 +9,9 @@ struct MemoSheet: View {
     @Environment(\.dismiss) private var dismiss
     @State private var canvas = PKCanvasView()
     @State private var toolPicker = PKToolPicker()
+    @State private var isSavingToPhotos = false
+    @State private var photoSaveMessage: String?
+    @State private var photoSaveSucceeded = false
 
     var body: some View {
         NavigationStack {
@@ -23,6 +26,22 @@ struct MemoSheet: View {
                             .stroke(TKColor.divider, lineWidth: 1)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: TKRadius.medium))
+
+                PrimaryButton(
+                    isSavingToPhotos ? "保存中" : "写真に保存",
+                    systemImage: "photo"
+                ) {
+                    saveMemoToPhotos()
+                }
+                .disabled(isSavingToPhotos)
+                .opacity(isSavingToPhotos ? 0.55 : 1)
+
+                if let photoSaveMessage {
+                    Text(photoSaveMessage)
+                        .font(TKType.caption)
+                        .foregroundStyle(photoSaveSucceeded ? TKColor.success : TKColor.warm)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             .padding(TKSpacing.md)
             .background(TKColor.background)
@@ -36,7 +55,7 @@ struct MemoSheet: View {
                     Button("消去") { canvas.drawing = PKDrawing() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("保存") {
+                    Button("アプリに保存") {
                         store.memoDrawingData = canvas.drawing.dataRepresentation()
                         store.save()
                         dismiss()
@@ -48,6 +67,31 @@ struct MemoSheet: View {
                     canvas.drawing = drawing
                 }
             }
+        }
+    }
+
+    private func saveMemoToPhotos() {
+        guard !isSavingToPhotos else { return }
+        isSavingToPhotos = true
+        photoSaveMessage = nil
+        photoSaveSucceeded = false
+
+        store.memoDrawingData = canvas.drawing.dataRepresentation()
+        store.save()
+
+        Task {
+            do {
+                try await PhotoLibrarySaveService.shared.saveDrawing(from: canvas)
+                photoSaveSucceeded = true
+                photoSaveMessage = "写真に保存しました。"
+            } catch let error as PhotoLibrarySaveError {
+                photoSaveSucceeded = false
+                photoSaveMessage = error.studentMessage
+            } catch {
+                photoSaveSucceeded = false
+                photoSaveMessage = "写真への保存で問題が起きました。もう一度試してください。"
+            }
+            isSavingToPhotos = false
         }
     }
 }

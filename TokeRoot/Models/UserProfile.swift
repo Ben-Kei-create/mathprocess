@@ -27,7 +27,6 @@ struct UserProfile: Codable, Hashable {
     var hasCompletedOnboarding: Bool
     var hasCompletedDiagnosis: Bool
     var diagnosisRecommendedSetId: String?
-    var adsRemoved: Bool
     var reminderHour: Int?
     var reminderMinute: Int?
 
@@ -36,7 +35,6 @@ struct UserProfile: Codable, Hashable {
          hasCompletedOnboarding: Bool,
          hasCompletedDiagnosis: Bool,
          diagnosisRecommendedSetId: String?,
-         adsRemoved: Bool,
          reminderHour: Int? = nil,
          reminderMinute: Int? = nil) {
         self.dailyTime = dailyTime
@@ -44,7 +42,6 @@ struct UserProfile: Codable, Hashable {
         self.hasCompletedOnboarding = hasCompletedOnboarding
         self.hasCompletedDiagnosis = hasCompletedDiagnosis
         self.diagnosisRecommendedSetId = diagnosisRecommendedSetId
-        self.adsRemoved = adsRemoved
         self.reminderHour = reminderHour
         self.reminderMinute = reminderMinute
     }
@@ -56,7 +53,6 @@ struct UserProfile: Codable, Hashable {
         hasCompletedOnboarding = try c.decode(Bool.self, forKey: .hasCompletedOnboarding)
         hasCompletedDiagnosis = try c.decode(Bool.self, forKey: .hasCompletedDiagnosis)
         diagnosisRecommendedSetId = try c.decodeIfPresent(String.self, forKey: .diagnosisRecommendedSetId)
-        adsRemoved = try c.decodeIfPresent(Bool.self, forKey: .adsRemoved) ?? false
         reminderHour = try c.decodeIfPresent(Int.self, forKey: .reminderHour)
         reminderMinute = try c.decodeIfPresent(Int.self, forKey: .reminderMinute)
     }
@@ -67,7 +63,6 @@ struct UserProfile: Codable, Hashable {
         hasCompletedOnboarding: false,
         hasCompletedDiagnosis: false,
         diagnosisRecommendedSetId: nil,
-        adsRemoved: false,
         reminderHour: nil,
         reminderMinute: nil
     )

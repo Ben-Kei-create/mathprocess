@@ -38,6 +38,7 @@ struct PrimaryButton: View {
                     .stroke(strokeColor, lineWidth: style == .outline ? 1.5 : 0)
             )
             .clipShape(RoundedRectangle(cornerRadius: TKRadius.large))
+            .shadow(color: shadowColor, radius: shadowRadius, y: shadowY)
         }
         .buttonStyle(.plain)
     }
@@ -58,5 +59,14 @@ struct PrimaryButton: View {
     }
     private var strokeColor: Color {
         style == .outline ? TKColor.accent : .clear
+    }
+    private var shadowColor: Color {
+        style == .filled ? TKColor.accent.opacity(0.22) : .clear
+    }
+    private var shadowRadius: CGFloat {
+        style == .filled ? 8 : 0
+    }
+    private var shadowY: CGFloat {
+        style == .filled ? 3 : 0
     }
 }

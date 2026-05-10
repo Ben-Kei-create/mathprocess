@@ -44,9 +44,9 @@ struct HomeView: View {
     private var compactHomeContent: some View {
         VStack(alignment: .leading, spacing: TKSpacing.lg) {
             header
-            routeMessage
+            dailyWord
             continueCTA
-            recommendation
+            reviewReminder
             todaysFocus
             weeklyStrip
             AdSlot(placement: .homeBottom)
@@ -62,9 +62,9 @@ struct HomeView: View {
 
             HStack(alignment: .top, spacing: TKSpacing.lg) {
                 VStack(alignment: .leading, spacing: TKSpacing.lg) {
-                    routeMessage
+                    dailyWord
                     continueCTA
-                    recommendation
+                    reviewReminder
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
 
@@ -88,58 +88,108 @@ struct HomeView: View {
             Text("解け√ルート")
                 .font(TKType.title)
                 .foregroundStyle(TKColor.textPrimary)
-            Text("中1 > 一次方程式")
+            Text("中学数学 > つまずきを小さく直す")
                 .font(TKType.caption)
                 .foregroundStyle(TKColor.textSecondary)
         }
     }
 
-    private var routeMessage: some View {
-        SectionCard("今日のルート診断") {
-            Text(engine.todayHomeMessage())
-                .font(TKType.body)
-                .foregroundStyle(TKColor.textPrimary)
-                .lineSpacing(4)
+    private var dailyWord: some View {
+        SectionCard("今日の言葉") {
+            HStack(alignment: .top, spacing: TKSpacing.sm) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(TKColor.warm)
+                    .frame(width: 28, height: 28)
+                    .background(TKColor.warmSoft)
+                    .clipShape(Circle())
+
+                Text(data.dailyWord())
+                    .font(TKType.body)
+                    .foregroundStyle(TKColor.textPrimary)
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
     }
 
     private var continueCTA: some View {
-        VStack(spacing: TKSpacing.sm) {
+        HStack(spacing: TKSpacing.sm) {
             PrimaryButton("つづきから", systemImage: "arrow.right.circle.fill") {
                 openContinue()
             }
+
             Button {
                 path.append(NavTarget.unitSelect)
             } label: {
-                Text("単元をえらぶ")
-                    .font(TKType.caption)
-                    .foregroundStyle(TKColor.textSecondary)
+                HStack(spacing: 6) {
+                    Image(systemName: "square.grid.2x2")
+                    Text("単元")
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .bold))
+                }
+                .font(TKType.subtitle)
+                .foregroundStyle(.white)
+                .frame(width: 112)
+                .padding(.vertical, TKSpacing.md + 2)
+                .background(TKColor.success)
+                .clipShape(RoundedRectangle(cornerRadius: TKRadius.large))
+                .shadow(color: TKColor.success.opacity(0.20), radius: 8, y: 3)
             }
+            .buttonStyle(.plain)
+            .accessibilityLabel("単元")
         }
     }
 
-    private var recommendation: some View {
-        SectionCard("今日のおすすめ") {
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(engine.todaysRecommendation())
-                        .font(TKType.subtitle)
-                        .foregroundStyle(TKColor.textPrimary)
-                    Text("短時間で終わります")
+    @ViewBuilder
+    private var reviewReminder: some View {
+        let dueItems = store.dueReviewItems()
+        if !dueItems.isEmpty {
+            SectionCard {
+                Button {
+                    if let first = dueItems.first {
+                        path.append(NavTarget.problem(first.problemId))
+                    }
+                } label: {
+                    HStack(alignment: .center, spacing: TKSpacing.md) {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.system(size: 22, weight: .semibold))
+                            .foregroundStyle(.white)
+                            .frame(width: 42, height: 42)
+                            .background(TKColor.accent)
+                            .clipShape(Circle())
+
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("\(dueItems.count)問だけ復習")
+                                .font(TKType.subtitle)
+                                .foregroundStyle(TKColor.textPrimary)
+                            Text("前に解けた問題を、忘れる前に確認します")
+                                .font(TKType.caption)
+                                .foregroundStyle(TKColor.textSecondary)
+                        }
+
+                        Spacer()
+
+                        HStack(spacing: 5) {
+                            Text("復習する")
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 11, weight: .bold))
+                        }
                         .font(TKType.caption)
-                        .foregroundStyle(TKColor.textSecondary)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, TKSpacing.sm)
+                        .padding(.vertical, 8)
+                        .background(TKColor.accent)
+                        .clipShape(Capsule())
+                    }
                 }
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .foregroundStyle(TKColor.textTertiary)
+                .buttonStyle(.plain)
             }
-            .contentShape(Rectangle())
-            .onTapGesture { openContinue() }
         }
     }
 
     private var todaysFocus: some View {
-        SectionCard("今日の集中") {
+        SectionCard("学習時間") {
             HStack(alignment: .firstTextBaseline) {
                 Text("\(Int((Double(store.todaySeconds()) / 60).rounded()))")
                     .font(TKType.display)

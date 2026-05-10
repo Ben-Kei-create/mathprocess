@@ -499,6 +499,683 @@
   },
 
   {
+    "id": "le-011",
+    "unitId": "g1-linear-eq",
+    "title": "自力: かっこを外す式",
+    "equation": "2(x + 3) = 14",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "まず左のかっこを外します。2 を x と 3 の両方にかけます。",
+    "tags": ["自力", "分配法則", "係数"],
+    "finalAnswer": "x = 4",
+    "steps": [
+      {
+        "id": "le-011-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "2(x + 3) = 14",
+        "explanationCaption": "かっこを外すと 2x + 6 = 14。両辺から 6 を引いて 2x = 8、両辺を 2 で割って x = 4 です。",
+        "equationAfter": "x = 4",
+        "highlight": "x = 4",
+        "choices": [
+          { "id": "a", "label": "x = 4", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-012",
+    "unitId": "g1-linear-eq",
+    "title": "自力: 負の係数",
+    "equation": "-3x + 5 = 14",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "まず +5 を消します。最後に -3 で割るところに気をつけます。",
+    "tags": ["自力", "移項", "係数", "正負の数"],
+    "finalAnswer": "x = -3",
+    "steps": [
+      {
+        "id": "le-012-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "-3x + 5 = 14",
+        "explanationCaption": "両辺から 5 を引いて -3x = 9。両辺を -3 で割ると x = -3 です。",
+        "equationAfter": "x = -3",
+        "highlight": "x = -3",
+        "choices": [
+          { "id": "a", "label": "x = -3", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-013",
+    "unitId": "g1-linear-eq",
+    "title": "小数をふくむ方程式",
+    "equation": "0.5x = 6",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "0.5 は 1/2 と同じです。x の半分が 6 という意味です。",
+    "tags": ["係数", "小数"],
+    "finalAnswer": "x = 12",
+    "steps": [
+      {
+        "id": "le-013-s1",
+        "prompt": "0.5x はどういう意味？",
+        "equationBefore": "0.5x = 6",
+        "explanationCaption": "0.5x は x の半分です。",
+        "equationAfter": "x の半分 = 6",
+        "highlight": "半分",
+        "choices": [
+          { "id": "a", "label": "x の半分", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x の 5倍", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x から 0.5 を引く", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-013-s2",
+        "prompt": "x は？",
+        "equationBefore": "x の半分 = 6",
+        "explanationCaption": "半分が 6 なので、もとの x は 12 です。",
+        "equationAfter": "x = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "x = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 3", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 6.5", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-014",
+    "unitId": "g1-linear-eq",
+    "title": "自力: 文章題で方程式",
+    "equation": "1本 x 円のペンを 4本買い、60円の消しゴムを買うと 500円。x は？",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "ペン4本は 4x 円です。消しゴム代 60 円を足します。",
+    "tags": ["自力", "文章題", "式立て"],
+    "finalAnswer": "x = 110",
+    "steps": [
+      {
+        "id": "le-014-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "4x + 60 = 500",
+        "explanationCaption": "4x + 60 = 500。両辺から 60 を引いて 4x = 440。4 で割ると x = 110 です。",
+        "equationAfter": "x = 110",
+        "highlight": "x = 110",
+        "choices": [
+          { "id": "a", "label": "x = 110", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-015",
+    "unitId": "g1-linear-eq",
+    "title": "-の数を消す",
+    "equation": "x - 4 = 9",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "-4 を消すには、両辺に 4 を足します。",
+    "tags": ["移項", "定数項"],
+    "finalAnswer": "x = 13",
+    "steps": [
+      {
+        "id": "le-015-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x - 4 = 9",
+        "explanationCaption": "-4 を消すために、両辺に 4 を足します。",
+        "equationAfter": "x - 4 + 4 = 9 + 4",
+        "highlight": "+ 4",
+        "choices": [
+          { "id": "a", "label": "両辺に 4 を足す", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 4 を引く", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "両辺を 4 で割る", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-015-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x - 4 + 4 = 9 + 4",
+        "explanationCaption": "-4 と +4 が消えて、x = 13 です。",
+        "equationAfter": "x = 13",
+        "highlight": "x = 13",
+        "choices": [
+          { "id": "a", "label": "x = 13", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 5", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "x = 36", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-016",
+    "unitId": "g1-linear-eq",
+    "title": "ひいてから割る",
+    "equation": "5x - 10 = 20",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "まず -10 を消して、そのあと 5x を x にします。",
+    "tags": ["移項", "係数"],
+    "finalAnswer": "x = 6",
+    "steps": [
+      {
+        "id": "le-016-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "5x - 10 = 20",
+        "explanationCaption": "-10 を消すために、両辺に 10 を足します。",
+        "equationAfter": "5x = 30",
+        "highlight": "30",
+        "choices": [
+          { "id": "a", "label": "両辺に 10 を足す", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 10 を引く", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "両辺を 10 で割る", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-016-s2",
+        "prompt": "5x = 30 から x は？",
+        "equationBefore": "5x = 30",
+        "explanationCaption": "両辺を 5 で割ると、x = 6 です。",
+        "equationAfter": "x = 6",
+        "highlight": "x = 6",
+        "choices": [
+          { "id": "a", "label": "x = 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 25", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 150", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-017",
+    "unitId": "g1-linear-eq",
+    "title": "穴埋め: -の数を消す",
+    "equation": "2x - 3 = 9",
+    "mode": "穴埋めモード",
+    "difficulty": 3,
+    "hint": "まず -3 を消すために、両辺に 3 を足します。",
+    "tags": ["穴埋め", "移項", "係数"],
+    "finalAnswer": "x = 6",
+    "steps": [
+      {
+        "id": "le-017-s1",
+        "prompt": "まず次の式を入力しよう",
+        "equationBefore": "2x - 3 = 9",
+        "explanationCaption": "両辺に 3 を足す形にします。",
+        "equationAfter": "2x - 3 + 3 = 9 + 3",
+        "highlight": "+ 3",
+        "choices": [
+          { "id": "a", "label": "2x - 3 + 3 = 9 + 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x - 3 - 3 = 9 - 3", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "2x ÷ 3 = 9 ÷ 3", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-017-s2",
+        "prompt": "計算した式を入力しよう",
+        "equationBefore": "2x - 3 + 3 = 9 + 3",
+        "explanationCaption": "-3 と +3 が消えて、2x = 12 になります。",
+        "equationAfter": "2x = 12",
+        "highlight": "2x = 12",
+        "choices": [
+          { "id": "a", "label": "2x = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x = 6", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      },
+      {
+        "id": "le-017-s3",
+        "prompt": "x だけにする式を入力しよう",
+        "equationBefore": "2x = 12",
+        "explanationCaption": "2x は x の 2倍なので、両辺を 2 で割ります。",
+        "equationAfter": "2x ÷ 2 = 12 ÷ 2",
+        "highlight": "÷ 2",
+        "choices": [
+          { "id": "a", "label": "2x ÷ 2 = 12 ÷ 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x - 2 = 12 - 2", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      },
+      {
+        "id": "le-017-s4",
+        "prompt": "答えを入力しよう",
+        "equationBefore": "2x ÷ 2 = 12 ÷ 2",
+        "explanationCaption": "答えは x = 6 です。",
+        "equationAfter": "x = 6",
+        "highlight": "x = 6",
+        "choices": [
+          { "id": "a", "label": "x = 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 14", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-018",
+    "unitId": "g1-linear-eq",
+    "title": "自力: かっこを外して解く",
+    "equation": "3(x - 2) = 15",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "まず 3 を x と -2 の両方にかけます。",
+    "tags": ["自力", "分配法則", "移項", "係数"],
+    "finalAnswer": "x = 7",
+    "steps": [
+      {
+        "id": "le-018-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "3(x - 2) = 15",
+        "explanationCaption": "3x - 6 = 15。両辺に 6 を足して 3x = 21。3 で割ると x = 7 です。",
+        "equationAfter": "x = 7",
+        "highlight": "x = 7",
+        "choices": [
+          { "id": "a", "label": "x = 7", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-019",
+    "unitId": "g1-linear-eq",
+    "title": "両辺に同じ数を足す",
+    "equation": "x - 7 = 4",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "-7 を消すには、両辺に 7 を足します。",
+    "tags": ["移項", "定数項"],
+    "finalAnswer": "x = 11",
+    "steps": [
+      {
+        "id": "le-019-s1",
+        "prompt": "まず何をする？",
+        "equationBefore": "x - 7 = 4",
+        "explanationCaption": "-7 を消すために、両辺に 7 を足します。",
+        "equationAfter": "x = 4 + 7",
+        "highlight": "+ 7",
+        "choices": [
+          { "id": "a", "label": "両辺に 7 を足す", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺から 7 を引く", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "両辺を 7 で割る", "isCorrect": false, "mistakeTagId": "balance-both-sides" }
+        ]
+      },
+      {
+        "id": "le-019-s2",
+        "prompt": "答えは？",
+        "equationBefore": "x = 4 + 7",
+        "explanationCaption": "4 + 7 = 11 なので、x = 11 です。",
+        "equationAfter": "x = 11",
+        "highlight": "x = 11",
+        "choices": [
+          { "id": "a", "label": "x = 11", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = -3", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "x = 28", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-020",
+    "unitId": "g1-linear-eq",
+    "title": "自力: 小数をなくして解く",
+    "equation": "0.2x = 3",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "0.2 は 1/5 と同じです。x の 1/5 が 3 と考えます。",
+    "tags": ["自力", "係数", "小数"],
+    "finalAnswer": "x = 15",
+    "steps": [
+      {
+        "id": "le-020-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "0.2x = 3",
+        "explanationCaption": "0.2x は x の 1/5。1/5 が 3 なので、もとの x は 15 です。",
+        "equationAfter": "x = 15",
+        "highlight": "x = 15",
+        "choices": [
+          { "id": "a", "label": "x = 15", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-021",
+    "unitId": "g1-linear-eq",
+    "title": "標準: 代金を式にする",
+    "equation": "ノート3冊と150円のペン2本で960円。ノート1冊を x 円とする。",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "ノート3冊は 3x 円、ペン2本は 150 × 2 円です。",
+    "tags": ["文章題", "式立て", "代金", "標準"],
+    "finalAnswer": "x = 220",
+    "steps": [
+      {
+        "id": "le-021-s1",
+        "prompt": "ノート3冊の代金は？",
+        "equationBefore": "ノート1冊を x 円とする",
+        "explanationCaption": "1冊 x 円が3冊なので、ノート3冊は 3x 円です。",
+        "equationAfter": "ノート3冊 = 3x 円",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3x 円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 3 円", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "150x 円", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-021-s2",
+        "prompt": "全体の式は？",
+        "equationBefore": "ノート3冊とペン2本で 960円",
+        "explanationCaption": "ペン2本は 150 × 2 = 300 円。だから 3x + 300 = 960 です。",
+        "equationAfter": "3x + 300 = 960",
+        "highlight": "3x + 300",
+        "choices": [
+          { "id": "a", "label": "3x + 300 = 960", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3x + 150 = 960", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "300x = 960", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-021-s3",
+        "prompt": "ノート1冊の値段は？",
+        "equationBefore": "3x + 300 = 960",
+        "explanationCaption": "両辺から 300 を引くと 3x = 660。3で割って x = 220 です。",
+        "equationAfter": "x = 220",
+        "highlight": "220",
+        "choices": [
+          { "id": "a", "label": "x = 220", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 270", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "x = 320", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-022",
+    "unitId": "g1-linear-eq",
+    "title": "標準: 過不足の問題",
+    "equation": "あめを5個ずつ配ると3個余り、6個ずつ配ると4個足りない。人数を x 人とする。",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "同じあめの数を、2通りの表し方で式にします。",
+    "tags": ["文章題", "式立て", "過不足", "標準", "高校受験"],
+    "finalAnswer": "x = 7",
+    "steps": [
+      {
+        "id": "le-022-s1",
+        "prompt": "5個ずつ配って3個余るとき、あめの数は？",
+        "equationBefore": "人数を x 人とする",
+        "explanationCaption": "5個ずつ x 人に配ると 5x 個。さらに3個余るので、あめの数は 5x + 3 です。",
+        "equationAfter": "あめの数 = 5x + 3",
+        "highlight": "5x + 3",
+        "choices": [
+          { "id": "a", "label": "5x + 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5x - 3", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "3x + 5", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-022-s2",
+        "prompt": "6個ずつ配ると4個足りないとき、あめの数は？",
+        "equationBefore": "6個ずつ配るには4個足りない",
+        "explanationCaption": "6個ずつ x 人に配るには 6x 個必要です。でも4個足りないので、実際のあめの数は 6x - 4 です。",
+        "equationAfter": "あめの数 = 6x - 4",
+        "highlight": "6x - 4",
+        "choices": [
+          { "id": "a", "label": "6x - 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x + 4", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "4x - 6", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-022-s3",
+        "prompt": "同じあめの数なので、式は？",
+        "equationBefore": "5x + 3 と 6x - 4 は同じあめの数",
+        "explanationCaption": "同じ個数を表しているので、5x + 3 = 6x - 4 とおけます。",
+        "equationAfter": "5x + 3 = 6x - 4",
+        "highlight": "=",
+        "choices": [
+          { "id": "a", "label": "5x + 3 = 6x - 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5x + 3 + 6x - 4 = 0", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "5x - 3 = 6x + 4", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-022-s4",
+        "prompt": "人数は？",
+        "equationBefore": "5x + 3 = 6x - 4",
+        "explanationCaption": "x を右に、数を左にまとめると 7 = x。人数は 7人です。",
+        "equationAfter": "x = 7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "x = 7", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 1", "isCorrect": false, "mistakeTagId": "transpose-sign" },
+          { "id": "c", "label": "x = 11", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-023",
+    "unitId": "g1-linear-eq",
+    "title": "標準: 追いつきの問題",
+    "equation": "Aさんが分速70mで出発。10分後、Bさんが分速120mで同じ道を追いかける。",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "Bさんが出発してから x 分後に追いつくとすると、Aさんは x + 10 分歩いています。",
+    "tags": ["文章題", "式立て", "速さ", "高校受験"],
+    "finalAnswer": "x = 14",
+    "steps": [
+      {
+        "id": "le-023-s1",
+        "prompt": "Bさんが出発してから x 分後、Aさんが歩いた時間は？",
+        "equationBefore": "Aさんは10分早く出発している",
+        "explanationCaption": "Bさんが x 分歩いたとき、Aさんはその10分前から歩いているので x + 10 分です。",
+        "equationAfter": "Aさんの時間 = x + 10",
+        "highlight": "x + 10",
+        "choices": [
+          { "id": "a", "label": "x + 10 分", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x - 10 分", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "10x 分", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-023-s2",
+        "prompt": "Aさんが進んだ距離は？",
+        "equationBefore": "距離 = 速さ × 時間",
+        "explanationCaption": "Aさんは分速70mで x + 10 分歩くので、距離は 70(x + 10) m です。",
+        "equationAfter": "Aさんの距離 = 70(x + 10)",
+        "highlight": "70(x + 10)",
+        "choices": [
+          { "id": "a", "label": "70(x + 10)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "70x + 10", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "120(x + 10)", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-023-s3",
+        "prompt": "追いついたときの式は？",
+        "equationBefore": "追いつく = 2人の進んだ距離が同じ",
+        "explanationCaption": "Bさんの距離は 120x。追いついたので、70(x + 10) = 120x です。",
+        "equationAfter": "70(x + 10) = 120x",
+        "highlight": "=",
+        "choices": [
+          { "id": "a", "label": "70(x + 10) = 120x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "70x = 120(x + 10)", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "70 + x + 10 = 120x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-023-s4",
+        "prompt": "Bさんが出発してから何分後？",
+        "equationBefore": "70(x + 10) = 120x",
+        "explanationCaption": "70x + 700 = 120x。700 = 50x なので、x = 14 です。",
+        "equationAfter": "x = 14",
+        "highlight": "14",
+        "choices": [
+          { "id": "a", "label": "x = 14", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 10", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 20", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-024",
+    "unitId": "g1-linear-eq",
+    "title": "標準: 割引の問題",
+    "equation": "定価 x 円の商品を20%引きにし、さらに100円引いたら860円になった。",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "20%引きは、定価の80%を払うという意味です。",
+    "tags": ["文章題", "式立て", "割合", "高校受験"],
+    "finalAnswer": "x = 1200",
+    "steps": [
+      {
+        "id": "le-024-s1",
+        "prompt": "20%引き後の値段は、定価の何倍？",
+        "equationBefore": "20%引き = 100% - 20%",
+        "explanationCaption": "100% - 20% = 80%。80% は 0.8倍です。",
+        "equationAfter": "20%引き後 = 0.8x",
+        "highlight": "0.8x",
+        "choices": [
+          { "id": "a", "label": "0.8x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.2x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 20", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-024-s2",
+        "prompt": "さらに100円引いた式は？",
+        "equationBefore": "20%引き後から100円引く",
+        "explanationCaption": "20%引き後は 0.8x。そこから100円引くので、0.8x - 100 です。",
+        "equationAfter": "0.8x - 100",
+        "highlight": "- 100",
+        "choices": [
+          { "id": "a", "label": "0.8x - 100", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.8x + 100", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "100 - 0.8x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-024-s3",
+        "prompt": "方程式は？",
+        "equationBefore": "最後の値段は 860円",
+        "explanationCaption": "0.8x - 100 が 860 円なので、0.8x - 100 = 860 です。",
+        "equationAfter": "0.8x - 100 = 860",
+        "highlight": "860",
+        "choices": [
+          { "id": "a", "label": "0.8x - 100 = 860", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.8x = 860 - 100", "isCorrect": false, "mistakeTagId": "transpose-sign" },
+          { "id": "c", "label": "x - 0.2 - 100 = 860", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-024-s4",
+        "prompt": "定価はいくら？",
+        "equationBefore": "0.8x - 100 = 860",
+        "explanationCaption": "両辺に100を足すと 0.8x = 960。0.8で割って x = 1200 です。",
+        "equationAfter": "x = 1200",
+        "highlight": "1200",
+        "choices": [
+          { "id": "a", "label": "x = 1200", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 960", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "x = 1080", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-025",
+    "unitId": "g1-linear-eq",
+    "title": "標準: 図形の文章題",
+    "equation": "長方形の縦は横より4cm短く、周りの長さは44cm。横を x cm とする。",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "縦は x - 4 cm。周りの長さは、横2本と縦2本の合計です。",
+    "tags": ["文章題", "式立て", "図形", "標準"],
+    "finalAnswer": "x = 13",
+    "steps": [
+      {
+        "id": "le-025-s1",
+        "prompt": "縦の長さは？",
+        "equationBefore": "横を x cm、縦は横より4cm短い",
+        "explanationCaption": "横より4cm短いので、縦は x - 4 cm です。",
+        "equationAfter": "縦 = x - 4",
+        "highlight": "x - 4",
+        "choices": [
+          { "id": "a", "label": "x - 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 4", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "4x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-025-s2",
+        "prompt": "周りの長さの式は？",
+        "equationBefore": "横2本と縦2本の合計が 44cm",
+        "explanationCaption": "横が2本で 2x、縦が2本で 2(x - 4)。合計して 44 です。",
+        "equationAfter": "2x + 2(x - 4) = 44",
+        "highlight": "2(x - 4)",
+        "choices": [
+          { "id": "a", "label": "2x + 2(x - 4) = 44", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + (x - 4) = 44", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "2x + x - 4 = 44", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-025-s3",
+        "prompt": "横の長さは？",
+        "equationBefore": "2x + 2(x - 4) = 44",
+        "explanationCaption": "2x + 2x - 8 = 44。4x = 52 なので、x = 13 です。",
+        "equationAfter": "x = 13",
+        "highlight": "13",
+        "choices": [
+          { "id": "a", "label": "x = 13", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 11", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "x = 9", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-026",
+    "unitId": "g1-linear-eq",
+    "title": "入試型: 食塩水",
+    "equation": "8%の食塩水 x g に、2%の食塩水200gを混ぜると5%の食塩水になる。",
+    "mode": "自力モード",
+    "difficulty": 5,
+    "hint": "食塩の重さで式を作ります。8%は0.08倍、2%は0.02倍、5%は0.05倍です。",
+    "tags": ["自力", "文章題", "式立て", "割合", "食塩水", "高校受験"],
+    "finalAnswer": "x = 200",
+    "steps": [
+      {
+        "id": "le-026-s1",
+        "prompt": "食塩の重さで式を作り、x の値を書こう",
+        "equationBefore": "0.08x + 0.02 × 200 = 0.05(x + 200)",
+        "explanationCaption": "0.08x + 4 = 0.05x + 10。0.03x = 6 なので、x = 200 です。",
+        "equationAfter": "x = 200",
+        "highlight": "200",
+        "choices": [
+          { "id": "a", "label": "x = 200", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
     "id": "le-101",
     "unitId": "g1-linear-eq",
     "title": "特訓: +の数を消す①",
@@ -802,6 +1479,337 @@
         "choices": [
           { "id": "a", "label": "x = 8", "isCorrect": true,  "mistakeTagId": null },
           { "id": "b", "label": "x = 4", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-027",
+    "unitId": "g1-linear-eq",
+    "title": "年齢の文章題",
+    "equation": "姉は弟より6歳上。2人の年齢の和は30歳。弟は何歳？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "弟の年齢を x 歳とすると、姉の年齢は x + 6 歳です。",
+    "tags": ["一次方程式", "文章題", "年齢", "式立て", "標準"],
+    "finalAnswer": "x = 12",
+    "steps": [
+      {
+        "id": "le-027-s1",
+        "prompt": "弟を x 歳とすると、姉は？",
+        "equationBefore": "姉は弟より6歳上",
+        "explanationCaption": "弟が x 歳なら、6歳上の姉は x + 6 歳です。",
+        "equationAfter": "姉 = x + 6",
+        "highlight": "x + 6",
+        "choices": [
+          { "id": "a", "label": "x + 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x - 6", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "6x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-027-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "弟 + 姉 = 30",
+        "explanationCaption": "弟は x、姉は x + 6。2人の和が30なので、x + (x + 6) = 30 です。",
+        "equationAfter": "x + (x + 6) = 30",
+        "highlight": "x + (x + 6)",
+        "choices": [
+          { "id": "a", "label": "x + (x + 6) = 30", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 6 = 30", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "6x = 30", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-027-s3",
+        "prompt": "弟の年齢は？",
+        "equationBefore": "2x + 6 = 30",
+        "explanationCaption": "2x = 24 なので、x = 12。弟は12歳です。",
+        "equationAfter": "x = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12歳", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "18歳", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "15歳", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-028",
+    "unitId": "g1-linear-eq",
+    "title": "連続する整数",
+    "equation": "連続する3つの整数の和が75。一番小さい数は？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "一番小さい数を x とすると、次は x + 1、その次は x + 2 です。",
+    "tags": ["一次方程式", "文章題", "連続する数", "標準"],
+    "finalAnswer": "x = 24",
+    "steps": [
+      {
+        "id": "le-028-s1",
+        "prompt": "連続する3つの整数を表すと？",
+        "equationBefore": "一番小さい数を x とする",
+        "explanationCaption": "連続する整数は1ずつ増えるので、x、x + 1、x + 2 と表せます。",
+        "equationAfter": "x, x + 1, x + 2",
+        "highlight": "x + 1",
+        "choices": [
+          { "id": "a", "label": "x, x + 1, x + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x, 2x, 3x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 1, x, x + 1", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-028-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "3つの和が75",
+        "explanationCaption": "3つを足して75なので、x + (x + 1) + (x + 2) = 75 です。",
+        "equationAfter": "x + (x + 1) + (x + 2) = 75",
+        "highlight": "= 75",
+        "choices": [
+          { "id": "a", "label": "x + (x + 1) + (x + 2) = 75", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x + 1 + 2 = 75", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "3x = 75", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-028-s3",
+        "prompt": "一番小さい数は？",
+        "equationBefore": "3x + 3 = 75",
+        "explanationCaption": "3x = 72 なので、x = 24。一番小さい数は24です。",
+        "equationAfter": "x = 24",
+        "highlight": "24",
+        "choices": [
+          { "id": "a", "label": "24", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "25", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "75", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-029",
+    "unitId": "g1-linear-eq",
+    "title": "入場券の枚数",
+    "equation": "大人600円、子ども300円。合計12枚で5100円。子どもは何枚？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "子どもを x 枚とすると、大人は 12 - x 枚です。",
+    "tags": ["一次方程式", "文章題", "料金", "高校受験"],
+    "finalAnswer": "x = 7",
+    "steps": [
+      {
+        "id": "le-029-s1",
+        "prompt": "子どもを x 枚とすると、大人は何枚？",
+        "equationBefore": "合計12枚",
+        "explanationCaption": "全部で12枚なので、子ども x 枚を引いた 12 - x 枚が大人です。",
+        "equationAfter": "大人 = 12 - x",
+        "highlight": "12 - x",
+        "choices": [
+          { "id": "a", "label": "12 - x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12 + x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "600 - x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-029-s2",
+        "prompt": "代金の方程式は？",
+        "equationBefore": "子ども300円、大人600円、合計5100円",
+        "explanationCaption": "子どもは 300x 円、大人は 600(12 - x) 円。合計が5100円です。",
+        "equationAfter": "300x + 600(12 - x) = 5100",
+        "highlight": "600(12 - x)",
+        "choices": [
+          { "id": "a", "label": "300x + 600(12 - x) = 5100", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "600x + 300(12 - x) = 5100", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "300x + 600x = 5100", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-029-s3",
+        "prompt": "整理すると？",
+        "equationBefore": "300x + 600(12 - x) = 5100",
+        "explanationCaption": "600(12 - x) = 7200 - 600x。合わせると 7200 - 300x = 5100 です。",
+        "equationAfter": "7200 - 300x = 5100",
+        "highlight": "-300x",
+        "choices": [
+          { "id": "a", "label": "7200 - 300x = 5100", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7200 + 900x = 5100", "isCorrect": false, "mistakeTagId": "distribute-parentheses" },
+          { "id": "c", "label": "900x = 5100", "isCorrect": false, "mistakeTagId": "distribute-parentheses" }
+        ]
+      },
+      {
+        "id": "le-029-s4",
+        "prompt": "子どもの枚数は？",
+        "equationBefore": "7200 - 300x = 5100",
+        "explanationCaption": "-300x = -2100 なので、x = 7。子どもの入場券は7枚です。",
+        "equationAfter": "x = 7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "7枚", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5枚", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "12枚", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-030",
+    "unitId": "g1-linear-eq",
+    "title": "割引と送料",
+    "equation": "定価 x 円の商品を20%引きで買い、送料200円を足すと1800円",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "20%引きは定価の80%、つまり 0.8x 円です。",
+    "tags": ["一次方程式", "文章題", "割合", "料金", "高校受験"],
+    "finalAnswer": "x = 2000",
+    "steps": [
+      {
+        "id": "le-030-s1",
+        "prompt": "20%引き後の代金は？",
+        "equationBefore": "定価 x 円を20%引き",
+        "explanationCaption": "20%引きでは、定価の80%を払います。だから 0.8x 円です。",
+        "equationAfter": "0.8x",
+        "highlight": "0.8x",
+        "choices": [
+          { "id": "a", "label": "0.8x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.2x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x - 20", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-030-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "割引後の代金 + 送料200円 = 1800円",
+        "explanationCaption": "割引後の代金は 0.8x 円。送料200円を足して1800円なので、0.8x + 200 = 1800 です。",
+        "equationAfter": "0.8x + 200 = 1800",
+        "highlight": "+ 200",
+        "choices": [
+          { "id": "a", "label": "0.8x + 200 = 1800", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.2x + 200 = 1800", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "0.8x - 200 = 1800", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-030-s3",
+        "prompt": "定価は？",
+        "equationBefore": "0.8x + 200 = 1800",
+        "explanationCaption": "0.8x = 1600。1600 ÷ 0.8 = 2000 なので、定価は2000円です。",
+        "equationAfter": "x = 2000",
+        "highlight": "2000",
+        "choices": [
+          { "id": "a", "label": "2000円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1600円", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "1800円", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-031",
+    "unitId": "g1-linear-eq",
+    "title": "長方形の周",
+    "equation": "たて x cm、横 x + 5 cm の長方形の周が34cm",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "長方形の周は、たて2本と横2本の合計です。",
+    "tags": ["一次方程式", "文章題", "図形", "周の長さ", "標準"],
+    "finalAnswer": "x = 6",
+    "steps": [
+      {
+        "id": "le-031-s1",
+        "prompt": "周の長さの方程式は？",
+        "equationBefore": "たて x、横 x + 5、周34",
+        "explanationCaption": "たてが2本、横が2本あるので、2x + 2(x + 5) = 34 です。",
+        "equationAfter": "2x + 2(x + 5) = 34",
+        "highlight": "2(x + 5)",
+        "choices": [
+          { "id": "a", "label": "2x + 2(x + 5) = 34", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x(x + 5) = 34", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "x + x + 5 = 34", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-031-s2",
+        "prompt": "整理すると？",
+        "equationBefore": "2x + 2(x + 5) = 34",
+        "explanationCaption": "2(x + 5) = 2x + 10。だから 4x + 10 = 34 です。",
+        "equationAfter": "4x + 10 = 34",
+        "highlight": "4x + 10",
+        "choices": [
+          { "id": "a", "label": "4x + 10 = 34", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4x + 5 = 34", "isCorrect": false, "mistakeTagId": "distribute-parentheses" },
+          { "id": "c", "label": "2x + 10 = 34", "isCorrect": false, "mistakeTagId": "distribute-parentheses" }
+        ]
+      },
+      {
+        "id": "le-031-s3",
+        "prompt": "たての長さは？",
+        "equationBefore": "4x + 10 = 34",
+        "explanationCaption": "4x = 24 なので、x = 6。たての長さは6cmです。",
+        "equationAfter": "x = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6cm", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8.5cm", "isCorrect": false, "mistakeTagId": "isolate-2x-to-x" },
+          { "id": "c", "label": "11cm", "isCorrect": false, "mistakeTagId": "remove-constant" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "le-032",
+    "unitId": "g1-linear-eq",
+    "title": "平均点の文章題",
+    "equation": "4回のテスト平均を75点にしたい。68点、72点、80点、あと1回は何点？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "平均75点を4回分にすると、合計は 75 × 4 点です。",
+    "tags": ["一次方程式", "文章題", "平均", "標準"],
+    "finalAnswer": "x = 80",
+    "steps": [
+      {
+        "id": "le-032-s1",
+        "prompt": "目標の合計点は？",
+        "equationBefore": "平均75点、4回分",
+        "explanationCaption": "平均75点を4回分にするには、合計が 75 × 4 = 300 点必要です。",
+        "equationAfter": "合計 300点",
+        "highlight": "300",
+        "choices": [
+          { "id": "a", "label": "300点", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "75点", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "220点", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-032-s2",
+        "prompt": "方程式にすると？",
+        "equationBefore": "68点、72点、80点、x点",
+        "explanationCaption": "4回分の合計が300点なので、68 + 72 + 80 + x = 300 です。",
+        "equationAfter": "68 + 72 + 80 + x = 300",
+        "highlight": "+ x",
+        "choices": [
+          { "id": "a", "label": "68 + 72 + 80 + x = 300", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(68 + 72 + 80) ÷ x = 75", "isCorrect": false, "mistakeTagId": "word-problem-modeling" },
+          { "id": "c", "label": "68 + 72 + 80 = x", "isCorrect": false, "mistakeTagId": "word-problem-modeling" }
+        ]
+      },
+      {
+        "id": "le-032-s3",
+        "prompt": "あと1回は何点必要？",
+        "equationBefore": "220 + x = 300",
+        "explanationCaption": "68 + 72 + 80 = 220。300 - 220 = 80 なので、あと1回は80点必要です。",
+        "equationAfter": "x = 80",
+        "highlight": "80",
+        "choices": [
+          { "id": "a", "label": "80点", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "75点", "isCorrect": false, "mistakeTagId": "remove-constant" },
+          { "id": "c", "label": "85点", "isCorrect": false, "mistakeTagId": "remove-constant" }
         ]
       }
     ]

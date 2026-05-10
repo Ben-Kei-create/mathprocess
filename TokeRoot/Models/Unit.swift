@@ -13,7 +13,7 @@ enum UnitStatus: String, Codable {
 
     var label: String {
         switch self {
-        case .available:  return "利用可能"
+        case .available:  return "はじめる"
         case .comingSoon: return "準備中"
         }
     }

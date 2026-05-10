@@ -1,0 +1,1588 @@
+[
+  {
+    "id": "lf-001",
+    "unitId": "g2-linear-fn",
+    "title": "グラフから切片を見る",
+    "equation": "直線 y = 2x + 1",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -4,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": "y = 2x + 1", "x1": -2.5, "y1": -4, "x2": 3, "y2": 7 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 1, "label": "(0, 1)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "切片は、直線が y 軸と交わるところの y の値です。",
+    "tags": ["一次関数", "グラフを読む", "切片"],
+    "finalAnswer": "切片は1",
+    "steps": [
+      {
+        "id": "lf-001-s1",
+        "prompt": "この直線が y 軸と交わる点は？",
+        "equationBefore": "直線 y = 2x + 1",
+        "explanationCaption": "y 軸は x = 0 の線です。直線は (0, 1) で y 軸と交わります。",
+        "equationAfter": "x = 0 のとき y = 1",
+        "highlight": "y = 1",
+        "choices": [
+          { "id": "a", "label": "(0, 1)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(1, 0)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(2, 1)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-001-s2",
+        "prompt": "切片はいくつ？",
+        "equationBefore": "x = 0 のとき y = 1",
+        "explanationCaption": "y 軸と交わるところの y の値が切片です。だから切片は 1 です。",
+        "equationAfter": "切片は 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-002",
+    "unitId": "g2-linear-fn",
+    "title": "傾きを読む",
+    "equation": "右へ1、上へ2進む直線",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -3,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": null, "x1": -2, "y1": -3, "x2": 3, "y2": 7 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 1, "label": "(0, 1)" },
+        { "id": "p2", "x": 1, "y": 3, "label": "(1, 3)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "傾きは、x が 1 増えたとき y がいくつ増えるかです。",
+    "tags": ["一次関数", "グラフを読む", "傾き"],
+    "finalAnswer": "傾きは2",
+    "steps": [
+      {
+        "id": "lf-002-s1",
+        "prompt": "(0,1) から (1,3) へ、y はいくつ増えた？",
+        "equationBefore": "(0, 1) → (1, 3)",
+        "explanationCaption": "x は 1 増え、y は 1 から 3 へ 2 増えています。",
+        "equationAfter": "y は 2 増える",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-002-s2",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "x が 1 増えると y は 2 増える",
+        "explanationCaption": "x が 1 増えたときの y の増え方が傾きなので、傾きは 2 です。",
+        "equationAfter": "傾きは 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-003",
+    "unitId": "g2-linear-fn",
+    "title": "直線の式を選ぶ",
+    "equation": "切片3、傾き-1の直線",
+    "graph": {
+      "xMin": -3,
+      "xMax": 4,
+      "yMin": -2,
+      "yMax": 6,
+      "lines": [
+        { "id": "l1", "label": null, "x1": -3, "y1": 6, "x2": 4, "y2": -1 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 3, "label": "(0, 3)" },
+        { "id": "p2", "x": 1, "y": 2, "label": "(1, 2)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "一次関数の式は y = ax + b。a が傾き、b が切片です。",
+    "tags": ["一次関数", "式にする", "傾き", "切片"],
+    "finalAnswer": "y = -x + 3",
+    "steps": [
+      {
+        "id": "lf-003-s1",
+        "prompt": "切片はいくつ？",
+        "equationBefore": "y 軸との交点は (0, 3)",
+        "explanationCaption": "y 軸と交わる点は (0, 3) なので、切片は 3 です。",
+        "equationAfter": "b = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-003-s2",
+        "prompt": "式はどれ？",
+        "equationBefore": "傾き -1、切片 3",
+        "explanationCaption": "y = ax + b に a = -1、b = 3 を入れて、y = -x + 3 です。",
+        "equationAfter": "y = -x + 3",
+        "highlight": "-x + 3",
+        "choices": [
+          { "id": "a", "label": "y = -x + 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = -3x + 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-004",
+    "unitId": "g2-linear-fn",
+    "title": "自力: x の値から y を出す",
+    "equation": "y = 3x - 2、x = 4 のとき y は？",
+    "graph": {
+      "xMin": -2,
+      "xMax": 4,
+      "yMin": -5,
+      "yMax": 10,
+      "lines": [
+        { "id": "l1", "label": "y = 3x - 2", "x1": -1, "y1": -5, "x2": 4, "y2": 10 }
+      ],
+      "points": [
+        { "id": "p1", "x": 4, "y": 10, "label": "(4, 10)" }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "x の場所に 4 を入れて、3 × 4 - 2 を計算します。",
+    "tags": ["一次関数", "直線の式", "グラフ", "代入", "自力"],
+    "finalAnswer": "y = 10",
+    "steps": [
+      {
+        "id": "lf-004-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = 3x - 2, x = 4",
+        "explanationCaption": "y = 3 × 4 - 2 = 12 - 2 = 10 です。",
+        "equationAfter": "y = 10",
+        "highlight": "10",
+        "choices": [
+          { "id": "a", "label": "y = 10", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-005",
+    "unitId": "g2-linear-fn",
+    "title": "切片がマイナスの直線",
+    "equation": "直線 y = x - 2",
+    "graph": {
+      "xMin": -3,
+      "xMax": 4,
+      "yMin": -4,
+      "yMax": 4,
+      "lines": [
+        { "id": "l1", "label": "y = x - 2", "x1": -2, "y1": -4, "x2": 4, "y2": 2 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": -2, "label": "(0, -2)" },
+        { "id": "p2", "x": 2, "y": 0, "label": "(2, 0)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "y 軸と交わる点を見ます。x = 0 のところです。",
+    "tags": ["一次関数", "グラフを読む", "切片"],
+    "finalAnswer": "切片は-2",
+    "steps": [
+      {
+        "id": "lf-005-s1",
+        "prompt": "この直線が y 軸と交わる点は？",
+        "equationBefore": "直線 y = x - 2",
+        "explanationCaption": "y 軸は x = 0 の線です。直線は (0, -2) で y 軸と交わります。",
+        "equationAfter": "x = 0 のとき y = -2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "(0, -2)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(-2, 0)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(0, 2)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-005-s2",
+        "prompt": "切片はいくつ？",
+        "equationBefore": "x = 0 のとき y = -2",
+        "explanationCaption": "y 軸と交わるところの y の値が切片です。だから切片は -2 です。",
+        "equationAfter": "切片は -2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-006",
+    "unitId": "g2-linear-fn",
+    "title": "下がる直線の傾き",
+    "equation": "右へ1進むと y は2下がる直線",
+    "graph": {
+      "xMin": -2,
+      "xMax": 4,
+      "yMin": -3,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": "y = -2x + 4", "x1": -1, "y1": 6, "x2": 3, "y2": -2 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 4, "label": "(0, 4)" },
+        { "id": "p2", "x": 1, "y": 2, "label": "(1, 2)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "右へ進んだとき、上がるならプラス、下がるならマイナスです。",
+    "tags": ["一次関数", "グラフを読む", "傾き"],
+    "finalAnswer": "傾きは-2",
+    "steps": [
+      {
+        "id": "lf-006-s1",
+        "prompt": "(0,4) から (1,2) へ、y はどう変わった？",
+        "equationBefore": "(0, 4) → (1, 2)",
+        "explanationCaption": "x は 1 増え、y は 4 から 2 へ 2 下がっています。",
+        "equationAfter": "y は 2 下がる",
+        "highlight": "2 下がる",
+        "choices": [
+          { "id": "a", "label": "2 下がる", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2 上がる", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1 下がる", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-006-s2",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "右へ1、下へ2",
+        "explanationCaption": "右へ 1 進んで下へ 2 なので、傾きは -2 です。",
+        "equationAfter": "傾きは -2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-007",
+    "unitId": "g2-linear-fn",
+    "title": "2点から式を作る",
+    "equation": "(0, -1) と (2, 3) を通る直線",
+    "graph": {
+      "xMin": -2,
+      "xMax": 3,
+      "yMin": -5,
+      "yMax": 6,
+      "lines": [
+        { "id": "l1", "label": "y = 2x - 1", "x1": -2, "y1": -5, "x2": 3, "y2": 5 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": -1, "label": "(0, -1)" },
+        { "id": "p2", "x": 2, "y": 3, "label": "(2, 3)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "(0, b) の b が切片です。傾きは y の増え方 ÷ x の増え方で見ます。",
+    "tags": ["一次関数", "式にする", "傾き", "切片"],
+    "finalAnswer": "y = 2x - 1",
+    "steps": [
+      {
+        "id": "lf-007-s1",
+        "prompt": "切片はいくつ？",
+        "equationBefore": "点 (0, -1) を通る",
+        "explanationCaption": "x = 0 のとき y = -1 なので、切片は -1 です。",
+        "equationAfter": "b = -1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-007-s2",
+        "prompt": "(0,-1) から (2,3) へ、傾きはいくつ？",
+        "equationBefore": "x は 2 増え、y は 4 増える",
+        "explanationCaption": "傾きは y の増え方 ÷ x の増え方。4 ÷ 2 = 2 です。",
+        "equationAfter": "傾きは 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-007-s3",
+        "prompt": "式はどれ？",
+        "equationBefore": "傾き 2、切片 -1",
+        "explanationCaption": "y = ax + b に a = 2、b = -1 を入れて、y = 2x - 1 です。",
+        "equationAfter": "y = 2x - 1",
+        "highlight": "2x - 1",
+        "choices": [
+          { "id": "a", "label": "y = 2x - 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 2x + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = -2x - 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-008",
+    "unitId": "g2-linear-fn",
+    "title": "自力: マイナスの x を代入",
+    "equation": "y = -2x + 1、x = -1 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -5,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": "y = -2x + 1", "x1": -3, "y1": 7, "x2": 3, "y2": -5 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 3, "label": "(-1, 3)" }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "x の場所に -1 を入れます。-2 × -1 はプラスになります。",
+    "tags": ["一次関数", "直線の式", "グラフ", "代入", "自力"],
+    "finalAnswer": "y = 3",
+    "steps": [
+      {
+        "id": "lf-008-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = -2x + 1, x = -1",
+        "explanationCaption": "y = -2 × (-1) + 1 = 2 + 1 = 3 です。",
+        "equationAfter": "y = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "y = 3", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-009",
+    "unitId": "g2-linear-fn",
+    "title": "傾きが分数の直線",
+    "equation": "切片2、右へ2で上へ1進む直線",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 5,
+      "lines": [
+        { "id": "l1", "label": "y = 1/2x + 2", "x1": -4, "y1": 0, "x2": 4, "y2": 4 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 2, "label": "(0, 2)" },
+        { "id": "p2", "x": 2, "y": 3, "label": "(2, 3)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x が 2 増えたとき y が 1 増えるので、傾きは 1 ÷ 2 です。",
+    "tags": ["一次関数", "式にする", "傾き", "切片"],
+    "finalAnswer": "y = 1/2x + 2",
+    "steps": [
+      {
+        "id": "lf-009-s1",
+        "prompt": "(0,2) から (2,3) へ、x と y はどう増えた？",
+        "equationBefore": "(0, 2) → (2, 3)",
+        "explanationCaption": "x は 2 増え、y は 1 増えています。",
+        "equationAfter": "x は 2 増え、y は 1 増える",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "x は2、y は1増える", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x は1、y は2増える", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x も y も2増える", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-009-s2",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "y の増え方 ÷ x の増え方 = 1 ÷ 2",
+        "explanationCaption": "1 ÷ 2 なので、傾きは 1/2 です。",
+        "equationAfter": "傾きは 1/2",
+        "highlight": "1/2",
+        "choices": [
+          { "id": "a", "label": "1/2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-1/2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-009-s3",
+        "prompt": "式はどれ？",
+        "equationBefore": "傾き 1/2、切片 2",
+        "explanationCaption": "y = ax + b に a = 1/2、b = 2 を入れて、y = 1/2x + 2 です。",
+        "equationAfter": "y = 1/2x + 2",
+        "highlight": "1/2x + 2",
+        "choices": [
+          { "id": "a", "label": "y = 1/2x + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 2x + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = -1/2x + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-010",
+    "unitId": "g2-linear-fn",
+    "title": "自力: 分数の傾きで代入",
+    "equation": "y = 1/2x + 2、x = 4 のとき y は？",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 5,
+      "lines": [
+        { "id": "l1", "label": "y = 1/2x + 2", "x1": -4, "y1": 0, "x2": 4, "y2": 4 }
+      ],
+      "points": [
+        { "id": "p1", "x": 4, "y": 4, "label": "(4, 4)" }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "1/2 × 4 は 2 です。そこに 2 を足します。",
+    "tags": ["一次関数", "直線の式", "グラフ", "代入", "自力"],
+    "finalAnswer": "y = 4",
+    "steps": [
+      {
+        "id": "lf-010-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = 1/2x + 2, x = 4",
+        "explanationCaption": "y = 1/2 × 4 + 2 = 2 + 2 = 4 です。",
+        "equationAfter": "y = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "y = 4", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-011",
+    "unitId": "g2-linear-fn",
+    "title": "表から式を作る",
+    "equation": "x: 0, 1, 2\ny: 1, 4, 7",
+    "graph": {
+      "xMin": -1,
+      "xMax": 3,
+      "yMin": -2,
+      "yMax": 10,
+      "lines": [
+        { "id": "l1", "label": "y = 3x + 1", "x1": -1, "y1": -2, "x2": 3, "y2": 10 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 1, "label": "(0, 1)" },
+        { "id": "p2", "x": 1, "y": 4, "label": "(1, 4)" },
+        { "id": "p3", "x": 2, "y": 7, "label": "(2, 7)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x が 1 増えるたびに y が 3 増えています。x = 0 のときの y が切片です。",
+    "tags": ["一次関数", "式にする", "表", "傾き", "切片"],
+    "finalAnswer": "y = 3x + 1",
+    "steps": [
+      {
+        "id": "lf-011-s1",
+        "prompt": "x が 1 増えると、y はいくつ増える？",
+        "equationBefore": "x: 0, 1, 2\ny: 1, 4, 7",
+        "explanationCaption": "y は 1 → 4 → 7 と、3 ずつ増えています。",
+        "equationAfter": "傾きは 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-011-s2",
+        "prompt": "切片はいくつ？",
+        "equationBefore": "x = 0 のとき y = 1",
+        "explanationCaption": "x = 0 のときの y の値が切片なので、切片は 1 です。",
+        "equationAfter": "切片は 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "7", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-011-s3",
+        "prompt": "式はどれ？",
+        "equationBefore": "傾き 3、切片 1",
+        "explanationCaption": "y = ax + b に a = 3、b = 1 を入れて、y = 3x + 1 です。",
+        "equationAfter": "y = 3x + 1",
+        "highlight": "3x + 1",
+        "choices": [
+          { "id": "a", "label": "y = 3x + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 4x + 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-012",
+    "unitId": "g2-linear-fn",
+    "title": "変化の割合",
+    "equation": "点 (1, 2) と (3, 8) を通る直線",
+    "graph": {
+      "xMin": 0,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 10,
+      "lines": [
+        { "id": "l1", "label": "y = 3x - 1", "x1": 0, "y1": -1, "x2": 4, "y2": 11 }
+      ],
+      "points": [
+        { "id": "p1", "x": 1, "y": 2, "label": "(1, 2)" },
+        { "id": "p2", "x": 3, "y": 8, "label": "(3, 8)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "変化の割合は、y の増え方 ÷ x の増え方 です。",
+    "tags": ["一次関数", "グラフを読む", "変化の割合"],
+    "finalAnswer": "変化の割合は3",
+    "steps": [
+      {
+        "id": "lf-012-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "(1, 2) → (3, 8)",
+        "explanationCaption": "x は 1 から 3 へ、2 増えています。",
+        "equationAfter": "x の増え方 = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-012-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "(1, 2) → (3, 8)",
+        "explanationCaption": "y は 2 から 8 へ、6 増えています。",
+        "equationAfter": "y の増え方 = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-012-s3",
+        "prompt": "変化の割合は？",
+        "equationBefore": "6 ÷ 2",
+        "explanationCaption": "y の増え方 6 を、x の増え方 2 で割ります。6 ÷ 2 = 3 です。",
+        "equationAfter": "変化の割合は 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-013",
+    "unitId": "g2-linear-fn",
+    "title": "x 軸との交点",
+    "equation": "直線 y = -x + 4",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": -2,
+      "yMax": 6,
+      "lines": [
+        { "id": "l1", "label": "y = -x + 4", "x1": -1, "y1": 5, "x2": 5, "y2": -1 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 4, "label": "(0, 4)" },
+        { "id": "p2", "x": 4, "y": 0, "label": "(4, 0)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x 軸と交わる点では、y = 0 です。",
+    "tags": ["一次関数", "グラフを読む", "交点"],
+    "finalAnswer": "(4, 0)",
+    "steps": [
+      {
+        "id": "lf-013-s1",
+        "prompt": "x 軸と交わる点では、y はいくつ？",
+        "equationBefore": "x 軸との交点",
+        "explanationCaption": "x 軸上の点は、y の値が 0 です。",
+        "equationAfter": "y = 0",
+        "highlight": "0",
+        "choices": [
+          { "id": "a", "label": "0", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-013-s2",
+        "prompt": "x 軸と交わる点は？",
+        "equationBefore": "y = -x + 4、y = 0",
+        "explanationCaption": "0 = -x + 4 なので、x = 4。交点は (4, 0) です。",
+        "equationAfter": "(4, 0)",
+        "highlight": "(4, 0)",
+        "choices": [
+          { "id": "a", "label": "(4, 0)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(0, 4)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(-4, 0)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-014",
+    "unitId": "g2-linear-fn",
+    "title": "自力: マイナス代入",
+    "equation": "y = -3x + 2、x = -2 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -7,
+      "yMax": 11,
+      "lines": [
+        { "id": "l1", "label": "y = -3x + 2", "x1": -3, "y1": 11, "x2": 3, "y2": -7 }
+      ],
+      "points": [
+        { "id": "p1", "x": -2, "y": 8, "label": "(-2, 8)" }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "x の場所に -2 を入れます。-3 × -2 は +6 です。",
+    "tags": ["一次関数", "直線の式", "グラフ", "代入", "自力"],
+    "finalAnswer": "y = 8",
+    "steps": [
+      {
+        "id": "lf-014-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = -3x + 2, x = -2",
+        "explanationCaption": "y = -3 × (-2) + 2 = 6 + 2 = 8 です。",
+        "equationAfter": "y = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "y = 8", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-015",
+    "unitId": "g2-linear-fn",
+    "title": "自力: y から x を出す",
+    "equation": "y = 2x - 5、y = 1 のとき x は？",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": -7,
+      "yMax": 5,
+      "lines": [
+        { "id": "l1", "label": "y = 2x - 5", "x1": -1, "y1": -7, "x2": 5, "y2": 5 }
+      ],
+      "points": [
+        { "id": "p1", "x": 3, "y": 1, "label": "(3, 1)" }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "y の場所に 1 を入れて、1 = 2x - 5 を解きます。",
+    "tags": ["一次関数", "直線の式", "グラフ", "代入", "自力"],
+    "finalAnswer": "x = 3",
+    "steps": [
+      {
+        "id": "lf-015-s1",
+        "prompt": "途中式をメモして、x の値を書こう",
+        "equationBefore": "1 = 2x - 5",
+        "explanationCaption": "1 = 2x - 5。両辺に 5 を足して 6 = 2x。だから x = 3 です。",
+        "equationAfter": "x = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "x = 3", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-016",
+    "unitId": "g2-linear-fn",
+    "title": "2点から傾きを読む",
+    "equation": "点 (-1, 1) と (2, 7) を通る直線",
+    "graph": {
+      "xMin": -2,
+      "xMax": 4,
+      "yMin": -2,
+      "yMax": 10,
+      "lines": [
+        { "id": "l1", "label": "y = 2x + 3", "x1": -2, "y1": -1, "x2": 3, "y2": 9 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 1, "label": "(-1, 1)" },
+        { "id": "p2", "x": 2, "y": 7, "label": "(2, 7)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "傾きは、y の増え方 ÷ x の増え方です。",
+    "tags": ["一次関数", "グラフを読む", "変化の割合", "傾き"],
+    "finalAnswer": "傾きは2",
+    "steps": [
+      {
+        "id": "lf-016-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "(-1, 1) → (2, 7)",
+        "explanationCaption": "x は -1 から 2 へ、3 増えています。",
+        "equationAfter": "x の増え方 = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-016-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "(-1, 1) → (2, 7)",
+        "explanationCaption": "y は 1 から 7 へ、6 増えています。",
+        "equationAfter": "y の増え方 = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-016-s3",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "y の増え方 ÷ x の増え方 = 6 ÷ 3",
+        "explanationCaption": "6 ÷ 3 = 2。だから、この直線の傾きは 2 です。",
+        "equationAfter": "傾きは 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-017",
+    "unitId": "g2-linear-fn",
+    "title": "点と傾きから式を作る",
+    "equation": "傾き2、点 (1, 5) を通る直線",
+    "graph": {
+      "xMin": -1,
+      "xMax": 4,
+      "yMin": 0,
+      "yMax": 11,
+      "lines": [
+        { "id": "l1", "label": "y = 2x + 3", "x1": -1, "y1": 1, "x2": 4, "y2": 11 }
+      ],
+      "points": [
+        { "id": "p1", "x": 1, "y": 5, "label": "(1, 5)" },
+        { "id": "p2", "x": 0, "y": 3, "label": "(0, 3)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "y = ax + b に、a = 2 と点 (1, 5) を入れます。",
+    "tags": ["一次関数", "式にする", "傾き", "切片"],
+    "finalAnswer": "y = 2x + 3",
+    "steps": [
+      {
+        "id": "lf-017-s1",
+        "prompt": "まず a に入る数は？",
+        "equationBefore": "y = ax + b、傾き2",
+        "explanationCaption": "一次関数 y = ax + b では、a が傾きです。だから a = 2 です。",
+        "equationAfter": "y = 2x + b",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-017-s2",
+        "prompt": "点 (1, 5) を入れると？",
+        "equationBefore": "y = 2x + b",
+        "explanationCaption": "x = 1、y = 5 を入れるので、5 = 2 × 1 + b です。",
+        "equationAfter": "5 = 2 × 1 + b",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5 = 2 × 1 + b", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1 = 2 × 5 + b", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5 = 1 × b + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-017-s3",
+        "prompt": "b はいくつ？",
+        "equationBefore": "5 = 2 + b",
+        "explanationCaption": "5 = 2 + b なので、b = 3 です。",
+        "equationAfter": "b = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-017-s4",
+        "prompt": "直線の式は？",
+        "equationBefore": "a = 2、b = 3",
+        "explanationCaption": "y = ax + b に a = 2、b = 3 を入れて、y = 2x + 3 です。",
+        "equationAfter": "y = 2x + 3",
+        "highlight": "2x + 3",
+        "choices": [
+          { "id": "a", "label": "y = 2x + 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 3x + 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 2x + 5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-018",
+    "unitId": "g2-linear-fn",
+    "title": "平行な直線の式",
+    "equation": "y = 3x - 1 と平行、点 (0, 2) を通る",
+    "graph": {
+      "xMin": -2,
+      "xMax": 3,
+      "yMin": -5,
+      "yMax": 11,
+      "lines": [
+        { "id": "l1", "label": "y = 3x + 2", "x1": -2, "y1": -4, "x2": 3, "y2": 11 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 2, "label": "(0, 2)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "平行な直線は、傾きが同じです。点 (0, 2) は切片も表しています。",
+    "tags": ["一次関数", "式にする", "平行", "傾き", "切片"],
+    "finalAnswer": "y = 3x + 2",
+    "steps": [
+      {
+        "id": "lf-018-s1",
+        "prompt": "平行な直線で同じになるものは？",
+        "equationBefore": "y = 3x - 1 と平行",
+        "explanationCaption": "平行な直線は傾きが同じです。だから傾きは 3 です。",
+        "equationAfter": "傾きは 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "傾き", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "切片", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x の値", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-018-s2",
+        "prompt": "点 (0, 2) から切片はいくつ？",
+        "equationBefore": "点 (0, 2)",
+        "explanationCaption": "x = 0 の点なので、y の値 2 が切片です。",
+        "equationAfter": "切片は 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-018-s3",
+        "prompt": "式はどれ？",
+        "equationBefore": "傾き 3、切片 2",
+        "explanationCaption": "y = ax + b に a = 3、b = 2 を入れて、y = 3x + 2 です。",
+        "equationAfter": "y = 3x + 2",
+        "highlight": "3x + 2",
+        "choices": [
+          { "id": "a", "label": "y = 3x + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 2x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 3x - 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-019",
+    "unitId": "g2-linear-fn",
+    "title": "2直線の交点",
+    "equation": "y = x + 1 と y = -x + 5",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": 0,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": "y = x + 1", "x1": -1, "y1": 0, "x2": 5, "y2": 6 },
+        { "id": "l2", "label": "y = -x + 5", "x1": -1, "y1": 6, "x2": 5, "y2": 0 }
+      ],
+      "points": [
+        { "id": "p1", "x": 2, "y": 3, "label": "(2, 3)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "交点は、2つの直線が同じ点を通る場所です。",
+    "tags": ["一次関数", "グラフを読む", "交点"],
+    "finalAnswer": "(2, 3)",
+    "steps": [
+      {
+        "id": "lf-019-s1",
+        "prompt": "グラフで2直線が交わる点は？",
+        "equationBefore": "y = x + 1 と y = -x + 5",
+        "explanationCaption": "2つの直線は、点 (2, 3) で交わっています。",
+        "equationAfter": "交点は (2, 3)",
+        "highlight": "(2, 3)",
+        "choices": [
+          { "id": "a", "label": "(2, 3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(3, 2)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(0, 5)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-019-s2",
+        "prompt": "点 (2, 3) は y = x + 1 に合う？",
+        "equationBefore": "y = x + 1、点 (2, 3)",
+        "explanationCaption": "x = 2 を入れると y = 2 + 1 = 3。合っています。",
+        "equationAfter": "3 = 2 + 1",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "合う", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "合わない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-019-s3",
+        "prompt": "点 (2, 3) は y = -x + 5 に合う？",
+        "equationBefore": "y = -x + 5、点 (2, 3)",
+        "explanationCaption": "x = 2 を入れると y = -2 + 5 = 3。こちらにも合います。",
+        "equationAfter": "3 = -2 + 5",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "合う", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "合わない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-020",
+    "unitId": "g2-linear-fn",
+    "title": "2点から直線の式",
+    "equation": "2点 (-1, 2), (3, 10) を通る直線",
+    "graph": {
+      "xMin": -2,
+      "xMax": 4,
+      "yMin": 0,
+      "yMax": 12,
+      "lines": [
+        { "id": "l1", "label": "y = 2x + 4", "x1": -2, "y1": 0, "x2": 4, "y2": 12 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 2, "label": "(-1, 2)" },
+        { "id": "p2", "x": 3, "y": 10, "label": "(3, 10)" },
+        { "id": "p3", "x": 0, "y": 4, "label": "(0, 4)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "2点の x の増え方と y の増え方から、まず傾きを出します。",
+    "tags": ["一次関数", "式にする", "2点", "傾き", "高校受験"],
+    "finalAnswer": "y = 2x + 4",
+    "steps": [
+      {
+        "id": "lf-020-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "(-1, 2) → (3, 10)",
+        "explanationCaption": "x は -1 から 3 へ増えています。3 - (-1) = 4 なので、x の増え方は 4 です。",
+        "equationAfter": "x の増え方 = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-020-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "2 → 10",
+        "explanationCaption": "y は 2 から 10 へ増えています。10 - 2 = 8 です。",
+        "equationAfter": "y の増え方 = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-020-s3",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "y の増え方 ÷ x の増え方 = 8 ÷ 4",
+        "explanationCaption": "8 ÷ 4 = 2 なので、傾きは 2 です。",
+        "equationAfter": "a = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-020-s4",
+        "prompt": "点 (-1, 2) を入れると？",
+        "equationBefore": "y = 2x + b",
+        "explanationCaption": "x = -1、y = 2 を入れるので、2 = 2 × (-1) + b です。",
+        "equationAfter": "2 = -2 + b",
+        "highlight": "-2 + b",
+        "choices": [
+          { "id": "a", "label": "2 = 2 × (-1) + b", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-1 = 2 × 2 + b", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2 = -1 × b + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-020-s5",
+        "prompt": "直線の式は？",
+        "equationBefore": "2 = -2 + b",
+        "explanationCaption": "2 = -2 + b なので b = 4。したがって、直線の式は y = 2x + 4 です。",
+        "equationAfter": "y = 2x + 4",
+        "highlight": "2x + 4",
+        "choices": [
+          { "id": "a", "label": "y = 2x + 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 4x + 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 2x - 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-021",
+    "unitId": "g2-linear-fn",
+    "title": "料金の式を作る",
+    "equation": "3kmで900円、8kmで1900円のタクシー料金",
+    "graph": {
+      "xMin": 0,
+      "xMax": 8,
+      "yMin": 0,
+      "yMax": 2000,
+      "lines": [
+        { "id": "l1", "label": "y = 200x + 300", "x1": 0, "y1": 300, "x2": 8, "y2": 1900 }
+      ],
+      "points": [
+        { "id": "p1", "x": 3, "y": 900, "label": "(3, 900)" },
+        { "id": "p2", "x": 8, "y": 1900, "label": "(8, 1900)" },
+        { "id": "p3", "x": 6, "y": 1500, "label": "(6, 1500)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "距離が 5km 増えると、料金は 1000円 増えています。",
+    "tags": ["一次関数", "文章題", "料金", "式にする", "高校受験"],
+    "finalAnswer": "6kmの料金は1500円",
+    "steps": [
+      {
+        "id": "lf-021-s1",
+        "prompt": "距離は何km増えた？",
+        "equationBefore": "3km → 8km",
+        "explanationCaption": "8 - 3 = 5 なので、距離は 5km 増えています。",
+        "equationAfter": "x の増え方 = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5km", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8km", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3km", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-021-s2",
+        "prompt": "料金は何円増えた？",
+        "equationBefore": "900円 → 1900円",
+        "explanationCaption": "1900 - 900 = 1000 なので、料金は 1000円 増えています。",
+        "equationAfter": "y の増え方 = 1000",
+        "highlight": "1000",
+        "choices": [
+          { "id": "a", "label": "1000円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1900円", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "900円", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-021-s3",
+        "prompt": "1kmあたりの増え方は？",
+        "equationBefore": "1000 ÷ 5",
+        "explanationCaption": "1000円 を 5km で割るので、1km あたり 200円 ずつ増えます。",
+        "equationAfter": "傾き = 200",
+        "highlight": "200",
+        "choices": [
+          { "id": "a", "label": "200円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "500円", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1000円", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-021-s4",
+        "prompt": "料金の式はどれ？",
+        "equationBefore": "y = 200x + b、3kmで900円",
+        "explanationCaption": "900 = 200 × 3 + b なので、b = 300。式は y = 200x + 300 です。",
+        "equationAfter": "y = 200x + 300",
+        "highlight": "200x + 300",
+        "choices": [
+          { "id": "a", "label": "y = 200x + 300", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 300x + 200", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 200x + 900", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-021-s5",
+        "prompt": "6kmの料金は？",
+        "equationBefore": "y = 200x + 300、x = 6",
+        "explanationCaption": "y = 200 × 6 + 300 = 1200 + 300 = 1500。6kmの料金は1500円です。",
+        "equationAfter": "y = 1500",
+        "highlight": "1500",
+        "choices": [
+          { "id": "a", "label": "1500円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1200円", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1800円", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-022",
+    "unitId": "g2-linear-fn",
+    "title": "交点を計算で求める",
+    "equation": "y = 2x - 1 と y = -x + 8",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": -2,
+      "yMax": 9,
+      "lines": [
+        { "id": "l1", "label": "y = 2x - 1", "x1": -0.5, "y1": -2, "x2": 5, "y2": 9 },
+        { "id": "l2", "label": "y = -x + 8", "x1": -1, "y1": 9, "x2": 5, "y2": 3 }
+      ],
+      "points": [
+        { "id": "p1", "x": 3, "y": 5, "label": "(3, 5)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "交点では、2つの式の y の値が同じになります。",
+    "tags": ["一次関数", "交点", "連立", "高校受験"],
+    "finalAnswer": "(3, 5)",
+    "steps": [
+      {
+        "id": "lf-022-s1",
+        "prompt": "交点で同じになるものは？",
+        "equationBefore": "y = 2x - 1 と y = -x + 8",
+        "explanationCaption": "交点では、2つの直線の y の値が同じです。だから右辺どうしを等しくします。",
+        "equationAfter": "2x - 1 = -x + 8",
+        "highlight": "2x - 1 = -x + 8",
+        "choices": [
+          { "id": "a", "label": "2x - 1 = -x + 8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x - 1 + -x + 8 = 0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x - 1 = 8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-022-s2",
+        "prompt": "x はいくつ？",
+        "equationBefore": "2x - 1 = -x + 8",
+        "explanationCaption": "両辺に x を足し、両辺に 1 を足すと、3x = 9。だから x = 3 です。",
+        "equationAfter": "x = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "x = 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 9", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-022-s3",
+        "prompt": "y はいくつ？",
+        "equationBefore": "y = 2x - 1、x = 3",
+        "explanationCaption": "y = 2 × 3 - 1 = 6 - 1 = 5。交点は (3, 5) です。",
+        "equationAfter": "y = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "y = 5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-023",
+    "unitId": "g2-linear-fn",
+    "title": "直線と座標軸の面積",
+    "equation": "直線 y = -2x + 6 と x軸・y軸でできる三角形",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": -1,
+      "yMax": 7,
+      "lines": [
+        { "id": "l1", "label": "y = -2x + 6", "x1": -0.5, "y1": 7, "x2": 3.5, "y2": -1 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 6, "label": "(0, 6)" },
+        { "id": "p2", "x": 3, "y": 0, "label": "(3, 0)" },
+        { "id": "p3", "x": 0, "y": 0, "label": "O" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "x軸との交点、y軸との交点をそれぞれ求めると、三角形の底辺と高さが見えます。",
+    "tags": ["一次関数", "グラフ", "面積", "高校受験"],
+    "finalAnswer": "面積は9",
+    "steps": [
+      {
+        "id": "lf-023-s1",
+        "prompt": "y軸との交点は？",
+        "equationBefore": "y = -2x + 6",
+        "explanationCaption": "y軸上では x = 0 です。y = -2 × 0 + 6 = 6 なので、交点は (0, 6) です。",
+        "equationAfter": "(0, 6)",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "(0, 6)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(6, 0)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(0, 3)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-023-s2",
+        "prompt": "x軸との交点は？",
+        "equationBefore": "0 = -2x + 6",
+        "explanationCaption": "x軸上では y = 0 です。0 = -2x + 6 を解くと x = 3 なので、交点は (3, 0) です。",
+        "equationAfter": "(3, 0)",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "(3, 0)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(0, 3)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(6, 0)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-023-s3",
+        "prompt": "三角形の面積は？",
+        "equationBefore": "底辺 3、高さ 6",
+        "explanationCaption": "座標軸でできる直角三角形です。面積は 3 × 6 ÷ 2 = 9 です。",
+        "equationAfter": "3 × 6 ÷ 2 = 9",
+        "highlight": "9",
+        "choices": [
+          { "id": "a", "label": "9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "18", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-024",
+    "unitId": "g2-linear-fn",
+    "title": "変域を求める",
+    "equation": "y = -3x + 4、1 <= x <= 5",
+    "graph": {
+      "xMin": 0,
+      "xMax": 6,
+      "yMin": -12,
+      "yMax": 5,
+      "lines": [
+        { "id": "l1", "label": "y = -3x + 4", "x1": 0, "y1": 4, "x2": 5, "y2": -11 }
+      ],
+      "points": [
+        { "id": "p1", "x": 1, "y": 1, "label": "(1, 1)" },
+        { "id": "p2", "x": 5, "y": -11, "label": "(5, -11)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x の端の値を両方入れて、y の小さい値と大きい値を確認します。",
+    "tags": ["一次関数", "変域", "グラフ"],
+    "finalAnswer": "-11 <= y <= 1",
+    "steps": [
+      {
+        "id": "lf-024-s1",
+        "prompt": "x = 1 のとき y は？",
+        "equationBefore": "y = -3x + 4",
+        "explanationCaption": "y = -3 × 1 + 4 = 1 です。",
+        "equationAfter": "y = 1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-024-s2",
+        "prompt": "x = 5 のとき y は？",
+        "equationBefore": "y = -3x + 4",
+        "explanationCaption": "y = -3 × 5 + 4 = -15 + 4 = -11 です。",
+        "equationAfter": "y = -11",
+        "highlight": "-11",
+        "choices": [
+          { "id": "a", "label": "-11", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "11", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-024-s3",
+        "prompt": "y の変域は？",
+        "equationBefore": "y は -11 から 1 まで",
+        "explanationCaption": "変域は小さい値から大きい値の順に書きます。だから -11 <= y <= 1 です。",
+        "equationAfter": "-11 <= y <= 1",
+        "highlight": "-11 <= y <= 1",
+        "choices": [
+          { "id": "a", "label": "-11 <= y <= 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1 <= y <= -11", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-3 <= y <= 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-025",
+    "unitId": "g2-linear-fn",
+    "title": "表から式と値を求める",
+    "equation": "x: -1, 1, 3 / y: 7, 3, -1",
+    "graph": {
+      "xMin": -2,
+      "xMax": 5,
+      "yMin": -4,
+      "yMax": 8,
+      "lines": [
+        { "id": "l1", "label": "y = -2x + 5", "x1": -1.5, "y1": 8, "x2": 4.5, "y2": -4 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 7, "label": "(-1, 7)" },
+        { "id": "p2", "x": 1, "y": 3, "label": "(1, 3)" },
+        { "id": "p3", "x": 3, "y": -1, "label": "(3, -1)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x が 2 増えると、y は 4 減っています。",
+    "tags": ["一次関数", "表", "式にする", "グラフ"],
+    "finalAnswer": "y = -2x + 5、x = 4 のとき y = -3",
+    "steps": [
+      {
+        "id": "lf-025-s1",
+        "prompt": "x が 2 増えると、y はどう変わる？",
+        "equationBefore": "x: -1 → 1、y: 7 → 3",
+        "explanationCaption": "x は 2 増え、y は 7 から 3 へ 4 減っています。",
+        "equationAfter": "y は 4 減る",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4減る", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4増える", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2減る", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-025-s2",
+        "prompt": "傾きはいくつ？",
+        "equationBefore": "-4 ÷ 2",
+        "explanationCaption": "y の増え方 -4 を x の増え方 2 で割るので、傾きは -2 です。",
+        "equationAfter": "a = -2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-025-s3",
+        "prompt": "式はどれ？",
+        "equationBefore": "y = -2x + b、点 (1, 3)",
+        "explanationCaption": "3 = -2 × 1 + b なので、b = 5。式は y = -2x + 5 です。",
+        "equationAfter": "y = -2x + 5",
+        "highlight": "-2x + 5",
+        "choices": [
+          { "id": "a", "label": "y = -2x + 5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 2x + 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = -2x + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-025-s4",
+        "prompt": "x = 4 のとき y は？",
+        "equationBefore": "y = -2x + 5",
+        "explanationCaption": "y = -2 × 4 + 5 = -8 + 5 = -3 です。",
+        "equationAfter": "y = -3",
+        "highlight": "-3",
+        "choices": [
+          { "id": "a", "label": "-3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "lf-026",
+    "unitId": "g2-linear-fn",
+    "title": "2直線とy軸で囲む面積",
+    "equation": "y = x + 2、y = -2x + 8、y軸で囲まれる三角形",
+    "graph": {
+      "xMin": -1,
+      "xMax": 5,
+      "yMin": 0,
+      "yMax": 9,
+      "lines": [
+        { "id": "l1", "label": "y = x + 2", "x1": -1, "y1": 1, "x2": 5, "y2": 7 },
+        { "id": "l2", "label": "y = -2x + 8", "x1": -0.5, "y1": 9, "x2": 4, "y2": 0 }
+      ],
+      "points": [
+        { "id": "p1", "x": 0, "y": 2, "label": "(0, 2)" },
+        { "id": "p2", "x": 0, "y": 8, "label": "(0, 8)" },
+        { "id": "p3", "x": 2, "y": 4, "label": "(2, 4)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "2直線の交点を求め、y軸上の2点との三角形として見ます。",
+    "tags": ["一次関数", "交点", "面積", "高校受験"],
+    "finalAnswer": "面積は6",
+    "steps": [
+      {
+        "id": "lf-026-s1",
+        "prompt": "2直線の交点の x 座標は？",
+        "equationBefore": "x + 2 = -2x + 8",
+        "explanationCaption": "交点では y が同じなので、x + 2 = -2x + 8。整理すると 3x = 6 なので x = 2 です。",
+        "equationAfter": "x = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "x = 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-026-s2",
+        "prompt": "交点の y 座標は？",
+        "equationBefore": "y = x + 2、x = 2",
+        "explanationCaption": "y = 2 + 2 = 4 なので、交点は (2, 4) です。",
+        "equationAfter": "(2, 4)",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "y = 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-026-s3",
+        "prompt": "y軸上の辺の長さは？",
+        "equationBefore": "(0, 2) と (0, 8)",
+        "explanationCaption": "y軸上の2点の y 座標の差は 8 - 2 = 6 です。",
+        "equationAfter": "6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "lf-026-s4",
+        "prompt": "三角形の面積は？",
+        "equationBefore": "底辺 6、高さ 2",
+        "explanationCaption": "y軸上の辺を底辺 6 と見ると、交点 (2, 4) までの横の距離が高さ 2 です。面積は 6 × 2 ÷ 2 = 6 です。",
+        "equationAfter": "6 × 2 ÷ 2 = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

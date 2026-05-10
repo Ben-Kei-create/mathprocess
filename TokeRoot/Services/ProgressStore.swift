@@ -105,11 +105,12 @@ final class ProgressStore {
 
     // MARK: mutations
 
-    func recordEvent(_ e: StudyEvent) {
+    func recordEvent(_ e: StudyEvent, data: DataService = .shared) {
         events.append(e)
         for tag in e.mistakeTagIds {
             stuckCounts[tag, default: 0] += 1
         }
+        updateReviewSchedule(after: e, data: data)
         lastProblemId = e.problemId
         lastUnitId = e.unitId
         checkAchievements()
@@ -117,7 +118,20 @@ final class ProgressStore {
     }
 
     func addReview(_ item: ReviewItem) {
-        if !reviewItems.contains(where: { $0.problemId == item.problemId && $0.reason == item.reason }) {
+        if let index = reviewItems.firstIndex(where: { $0.problemId == item.problemId }) {
+            let existing = reviewItems[index]
+            let dueAt = min(existing.dueAt, item.dueAt)
+            reviewItems[index] = ReviewItem(
+                id: existing.id,
+                problemId: existing.problemId,
+                reason: item.reason,
+                addedAt: existing.addedAt,
+                dueAt: dueAt,
+                intervalDays: min(existing.intervalDays, item.intervalDays),
+                reviewedCount: existing.reviewedCount
+            )
+            save()
+        } else {
             reviewItems.append(item)
             save()
         }
@@ -126,6 +140,49 @@ final class ProgressStore {
     func removeReview(_ id: UUID) {
         reviewItems.removeAll { $0.id == id }
         save()
+    }
+
+    func dueReviewItems(now: Date = .now) -> [ReviewItem] {
+        let today = Calendar.current.startOfDay(for: now)
+        return reviewItems
+            .filter { Calendar.current.startOfDay(for: $0.dueAt) <= today }
+            .sorted { $0.dueAt < $1.dueAt }
+    }
+
+    func upcomingReviewItems(now: Date = .now) -> [ReviewItem] {
+        let today = Calendar.current.startOfDay(for: now)
+        return reviewItems
+            .filter { Calendar.current.startOfDay(for: $0.dueAt) > today }
+            .sorted { $0.dueAt < $1.dueAt }
+    }
+
+    func nextReviewDueDate(now: Date = .now) -> Date? {
+        reviewItems
+            .map(\.dueAt)
+            .filter { $0 >= Calendar.current.startOfDay(for: now) }
+            .min()
+    }
+
+    func clearCount(for problemId: String) -> Int {
+        events.filter {
+            $0.problemId == problemId
+            && ($0.outcome == .solved || $0.outcome == .practice)
+        }
+        .count
+    }
+
+    func masterySlots(for problemId: String) -> Int {
+        min(clearCount(for: problemId), 3)
+    }
+
+    func isMastered(problemId: String) -> Bool {
+        masterySlots(for: problemId) >= 3
+    }
+
+    func masteredCount(in unitId: String, data: DataService = .shared) -> Int {
+        data.problems(in: unitId)
+            .filter { isMastered(problemId: $0.id) }
+            .count
     }
 
     /// Reset the saved snapshot — used by Settings 「最初からやり直す」.
@@ -212,6 +269,73 @@ final class ProgressStore {
     /// Most-recent unresolved mistake tag — used by recovery suggestions.
     func topStuckTagId() -> String? {
         stuckCounts.max(by: { $0.value < $1.value })?.key
+    }
+
+    private func updateReviewSchedule(after event: StudyEvent, data: DataService) {
+        guard event.outcome == .solved || event.outcome == .practice,
+              let problem = data.problem(id: event.problemId),
+              !problem.tags.contains("特訓") else {
+            return
+        }
+
+        let hasMistake = !event.mistakeTagIds.isEmpty
+        let reason: ReviewItem.Reason = hasMistake ? .mistake : .scheduled
+        let nextDay = dueDate(daysFromNow: 1, now: event.date)
+
+        if let index = reviewItems.firstIndex(where: { $0.problemId == event.problemId }) {
+            let current = reviewItems[index]
+            if hasMistake {
+                reviewItems[index] = ReviewItem(
+                    id: current.id,
+                    problemId: current.problemId,
+                    reason: .mistake,
+                    addedAt: current.addedAt,
+                    dueAt: nextDay,
+                    intervalDays: 1,
+                    reviewedCount: 0
+                )
+                return
+            }
+
+            let today = Calendar.current.startOfDay(for: event.date)
+            guard Calendar.current.startOfDay(for: current.dueAt) <= today else {
+                return
+            }
+
+            let nextReviewedCount = current.reviewedCount + 1
+            let nextInterval = reviewIntervalDays(afterReviewedCount: nextReviewedCount)
+            reviewItems[index] = ReviewItem(
+                id: current.id,
+                problemId: current.problemId,
+                reason: .scheduled,
+                addedAt: current.addedAt,
+                dueAt: dueDate(daysFromNow: nextInterval, now: event.date),
+                intervalDays: nextInterval,
+                reviewedCount: nextReviewedCount
+            )
+        } else {
+            reviewItems.append(ReviewItem(
+                id: UUID(),
+                problemId: event.problemId,
+                reason: reason,
+                addedAt: event.date,
+                dueAt: nextDay,
+                intervalDays: 1,
+                reviewedCount: 0
+            ))
+        }
+    }
+
+    private func dueDate(daysFromNow days: Int, now: Date) -> Date {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: now)
+        return cal.date(byAdding: .day, value: days, to: today) ?? now
+    }
+
+    private func reviewIntervalDays(afterReviewedCount count: Int) -> Int {
+        let intervals = [1, 3, 7, 14, 30]
+        let index = min(max(count, 0), intervals.count - 1)
+        return intervals[index]
     }
 
     private func unlockAchievement(_ id: String, at date: Date) {

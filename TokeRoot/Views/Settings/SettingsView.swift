@@ -2,10 +2,8 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(ProgressStore.self) private var store
-    @Environment(PurchaseService.self) private var purchase
     @Environment(NotificationService.self) private var notifications
     @State private var showResetAlert = false
-    @State private var showPurchaseMessage = false
 
     var body: some View {
         NavigationStack {
@@ -14,7 +12,6 @@ struct SettingsView: View {
                     timeCard
                     lifestyleCard
                     reminderCard
-                    purchaseCard
                     aboutCard
                     dangerCard
                     AdSlot(placement: .settingsBottom)
@@ -31,11 +28,6 @@ struct SettingsView: View {
             Button("キャンセル", role: .cancel) {}
         } message: {
             Text("学習記録とふくしゅう箱もリセットされます。")
-        }
-        .alert(purchaseAlertTitle, isPresented: $showPurchaseMessage) {
-            Button("OK", role: .cancel) {}
-        } message: {
-            Text(purchase.errorMessage ?? purchase.statusMessage ?? "")
         }
     }
 
@@ -58,16 +50,28 @@ struct SettingsView: View {
                         store.profile.lifestyle = l
                         store.save()
                     } label: {
+                        let isSelected = store.profile.lifestyle == l
                         HStack {
                             Text(l.rawValue)
                                 .foregroundStyle(TKColor.textPrimary)
                             Spacer()
-                            if store.profile.lifestyle == l {
+                            if isSelected {
                                 Image(systemName: "checkmark")
-                                    .foregroundStyle(TKColor.accent)
+                                    .font(.system(size: 13, weight: .bold))
+                                    .foregroundStyle(.white)
+                                    .frame(width: 24, height: 24)
+                                    .background(TKColor.accent)
+                                    .clipShape(Circle())
+                            } else {
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 12, weight: .bold))
+                                    .foregroundStyle(TKColor.textTertiary)
                             }
                         }
-                        .padding(.vertical, 6)
+                        .padding(.horizontal, TKSpacing.sm)
+                        .padding(.vertical, 8)
+                        .background(isSelected ? TKColor.accentSoft : .clear)
+                        .clipShape(RoundedRectangle(cornerRadius: TKRadius.small))
                     }
                     .buttonStyle(.plain)
                 }
@@ -91,51 +95,6 @@ struct SettingsView: View {
         }
     }
 
-    private var purchaseCard: some View {
-        SectionCard("購入") {
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("広告を非表示にする")
-                        .foregroundStyle(TKColor.textPrimary)
-                    Text(store.profile.adsRemoved ? "購入済み" : "ホームと記録の広告枠を消します")
-                        .font(TKType.caption)
-                        .foregroundStyle(TKColor.textSecondary)
-                }
-                Spacer()
-                if store.profile.adsRemoved {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(TKColor.success)
-                } else {
-                    Button {
-                        buyRemoveAds()
-                    } label: {
-                        if purchase.isPurchasing {
-                            ProgressView()
-                        } else {
-                            Text(purchase.removeAdsProduct?.displayPrice ?? "購入")
-                        }
-                    }
-                    .disabled(purchase.isPurchasing || purchase.isLoading)
-                        .buttonStyle(.borderedProminent)
-                        .tint(TKColor.accent)
-                }
-            }
-            if !store.profile.adsRemoved {
-                Button("購入を復元") {
-                    restorePurchases()
-                }
-                .font(TKType.caption)
-                .foregroundStyle(TKColor.textSecondary)
-                .buttonStyle(.plain)
-            }
-            if let status = purchase.statusMessage {
-                Text(status)
-                    .font(TKType.caption)
-                    .foregroundStyle(TKColor.textSecondary)
-            }
-        }
-    }
-
     private var aboutCard: some View {
         SectionCard("このアプリについて") {
             VStack(alignment: .leading, spacing: TKSpacing.xs) {
@@ -153,9 +112,15 @@ struct SettingsView: View {
             Button {
                 showResetAlert = true
             } label: {
-                Text("最初からやり直す")
-                    .foregroundStyle(TKColor.warm)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                HStack {
+                    Image(systemName: "arrow.counterclockwise")
+                    Text("最初からやり直す")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .bold))
+                }
+                .foregroundStyle(TKColor.warm)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .buttonStyle(.plain)
         }
@@ -228,32 +193,4 @@ struct SettingsView: View {
         }
     }
 
-    private var purchaseAlertTitle: String {
-        purchase.errorMessage == nil ? "購入の状態" : "購入できませんでした"
-    }
-
-    private func buyRemoveAds() {
-        Task {
-            let purchased = await purchase.purchaseRemoveAds()
-            if purchased {
-                store.profile.adsRemoved = true
-                store.save()
-            } else if purchase.errorMessage != nil || purchase.statusMessage != nil {
-                showPurchaseMessage = true
-            }
-        }
-    }
-
-    private func restorePurchases() {
-        Task {
-            let restored = await purchase.restorePurchases()
-            if restored {
-                store.profile.adsRemoved = true
-                store.save()
-            }
-            if purchase.errorMessage != nil || purchase.statusMessage != nil {
-                showPurchaseMessage = true
-            }
-        }
-    }
 }

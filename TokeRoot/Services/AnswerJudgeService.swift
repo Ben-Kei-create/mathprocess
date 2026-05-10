@@ -42,15 +42,24 @@ struct AnswerJudgeService {
 
     private func normalizedExpression(_ value: String) -> String {
         let halfWidth = value.applyingTransform(.fullwidthToHalfwidth, reverse: false) ?? value
-        return halfWidth
+        let normalized = halfWidth
             .replacingOccurrences(of: "＝", with: "=")
             .replacingOccurrences(of: "−", with: "-")
             .replacingOccurrences(of: "ー", with: "-")
+            .replacingOccurrences(of: "²", with: "^2")
+            .replacingOccurrences(of: "³", with: "^3")
+            .replacingOccurrences(of: "½", with: "1/2")
             .replacingOccurrences(of: "です", with: "")
             .replacingOccurrences(of: "。", with: "")
             .replacingOccurrences(of: "、", with: "")
-            .filter { !$0.isWhitespace && !$0.isNewline }
             .lowercased()
+        return normalized
+            .replacingOccurrences(of: "平方センチメートル", with: "")
+            .replacingOccurrences(of: "cm^2", with: "")
+            .replacingOccurrences(of: "cm2", with: "")
+            .replacingOccurrences(of: "cm²", with: "")
+            .replacingOccurrences(of: "㎠", with: "")
+            .filter { !$0.isWhitespace && !$0.isNewline }
     }
 
     private func answerSide(from expression: String) -> String {

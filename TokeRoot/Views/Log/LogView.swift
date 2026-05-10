@@ -30,6 +30,7 @@ struct LogView: View {
                 stat("問題", "\(store.events.count)")
                 stat("分", "\(totalMinutes)")
                 stat("日", "\(uniqueDays)")
+                stat("復習", "\(store.dueReviewItems().count)")
             }
         }
     }

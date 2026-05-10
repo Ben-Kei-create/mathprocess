@@ -26,12 +26,24 @@ struct ReviewBoxView: View {
             empty
         } else {
             ScrollView {
-                VStack(spacing: TKSpacing.sm) {
-                    ForEach(store.reviewItems) { item in
-                        row(item)
+                VStack(alignment: .leading, spacing: TKSpacing.lg) {
+                    if !dueItems.isEmpty {
+                        reviewSection(
+                            title: "今日やる復習",
+                            caption: "前にできた問題を、忘れる前に確認します。",
+                            items: dueItems
+                        )
                     }
+
+                    if !upcomingItems.isEmpty {
+                        reviewSection(
+                            title: "これから出てくる復習",
+                            caption: "1日後、3日後、7日後…と少しずつ間を空けます。",
+                            items: upcomingItems
+                        )
+                    }
+
                     AdSlot(placement: .logBottom)
-                        .padding(.top, TKSpacing.lg)
                 }
                 .padding(.horizontal, TKSpacing.md)
                 .padding(.top, TKSpacing.md)
@@ -39,6 +51,14 @@ struct ReviewBoxView: View {
             }
             .background(TKColor.background.ignoresSafeArea())
         }
+    }
+
+    private var dueItems: [ReviewItem] {
+        store.dueReviewItems()
+    }
+
+    private var upcomingItems: [ReviewItem] {
+        store.upcomingReviewItems()
     }
 
     private var empty: some View {
@@ -58,6 +78,25 @@ struct ReviewBoxView: View {
         .background(TKColor.background.ignoresSafeArea())
     }
 
+    private func reviewSection(title: String, caption: String, items: [ReviewItem]) -> some View {
+        VStack(alignment: .leading, spacing: TKSpacing.sm) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(TKType.subtitle)
+                    .foregroundStyle(TKColor.textPrimary)
+                Text(caption)
+                    .font(TKType.caption)
+                    .foregroundStyle(TKColor.textSecondary)
+            }
+
+            VStack(spacing: TKSpacing.sm) {
+                ForEach(items) { item in
+                    row(item)
+                }
+            }
+        }
+    }
+
     @ViewBuilder
     private func row(_ item: ReviewItem) -> some View {
         if let problem = data.problem(id: item.problemId) {
@@ -66,12 +105,27 @@ struct ReviewBoxView: View {
             } label: {
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(problem.equation)
-                            .font(TKType.subtitle)
+                        MathText(
+                            text: problem.equation,
+                            font: TKType.subtitle,
+                            scriptFont: .system(size: 12, weight: .semibold, design: .rounded),
+                            scriptOffset: 6
+                        )
                             .foregroundStyle(TKColor.textPrimary)
-                        Text(item.reason.rawValue)
-                            .font(TKType.caption)
+                        MathText(
+                            text: problem.title,
+                            font: TKType.caption,
+                            scriptFont: .system(size: 9, weight: .semibold, design: .rounded),
+                            scriptOffset: 4
+                        )
                             .foregroundStyle(TKColor.textSecondary)
+                        HStack(spacing: TKSpacing.xs) {
+                            Label(item.reason.rawValue, systemImage: reasonIcon(for: item.reason))
+                            Text(reviewTimingText(for: item))
+                            Text(masteryText(for: problem))
+                        }
+                        .font(TKType.caption)
+                        .foregroundStyle(TKColor.textTertiary)
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
@@ -92,5 +146,40 @@ struct ReviewBoxView: View {
                 }
             }
         }
+    }
+
+    private func reasonIcon(for reason: ReviewItem.Reason) -> String {
+        switch reason {
+        case .mistake: return "arrow.uturn.left"
+        case .shaky: return "questionmark.circle"
+        case .manual: return "tray.and.arrow.down"
+        case .scheduled: return "clock.arrow.circlepath"
+        }
+    }
+
+    private func reviewTimingText(for item: ReviewItem) -> String {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: .now)
+        let due = cal.startOfDay(for: item.dueAt)
+        let days = cal.dateComponents([.day], from: today, to: due).day ?? 0
+
+        if days < 0 {
+            return "\(-days)日遅れ"
+        }
+        if days == 0 {
+            return "今日"
+        }
+        if days == 1 {
+            return "明日"
+        }
+        return "あと\(days)日"
+    }
+
+    private func masteryText(for problem: Problem) -> String {
+        let count = store.masterySlots(for: problem.id)
+        if count >= 3 {
+            return "クリア 3/3"
+        }
+        return "クリア \(count)/3"
     }
 }

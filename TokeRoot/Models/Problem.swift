@@ -38,6 +38,7 @@ struct Problem: Codable, Identifiable, Hashable {
     let title: String                 // short label, optional
     let equation: String              // headline equation: "2x + 3 = 11"
     let diagram: GeometryDiagram?
+    let graph: CartesianGraph?
     let mode: SolveMode
     let difficulty: Int               // 1...5
     let steps: [ProblemStep]
@@ -110,6 +111,121 @@ struct GeometryLabel: Codable, Hashable {
     let text: String
     let x: Double
     let y: Double
+}
+
+/// A small coordinate-plane graph for functions such as y = ax + b.
+struct CartesianGraph: Codable, Hashable {
+    let xMin: Double
+    let xMax: Double
+    let yMin: Double
+    let yMax: Double
+    let parabolas: [CartesianParabola]
+    let lines: [CartesianLine]
+    let points: [CartesianPoint]
+
+    private enum CodingKeys: String, CodingKey {
+        case xMin
+        case xMax
+        case yMin
+        case yMax
+        case parabolas
+        case lines
+        case points
+    }
+
+    init(
+        xMin: Double,
+        xMax: Double,
+        yMin: Double,
+        yMax: Double,
+        parabolas: [CartesianParabola] = [],
+        lines: [CartesianLine] = [],
+        points: [CartesianPoint] = []
+    ) {
+        self.xMin = xMin
+        self.xMax = xMax
+        self.yMin = yMin
+        self.yMax = yMax
+        self.parabolas = parabolas
+        self.lines = lines
+        self.points = points
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        xMin = try container.decode(Double.self, forKey: .xMin)
+        xMax = try container.decode(Double.self, forKey: .xMax)
+        yMin = try container.decode(Double.self, forKey: .yMin)
+        yMax = try container.decode(Double.self, forKey: .yMax)
+        parabolas = try container.decodeIfPresent([CartesianParabola].self, forKey: .parabolas) ?? []
+        lines = try container.decodeIfPresent([CartesianLine].self, forKey: .lines) ?? []
+        points = try container.decodeIfPresent([CartesianPoint].self, forKey: .points) ?? []
+    }
+}
+
+struct CartesianParabola: Codable, Identifiable, Hashable {
+    let id: String
+    let label: String?
+    let a: Double
+    let h: Double
+    let k: Double
+    let xStart: Double
+    let xEnd: Double
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case label
+        case a
+        case h
+        case k
+        case xStart
+        case xEnd
+    }
+
+    init(
+        id: String,
+        label: String? = nil,
+        a: Double,
+        h: Double = 0,
+        k: Double = 0,
+        xStart: Double,
+        xEnd: Double
+    ) {
+        self.id = id
+        self.label = label
+        self.a = a
+        self.h = h
+        self.k = k
+        self.xStart = xStart
+        self.xEnd = xEnd
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        label = try container.decodeIfPresent(String.self, forKey: .label)
+        a = try container.decode(Double.self, forKey: .a)
+        h = try container.decodeIfPresent(Double.self, forKey: .h) ?? 0
+        k = try container.decodeIfPresent(Double.self, forKey: .k) ?? 0
+        xStart = try container.decode(Double.self, forKey: .xStart)
+        xEnd = try container.decode(Double.self, forKey: .xEnd)
+    }
+}
+
+struct CartesianLine: Codable, Identifiable, Hashable {
+    let id: String
+    let label: String?
+    let x1: Double
+    let y1: Double
+    let x2: Double
+    let y2: Double
+}
+
+struct CartesianPoint: Codable, Identifiable, Hashable {
+    let id: String
+    let x: Double
+    let y: Double
+    let label: String?
 }
 
 /// A small targeted set used by 「ここだけ特訓」 and the recovery route.

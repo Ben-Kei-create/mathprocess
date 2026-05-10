@@ -1,0 +1,719 @@
+[
+  {
+    "id": "sf-001",
+    "unitId": "g1-seifu",
+    "title": "数直線で向きを見る",
+    "equation": "-3 は 0 からどちら？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "負の数は、数直線で 0 より左にあります。",
+    "tags": ["正負の数", "数直線"],
+    "finalAnswer": "左に3",
+    "steps": [
+      {
+        "id": "sf-001-s1",
+        "prompt": "-3 は 0 から見てどちらにある？",
+        "equationBefore": "-3",
+        "explanationCaption": "負の数は 0 より左にあります。-3 は 0 から左へ 3 です。",
+        "equationAfter": "0 から左へ 3",
+        "highlight": "左",
+        "choices": [
+          { "id": "a", "label": "左へ 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "右へ 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "0 と同じ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-002",
+    "unitId": "g1-seifu",
+    "title": "反対向きのたし算",
+    "equation": "3 + (-5)",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "プラスとマイナスが混ざるときは、大きいほうから小さいほうを引いて、向きを考えます。",
+    "tags": ["正負の数", "加法"],
+    "finalAnswer": "-2",
+    "steps": [
+      {
+        "id": "sf-002-s1",
+        "prompt": "3 と 5、どちらの大きさが大きい？",
+        "equationBefore": "3 + (-5)",
+        "explanationCaption": "大きさだけを見ると、5 のほうが大きいです。",
+        "equationAfter": "5 のほうが大きい",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "3 のほうが大きい", "isCorrect": false, "mistakeTagId": null },
+          { "id": "b", "label": "5 のほうが大きい", "isCorrect": true, "mistakeTagId": null },
+          { "id": "c", "label": "同じ大きさ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-002-s2",
+        "prompt": "答えの向きは？",
+        "equationBefore": "3 + (-5)",
+        "explanationCaption": "大きいほうは -5 なので、答えはマイナスになります。",
+        "equationAfter": "-(5 - 3)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "プラス", "isCorrect": false, "mistakeTagId": null },
+          { "id": "b", "label": "マイナス", "isCorrect": true, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-002-s3",
+        "prompt": "計算すると？",
+        "equationBefore": "-(5 - 3)",
+        "explanationCaption": "5 - 3 = 2。向きはマイナスなので、答えは -2 です。",
+        "equationAfter": "-2",
+        "highlight": "-2",
+        "choices": [
+          { "id": "a", "label": "-2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-003",
+    "unitId": "g1-seifu",
+    "title": "負の数をひく",
+    "equation": "4 - (-2)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "マイナスをひくことは、プラスを足すことと同じです。",
+    "tags": ["正負の数", "減法"],
+    "finalAnswer": "6",
+    "steps": [
+      {
+        "id": "sf-003-s1",
+        "prompt": "-2 をひくと、何に変えられる？",
+        "equationBefore": "4 - (-2)",
+        "explanationCaption": "負の数をひくと、同じ大きさの正の数を足す形に変えられます。",
+        "equationAfter": "4 + 2",
+        "highlight": "+ 2",
+        "choices": [
+          { "id": "a", "label": "4 + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4 - 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-4 - 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-003-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "4 + 2",
+        "explanationCaption": "4 + 2 = 6 です。",
+        "equationAfter": "6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-004",
+    "unitId": "g1-seifu",
+    "title": "同じ符号のかけ算",
+    "equation": "(-3) × (-4)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "同じ符号どうしをかけると、答えはプラスになります。",
+    "tags": ["正負の数", "乗法"],
+    "finalAnswer": "12",
+    "steps": [
+      {
+        "id": "sf-004-s1",
+        "prompt": "答えの符号は？",
+        "equationBefore": "(-3) × (-4)",
+        "explanationCaption": "マイナスどうしなので、答えの符号はプラスです。",
+        "equationAfter": "+ (3 × 4)",
+        "highlight": "+",
+        "choices": [
+          { "id": "a", "label": "プラス", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "マイナス", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-004-s2",
+        "prompt": "3 × 4 は？",
+        "equationBefore": "+ (3 × 4)",
+        "explanationCaption": "3 × 4 = 12。符号はプラスなので、答えは 12 です。",
+        "equationAfter": "12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-12", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "7", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-005",
+    "unitId": "g1-seifu",
+    "title": "違う符号のわり算",
+    "equation": "(-18) ÷ 3",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "符号が違う数どうしのわり算は、答えがマイナスになります。",
+    "tags": ["正負の数", "除法"],
+    "finalAnswer": "-6",
+    "steps": [
+      {
+        "id": "sf-005-s1",
+        "prompt": "答えの符号は？",
+        "equationBefore": "(-18) ÷ 3",
+        "explanationCaption": "マイナスとプラスなので、答えの符号はマイナスです。",
+        "equationAfter": "-(18 ÷ 3)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "プラス", "isCorrect": false, "mistakeTagId": null },
+          { "id": "b", "label": "マイナス", "isCorrect": true, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-005-s2",
+        "prompt": "18 ÷ 3 は？",
+        "equationBefore": "-(18 ÷ 3)",
+        "explanationCaption": "18 ÷ 3 = 6。符号はマイナスなので、答えは -6 です。",
+        "equationAfter": "-6",
+        "highlight": "-6",
+        "choices": [
+          { "id": "a", "label": "-6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-006",
+    "unitId": "g1-seifu",
+    "title": "絶対値を読む",
+    "equation": "|-7|",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "絶対値は、0 からどれだけ離れているかを表します。",
+    "tags": ["正負の数", "絶対値"],
+    "finalAnswer": "7",
+    "steps": [
+      {
+        "id": "sf-006-s1",
+        "prompt": "-7 は 0 からどれだけ離れている？",
+        "equationBefore": "|-7|",
+        "explanationCaption": "-7 は 0 から 7 だけ離れています。だから絶対値は 7 です。",
+        "equationAfter": "7",
+        "highlight": "7",
+        "choices": [
+          { "id": "a", "label": "7", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "0", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-007",
+    "unitId": "g1-seifu",
+    "title": "自力: 符号が混ざる計算",
+    "equation": "(-6) + 9 - 4",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "先に (-6) + 9 を考えてから、4 を引くと進めやすいです。",
+    "tags": ["正負の数", "加法", "減法", "自力"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-007-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "(-6) + 9 - 4",
+        "explanationCaption": "(-6) + 9 = 3、3 - 4 = -1 です。",
+        "equationAfter": "-1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-008",
+    "unitId": "g1-seifu",
+    "title": "自力: かけ算とたし算",
+    "equation": "(-2) × 5 + 3",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "かけ算を先に計算します。符号にも気をつけましょう。",
+    "tags": ["正負の数", "乗法", "加法", "自力"],
+    "finalAnswer": "-7",
+    "steps": [
+      {
+        "id": "sf-008-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "(-2) × 5 + 3",
+        "explanationCaption": "(-2) × 5 = -10、-10 + 3 = -7 です。",
+        "equationAfter": "-7",
+        "highlight": "-7",
+        "choices": [
+          { "id": "a", "label": "-7", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-009",
+    "unitId": "g1-seifu",
+    "title": "累乗の符号",
+    "equation": "(-3)^2",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "(-3)^2 は、(-3) を 2回かけるという意味です。",
+    "tags": ["正負の数", "累乗", "乗法"],
+    "finalAnswer": "9",
+    "steps": [
+      {
+        "id": "sf-009-s1",
+        "prompt": "(-3)^2 はどういう意味？",
+        "equationBefore": "(-3)^2",
+        "explanationCaption": "(-3) を 2回かけるので、(-3) × (-3) です。",
+        "equationAfter": "(-3) × (-3)",
+        "highlight": "×",
+        "choices": [
+          { "id": "a", "label": "(-3) × (-3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-3 × 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3 × 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-009-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(-3) × (-3)",
+        "explanationCaption": "マイナスどうしのかけ算なので、答えはプラスの 9 です。",
+        "equationAfter": "9",
+        "highlight": "9",
+        "choices": [
+          { "id": "a", "label": "9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-010",
+    "unitId": "g1-seifu",
+    "title": "自力: 累乗とたし算",
+    "equation": "(-2)^2 + (-5)",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "先に (-2)^2 を計算します。そのあと -5 を足します。",
+    "tags": ["正負の数", "累乗", "加法", "自力"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-010-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "(-2)^2 + (-5)",
+        "explanationCaption": "(-2)^2 = 4。4 + (-5) = -1 です。",
+        "equationAfter": "-1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-011",
+    "unitId": "g1-seifu",
+    "title": "負の数の大小",
+    "equation": "-4 と -7 はどちらが大きい？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "負の数は、0 に近いほうが大きい数です。",
+    "tags": ["正負の数", "数直線", "大小"],
+    "finalAnswer": "-4",
+    "steps": [
+      {
+        "id": "sf-011-s1",
+        "prompt": "数直線で 0 に近いのはどちら？",
+        "equationBefore": "-4 と -7",
+        "explanationCaption": "-4 は 0 から 4、-7 は 0 から 7 離れています。0 に近い -4 のほうが大きいです。",
+        "equationAfter": "-4 > -7",
+        "highlight": "-4",
+        "choices": [
+          { "id": "a", "label": "-4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "同じ大きさ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-012",
+    "unitId": "g1-seifu",
+    "title": "マイナスどうしのたし算",
+    "equation": "-6 + (-8)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "同じマイナス向きなので、大きさを足して、符号はマイナスのままです。",
+    "tags": ["正負の数", "加法"],
+    "finalAnswer": "-14",
+    "steps": [
+      {
+        "id": "sf-012-s1",
+        "prompt": "答えの符号は？",
+        "equationBefore": "-6 + (-8)",
+        "explanationCaption": "どちらもマイナスなので、答えもマイナスになります。",
+        "equationAfter": "-(6 + 8)",
+        "highlight": "-",
+        "choices": [
+          { "id": "a", "label": "マイナス", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "プラス", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-012-s2",
+        "prompt": "大きさを計算すると？",
+        "equationBefore": "-(6 + 8)",
+        "explanationCaption": "6 + 8 = 14。符号はマイナスなので、答えは -14 です。",
+        "equationAfter": "-14",
+        "highlight": "-14",
+        "choices": [
+          { "id": "a", "label": "-14", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "14", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-013",
+    "unitId": "g1-seifu",
+    "title": "自力: ひき算とたし算",
+    "equation": "12 - 20 + 5",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "12 - 20 を先に考えて、そのあと 5 を足します。",
+    "tags": ["正負の数", "減法", "加法", "自力"],
+    "finalAnswer": "-3",
+    "steps": [
+      {
+        "id": "sf-013-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "12 - 20 + 5",
+        "explanationCaption": "12 - 20 = -8。-8 + 5 = -3 です。",
+        "equationAfter": "-3",
+        "highlight": "-3",
+        "choices": [
+          { "id": "a", "label": "-3", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-014",
+    "unitId": "g1-seifu",
+    "title": "3つの数のたし算",
+    "equation": "-4 + 9 + (-6)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "先にプラスどうし、マイナスどうしを分けて見ると楽です。",
+    "tags": ["正負の数", "加法"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-014-s1",
+        "prompt": "マイナスどうしを先にまとめると？",
+        "equationBefore": "-4 + 9 + (-6)",
+        "explanationCaption": "-4 と -6 をまとめると -10 です。",
+        "equationAfter": "9 + (-10)",
+        "highlight": "-10",
+        "choices": [
+          { "id": "a", "label": "9 + (-10)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9 + 10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-4 + 15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-014-s2",
+        "prompt": "答えは？",
+        "equationBefore": "9 + (-10)",
+        "explanationCaption": "10 のほうが大きくて、向きはマイナス。答えは -1 です。",
+        "equationAfter": "-1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-19", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-015",
+    "unitId": "g1-seifu",
+    "title": "自力: かけ算とわり算",
+    "equation": "(-24) ÷ (-3) × (-2)",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "左から順に計算します。マイナスどうしのわり算はプラスです。",
+    "tags": ["正負の数", "乗法", "除法", "自力"],
+    "finalAnswer": "-16",
+    "steps": [
+      {
+        "id": "sf-015-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "(-24) ÷ (-3) × (-2)",
+        "explanationCaption": "(-24) ÷ (-3) = 8。8 × (-2) = -16 です。",
+        "equationAfter": "-16",
+        "highlight": "-16",
+        "choices": [
+          { "id": "a", "label": "-16", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-016",
+    "unitId": "g1-seifu",
+    "title": "ひき算をたし算に直す",
+    "equation": "-5 - 8",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "ひき算は、反対の数を足す形に直せます。",
+    "tags": ["正負の数", "減法", "加法"],
+    "finalAnswer": "-13",
+    "steps": [
+      {
+        "id": "sf-016-s1",
+        "prompt": "ひき算をたし算に直すと？",
+        "equationBefore": "-5 - 8",
+        "explanationCaption": "8 をひくことは、-8 を足すことと同じです。",
+        "equationAfter": "-5 + (-8)",
+        "highlight": "+ (-8)",
+        "choices": [
+          { "id": "a", "label": "-5 + (-8)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-5 + 8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5 + (-8)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-016-s2",
+        "prompt": "答えは？",
+        "equationBefore": "-5 + (-8)",
+        "explanationCaption": "マイナスどうしなので、数を足して向きはマイナス。答えは -13 です。",
+        "equationAfter": "-13",
+        "highlight": "-13",
+        "choices": [
+          { "id": "a", "label": "-13", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "13", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-017",
+    "unitId": "g1-seifu",
+    "title": "小数のたし算",
+    "equation": "-1.5 + 4",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "4 と 1.5 の大きさを比べて、向きを決めます。",
+    "tags": ["正負の数", "加法", "小数"],
+    "finalAnswer": "2.5",
+    "steps": [
+      {
+        "id": "sf-017-s1",
+        "prompt": "大きいほうはどちら？",
+        "equationBefore": "-1.5 + 4",
+        "explanationCaption": "4 のほうが 1.5 より大きいので、答えの向きはプラスです。",
+        "equationAfter": "4 - 1.5",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1.5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "同じ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-017-s2",
+        "prompt": "答えは？",
+        "equationBefore": "4 - 1.5",
+        "explanationCaption": "4 - 1.5 = 2.5。向きはプラスなので、答えは 2.5 です。",
+        "equationAfter": "2.5",
+        "highlight": "2.5",
+        "choices": [
+          { "id": "a", "label": "2.5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-2.5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5.5", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-018",
+    "unitId": "g1-seifu",
+    "title": "かけ算を先にする",
+    "equation": "6 - (-2) × 3",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "たし算・ひき算より、かけ算を先に計算します。",
+    "tags": ["正負の数", "乗法", "減法"],
+    "finalAnswer": "12",
+    "steps": [
+      {
+        "id": "sf-018-s1",
+        "prompt": "先に計算するところは？",
+        "equationBefore": "6 - (-2) × 3",
+        "explanationCaption": "かけ算を先に見ます。(-2) × 3 = -6 です。",
+        "equationAfter": "6 - (-6)",
+        "highlight": "-6",
+        "choices": [
+          { "id": "a", "label": "(-2) × 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6 - (-2)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6 × 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-018-s2",
+        "prompt": "6 - (-6) はどうなる？",
+        "equationBefore": "6 - (-6)",
+        "explanationCaption": "マイナスをひくので、6 + 6 になります。",
+        "equationAfter": "6 + 6",
+        "highlight": "+ 6",
+        "choices": [
+          { "id": "a", "label": "6 + 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6 - 6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-6 - 6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-018-s3",
+        "prompt": "答えは？",
+        "equationBefore": "6 + 6",
+        "explanationCaption": "6 + 6 = 12 です。",
+        "equationAfter": "12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-019",
+    "unitId": "g1-seifu",
+    "title": "自力: 累乗とひき算",
+    "equation": "(-3)^2 - 10",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "(-3)^2 は (-3) × (-3) です。先に累乗を計算します。",
+    "tags": ["正負の数", "累乗", "減法", "自力"],
+    "finalAnswer": "-1",
+    "steps": [
+      {
+        "id": "sf-019-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "(-3)^2 - 10",
+        "explanationCaption": "(-3)^2 = 9。9 - 10 = -1 です。",
+        "equationAfter": "-1",
+        "highlight": "-1",
+        "choices": [
+          { "id": "a", "label": "-1", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-020",
+    "unitId": "g1-seifu",
+    "title": "分数のたし算",
+    "equation": "-1/2 + 3/2",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "分母が同じなので、上の数だけを見て計算します。",
+    "tags": ["正負の数", "加法", "分数"],
+    "finalAnswer": "1",
+    "steps": [
+      {
+        "id": "sf-020-s1",
+        "prompt": "分母が同じとき、どこを計算する？",
+        "equationBefore": "-1/2 + 3/2",
+        "explanationCaption": "分母が同じなので、-1 + 3 を考えます。",
+        "equationAfter": "(-1 + 3)/2",
+        "highlight": "-1 + 3",
+        "choices": [
+          { "id": "a", "label": "-1 + 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1 + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2 + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "sf-020-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(-1 + 3)/2",
+        "explanationCaption": "-1 + 3 = 2。2/2 = 1 です。",
+        "equationAfter": "1",
+        "highlight": "1",
+        "choices": [
+          { "id": "a", "label": "1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "sf-021",
+    "unitId": "g1-seifu",
+    "title": "自力: 小数とひき算",
+    "equation": "2.5 - 4.8",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "4.8 のほうが大きいので、答えはマイナスになります。",
+    "tags": ["正負の数", "減法", "小数", "自力"],
+    "finalAnswer": "-2.3",
+    "steps": [
+      {
+        "id": "sf-021-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "2.5 - 4.8",
+        "explanationCaption": "4.8 - 2.5 = 2.3。大きいほうがマイナス側なので、答えは -2.3 です。",
+        "equationAfter": "-2.3",
+        "highlight": "-2.3",
+        "choices": [
+          { "id": "a", "label": "-2.3", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

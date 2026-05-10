@@ -2,6 +2,9 @@ import SwiftUI
 
 struct GeometryDiagramView: View {
     let diagram: GeometryDiagram
+    var showPointLabels = true
+    var showAngleNames = true
+    var showMeasurements = true
 
     var body: some View {
         Canvas { context, size in
@@ -43,20 +46,20 @@ struct GeometryDiagramView: View {
                     height: 6
                 ))
                 context.fill(dot, with: .color(TKColor.textPrimary))
-                context.draw(
-                    Text(point.label ?? point.id)
-                        .font(TKType.caption)
-                        .foregroundStyle(TKColor.textPrimary),
-                    at: CGPoint(x: position.x + 12, y: position.y - 12)
-                )
+                if showPointLabels {
+                    let text = point.label ?? point.id
+                    let labelPoint = CGPoint(x: position.x + 12, y: position.y - 12)
+                    drawLabel(text, at: labelPoint, in: &context, color: TKColor.textPrimary)
+                }
             }
 
             for label in diagram.labels {
-                context.draw(
-                    Text(label.text)
-                        .font(TKType.caption)
-                        .foregroundStyle(TKColor.textSecondary),
-                    at: CGPoint(x: label.x * size.width, y: label.y * size.height)
+                guard shouldDraw(label.text) else { continue }
+                drawLabel(
+                    label.text,
+                    at: CGPoint(x: label.x * size.width, y: label.y * size.height),
+                    in: &context,
+                    color: TKColor.textSecondary
                 )
             }
         }
@@ -68,6 +71,58 @@ struct GeometryDiagramView: View {
         .overlay(
             RoundedRectangle(cornerRadius: TKRadius.medium)
                 .stroke(TKColor.divider, lineWidth: 1)
+        )
+    }
+
+    private func shouldDraw(_ text: String) -> Bool {
+        if isAngleName(text) {
+            return showAngleNames
+        }
+        if isMeasurement(text) {
+            return showMeasurements
+        }
+        return true
+    }
+
+    private func isAngleName(_ text: String) -> Bool {
+        text.contains("∠") || text.contains("角")
+    }
+
+    private func isMeasurement(_ text: String) -> Bool {
+        if text.contains("°") || text.contains("度") { return true }
+        if text.lowercased() == "x" { return true }
+        return text.range(of: #"^-?\d+(\.\d+)?$"#, options: .regularExpression) != nil
+    }
+
+    private func drawLabel(
+        _ text: String,
+        at point: CGPoint,
+        in context: inout GraphicsContext,
+        color: Color
+    ) {
+        let rect = labelBackgroundRect(for: text, centeredAt: point)
+        let background = Path(
+            roundedRect: rect,
+            cornerRadius: TKRadius.small
+        )
+        context.fill(background, with: .color(TKColor.surface.opacity(0.92)))
+        context.stroke(background, with: .color(TKColor.divider.opacity(0.8)), lineWidth: 0.6)
+        context.draw(
+            Text(text)
+                .font(TKType.caption)
+                .foregroundStyle(color),
+            at: point
+        )
+    }
+
+    private func labelBackgroundRect(for text: String, centeredAt point: CGPoint) -> CGRect {
+        let width = max(24, CGFloat(text.count) * 9 + 12)
+        let height: CGFloat = 22
+        return CGRect(
+            x: point.x - width / 2,
+            y: point.y - height / 2,
+            width: width,
+            height: height
         )
     }
 }

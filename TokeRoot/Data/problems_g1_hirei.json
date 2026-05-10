@@ -1,0 +1,776 @@
+[
+  {
+    "id": "hr-001",
+    "unitId": "g1-hirei",
+    "title": "比例かどうかを見る",
+    "equation": "x が 2倍になると y も 2倍？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "比例では、x を何倍かすると y も同じ倍になります。",
+    "tags": ["比例", "表"],
+    "finalAnswer": "比例する",
+    "steps": [
+      {
+        "id": "hr-001-s1",
+        "prompt": "比例の見方として正しいのは？",
+        "equationBefore": "x: 1, 2, 3 / y: 4, 8, 12",
+        "explanationCaption": "x が 1 から 2 で 2倍になると、y も 4 から 8 で 2倍です。",
+        "equationAfter": "x と y は同じ倍で増える",
+        "highlight": "同じ倍",
+        "choices": [
+          { "id": "a", "label": "x と y が同じ倍になるか見る", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y がいつも 4 だけ増えるか見る", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x と y を足して同じか見る", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-001-s2",
+        "prompt": "この表は比例している？",
+        "equationBefore": "x: 1, 2, 3 / y: 4, 8, 12",
+        "explanationCaption": "y はいつも x の 4倍です。だから比例しています。",
+        "equationAfter": "y = 4x",
+        "highlight": "4x",
+        "choices": [
+          { "id": "a", "label": "比例している", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "比例していない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-002",
+    "unitId": "g1-hirei",
+    "title": "比例の式を作る",
+    "equation": "y は x の 3倍",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "「x の 3倍」は 3x と書けます。",
+    "tags": ["比例", "式"],
+    "finalAnswer": "y = 3x",
+    "steps": [
+      {
+        "id": "hr-002-s1",
+        "prompt": "式にすると？",
+        "equationBefore": "y は x の 3倍",
+        "explanationCaption": "x の 3倍は 3x。だから y = 3x です。",
+        "equationAfter": "y = 3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "y = 3x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 3y", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-003",
+    "unitId": "g1-hirei",
+    "title": "比例の表をうめる",
+    "equation": "y = 5x, x = 4 のとき y は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x のところに 4 を入れます。",
+    "tags": ["比例", "表", "代入"],
+    "finalAnswer": "y = 20",
+    "steps": [
+      {
+        "id": "hr-003-s1",
+        "prompt": "x に何を入れる？",
+        "equationBefore": "y = 5x",
+        "explanationCaption": "x = 4 なので、x の場所に 4 を入れます。",
+        "equationAfter": "y = 5 × 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "20", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-003-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "y = 5 × 4",
+        "explanationCaption": "5 × 4 = 20。だから y = 20 です。",
+        "equationAfter": "y = 20",
+        "highlight": "20",
+        "choices": [
+          { "id": "a", "label": "y = 20", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-004",
+    "unitId": "g1-hirei",
+    "title": "比例定数を見つける",
+    "equation": "x = 3 のとき y = 12",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "比例の式は y = ax です。a は y ÷ x で出せます。",
+    "tags": ["比例", "式"],
+    "finalAnswer": "y = 4x",
+    "steps": [
+      {
+        "id": "hr-004-s1",
+        "prompt": "比例定数 a を出すには？",
+        "equationBefore": "y = ax, x = 3, y = 12",
+        "explanationCaption": "a = y ÷ x なので、12 ÷ 3 を計算します。",
+        "equationAfter": "a = 12 ÷ 3",
+        "highlight": "12 ÷ 3",
+        "choices": [
+          { "id": "a", "label": "12 ÷ 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "12 + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3 ÷ 12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-004-s2",
+        "prompt": "式は？",
+        "equationBefore": "a = 12 ÷ 3",
+        "explanationCaption": "a = 4 なので、比例の式は y = 4x です。",
+        "equationAfter": "y = 4x",
+        "highlight": "4x",
+        "choices": [
+          { "id": "a", "label": "y = 4x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 15x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 9x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-005",
+    "unitId": "g1-hirei",
+    "title": "比例の文章題",
+    "equation": "1m 80円のリボンを x m 買う",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "1m の値段に、長さ x をかけます。",
+    "tags": ["比例", "文章題", "式立て"],
+    "finalAnswer": "y = 80x",
+    "steps": [
+      {
+        "id": "hr-005-s1",
+        "prompt": "代金 y 円を式にすると？",
+        "equationBefore": "1m 80円 × x m",
+        "explanationCaption": "1m 80円を x m 買うので、y = 80x です。",
+        "equationAfter": "y = 80x",
+        "highlight": "80x",
+        "choices": [
+          { "id": "a", "label": "y = 80x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 80 + x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = x ÷ 80", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-006",
+    "unitId": "g1-hirei",
+    "title": "反比例の式を作る",
+    "equation": "x と y の積が 24",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "反比例では x と y の積が一定です。y = 決まった数 ÷ x と書きます。",
+    "tags": ["反比例", "式"],
+    "finalAnswer": "y = 24/x",
+    "steps": [
+      {
+        "id": "hr-006-s1",
+        "prompt": "反比例の式は？",
+        "equationBefore": "xy = 24",
+        "explanationCaption": "xy = 24 なので、y = 24 ÷ x と書けます。",
+        "equationAfter": "y = 24/x",
+        "highlight": "24/x",
+        "choices": [
+          { "id": "a", "label": "y = 24/x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 24x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = x + 24", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-007",
+    "unitId": "g1-hirei",
+    "title": "反比例の値を出す",
+    "equation": "y = 18/x, x = 3 のとき y は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x に 3 を入れて、18 ÷ 3 を計算します。",
+    "tags": ["反比例", "代入"],
+    "finalAnswer": "y = 6",
+    "steps": [
+      {
+        "id": "hr-007-s1",
+        "prompt": "x に 3 を入れると？",
+        "equationBefore": "y = 18/x",
+        "explanationCaption": "x = 3 なので、y = 18 ÷ 3 です。",
+        "equationAfter": "y = 18 ÷ 3",
+        "highlight": "18 ÷ 3",
+        "choices": [
+          { "id": "a", "label": "y = 18 ÷ 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 18 × 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 18 + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-007-s2",
+        "prompt": "答えは？",
+        "equationBefore": "y = 18 ÷ 3",
+        "explanationCaption": "18 ÷ 3 = 6。だから y = 6 です。",
+        "equationAfter": "y = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "y = 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 15", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 54", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-008",
+    "unitId": "g1-hirei",
+    "title": "反比例の表を見る",
+    "equation": "x が 2倍になると y は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "反比例では、x が 2倍になると y は半分になります。",
+    "tags": ["反比例", "表"],
+    "finalAnswer": "半分になる",
+    "steps": [
+      {
+        "id": "hr-008-s1",
+        "prompt": "反比例では x が 2倍になると y は？",
+        "equationBefore": "x: 2, 4 / y: 6, 3",
+        "explanationCaption": "x が 2 から 4 で 2倍になると、y は 6 から 3 で半分です。",
+        "equationAfter": "y は半分になる",
+        "highlight": "半分",
+        "choices": [
+          { "id": "a", "label": "半分になる", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2倍になる", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "変わらない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-009",
+    "unitId": "g1-hirei",
+    "title": "自力: 比例の式と値",
+    "equation": "y は x の 4倍。x = 7 のとき y は？",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "まず y = 4x と書き、x に 7 を入れます。",
+    "tags": ["比例", "式", "自力"],
+    "finalAnswer": "y = 28",
+    "steps": [
+      {
+        "id": "hr-009-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "y = 4x, x = 7",
+        "explanationCaption": "y = 4x に x = 7 を入れると、y = 4 × 7 = 28 です。",
+        "equationAfter": "y = 28",
+        "highlight": "28",
+        "choices": [
+          { "id": "a", "label": "y = 28", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-010",
+    "unitId": "g1-hirei",
+    "title": "自力: 反比例の値",
+    "equation": "xy = 30。x = 5 のとき y は？",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "xy = 30 なので、y = 30 ÷ x と考えます。",
+    "tags": ["反比例", "式", "自力"],
+    "finalAnswer": "y = 6",
+    "steps": [
+      {
+        "id": "hr-010-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "xy = 30, x = 5",
+        "explanationCaption": "y = 30 ÷ 5 = 6 です。",
+        "equationAfter": "y = 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "y = 6", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-011",
+    "unitId": "g1-hirei",
+    "title": "比例の式を見つける",
+    "equation": "x = 2 のとき y = 10",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "比例の式は y = ax。a は y ÷ x で出せます。",
+    "tags": ["比例", "式"],
+    "finalAnswer": "y = 5x",
+    "steps": [
+      {
+        "id": "hr-011-s1",
+        "prompt": "比例定数 a は？",
+        "equationBefore": "y = ax, x = 2, y = 10",
+        "explanationCaption": "a = y ÷ x なので、10 ÷ 2 = 5 です。",
+        "equationAfter": "a = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "20", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-011-s2",
+        "prompt": "式は？",
+        "equationBefore": "a = 5",
+        "explanationCaption": "a = 5 なので、比例の式は y = 5x です。",
+        "equationAfter": "y = 5x",
+        "highlight": "5x",
+        "choices": [
+          { "id": "a", "label": "y = 5x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 2x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-012",
+    "unitId": "g1-hirei",
+    "title": "反比例の式を見つける",
+    "equation": "x = 4 のとき y = 6",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "反比例では x と y の積が決まった数になります。",
+    "tags": ["反比例", "式"],
+    "finalAnswer": "y = 24/x",
+    "steps": [
+      {
+        "id": "hr-012-s1",
+        "prompt": "決まった数はいくつ？",
+        "equationBefore": "x = 4, y = 6",
+        "explanationCaption": "反比例では x × y が一定です。4 × 6 = 24 です。",
+        "equationAfter": "xy = 24",
+        "highlight": "24",
+        "choices": [
+          { "id": "a", "label": "24", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "10", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-012-s2",
+        "prompt": "式は？",
+        "equationBefore": "xy = 24",
+        "explanationCaption": "xy = 24 なので、y = 24 ÷ x と書けます。",
+        "equationAfter": "y = 24/x",
+        "highlight": "24/x",
+        "choices": [
+          { "id": "a", "label": "y = 24/x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 24x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = x + 24", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-013",
+    "unitId": "g1-hirei",
+    "title": "自力: 比例の文章題",
+    "equation": "1km 走るのに 12分。x km 走る時間 y 分は？",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "1km で 12分なので、x km なら 12 に x をかけます。",
+    "tags": ["比例", "文章題", "式立て", "自力"],
+    "finalAnswer": "y = 12x",
+    "steps": [
+      {
+        "id": "hr-013-s1",
+        "prompt": "途中式をメモして、y を x の式で書こう",
+        "equationBefore": "12分 × x km",
+        "explanationCaption": "1km あたり 12分なので、x km の時間は y = 12x です。",
+        "equationAfter": "y = 12x",
+        "highlight": "12x",
+        "choices": [
+          { "id": "a", "label": "y = 12x", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-014",
+    "unitId": "g1-hirei",
+    "title": "比例の値を逆に出す",
+    "equation": "y = 6x, y = 30 のとき x は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "y のところに 30 を入れて、6x = 30 と考えます。",
+    "tags": ["比例", "式", "代入"],
+    "finalAnswer": "x = 5",
+    "steps": [
+      {
+        "id": "hr-014-s1",
+        "prompt": "y に何を入れる？",
+        "equationBefore": "y = 6x, y = 30",
+        "explanationCaption": "y = 30 なので、30 = 6x になります。",
+        "equationAfter": "30 = 6x",
+        "highlight": "30",
+        "choices": [
+          { "id": "a", "label": "30", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-014-s2",
+        "prompt": "x は？",
+        "equationBefore": "30 = 6x",
+        "explanationCaption": "6x = 30 なので、両辺を 6 で割って x = 5 です。",
+        "equationAfter": "x = 5",
+        "highlight": "5",
+        "choices": [
+          { "id": "a", "label": "x = 5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 24", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = 180", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-015",
+    "unitId": "g1-hirei",
+    "title": "自力: 反比例の文章題",
+    "equation": "面積 36 の長方形。横 x、たて y の関係は？",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "横 × たて = 面積なので、xy = 36 と考えます。",
+    "tags": ["反比例", "文章題", "式立て", "自力"],
+    "finalAnswer": "y = 36/x",
+    "steps": [
+      {
+        "id": "hr-015-s1",
+        "prompt": "途中式をメモして、y を x の式で書こう",
+        "equationBefore": "xy = 36",
+        "explanationCaption": "xy = 36 なので、y = 36 ÷ x と書けます。",
+        "equationAfter": "y = 36/x",
+        "highlight": "36/x",
+        "choices": [
+          { "id": "a", "label": "y = 36/x", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-016",
+    "unitId": "g1-hirei",
+    "title": "比例の式に代入する",
+    "equation": "y = 2x, x = 6 のとき y は？",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x の場所に 6 を入れます。",
+    "tags": ["比例", "式", "代入"],
+    "finalAnswer": "y = 12",
+    "steps": [
+      {
+        "id": "hr-016-s1",
+        "prompt": "x に入れる数は？",
+        "equationBefore": "y = 2x, x = 6",
+        "explanationCaption": "x = 6 なので、2x は 2 × 6 になります。",
+        "equationAfter": "y = 2 × 6",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-016-s2",
+        "prompt": "y は？",
+        "equationBefore": "y = 2 × 6",
+        "explanationCaption": "2 × 6 = 12 なので、y = 12 です。",
+        "equationAfter": "y = 12",
+        "highlight": "12",
+        "choices": [
+          { "id": "a", "label": "y = 12", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-017",
+    "unitId": "g1-hirei",
+    "title": "反比例の式に代入する",
+    "equation": "y = 15/x, x = 5 のとき y は？",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x の場所に 5 を入れて、15 ÷ 5 を計算します。",
+    "tags": ["反比例", "式", "代入"],
+    "finalAnswer": "y = 3",
+    "steps": [
+      {
+        "id": "hr-017-s1",
+        "prompt": "式に x = 5 を入れると？",
+        "equationBefore": "y = 15/x, x = 5",
+        "explanationCaption": "x の場所を 5 にすると、y = 15/5 になります。",
+        "equationAfter": "y = 15/5",
+        "highlight": "15/5",
+        "choices": [
+          { "id": "a", "label": "y = 15/5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 15 × 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 5/15", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-017-s2",
+        "prompt": "y は？",
+        "equationBefore": "y = 15/5",
+        "explanationCaption": "15 ÷ 5 = 3 なので、y = 3 です。",
+        "equationAfter": "y = 3",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "y = 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 75", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 10", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-018",
+    "unitId": "g1-hirei",
+    "title": "比例定数を出す",
+    "equation": "x = 3 のとき y = 9",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "比例では y ÷ x が比例定数です。",
+    "tags": ["比例", "式"],
+    "finalAnswer": "y = 3x",
+    "steps": [
+      {
+        "id": "hr-018-s1",
+        "prompt": "比例定数は？",
+        "equationBefore": "x = 3, y = 9",
+        "explanationCaption": "9 ÷ 3 = 3 なので、比例定数は 3 です。",
+        "equationAfter": "y = 3x",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "12", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-018-s2",
+        "prompt": "式は？",
+        "equationBefore": "比例定数 3",
+        "explanationCaption": "y は x の 3倍なので、y = 3x です。",
+        "equationAfter": "y = 3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "y = 3x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 9x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-019",
+    "unitId": "g1-hirei",
+    "title": "自力: 水の量を式にする",
+    "equation": "4分で20L入る水。x分で y L は？",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "まず 1分で何L 入るかを考えます。",
+    "tags": ["比例", "文章題", "式立て", "自力"],
+    "finalAnswer": "y = 5x",
+    "steps": [
+      {
+        "id": "hr-019-s1",
+        "prompt": "途中式をメモして、y を x の式で書こう",
+        "equationBefore": "4分で20L",
+        "explanationCaption": "20 ÷ 4 = 5。1分で 5L なので、x分では y = 5x です。",
+        "equationAfter": "y = 5x",
+        "highlight": "5x",
+        "choices": [
+          { "id": "a", "label": "y = 5x", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-020",
+    "unitId": "g1-hirei",
+    "title": "表から比例を見る",
+    "equation": "x と y の表から比例か見る",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "y がいつも x の何倍かを見ます。",
+    "tags": ["比例", "表"],
+    "finalAnswer": "比例している",
+    "steps": [
+      {
+        "id": "hr-020-s1",
+        "prompt": "y は x の何倍？",
+        "equationBefore": "x: 1, 2, 3\ny: 6, 12, 18",
+        "explanationCaption": "6 ÷ 1 = 6、12 ÷ 2 = 6、18 ÷ 3 = 6 です。",
+        "equationAfter": "y = 6x",
+        "highlight": "6x",
+        "choices": [
+          { "id": "a", "label": "6倍", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3倍", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "いつも同じではない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-020-s2",
+        "prompt": "この表は比例している？",
+        "equationBefore": "x: 1, 2, 3\ny: 6, 12, 18",
+        "explanationCaption": "y はいつも x の 6倍なので、比例しています。",
+        "equationAfter": "比例している",
+        "highlight": "比例",
+        "choices": [
+          { "id": "a", "label": "比例している", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "比例していない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-021",
+    "unitId": "g1-hirei",
+    "title": "表から比例でない例を見る",
+    "equation": "同じ増え方でも比例とは限らない",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "比例では、y ÷ x がいつも同じになります。",
+    "tags": ["比例", "表"],
+    "finalAnswer": "比例していない",
+    "steps": [
+      {
+        "id": "hr-021-s1",
+        "prompt": "y ÷ x を見ると？",
+        "equationBefore": "x: 1, 2, 3\ny: 3, 5, 7",
+        "explanationCaption": "3 ÷ 1 = 3、5 ÷ 2 = 2.5。値が同じではありません。",
+        "equationAfter": "y ÷ x が同じではない",
+        "highlight": "同じではない",
+        "choices": [
+          { "id": "a", "label": "同じではない", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "いつも 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "いつも 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-021-s2",
+        "prompt": "この表は比例している？",
+        "equationBefore": "x: 1, 2, 3\ny: 3, 5, 7",
+        "explanationCaption": "y ÷ x が一定ではないので、比例していません。",
+        "equationAfter": "比例していない",
+        "highlight": "いない",
+        "choices": [
+          { "id": "a", "label": "比例していない", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "比例している", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-022",
+    "unitId": "g1-hirei",
+    "title": "反比例の表をうめる",
+    "equation": "xy = 24 の表で y を出す",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "反比例では x × y が同じ数になります。",
+    "tags": ["反比例", "表"],
+    "finalAnswer": "y = 4",
+    "steps": [
+      {
+        "id": "hr-022-s1",
+        "prompt": "x = 6 のとき y は？",
+        "equationBefore": "x: 2, 4, 6\ny: 12, 6, ?",
+        "explanationCaption": "x × y は 24。だから 6 × y = 24 です。",
+        "equationAfter": "6 × y = 24",
+        "highlight": "24",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "18", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "hr-022-s2",
+        "prompt": "表の空らんは？",
+        "equationBefore": "x: 2, 4, 6\ny: 12, 6, ?",
+        "explanationCaption": "24 ÷ 6 = 4。空らんは 4 です。",
+        "equationAfter": "y = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "y = 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = 8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = 18", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "hr-023",
+    "unitId": "g1-hirei",
+    "title": "自力: 表から式を作る",
+    "equation": "表を見て比例の式を作る",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "y ÷ x がいくつかを見て、y = ax にします。",
+    "tags": ["比例", "表", "式", "自力"],
+    "finalAnswer": "y = 7x",
+    "steps": [
+      {
+        "id": "hr-023-s1",
+        "prompt": "途中式をメモして、比例の式を書こう",
+        "equationBefore": "x: 1, 2, 4\ny: 7, 14, 28",
+        "explanationCaption": "y はいつも x の 7倍です。だから式は y = 7x です。",
+        "equationAfter": "y = 7x",
+        "highlight": "7x",
+        "choices": [
+          { "id": "a", "label": "y = 7x", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

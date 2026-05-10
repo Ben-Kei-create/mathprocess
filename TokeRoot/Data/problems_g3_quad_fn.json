@@ -1,0 +1,1757 @@
+[
+  {
+    "id": "qf-001",
+    "unitId": "g3-quad-fn",
+    "title": "y = x^2 の値",
+    "equation": "y = x^2、x = 2 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 9,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = x^2",
+          "a": 1,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 2,
+          "y": 4,
+          "label": "(2, 4)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x^2 は x を2回かけることです。2^2 は 2 × 2 です。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "グラフ"
+    ],
+    "finalAnswer": "y = 4",
+    "steps": [
+      {
+        "id": "qf-001-s1",
+        "prompt": "x = 2 を入れると、式はどうなる？",
+        "equationBefore": "y = x^2",
+        "explanationCaption": "x の場所に 2 を入れるので、y = 2^2 になります。",
+        "equationAfter": "y = 2^2",
+        "highlight": "2^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 2^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "y = 2 × 1",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "y = 2 + 2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-001-s2",
+        "prompt": "y はいくつ？",
+        "equationBefore": "y = 2^2",
+        "explanationCaption": "2^2 = 2 × 2 = 4。だから y = 4 です。",
+        "equationAfter": "y = 4",
+        "highlight": "4",
+        "choices": [
+          {
+            "id": "a",
+            "label": "4",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-002",
+    "unitId": "g3-quad-fn",
+    "title": "a が大きいグラフ",
+    "equation": "y = 2x^2、x = 3 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 20,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 3,
+          "y": 18,
+          "label": "(3, 18)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "先に x^2 を計算してから、前の 2 をかけます。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "グラフ"
+    ],
+    "finalAnswer": "y = 18",
+    "steps": [
+      {
+        "id": "qf-002-s1",
+        "prompt": "x = 3 を入れると、式はどうなる？",
+        "equationBefore": "y = 2x^2",
+        "explanationCaption": "x の場所に 3 を入れて、y = 2 × 3^2 になります。",
+        "equationAfter": "y = 2 × 3^2",
+        "highlight": "3^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 2 × 3^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "y = 2 × 3",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "y = 3^2 - 2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-002-s2",
+        "prompt": "y はいくつ？",
+        "equationBefore": "y = 2 × 3^2",
+        "explanationCaption": "3^2 = 9。2 × 9 = 18 なので、y = 18 です。",
+        "equationAfter": "y = 18",
+        "highlight": "18",
+        "choices": [
+          {
+            "id": "a",
+            "label": "18",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "12",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "9",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-003",
+    "unitId": "g3-quad-fn",
+    "title": "分数の a",
+    "equation": "y = 1/2x^2、x = 4 のとき y は？",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 9,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 1/2x^2",
+          "a": 0.5,
+          "xStart": -4,
+          "xEnd": 4
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 4,
+          "y": 8,
+          "label": "(4, 8)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "4^2 を先に計算してから、1/2 をかけます。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "グラフ"
+    ],
+    "finalAnswer": "y = 8",
+    "steps": [
+      {
+        "id": "qf-003-s1",
+        "prompt": "先に計算するのは？",
+        "equationBefore": "y = 1/2 × 4^2",
+        "explanationCaption": "累乗を先に計算します。4^2 = 16 です。",
+        "equationAfter": "4^2 = 16",
+        "highlight": "16",
+        "choices": [
+          {
+            "id": "a",
+            "label": "4^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "1/2 + 4",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "4 ÷ 2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-003-s2",
+        "prompt": "y はいくつ？",
+        "equationBefore": "y = 1/2 × 16",
+        "explanationCaption": "16 の半分は 8。だから y = 8 です。",
+        "equationAfter": "y = 8",
+        "highlight": "8",
+        "choices": [
+          {
+            "id": "a",
+            "label": "8",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "4",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "16",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-004",
+    "unitId": "g3-quad-fn",
+    "title": "下に開くグラフ",
+    "equation": "y = -x^2 のグラフ",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -9,
+      "yMax": 1,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = -x^2",
+          "a": -1,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 0,
+          "y": 0,
+          "label": "(0, 0)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "a がマイナスのとき、放物線は下に開きます。",
+    "tags": [
+      "二次関数",
+      "グラフの形",
+      "グラフ"
+    ],
+    "finalAnswer": "下に開く",
+    "steps": [
+      {
+        "id": "qf-004-s1",
+        "prompt": "このグラフはどちらに開く？",
+        "equationBefore": "y = -x^2",
+        "explanationCaption": "x^2 の前にマイナスがあるので、グラフは下に開きます。",
+        "equationAfter": "下に開く",
+        "highlight": "下",
+        "choices": [
+          {
+            "id": "a",
+            "label": "下に開く",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "上に開く",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "直線になる",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-005",
+    "unitId": "g3-quad-fn",
+    "title": "点が通るか見る",
+    "equation": "y = x^2 のグラフ上の点は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 9,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = x^2",
+          "a": 1,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": -2,
+          "y": 4,
+          "label": "(-2, 4)"
+        },
+        {
+          "id": "p2",
+          "x": 2,
+          "y": 4,
+          "label": "(2, 4)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x の値を2乗して、y と同じになる点を選びます。",
+    "tags": [
+      "二次関数",
+      "グラフの形",
+      "点"
+    ],
+    "finalAnswer": "(2, 4) と (-2, 4)",
+    "steps": [
+      {
+        "id": "qf-005-s1",
+        "prompt": "y = x^2 のグラフ上にある点は？",
+        "equationBefore": "y = x^2",
+        "explanationCaption": "x = 2 のとき y = 4。x = -2 のときも y = 4 なので、どちらもグラフ上の点です。",
+        "equationAfter": "(2, 4) と (-2, 4)",
+        "highlight": "(2, 4)",
+        "choices": [
+          {
+            "id": "a",
+            "label": "(2, 4) と (-2, 4)",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "(2, 2) だけ",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "(-2, -4) だけ",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-006",
+    "unitId": "g3-quad-fn",
+    "title": "点から a を求める",
+    "equation": "y = ax^2 が点 (2, 8) を通る",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 18,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 2,
+          "y": 8,
+          "label": "(2, 8)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "点 (2, 8) は、x = 2、y = 8 という意味です。式に入れます。",
+    "tags": [
+      "二次関数",
+      "式にする",
+      "点"
+    ],
+    "finalAnswer": "a = 2",
+    "steps": [
+      {
+        "id": "qf-006-s1",
+        "prompt": "点 (2, 8) を式に入れると？",
+        "equationBefore": "y = ax^2",
+        "explanationCaption": "x = 2、y = 8 なので、8 = a × 2^2 になります。",
+        "equationAfter": "8 = a × 2^2",
+        "highlight": "2^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "8 = a × 2^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "2 = a × 8^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8 = 2a",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-006-s2",
+        "prompt": "a はいくつ？",
+        "equationBefore": "8 = a × 4",
+        "explanationCaption": "8 = 4a なので、a = 2 です。",
+        "equationAfter": "a = 2",
+        "highlight": "2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "4",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "1/2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-007",
+    "unitId": "g3-quad-fn",
+    "title": "変化の割合",
+    "equation": "y = x^2、x が 1 から 3 まで増える",
+    "graph": {
+      "xMin": -1,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 10,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = x^2",
+          "a": 1,
+          "xStart": -1,
+          "xEnd": 3.2
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 1,
+          "y": 1,
+          "label": "(1, 1)"
+        },
+        {
+          "id": "p2",
+          "x": 3,
+          "y": 9,
+          "label": "(3, 9)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "変化の割合は、y の増え方 ÷ x の増え方 です。",
+    "tags": [
+      "二次関数",
+      "変化の割合",
+      "グラフ"
+    ],
+    "finalAnswer": "変化の割合は4",
+    "steps": [
+      {
+        "id": "qf-007-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "x: 1 → 3",
+        "explanationCaption": "3 - 1 = 2 なので、x は 2 増えています。",
+        "equationAfter": "x の増え方 = 2",
+        "highlight": "2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "3",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-007-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "y: 1 → 9",
+        "explanationCaption": "9 - 1 = 8 なので、y は 8 増えています。",
+        "equationAfter": "y の増え方 = 8",
+        "highlight": "8",
+        "choices": [
+          {
+            "id": "a",
+            "label": "8",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "4",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-007-s3",
+        "prompt": "変化の割合は？",
+        "equationBefore": "y の増え方 ÷ x の増え方 = 8 ÷ 2",
+        "explanationCaption": "8 ÷ 2 = 4。変化の割合は 4 です。",
+        "equationAfter": "変化の割合は 4",
+        "highlight": "4",
+        "choices": [
+          {
+            "id": "a",
+            "label": "4",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-008",
+    "unitId": "g3-quad-fn",
+    "title": "自力: 負の x を入れる",
+    "equation": "y = 2x^2、x = -3 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 20,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": -3,
+          "y": 18,
+          "label": "(-3, 18)"
+        }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "(-3)^2 は 9 です。マイナスを2回かけるとプラスになります。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "自力"
+    ],
+    "finalAnswer": "y = 18",
+    "steps": [
+      {
+        "id": "qf-008-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = 2x^2, x = -3",
+        "explanationCaption": "y = 2 × (-3)^2 = 2 × 9 = 18 です。",
+        "equationAfter": "y = 18",
+        "highlight": "18",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 18",
+            "isCorrect": true,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-009",
+    "unitId": "g3-quad-fn",
+    "title": "自力: 下に開く式",
+    "equation": "y = -1/2x^2、x = 4 のとき y は？",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -9,
+      "yMax": 1,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = -1/2x^2",
+          "a": -0.5,
+          "xStart": -4,
+          "xEnd": 4
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 4,
+          "y": -8,
+          "label": "(4, -8)"
+        }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "4^2 = 16。そこに -1/2 をかけるので、答えはマイナスになります。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "自力"
+    ],
+    "finalAnswer": "y = -8",
+    "steps": [
+      {
+        "id": "qf-009-s1",
+        "prompt": "途中式をメモして、y の値を書こう",
+        "equationBefore": "y = -1/2x^2, x = 4",
+        "explanationCaption": "y = -1/2 × 4^2 = -1/2 × 16 = -8 です。",
+        "equationAfter": "y = -8",
+        "highlight": "-8",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = -8",
+            "isCorrect": true,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-010",
+    "unitId": "g3-quad-fn",
+    "title": "自力: 点から a を出す",
+    "equation": "y = ax^2 が点 (3, 18) を通る",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 20,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 3,
+          "y": 18,
+          "label": "(3, 18)"
+        }
+      ]
+    },
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "x = 3、y = 18 を y = ax^2 に入れます。18 = a × 9 です。",
+    "tags": [
+      "二次関数",
+      "式にする",
+      "自力"
+    ],
+    "finalAnswer": "a = 2",
+    "steps": [
+      {
+        "id": "qf-010-s1",
+        "prompt": "途中式をメモして、a の値を書こう",
+        "equationBefore": "y = ax^2, (x, y) = (3, 18)",
+        "explanationCaption": "18 = a × 3^2 = 9a。18 = 9a なので、a = 2 です。",
+        "equationAfter": "a = 2",
+        "highlight": "2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "a = 2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-011",
+    "unitId": "g3-quad-fn",
+    "title": "y = 3x^2 の値",
+    "equation": "y = 3x^2、x = 2 のとき y は？",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 13,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 3x^2",
+          "a": 3,
+          "xStart": -2,
+          "xEnd": 2
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 2,
+          "y": 12,
+          "label": "(2, 12)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "先に 2^2 を計算してから、3 をかけます。",
+    "tags": [
+      "二次関数",
+      "値を出す",
+      "グラフ"
+    ],
+    "finalAnswer": "y = 12",
+    "steps": [
+      {
+        "id": "qf-011-s1",
+        "prompt": "x = 2 を入れると、式はどうなる？",
+        "equationBefore": "y = 3x^2",
+        "explanationCaption": "x の場所に 2 を入れて、y = 3 × 2^2 になります。",
+        "equationAfter": "y = 3 × 2^2",
+        "highlight": "2^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 3 × 2^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "y = 3 + 2^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "y = (3 × 2)^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-011-s2",
+        "prompt": "y はいくつ？",
+        "equationBefore": "y = 3 × 2^2",
+        "explanationCaption": "2^2 = 4。3 × 4 = 12 なので、y = 12 です。",
+        "equationAfter": "y = 12",
+        "highlight": "12",
+        "choices": [
+          {
+            "id": "a",
+            "label": "12",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "9",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "36",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-012",
+    "unitId": "g3-quad-fn",
+    "title": "下に開く放物線",
+    "equation": "y = -2x^2 のグラフ",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -18,
+      "yMax": 2,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = -2x^2",
+          "a": -2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 0,
+          "y": 0,
+          "label": "(0, 0)"
+        },
+        {
+          "id": "p2",
+          "x": 2,
+          "y": -8,
+          "label": "(2, -8)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "a がマイナスなら、グラフは下に開きます。",
+    "tags": [
+      "二次関数",
+      "グラフの形",
+      "グラフ"
+    ],
+    "finalAnswer": "下に開く",
+    "steps": [
+      {
+        "id": "qf-012-s1",
+        "prompt": "a の符号は？",
+        "equationBefore": "y = -2x^2",
+        "explanationCaption": "x^2 の前についている数は -2 なので、a はマイナスです。",
+        "equationAfter": "a = -2",
+        "highlight": "-2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "マイナス",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "プラス",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-012-s2",
+        "prompt": "グラフはどちらに開く？",
+        "equationBefore": "a はマイナス",
+        "explanationCaption": "a がマイナスの二次関数は、下に開きます。",
+        "equationAfter": "下に開く",
+        "highlight": "下",
+        "choices": [
+          {
+            "id": "a",
+            "label": "下に開く",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "上に開く",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-013",
+    "unitId": "g3-quad-fn",
+    "title": "点から a を求める",
+    "equation": "y = ax^2 が点 (4, 8) を通る",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 9,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 1/2x^2",
+          "a": 0.5,
+          "xStart": -4,
+          "xEnd": 4
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 4,
+          "y": 8,
+          "label": "(4, 8)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x = 4、y = 8 を y = ax^2 に入れます。",
+    "tags": [
+      "二次関数",
+      "式にする",
+      "グラフ"
+    ],
+    "finalAnswer": "a = 1/2",
+    "steps": [
+      {
+        "id": "qf-013-s1",
+        "prompt": "点 (4, 8) を式に入れると？",
+        "equationBefore": "y = ax^2",
+        "explanationCaption": "x = 4、y = 8 なので、8 = a × 4^2 です。",
+        "equationAfter": "8 = a × 4^2",
+        "highlight": "4^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "8 = a × 4^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "4 = a × 8^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8 = 4a^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-013-s2",
+        "prompt": "4^2 はいくつ？",
+        "equationBefore": "8 = a × 4^2",
+        "explanationCaption": "4^2 = 16 なので、8 = 16a になります。",
+        "equationAfter": "8 = 16a",
+        "highlight": "16",
+        "choices": [
+          {
+            "id": "a",
+            "label": "16",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "4",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-013-s3",
+        "prompt": "a はいくつ？",
+        "equationBefore": "8 = 16a",
+        "explanationCaption": "両辺を 16 で割ると、a = 8/16 = 1/2 です。",
+        "equationAfter": "a = 1/2",
+        "highlight": "1/2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "1/2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-014",
+    "unitId": "g3-quad-fn",
+    "title": "変化の割合を求める",
+    "equation": "y = 2x^2、x が 1 から 3 まで増える",
+    "graph": {
+      "xMin": -1,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 20,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -1,
+          "xEnd": 3
+        }
+      ],
+      "points": [
+        {
+          "id": "p1",
+          "x": 1,
+          "y": 2,
+          "label": "(1, 2)"
+        },
+        {
+          "id": "p2",
+          "x": 3,
+          "y": 18,
+          "label": "(3, 18)"
+        }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x の増え方は 2、y の増え方は 16 です。",
+    "tags": [
+      "二次関数",
+      "変化の割合",
+      "グラフ"
+    ],
+    "finalAnswer": "変化の割合は8",
+    "steps": [
+      {
+        "id": "qf-014-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "x: 1 → 3",
+        "explanationCaption": "3 - 1 = 2 なので、x は 2 増えています。",
+        "equationAfter": "x の増え方 = 2",
+        "highlight": "2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "3",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "1",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-014-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "y: 2 → 18",
+        "explanationCaption": "18 - 2 = 16 なので、y は 16 増えています。",
+        "equationAfter": "y の増え方 = 16",
+        "highlight": "16",
+        "choices": [
+          {
+            "id": "a",
+            "label": "16",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "18",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "8",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-014-s3",
+        "prompt": "変化の割合は？",
+        "equationBefore": "16 ÷ 2",
+        "explanationCaption": "y の増え方 16 を、x の増え方 2 で割ります。16 ÷ 2 = 8 です。",
+        "equationAfter": "変化の割合は 8",
+        "highlight": "8",
+        "choices": [
+          {
+            "id": "a",
+            "label": "8",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "16",
+            "isCorrect": false,
+            "mistakeTagId": null
+          },
+          {
+            "id": "c",
+            "label": "2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-015",
+    "unitId": "g3-quad-fn",
+    "title": "開き方を比べる",
+    "equation": "y = x^2 と y = 2x^2",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 18,
+      "parabolas": [
+        {
+          "id": "pb1",
+          "label": "y = x^2",
+          "a": 1,
+          "xStart": -3,
+          "xEnd": 3
+        },
+        {
+          "id": "pb2",
+          "label": "y = 2x^2",
+          "a": 2,
+          "xStart": -3,
+          "xEnd": 3
+        }
+      ],
+      "points": []
+    },
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "a の絶対値が大きいほど、グラフは細くなります。",
+    "tags": [
+      "二次関数",
+      "グラフの形",
+      "グラフ"
+    ],
+    "finalAnswer": "y = 2x^2",
+    "steps": [
+      {
+        "id": "qf-015-s1",
+        "prompt": "a の絶対値が大きいのはどちら？",
+        "equationBefore": "y = x^2 と y = 2x^2",
+        "explanationCaption": "y = x^2 の a は 1、y = 2x^2 の a は 2 です。大きいのは 2 です。",
+        "equationAfter": "2 のほうが大きい",
+        "highlight": "2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 2x^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "y = x^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      },
+      {
+        "id": "qf-015-s2",
+        "prompt": "細く開くのはどちら？",
+        "equationBefore": "a の絶対値が大きいほど細い",
+        "explanationCaption": "a の絶対値が大きい y = 2x^2 のほうが、y = x^2 より細く開きます。",
+        "equationAfter": "y = 2x^2 のほうが細い",
+        "highlight": "2x^2",
+        "choices": [
+          {
+            "id": "a",
+            "label": "y = 2x^2",
+            "isCorrect": true,
+            "mistakeTagId": null
+          },
+          {
+            "id": "b",
+            "label": "y = x^2",
+            "isCorrect": false,
+            "mistakeTagId": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-016",
+    "unitId": "g3-quad-fn",
+    "title": "点から a を求める",
+    "equation": "y = ax^2 が点 (-3, 18) を通る",
+    "graph": {
+      "xMin": -4,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 20,
+      "parabolas": [
+        { "id": "pb1", "label": "y = 2x^2", "a": 2, "xStart": -3, "xEnd": 3 }
+      ],
+      "points": [
+        { "id": "p1", "x": -3, "y": 18, "label": "(-3, 18)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "点 (-3, 18) は、x = -3、y = 18 という意味です。",
+    "tags": ["二次関数", "式にする", "グラフ", "標準"],
+    "finalAnswer": "a = 2",
+    "steps": [
+      {
+        "id": "qf-016-s1",
+        "prompt": "点 (-3, 18) を式に入れると？",
+        "equationBefore": "y = ax^2",
+        "explanationCaption": "x = -3、y = 18 を入れるので、18 = a × (-3)^2 です。",
+        "equationAfter": "18 = a × (-3)^2",
+        "highlight": "(-3)^2",
+        "choices": [
+          { "id": "a", "label": "18 = a × (-3)^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-3 = a × 18^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "18 = -3a^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-016-s2",
+        "prompt": "(-3)^2 はいくつ？",
+        "equationBefore": "18 = a × (-3)^2",
+        "explanationCaption": "(-3)^2 は (-3) × (-3) なので 9 です。",
+        "equationAfter": "18 = 9a",
+        "highlight": "9",
+        "choices": [
+          { "id": "a", "label": "9", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-016-s3",
+        "prompt": "a はいくつ？",
+        "equationBefore": "18 = 9a",
+        "explanationCaption": "両辺を 9 で割ると a = 2 です。式は y = 2x^2 です。",
+        "equationAfter": "a = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "18", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-017",
+    "unitId": "g3-quad-fn",
+    "title": "変化の割合: 負から正へ",
+    "equation": "y = x^2、x が -1 から 3 まで増える",
+    "graph": {
+      "xMin": -3,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 10,
+      "parabolas": [
+        { "id": "pb1", "label": "y = x^2", "a": 1, "xStart": -3, "xEnd": 3 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 1, "label": "(-1, 1)" },
+        { "id": "p2", "x": 3, "y": 9, "label": "(3, 9)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "x の増え方は、3 - (-1) で求めます。",
+    "tags": ["二次関数", "変化の割合", "グラフ", "標準"],
+    "finalAnswer": "変化の割合は2",
+    "steps": [
+      {
+        "id": "qf-017-s1",
+        "prompt": "x はいくつ増えた？",
+        "equationBefore": "x: -1 → 3",
+        "explanationCaption": "3 - (-1) = 4 なので、x は 4 増えています。",
+        "equationAfter": "x の増え方 = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-017-s2",
+        "prompt": "y はいくつ増えた？",
+        "equationBefore": "y: 1 → 9",
+        "explanationCaption": "y は 1 から 9 へ増えるので、9 - 1 = 8 です。",
+        "equationAfter": "y の増え方 = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-017-s3",
+        "prompt": "変化の割合は？",
+        "equationBefore": "8 ÷ 4",
+        "explanationCaption": "y の増え方 8 を x の増え方 4 で割ります。8 ÷ 4 = 2 です。",
+        "equationAfter": "変化の割合は 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-018",
+    "unitId": "g3-quad-fn",
+    "title": "二次関数の変域",
+    "equation": "y = 1/2x^2、-2 <= x <= 4",
+    "graph": {
+      "xMin": -3,
+      "xMax": 5,
+      "yMin": -1,
+      "yMax": 9,
+      "parabolas": [
+        { "id": "pb1", "label": "y = 1/2x^2", "a": 0.5, "xStart": -2, "xEnd": 4 }
+      ],
+      "points": [
+        { "id": "p1", "x": -2, "y": 2, "label": "(-2, 2)" },
+        { "id": "p2", "x": 0, "y": 0, "label": "(0, 0)" },
+        { "id": "p3", "x": 4, "y": 8, "label": "(4, 8)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "範囲の中に x = 0 があると、y = ax^2 の最小値は 0 になります。",
+    "tags": ["二次関数", "変域", "グラフ", "高校受験"],
+    "finalAnswer": "0 <= y <= 8",
+    "steps": [
+      {
+        "id": "qf-018-s1",
+        "prompt": "x = -2 のとき y は？",
+        "equationBefore": "y = 1/2x^2",
+        "explanationCaption": "y = 1/2 × (-2)^2 = 1/2 × 4 = 2 です。",
+        "equationAfter": "y = 2",
+        "highlight": "2",
+        "choices": [
+          { "id": "a", "label": "2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-018-s2",
+        "prompt": "x = 4 のとき y は？",
+        "equationBefore": "y = 1/2x^2",
+        "explanationCaption": "y = 1/2 × 4^2 = 1/2 × 16 = 8 です。",
+        "equationAfter": "y = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "16", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-018-s3",
+        "prompt": "y の変域は？",
+        "equationBefore": "範囲に x = 0 を含む",
+        "explanationCaption": "x = 0 のとき y = 0 で最小です。最大は x = 4 のとき 8。だから 0 <= y <= 8 です。",
+        "equationAfter": "0 <= y <= 8",
+        "highlight": "0 <= y <= 8",
+        "choices": [
+          { "id": "a", "label": "0 <= y <= 8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2 <= y <= 8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-2 <= y <= 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-019",
+    "unitId": "g3-quad-fn",
+    "title": "放物線と直線の交点",
+    "equation": "y = x^2 と y = x + 2",
+    "graph": {
+      "xMin": -3,
+      "xMax": 4,
+      "yMin": -1,
+      "yMax": 10,
+      "parabolas": [
+        { "id": "pb1", "label": "y = x^2", "a": 1, "xStart": -3, "xEnd": 3 }
+      ],
+      "lines": [
+        { "id": "l1", "label": "y = x + 2", "x1": -3, "y1": -1, "x2": 4, "y2": 6 }
+      ],
+      "points": [
+        { "id": "p1", "x": -1, "y": 1, "label": "(-1, 1)" },
+        { "id": "p2", "x": 2, "y": 4, "label": "(2, 4)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "交点では、x^2 と x + 2 の値が同じになります。",
+    "tags": ["二次関数", "一次関数", "交点", "高校受験"],
+    "finalAnswer": "(-1, 1) と (2, 4)",
+    "steps": [
+      {
+        "id": "qf-019-s1",
+        "prompt": "交点で成り立つ式は？",
+        "equationBefore": "y = x^2 と y = x + 2",
+        "explanationCaption": "交点では y が同じなので、x^2 = x + 2 とおけます。",
+        "equationAfter": "x^2 = x + 2",
+        "highlight": "x^2 = x + 2",
+        "choices": [
+          { "id": "a", "label": "x^2 = x + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x^2 + x + 2 = 0", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = x^2 + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-019-s2",
+        "prompt": "x の値はどれ？",
+        "equationBefore": "x^2 - x - 2 = 0",
+        "explanationCaption": "x^2 - x - 2 = 0 は、x = -1 と x = 2 のとき成り立ちます。",
+        "equationAfter": "x = -1, 2",
+        "highlight": "-1, 2",
+        "choices": [
+          { "id": "a", "label": "x = -1, 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x = 1, 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x = -2, 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-019-s3",
+        "prompt": "交点は？",
+        "equationBefore": "x = -1, 2",
+        "explanationCaption": "x = -1 なら y = 1、x = 2 なら y = 4。交点は (-1, 1) と (2, 4) です。",
+        "equationAfter": "(-1, 1) と (2, 4)",
+        "highlight": "(-1, 1)",
+        "choices": [
+          { "id": "a", "label": "(-1, 1) と (2, 4)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "(1, -1) と (4, 2)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "(-1, 2) と (2, 1)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-020",
+    "unitId": "g3-quad-fn",
+    "title": "放物線上の2点と面積",
+    "equation": "y = x^2 上の A(-2,4), B(2,4) と原点 O",
+    "graph": {
+      "xMin": -3,
+      "xMax": 3,
+      "yMin": -1,
+      "yMax": 6,
+      "parabolas": [
+        { "id": "pb1", "label": "y = x^2", "a": 1, "xStart": -2.5, "xEnd": 2.5 }
+      ],
+      "points": [
+        { "id": "p1", "x": -2, "y": 4, "label": "A(-2, 4)" },
+        { "id": "p2", "x": 2, "y": 4, "label": "B(2, 4)" },
+        { "id": "p3", "x": 0, "y": 0, "label": "O" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "AB は横向きの辺です。x 座標の差を見ると長さが出ます。",
+    "tags": ["二次関数", "座標", "面積", "高校受験"],
+    "finalAnswer": "面積は8",
+    "steps": [
+      {
+        "id": "qf-020-s1",
+        "prompt": "AB の長さは？",
+        "equationBefore": "A(-2, 4), B(2, 4)",
+        "explanationCaption": "A と B は y 座標が同じなので、AB は横向きです。x 座標の差は 2 - (-2) = 4 です。",
+        "equationAfter": "AB = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-020-s2",
+        "prompt": "原点 O から AB までの高さは？",
+        "equationBefore": "AB は y = 4 の高さにある",
+        "explanationCaption": "AB は y = 4 の横線です。原点 O は y = 0 なので、高さは 4 です。",
+        "equationAfter": "高さ = 4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-020-s3",
+        "prompt": "三角形 AOB の面積は？",
+        "equationBefore": "底辺 4、高さ 4",
+        "explanationCaption": "三角形の面積は、底辺 × 高さ ÷ 2。4 × 4 ÷ 2 = 8 です。",
+        "equationAfter": "4 × 4 ÷ 2 = 8",
+        "highlight": "8",
+        "choices": [
+          { "id": "a", "label": "8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "16", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qf-021",
+    "unitId": "g3-quad-fn",
+    "title": "2乗に比例する文章題",
+    "equation": "制動距離 y は速さ x の2乗に比例し、時速40kmで16m",
+    "graph": {
+      "xMin": 0,
+      "xMax": 70,
+      "yMin": 0,
+      "yMax": 50,
+      "parabolas": [
+        { "id": "pb1", "label": "y = 1/100x^2", "a": 0.01, "xStart": 0, "xEnd": 70 }
+      ],
+      "points": [
+        { "id": "p1", "x": 40, "y": 16, "label": "(40, 16)" },
+        { "id": "p2", "x": 60, "y": 36, "label": "(60, 36)" }
+      ]
+    },
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "2乗に比例するので、式は y = ax^2 とおきます。",
+    "tags": ["二次関数", "文章題", "比例", "高校受験"],
+    "finalAnswer": "時速60kmでは36m",
+    "steps": [
+      {
+        "id": "qf-021-s1",
+        "prompt": "まず式をどうおく？",
+        "equationBefore": "y は x の2乗に比例する",
+        "explanationCaption": "2乗に比例するので、y = ax^2 とおきます。",
+        "equationAfter": "y = ax^2",
+        "highlight": "ax^2",
+        "choices": [
+          { "id": "a", "label": "y = ax^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "y = ax + b", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "y = a/x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-021-s2",
+        "prompt": "時速40kmで16mを入れると？",
+        "equationBefore": "y = ax^2",
+        "explanationCaption": "x = 40、y = 16 を入れて、16 = a × 40^2 です。",
+        "equationAfter": "16 = a × 40^2",
+        "highlight": "40^2",
+        "choices": [
+          { "id": "a", "label": "16 = a × 40^2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "40 = a × 16^2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "16 = 40a^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-021-s3",
+        "prompt": "a はいくつ？",
+        "equationBefore": "16 = 1600a",
+        "explanationCaption": "16 = 1600a なので、a = 16 ÷ 1600 = 1/100 です。",
+        "equationAfter": "a = 1/100",
+        "highlight": "1/100",
+        "choices": [
+          { "id": "a", "label": "1/100", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "100", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1/40", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "qf-021-s4",
+        "prompt": "時速60kmでは何m？",
+        "equationBefore": "y = 1/100x^2、x = 60",
+        "explanationCaption": "y = 1/100 × 60^2 = 3600 ÷ 100 = 36。時速60kmでは36mです。",
+        "equationAfter": "y = 36",
+        "highlight": "36",
+        "choices": [
+          { "id": "a", "label": "36m", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "24m", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "32m", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

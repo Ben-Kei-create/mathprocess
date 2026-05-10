@@ -1,0 +1,236 @@
+[
+  {
+    "id": "gs-001",
+    "unitId": "g2-shiki",
+    "title": "単項式のかけ算",
+    "equation": "3a × 2b",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "数字どうし、文字どうしに分けて考えます。",
+    "tags": ["式の計算", "単項式", "かけ算"],
+    "finalAnswer": "6ab",
+    "steps": [
+      {
+        "id": "gs-001-s1",
+        "prompt": "数字どうしをかけると？",
+        "equationBefore": "3a × 2b",
+        "explanationCaption": "数字の部分は 3 × 2 = 6 です。",
+        "equationAfter": "6 × a × b",
+        "highlight": "6",
+        "choices": [
+          { "id": "a", "label": "6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-001-s2",
+        "prompt": "文字までまとめると？",
+        "equationBefore": "6 × a × b",
+        "explanationCaption": "かけ算の記号を省いて、6ab と書きます。",
+        "equationAfter": "6ab",
+        "highlight": "6ab",
+        "choices": [
+          { "id": "a", "label": "6ab", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5ab", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6a + b", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-002",
+    "unitId": "g2-shiki",
+    "title": "単項式のわり算",
+    "equation": "12x^2y ÷ 3xy",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "係数は 12 ÷ 3、文字は同じものを約分します。",
+    "tags": ["式の計算", "単項式", "わり算"],
+    "finalAnswer": "4x",
+    "steps": [
+      {
+        "id": "gs-002-s1",
+        "prompt": "係数はどうなる？",
+        "equationBefore": "12x^2y ÷ 3xy",
+        "explanationCaption": "数字の部分は 12 ÷ 3 = 4 です。",
+        "equationAfter": "4 × x^2y ÷ xy",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "36", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-002-s2",
+        "prompt": "文字まで整理すると？",
+        "equationBefore": "4 × x^2y ÷ xy",
+        "explanationCaption": "x^2y ÷ xy では、xy が消えて x が残ります。答えは 4x です。",
+        "equationAfter": "4x",
+        "highlight": "4x",
+        "choices": [
+          { "id": "a", "label": "4x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4xy", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4x^2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-003",
+    "unitId": "g2-shiki",
+    "title": "多項式の加法",
+    "equation": "(3x + 2) + (2x - 5)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x の項どうし、数だけの項どうしをまとめます。",
+    "tags": ["式の計算", "多項式", "同類項"],
+    "finalAnswer": "5x - 3",
+    "steps": [
+      {
+        "id": "gs-003-s1",
+        "prompt": "x の項をまとめると？",
+        "equationBefore": "(3x + 2) + (2x - 5)",
+        "explanationCaption": "3x と 2x を合わせると 5x です。",
+        "equationAfter": "5x + 2 - 5",
+        "highlight": "5x",
+        "choices": [
+          { "id": "a", "label": "5x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-003-s2",
+        "prompt": "全体を整理すると？",
+        "equationBefore": "5x + 2 - 5",
+        "explanationCaption": "2 - 5 = -3 なので、5x - 3 です。",
+        "equationAfter": "5x - 3",
+        "highlight": "-3",
+        "choices": [
+          { "id": "a", "label": "5x - 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "5x + 7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x - 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-004",
+    "unitId": "g2-shiki",
+    "title": "分配法則と整理",
+    "equation": "2(3x - 4) - 3(x + 1)",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "かっこの前の数を、中の両方にかけます。-3 の符号にも注意します。",
+    "tags": ["式の計算", "分配法則", "標準"],
+    "finalAnswer": "3x - 11",
+    "steps": [
+      {
+        "id": "gs-004-s1",
+        "prompt": "かっこを外すと？",
+        "equationBefore": "2(3x - 4) - 3(x + 1)",
+        "explanationCaption": "2(3x - 4) = 6x - 8、-3(x + 1) = -3x - 3 です。",
+        "equationAfter": "6x - 8 - 3x - 3",
+        "highlight": "-3x - 3",
+        "choices": [
+          { "id": "a", "label": "6x - 8 - 3x - 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x - 8 - 3x + 3", "isCorrect": false, "mistakeTagId": "distribute-parentheses" },
+          { "id": "c", "label": "6x - 4 - 3x - 1", "isCorrect": false, "mistakeTagId": "distribute-parentheses" }
+        ]
+      },
+      {
+        "id": "gs-004-s2",
+        "prompt": "整理すると？",
+        "equationBefore": "6x - 8 - 3x - 3",
+        "explanationCaption": "6x - 3x = 3x、-8 - 3 = -11。答えは 3x - 11 です。",
+        "equationAfter": "3x - 11",
+        "highlight": "3x - 11",
+        "choices": [
+          { "id": "a", "label": "3x - 11", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3x - 5", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "9x - 11", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-005",
+    "unitId": "g2-shiki",
+    "title": "式の値",
+    "equation": "a = -2, b = 3 のとき 4a - 2b",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "負の数を代入するときは、かっこをつけて考えます。",
+    "tags": ["式の計算", "代入", "負の数"],
+    "finalAnswer": "-14",
+    "steps": [
+      {
+        "id": "gs-005-s1",
+        "prompt": "代入すると？",
+        "equationBefore": "4a - 2b",
+        "explanationCaption": "a = -2、b = 3 を入れるので、4 × (-2) - 2 × 3 です。",
+        "equationAfter": "4 × (-2) - 2 × 3",
+        "highlight": "(-2)",
+        "choices": [
+          { "id": "a", "label": "4 × (-2) - 2 × 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4 × 2 - 2 × 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4 × 3 - 2 × (-2)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-005-s2",
+        "prompt": "値は？",
+        "equationBefore": "4 × (-2) - 2 × 3",
+        "explanationCaption": "4 × (-2) = -8、2 × 3 = 6。-8 - 6 = -14 です。",
+        "equationAfter": "-14",
+        "highlight": "-14",
+        "choices": [
+          { "id": "a", "label": "-14", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "14", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gs-006",
+    "unitId": "g2-shiki",
+    "title": "等式の変形",
+    "equation": "S = ah/2 を h について解く",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "h だけを残すために、まず両辺を2倍します。",
+    "tags": ["式の計算", "等式の変形", "高校受験"],
+    "finalAnswer": "h = 2S/a",
+    "steps": [
+      {
+        "id": "gs-006-s1",
+        "prompt": "まず分母の2を消すには？",
+        "equationBefore": "S = ah/2",
+        "explanationCaption": "両辺を2倍すると、2S = ah になります。",
+        "equationAfter": "2S = ah",
+        "highlight": "2S",
+        "choices": [
+          { "id": "a", "label": "両辺を2倍する", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "両辺を2で割る", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "両辺から2を引く", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "gs-006-s2",
+        "prompt": "h について解くと？",
+        "equationBefore": "2S = ah",
+        "explanationCaption": "h だけにするために両辺を a で割ります。h = 2S/a です。",
+        "equationAfter": "h = 2S/a",
+        "highlight": "2S/a",
+        "choices": [
+          { "id": "a", "label": "h = 2S/a", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "h = S/2a", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "h = a/2S", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]

@@ -16,6 +16,7 @@ settings:
     INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait"
     INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
     INFOPLIST_KEY_CFBundleDisplayName: "解け√ルート"
+    INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "手書きメモを写真に保存するために使います。"
     DEVELOPMENT_LANGUAGE: ja
 targets:
   TokeRoot:

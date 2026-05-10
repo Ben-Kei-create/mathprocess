@@ -1,0 +1,896 @@
+[
+  {
+    "id": "mj-001",
+    "unitId": "g1-mojishiki",
+    "title": "かけ算の記号を省く",
+    "equation": "3 × x",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "文字の前のかけ算記号は省いて書けます。",
+    "tags": ["文字式", "書き方"],
+    "finalAnswer": "3x",
+    "steps": [
+      {
+        "id": "mj-001-s1",
+        "prompt": "3 × x はどう書ける？",
+        "equationBefore": "3 × x",
+        "explanationCaption": "数と文字のかけ算は、かけ算記号を省いて 3x と書きます。",
+        "equationAfter": "3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3 + x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-002",
+    "unitId": "g1-mojishiki",
+    "title": "同じ文字を数える",
+    "equation": "x + x + x",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "x が何個あるかを数えてみます。",
+    "tags": ["文字式", "同類項"],
+    "finalAnswer": "3x",
+    "steps": [
+      {
+        "id": "mj-002-s1",
+        "prompt": "x は何個ある？",
+        "equationBefore": "x + x + x",
+        "explanationCaption": "x が 3個あるので、3x とまとめられます。",
+        "equationAfter": "3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3個", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2個", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x個", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-002-s2",
+        "prompt": "まとめると？",
+        "equationBefore": "x + x + x",
+        "explanationCaption": "同じ x が 3個なので、答えは 3x です。",
+        "equationAfter": "3x",
+        "highlight": "3x",
+        "choices": [
+          { "id": "a", "label": "3x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-003",
+    "unitId": "g1-mojishiki",
+    "title": "同類項をまとめる",
+    "equation": "2a + 3a",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "同じ文字の項は、前の数だけを足します。",
+    "tags": ["文字式", "同類項"],
+    "finalAnswer": "5a",
+    "steps": [
+      {
+        "id": "mj-003-s1",
+        "prompt": "どこを足せばいい？",
+        "equationBefore": "2a + 3a",
+        "explanationCaption": "同じ a なので、前の数 2 と 3 を足します。",
+        "equationAfter": "(2 + 3)a",
+        "highlight": "2 + 3",
+        "choices": [
+          { "id": "a", "label": "2 と 3 を足す", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "a と a を足して a2 にする", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "文字があるので足せない", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-003-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(2 + 3)a",
+        "explanationCaption": "2 + 3 = 5 なので、2a + 3a = 5a です。",
+        "equationAfter": "5a",
+        "highlight": "5a",
+        "choices": [
+          { "id": "a", "label": "5a", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6a", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5a2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-004",
+    "unitId": "g1-mojishiki",
+    "title": "文字に数を入れる",
+    "equation": "a = 4 のとき 3a + 2",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "a の場所に 4 を入れてから計算します。",
+    "tags": ["文字式", "代入"],
+    "finalAnswer": "14",
+    "steps": [
+      {
+        "id": "mj-004-s1",
+        "prompt": "a のところに何を入れる？",
+        "equationBefore": "3a + 2",
+        "explanationCaption": "a = 4 なので、a のところに 4 を入れます。",
+        "equationAfter": "3 × 4 + 2",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-004-s2",
+        "prompt": "計算すると？",
+        "equationBefore": "3 × 4 + 2",
+        "explanationCaption": "3 × 4 = 12、12 + 2 = 14 です。",
+        "equationAfter": "14",
+        "highlight": "14",
+        "choices": [
+          { "id": "a", "label": "14", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "20", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "9", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-005",
+    "unitId": "g1-mojishiki",
+    "title": "代金を文字式にする",
+    "equation": "80円のえんぴつを x 本",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "1本の値段に本数をかけます。",
+    "tags": ["文字式", "式立て"],
+    "finalAnswer": "80x 円",
+    "steps": [
+      {
+        "id": "mj-005-s1",
+        "prompt": "代金を式にすると？",
+        "equationBefore": "80円 × x 本",
+        "explanationCaption": "1本 80円を x 本買うので、代金は 80x 円です。",
+        "equationAfter": "80x 円",
+        "highlight": "80x",
+        "choices": [
+          { "id": "a", "label": "80x 円", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "80 + x 円", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x ÷ 80 円", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-006",
+    "unitId": "g1-mojishiki",
+    "title": "ひいてまとめる",
+    "equation": "5x - 2x + 4",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "x がついているものだけ先にまとめます。",
+    "tags": ["文字式", "同類項"],
+    "finalAnswer": "3x + 4",
+    "steps": [
+      {
+        "id": "mj-006-s1",
+        "prompt": "先にまとめるのはどこ？",
+        "equationBefore": "5x - 2x + 4",
+        "explanationCaption": "x がついている 5x と -2x をまとめます。+4 はそのまま残します。",
+        "equationAfter": "(5 - 2)x + 4",
+        "highlight": "5 - 2",
+        "choices": [
+          { "id": "a", "label": "5x と -2x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "-2x と +4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "全部たして 7x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-006-s2",
+        "prompt": "答えは？",
+        "equationBefore": "(5 - 2)x + 4",
+        "explanationCaption": "5 - 2 = 3 なので、答えは 3x + 4 です。",
+        "equationAfter": "3x + 4",
+        "highlight": "3x + 4",
+        "choices": [
+          { "id": "a", "label": "3x + 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "7x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-007",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 代入して計算",
+    "equation": "a = -2 のとき 5a + 3",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "a のところに -2 を入れます。かけ算を先に計算しましょう。",
+    "tags": ["文字式", "代入", "自力"],
+    "finalAnswer": "-7",
+    "steps": [
+      {
+        "id": "mj-007-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "5a + 3",
+        "explanationCaption": "a = -2 を入れると、5 × (-2) + 3 = -10 + 3 = -7 です。",
+        "equationAfter": "-7",
+        "highlight": "-7",
+        "choices": [
+          { "id": "a", "label": "-7", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-008",
+    "unitId": "g1-mojishiki",
+    "title": "自力: まとめてから代入",
+    "equation": "x = 3 のとき 4x - x + 2",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "先に 4x - x をまとめると、計算が短くなります。",
+    "tags": ["文字式", "同類項", "代入", "自力"],
+    "finalAnswer": "11",
+    "steps": [
+      {
+        "id": "mj-008-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "4x - x + 2",
+        "explanationCaption": "4x - x = 3x。x = 3 を入れると、3 × 3 + 2 = 11 です。",
+        "equationAfter": "11",
+        "highlight": "11",
+        "choices": [
+          { "id": "a", "label": "11", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-009",
+    "unitId": "g1-mojishiki",
+    "title": "かっこを外す",
+    "equation": "2(x + 4)",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "2 を、かっこの中の x と 4 の両方にかけます。",
+    "tags": ["文字式", "分配法則"],
+    "finalAnswer": "2x + 8",
+    "steps": [
+      {
+        "id": "mj-009-s1",
+        "prompt": "2 はどこにかける？",
+        "equationBefore": "2(x + 4)",
+        "explanationCaption": "2 を x と 4 の両方にかけます。",
+        "equationAfter": "2 × x + 2 × 4",
+        "highlight": "2 × 4",
+        "choices": [
+          { "id": "a", "label": "x と 4 の両方", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x だけ", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4 だけ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-009-s2",
+        "prompt": "答えは？",
+        "equationBefore": "2 × x + 2 × 4",
+        "explanationCaption": "2 × x = 2x、2 × 4 = 8 なので、2x + 8 です。",
+        "equationAfter": "2x + 8",
+        "highlight": "2x + 8",
+        "choices": [
+          { "id": "a", "label": "2x + 8", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x + 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x + 8", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-010",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 文章を式にする",
+    "equation": "1個 a 円のみかんを 5個買い、20円の袋をつける",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "みかん 5個の代金を 5a と書き、袋代 20 を足します。",
+    "tags": ["文字式", "式立て", "自力"],
+    "finalAnswer": "5a + 20",
+    "steps": [
+      {
+        "id": "mj-010-s1",
+        "prompt": "途中式をメモして、代金の式を書こう",
+        "equationBefore": "a円 × 5個 + 20円",
+        "explanationCaption": "みかん 5個は 5a 円。袋代 20円を足して、5a + 20 です。",
+        "equationAfter": "5a + 20",
+        "highlight": "5a + 20",
+        "choices": [
+          { "id": "a", "label": "5a + 20", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-011",
+    "unitId": "g1-mojishiki",
+    "title": "わり算を文字式で書く",
+    "equation": "x ÷ 4",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "文字式では、わり算を分数の形で書くことが多いです。",
+    "tags": ["文字式", "書き方"],
+    "finalAnswer": "x/4",
+    "steps": [
+      {
+        "id": "mj-011-s1",
+        "prompt": "x ÷ 4 はどう書ける？",
+        "equationBefore": "x ÷ 4",
+        "explanationCaption": "x を 4 でわるので、x/4 と書けます。",
+        "equationAfter": "x/4",
+        "highlight": "x/4",
+        "choices": [
+          { "id": "a", "label": "x/4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x + 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-012",
+    "unitId": "g1-mojishiki",
+    "title": "分配法則を使う",
+    "equation": "3(2x - 1)",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "3 を、2x と -1 の両方にかけます。",
+    "tags": ["文字式", "分配法則"],
+    "finalAnswer": "6x - 3",
+    "steps": [
+      {
+        "id": "mj-012-s1",
+        "prompt": "3 はどこにかける？",
+        "equationBefore": "3(2x - 1)",
+        "explanationCaption": "3 を 2x と -1 の両方にかけます。",
+        "equationAfter": "3 × 2x + 3 × (-1)",
+        "highlight": "両方",
+        "choices": [
+          { "id": "a", "label": "2x と -1 の両方", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2x だけ", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "-1 だけ", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-012-s2",
+        "prompt": "答えは？",
+        "equationBefore": "3 × 2x + 3 × (-1)",
+        "explanationCaption": "3 × 2x = 6x、3 × (-1) = -3。だから 6x - 3 です。",
+        "equationAfter": "6x - 3",
+        "highlight": "6x - 3",
+        "choices": [
+          { "id": "a", "label": "6x - 3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x - 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-013",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 負の数を代入する",
+    "equation": "x = -3 のとき 2x - 5",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "x の場所に -3 を入れて、2 × (-3) を先に計算します。",
+    "tags": ["文字式", "代入", "正負の数", "自力"],
+    "finalAnswer": "-11",
+    "steps": [
+      {
+        "id": "mj-013-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "2x - 5, x = -3",
+        "explanationCaption": "2 × (-3) - 5 = -6 - 5 = -11 です。",
+        "equationAfter": "-11",
+        "highlight": "-11",
+        "choices": [
+          { "id": "a", "label": "-11", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-014",
+    "unitId": "g1-mojishiki",
+    "title": "係数が1の文字式",
+    "equation": "1 × a + 4",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "1 × a は a と書けます。",
+    "tags": ["文字式", "書き方"],
+    "finalAnswer": "a + 4",
+    "steps": [
+      {
+        "id": "mj-014-s1",
+        "prompt": "1 × a はどう書ける？",
+        "equationBefore": "1 × a + 4",
+        "explanationCaption": "1 × a は a です。だから a + 4 と書けます。",
+        "equationAfter": "a + 4",
+        "highlight": "a",
+        "choices": [
+          { "id": "a", "label": "a + 4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "1a + 4", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "4a", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-015",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 同類項と代入",
+    "equation": "x = 2 のとき 7x - 3x + 5",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "先に 7x - 3x をまとめてから、x = 2 を入れます。",
+    "tags": ["文字式", "同類項", "代入", "自力"],
+    "finalAnswer": "13",
+    "steps": [
+      {
+        "id": "mj-015-s1",
+        "prompt": "途中式をメモして、最後の答えを書こう",
+        "equationBefore": "7x - 3x + 5, x = 2",
+        "explanationCaption": "7x - 3x = 4x。x = 2 を入れると 4 × 2 + 5 = 13 です。",
+        "equationAfter": "13",
+        "highlight": "13",
+        "choices": [
+          { "id": "a", "label": "13", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-016",
+    "unitId": "g1-mojishiki",
+    "title": "数を前に書く",
+    "equation": "b × 7",
+    "mode": "次の一手モード",
+    "difficulty": 1,
+    "hint": "文字式では、数字を文字の前に書くことが多いです。",
+    "tags": ["文字式", "書き方"],
+    "finalAnswer": "7b",
+    "steps": [
+      {
+        "id": "mj-016-s1",
+        "prompt": "b × 7 はどう書く？",
+        "equationBefore": "b × 7",
+        "explanationCaption": "かけ算の記号を省いて、数字を前に出すと 7b です。",
+        "equationAfter": "7b",
+        "highlight": "7b",
+        "choices": [
+          { "id": "a", "label": "7b", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "b7", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "b + 7", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-017",
+    "unitId": "g1-mojishiki",
+    "title": "x が1個ある式",
+    "equation": "6x + x",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x は 1x と考えます。",
+    "tags": ["文字式", "同類項"],
+    "finalAnswer": "7x",
+    "steps": [
+      {
+        "id": "mj-017-s1",
+        "prompt": "x は何個分？",
+        "equationBefore": "6x + x",
+        "explanationCaption": "x は 1x と同じです。",
+        "equationAfter": "6x + 1x",
+        "highlight": "1x",
+        "choices": [
+          { "id": "a", "label": "1x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "6x", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-017-s2",
+        "prompt": "まとめると？",
+        "equationBefore": "6x + 1x",
+        "explanationCaption": "6個分の x と 1個分の x で、7x です。",
+        "equationAfter": "7x",
+        "highlight": "7x",
+        "choices": [
+          { "id": "a", "label": "7x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "6x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "7", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-018",
+    "unitId": "g1-mojishiki",
+    "title": "分数の形に代入",
+    "equation": "a = 5 のとき a/5 + 3",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "a の場所に 5 を入れます。5/5 は 1 です。",
+    "tags": ["文字式", "代入"],
+    "finalAnswer": "4",
+    "steps": [
+      {
+        "id": "mj-018-s1",
+        "prompt": "a に入れる数は？",
+        "equationBefore": "a/5 + 3, a = 5",
+        "explanationCaption": "a = 5 なので、a の場所に 5 を入れます。",
+        "equationAfter": "5/5 + 3",
+        "highlight": "5/5",
+        "choices": [
+          { "id": "a", "label": "5", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "a", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-018-s2",
+        "prompt": "答えは？",
+        "equationBefore": "5/5 + 3",
+        "explanationCaption": "5/5 = 1。1 + 3 = 4 です。",
+        "equationAfter": "4",
+        "highlight": "4",
+        "choices": [
+          { "id": "a", "label": "4", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "8", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-019",
+    "unitId": "g1-mojishiki",
+    "title": "自力: かっこと同類項",
+    "equation": "2(x + 5) + x",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "まず 2 をかっこの中の x と 5 の両方にかけます。",
+    "tags": ["文字式", "分配法則", "同類項", "自力"],
+    "finalAnswer": "3x + 10",
+    "steps": [
+      {
+        "id": "mj-019-s1",
+        "prompt": "途中式をメモして、最後の式を書こう",
+        "equationBefore": "2(x + 5) + x",
+        "explanationCaption": "2(x + 5) = 2x + 10。そこに x を足すので、3x + 10 です。",
+        "equationAfter": "3x + 10",
+        "highlight": "3x + 10",
+        "choices": [
+          { "id": "a", "label": "3x + 10", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-020",
+    "unitId": "g1-mojishiki",
+    "title": "同類項と数字を分ける",
+    "equation": "3x + 2 + 4x",
+    "mode": "次の一手モード",
+    "difficulty": 2,
+    "hint": "x がついているものだけを先にまとめます。",
+    "tags": ["文字式", "同類項"],
+    "finalAnswer": "7x + 2",
+    "steps": [
+      {
+        "id": "mj-020-s1",
+        "prompt": "先にまとめるのは？",
+        "equationBefore": "3x + 2 + 4x",
+        "explanationCaption": "3x と 4x は同じ文字なのでまとめられます。2 はそのままです。",
+        "equationAfter": "3x + 4x + 2",
+        "highlight": "3x + 4x",
+        "choices": [
+          { "id": "a", "label": "3x と 4x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "2 と 4x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3x と 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-020-s2",
+        "prompt": "まとめると？",
+        "equationBefore": "3x + 4x + 2",
+        "explanationCaption": "3x + 4x = 7x。だから 7x + 2 です。",
+        "equationAfter": "7x + 2",
+        "highlight": "7x",
+        "choices": [
+          { "id": "a", "label": "7x + 2", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "9x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "5x + 4", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-021",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 文章から式へ",
+    "equation": "1冊 x 円のノートを3冊、120円のペンを1本",
+    "mode": "自力モード",
+    "difficulty": 3,
+    "hint": "ノート3冊は 3x 円です。そこにペン代を足します。",
+    "tags": ["文字式", "式立て", "自力"],
+    "finalAnswer": "3x + 120",
+    "steps": [
+      {
+        "id": "mj-021-s1",
+        "prompt": "途中式をメモして、代金を式で書こう",
+        "equationBefore": "ノート3冊 + ペン1本",
+        "explanationCaption": "ノート3冊は 3x 円、ペンは 120円。合わせて 3x + 120 です。",
+        "equationAfter": "3x + 120",
+        "highlight": "3x + 120",
+        "choices": [
+          { "id": "a", "label": "3x + 120", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-022",
+    "unitId": "g1-mojishiki",
+    "title": "連続する3つの整数",
+    "equation": "真ん中の整数を n とすると、3つの整数の和は？",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "真ん中が n なら、前の数は n - 1、次の数は n + 1 です。",
+    "tags": ["文字式", "式立て", "連続する数", "標準"],
+    "finalAnswer": "3n",
+    "steps": [
+      {
+        "id": "mj-022-s1",
+        "prompt": "3つの整数を文字で表すと？",
+        "equationBefore": "真ん中の整数を n とする",
+        "explanationCaption": "真ん中が n なので、1つ前は n - 1、1つ後は n + 1 です。",
+        "equationAfter": "n - 1, n, n + 1",
+        "highlight": "n - 1",
+        "choices": [
+          { "id": "a", "label": "n - 1, n, n + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "n, n + 1, n + 2", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n - 2, n, n + 2", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-022-s2",
+        "prompt": "和を式で表すと？",
+        "equationBefore": "(n - 1) + n + (n + 1)",
+        "explanationCaption": "-1 と +1 は打ち消し合います。n が3個分なので 3n です。",
+        "equationAfter": "3n",
+        "highlight": "3n",
+        "choices": [
+          { "id": "a", "label": "3n", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "3n + 1", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "n + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-023",
+    "unitId": "g1-mojishiki",
+    "title": "割引後の代金",
+    "equation": "定価 x 円の商品を20%引きで買う",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "20%引きは、定価の80%を払うという意味です。",
+    "tags": ["文字式", "割合", "式立て", "標準"],
+    "finalAnswer": "0.8x",
+    "steps": [
+      {
+        "id": "mj-023-s1",
+        "prompt": "20%引きで払う割合は？",
+        "equationBefore": "100% - 20%",
+        "explanationCaption": "100% から 20% を引くので、払うのは 80% です。",
+        "equationAfter": "80%",
+        "highlight": "80%",
+        "choices": [
+          { "id": "a", "label": "80%", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "20%", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "120%", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-023-s2",
+        "prompt": "代金を文字式で表すと？",
+        "equationBefore": "x 円の 80%",
+        "explanationCaption": "80% は 0.8 なので、代金は 0.8x 円です。",
+        "equationAfter": "0.8x",
+        "highlight": "0.8x",
+        "choices": [
+          { "id": "a", "label": "0.8x", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "0.2x", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x - 20", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-024",
+    "unitId": "g1-mojishiki",
+    "title": "長方形の周の長さ",
+    "equation": "たて x cm、横 x + 3 cm の長方形",
+    "mode": "次の一手モード",
+    "difficulty": 4,
+    "hint": "長方形の周は、たて2本と横2本を足します。",
+    "tags": ["文字式", "図形", "周の長さ", "標準"],
+    "finalAnswer": "4x + 6",
+    "steps": [
+      {
+        "id": "mj-024-s1",
+        "prompt": "周の長さの式は？",
+        "equationBefore": "たて x、横 x + 3",
+        "explanationCaption": "長方形の周は、たて + 横 + たて + 横 です。だから 2x + 2(x + 3) と書けます。",
+        "equationAfter": "2x + 2(x + 3)",
+        "highlight": "2(x + 3)",
+        "choices": [
+          { "id": "a", "label": "2x + 2(x + 3)", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "x(x + 3)", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "x + x + 3", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-024-s2",
+        "prompt": "簡単にすると？",
+        "equationBefore": "2x + 2(x + 3)",
+        "explanationCaption": "2(x + 3) = 2x + 6。合わせて 4x + 6 です。",
+        "equationAfter": "4x + 6",
+        "highlight": "4x + 6",
+        "choices": [
+          { "id": "a", "label": "4x + 6", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4x + 3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2x + 6", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-025",
+    "unitId": "g1-mojishiki",
+    "title": "平均を文字式で表す",
+    "equation": "3回のテストの点数が a 点、b 点、c 点",
+    "mode": "次の一手モード",
+    "difficulty": 3,
+    "hint": "平均は、合計を個数で割ります。",
+    "tags": ["文字式", "平均", "式立て"],
+    "finalAnswer": "(a + b + c)/3",
+    "steps": [
+      {
+        "id": "mj-025-s1",
+        "prompt": "3回分の合計は？",
+        "equationBefore": "a 点、b 点、c 点",
+        "explanationCaption": "3回分を足すので、合計は a + b + c です。",
+        "equationAfter": "a + b + c",
+        "highlight": "a + b + c",
+        "choices": [
+          { "id": "a", "label": "a + b + c", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "abc", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3abc", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-025-s2",
+        "prompt": "平均は？",
+        "equationBefore": "合計 ÷ 3",
+        "explanationCaption": "3回の平均なので、合計 a + b + c を 3 で割ります。",
+        "equationAfter": "(a + b + c)/3",
+        "highlight": "/3",
+        "choices": [
+          { "id": "a", "label": "(a + b + c)/3", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "a + b + c/3", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3(a + b + c)", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-026",
+    "unitId": "g1-mojishiki",
+    "title": "規則性: 正方形を並べる",
+    "equation": "正方形を横に n 個ならべると、棒は何本？",
+    "mode": "次の一手モード",
+    "difficulty": 5,
+    "hint": "1個目は4本。正方形を1個増やすごとに、共有する辺があるので3本ずつ増えます。",
+    "tags": ["文字式", "規則性", "式立て", "高校受験"],
+    "finalAnswer": "3n + 1",
+    "steps": [
+      {
+        "id": "mj-026-s1",
+        "prompt": "正方形が1個増えるごとに、棒は何本増える？",
+        "equationBefore": "横につなげて正方形を増やす",
+        "explanationCaption": "となりの正方形と1本の辺を共有するので、新しく増える棒は3本です。",
+        "equationAfter": "3本ずつ増える",
+        "highlight": "3",
+        "choices": [
+          { "id": "a", "label": "3本", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4本", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "2本", "isCorrect": false, "mistakeTagId": null }
+        ]
+      },
+      {
+        "id": "mj-026-s2",
+        "prompt": "n 個ならべたときの棒の本数は？",
+        "equationBefore": "1個目は4本、あとは3本ずつ増える",
+        "explanationCaption": "3本ずつ増える形は 3n。1個目で考えると、3 × 1 + 1 = 4 なので、式は 3n + 1 です。",
+        "equationAfter": "3n + 1",
+        "highlight": "3n + 1",
+        "choices": [
+          { "id": "a", "label": "3n + 1", "isCorrect": true, "mistakeTagId": null },
+          { "id": "b", "label": "4n", "isCorrect": false, "mistakeTagId": null },
+          { "id": "c", "label": "3n - 1", "isCorrect": false, "mistakeTagId": null }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "mj-027",
+    "unitId": "g1-mojishiki",
+    "title": "自力: 偶数を文字で表す",
+    "equation": "ある偶数を 2n とすると、次の偶数は？",
+    "mode": "自力モード",
+    "difficulty": 4,
+    "hint": "偶数は2ずつ増えます。",
+    "tags": ["文字式", "整数", "式立て", "自力"],
+    "finalAnswer": "2n + 2",
+    "steps": [
+      {
+        "id": "mj-027-s1",
+        "prompt": "途中式をメモして、次の偶数を文字式で書こう",
+        "equationBefore": "ある偶数 2n",
+        "explanationCaption": "偶数は 2 ずつ増えるので、2n の次の偶数は 2n + 2 です。",
+        "equationAfter": "2n + 2",
+        "highlight": "2n + 2",
+        "choices": [
+          { "id": "a", "label": "2n + 2", "isCorrect": true, "mistakeTagId": null }
+        ]
+      }
+    ]
+  }
+]
